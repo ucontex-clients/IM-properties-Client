@@ -1,12 +1,13 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap");
 
-.signup-container{
-  width: 65vw;
+.signup-container {
+  /* width: 65vw; */
+  padding-right: 141px;
   height: 90vh;
   padding: 20px;
   margin: auto;
@@ -16,92 +17,97 @@
   margin-top: 0.5cm;
 }
 
-.signupbox{
+.signupbox {
   width: 50%;
   height: 100%;
 }
 
-#signup-left{
+#signup-left {
   overflow: hidden;
 }
 
-.signup-image{
+.signup-image {
   width: 100%;
   height: 100%;
 }
 
-#signup-right{
+#signup-right {
   padding-inline: 60px;
 }
 
-.logo-container{
+.logo-container {
   display: flex;
   justify-content: center;
 }
 
-.logo{
+.logo {
   height: 90px;
   width: 90px;
 }
 
-
 #signup-paragraph {
-font-family: Inter;
-font-size: 11pt;
-font-weight: 500;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: left;
-margin-bottom: 10px;
+  font-family: Inter;
+  font-size: 11pt;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
-.signup-input{
-  height: 30px;
+.signup-input {
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #C6C5C5;
-  padding-block: 5px;
-  padding-left: 30px;
-  margin-bottom: 23px;
+  border: 1px solid #c6c5c5;
+  padding-block: 16px;
+  padding-left: 71px;
+  /* margin-bottom: 23px; */
+  font-size: 15px;
+}
+.input-icon-wrapper {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 22px;
 }
 
-
-.signup-input:focus{
+.signup-input:focus {
   outline: none;
 }
 
-.agreement{
+.agreement {
   display: flex;
   justify-content: left;
   align-items: center;
   column-gap: 4px;
 }
 
-#agreement-paragraph{
+#agreement-paragraph {
   font-family: Inter;
   font-size: 7pt;
   margin-top: 5px;
-  color: #6C6C6C;
+  color: #6c6c6c;
 }
 
-.signin-option{
+.signin-option {
   font-size: 8pt;
   font-family: Inter;
   font-weight: 500;
   text-align: center;
   margin-block: 3px;
-  color: #6C6C6C;
+  color: #6c6c6c;
 }
 
-.signin-option a{
+.signin-option a {
   text-decoration: none;
-  color: #0A55C6;
+  color: #0a55c6;
 }
 
-.create-account-button{
+.create-account-button {
   width: 100%;
   height: 30px;
-  background-color: #FF1212;
+  background-color: #ff1212;
   font-size: 8pt;
   color: white;
   border-radius: 8px;
@@ -112,11 +118,12 @@ margin-bottom: 10px;
   margin-block: 8px;
 }
 
-.input-field{
+.input-field {
   position: relative;
+  margin-bottom: 40px;
 }
 
-.input-icon{
+.input-icon {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -124,17 +131,17 @@ margin-bottom: 10px;
   top: 7px;
 }
 
-.signup-input::placeholder{
-font-family: Inter;
-font-size: 7pt;
-font-weight: 500;
-line-height: 18px;
-letter-spacing: 0em;
-text-align: left;
-color: #6C6C6C;
+.signup-input::placeholder {
+  font-family: Inter;
+  /* font-size: 7pt; */
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6c6c6c;
 }
 
-.input-icon-eye{
+.input-icon-eye {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -143,6 +150,6 @@ color: #6C6C6C;
   cursor: pointer;
 }
 
-.checkbox{
-  background-color: #6C6C6C;
+.checkbox {
+  background-color: #6c6c6c;
 }
