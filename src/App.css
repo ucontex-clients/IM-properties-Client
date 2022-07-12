@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.signup-container{
+  width: 65vw;
+  height: 90vh;
+  padding: 20px;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-top: 0.5cm;
+}
+
+.signupbox{
+  width: 50%;
+  height: 100%;
+}
+
+#signup-left{
+  overflow: hidden;
+}
+
+.signup-image{
+  width: 100%;
+  height: 100%;
+}
+
+#signup-right{
+  padding-inline: 60px;
+}
+
+.logo-container{
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  height: 90px;
+  width: 90px;
+}
+
+
+#signup-paragraph {
+font-family: Inter;
+font-size: 11pt;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+margin-bottom: 10px;
+}
+
+.signup-input{
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #C6C5C5;
+  padding-block: 5px;
+  padding-left: 30px;
+  margin-bottom: 23px;
+}
+
+
+.signup-input:focus{
+  outline: none;
+}
+
+.agreement{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  column-gap: 4px;
+}
+
+#agreement-paragraph{
+  font-family: Inter;
+  font-size: 7pt;
+  margin-top: 5px;
+  color: #6C6C6C;
+}
+
+.signin-option{
+  font-size: 8pt;
+  font-family: Inter;
+  font-weight: 500;
+  text-align: center;
+  margin-block: 3px;
+  color: #6C6C6C;
+}
+
+.signin-option a{
+  text-decoration: none;
+  color: #0A55C6;
+}
+
+.create-account-button{
+  width: 100%;
+  height: 30px;
+  background-color: #FF1212;
+  font-size: 8pt;
   color: white;
+  border-radius: 8px;
+  border-style: none;
+  cursor: pointer;
+  font-family: Inter;
+  padding-block: 5px;
+  margin-block: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-field{
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-icon{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 10px;
+  top: 7px;
+}
+
+.signup-input::placeholder{
+font-family: Inter;
+font-size: 7pt;
+font-weight: 500;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+color: #6C6C6C;
+}
+
+.input-icon-eye{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 10px;
+  top: 7px;
+  cursor: pointer;
+}
+
+.checkbox{
+  background-color: #6C6C6C;
 }
