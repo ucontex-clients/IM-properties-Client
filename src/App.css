@@ -46,6 +46,10 @@
   padding: 0 94px 0 114px;
 }
 
+.password-eye:hover{
+  cursor: pointer;
+}
+
 .logo-container {
   display: flex;
   justify-content: center;

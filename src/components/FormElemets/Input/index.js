@@ -8,7 +8,7 @@ export function Input({ img, type, placeholder, eye }) {
       </div>
       <input type={type} className="signup-input" placeholder={placeholder}></input>
       <div className="input-icon-wrapper2">
-        <img src={eye}></img>
+        <img src={eye} className='password-eye'></img>
       </div>
     </div>
   );
