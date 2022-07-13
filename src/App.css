@@ -6,23 +6,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap");
 
 .signup-container {
-  /* width: 65vw; */
-  padding-right: 141px;
-  height: 90vh;
-  padding: 20px;
-  margin: auto;
+  padding: 47px;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0.5cm;
 }
 
-.signupbox {
-  width: 50%;
-  height: 100%;
+.signin-container {
+  padding: 47px;
+  height: 100vh;
+  display: flex;
 }
 
 #signup-left {
+  min-height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+#signin-left {
+  min-height: 100%;
+  width: 50%;
   overflow: hidden;
 }
 
@@ -32,7 +35,15 @@
 }
 
 #signup-right {
-  padding-inline: 60px;
+  width: 50%;
+  height: 100%;
+  padding: 0 94px 0 114px;
+}
+
+#signin-right {
+  width: 50%;
+  height: 100%;
+  padding: 0 94px 0 114px;
 }
 
 .logo-container {
@@ -41,18 +52,18 @@
 }
 
 .logo {
-  height: 90px;
-  width: 90px;
+  height: 132px;
+  width: 132px;
 }
 
 #signup-paragraph {
   font-family: Inter;
-  font-size: 11pt;
+  font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .signup-input {
@@ -72,6 +83,15 @@
   left: 22px;
 }
 
+.input-icon-wrapper2{
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  right: 16px;
+  top: 0;
+}
+
 .signup-input:focus {
   outline: none;
 }
@@ -81,21 +101,26 @@
   justify-content: left;
   align-items: center;
   column-gap: 4px;
+  margin-top: 16px;
+  margin-bottom: 5px;
 }
 
 #agreement-paragraph {
   font-family: Inter;
-  font-size: 7pt;
-  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;  
   color: #6c6c6c;
 }
 
 .signin-option {
-  font-size: 8pt;
+  font-size: 15px;
   font-family: Inter;
   font-weight: 500;
   text-align: center;
-  margin-block: 3px;
+  /* margin-block: 3px; */
   color: #6c6c6c;
 }
 
@@ -106,16 +131,16 @@
 
 .create-account-button {
   width: 100%;
-  height: 30px;
   background-color: #ff1212;
-  font-size: 8pt;
+  font-size: 20px;
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   border-style: none;
   cursor: pointer;
   font-family: Inter;
-  padding-block: 5px;
-  margin-block: 8px;
+  padding-block: 13px;
+  margin-top: 10px;
+  margin-bottom: 26px;
 }
 
 .input-field {
@@ -151,5 +176,8 @@
 }
 
 .checkbox {
+  height: 30px;
+  width: 30px;
   background-color: #6c6c6c;
+  margin-right: 8px;
 }
