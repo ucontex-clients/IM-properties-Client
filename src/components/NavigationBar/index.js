@@ -16,15 +16,17 @@ const fontStyle2 = {
 
   return (
     <div className="navigation-wrapper">
-        <div className="navigation-logo-wrapper">
-            <img src="./images/logo.png"></img>
-        </div>
-
-        <div className="search-wrapper">
-            <div className="search-image-wrapper">
-                <img src="./images/Vector.png" className="search-image"></img>
+        <div className="navigation-left">
+            <div className="navigation-logo-wrapper">
+                <img src="./images/logo.png"></img>
             </div>
-            <input type={'text'} placeholder='Search'></input>
+
+            <div className="search-wrapper">
+                <div className="search-image-wrapper">
+                    <img src="./images/Vector.png" className="search-image"></img>
+                </div>
+                <input type={'text'} placeholder='Search'></input>
+            </div>
         </div>
 
         <div className="navigation-right">

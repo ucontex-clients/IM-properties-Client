@@ -209,10 +209,13 @@
 }
 
 .search-wrapper{
-  /* padding: 0 193px 0 53px;
-  margin-right: 150px; */
   display: flex;
   align-items: center;
+}
+
+.navigation-left{
+  display: flex;
+  column-gap: 53px;
 }
 
 .search-wrapper input{
@@ -229,9 +232,262 @@ border-style: none;
 padding-left: 31px;
 }
 
+.property-tab-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 58px 0;
+}
+
+.features-tab-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 104px 0 35px 0;
+}
+
+.section-heading-text{
+  font-family: Inter;
+font-size: 50px;
+font-weight: 700;
+line-height: 61px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+.section-heading-wrapper{
+  margin-bottom: 79px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-heading-wrapper-features{
+  margin-bottom: 62px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-tab-text{
+font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: center;
+color: #FF1212;
+padding: 11px 24px;
+background: rgba(255, 18, 18, 0.13);
+border-radius: 20px;
+cursor: pointer;
+}
+
 .search-wrapper input:focus{
   outline: none;
 }
+
+.sale-image-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sale-title{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left;
+margin: 30px 0px 27px 0px;
+}
+
+.one-sale-wrapper{
+  max-width: 343px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  padding-bottom: 46px;
+}
+
+.sale-description{
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6C6C6C;
+  margin-bottom: 35px;
+}
+
+.sales-text-wrapper{
+  padding-inline: 20px;
+}
+
+.sale-image{
+  width: 100%;
+  height: 100%;
+}
+
+.product-price{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: center;
+padding: 7px 20px;
+background: rgba(255, 18, 18, 0.13);
+border-radius: 20px;
+}
+
+.product-price-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-size{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+color: #038566;
+}
+
+.thin-line{
+  width: 100%;
+  height: 1px;
+  margin: 28px 0 29.06px 0;
+  background-color: #C6C5C5;
+  position: absolute;
+  left: 0;
+}
+
+.office-wrapper{
+  margin-top: 55px;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.venue-wrapper{
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  margin-top: 15px;
+}
+
+.office-wrapper p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+.view-product-button{
+font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+color: white;
+padding: 9px 88px;
+background-color: #FF1212;
+border-style: none;
+border-radius: 20px;
+cursor: pointer;
+}
+
+.sample-property-wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 64px;
+}
+
+.see-more-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  margin-top: 44px;
+}
+
+.see-more-container p{
+  font-family: Inter;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: #0A55C6;
+}
+
+.arrow-holder{
+  width: 12.67px;
+  height: 18.67px;
+}
+
+.arrow-holder img{
+  width: 100%;
+  height: 100%;
+}
+
+.arrow-holder-container{
+  display: flex;
+  align-items: center;
+}
+
+
+.view-product-button-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.venue-wrapper p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+.office-image-wrapper{
+  width: 16px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+}
+
+.venue-image-wrapper{
+  width: 14px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.office-image-wrapper img{
+  width: 100%;
+  height: 100%;
+}
+
+.venue-image-wrapper img{
+  width: 100%;
+  height: 100%;
+}
+
+.view-product-button{
+
+}
+
 
 .search-image-wrapper{
   width: 15px;
@@ -307,4 +563,109 @@ color: #000000;
   height: 650px;
   position: relative;
   bottom: 30px;
+}
+
+.one-category-wrapper{
+  max-width: 270px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+  border-bottom: 5px solid #038566;
+  padding-bottom: 81px;
+}
+
+.category-top{
+  padding: 27px 32px;
+}
+
+.categories-wrapper{
+  display: flex;
+  column-gap: 26px;
+  margin-bottom: 81px;
+}
+
+.contact-info-wrapper{
+  background: #010d20;
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 49px;
+}
+
+.category-image-wrapper{
+  width: 60px;
+  height: 60px;
+}
+
+.contact-info-button-wrapper{
+  display: flex;
+  column-gap: 69px;
+  justify-content: center;
+}
+
+.contact-info-button-wrapper button{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: center;
+padding: 15px 41px;
+background-color: #FF1212;
+color: white;
+border-radius: 50px;
+border-style: none;
+cursor: pointer;
+}
+
+.contact-info-button-wrapper button:hover{
+  background-color: white;
+  color:#FF1212 ;
+}
+
+.category-image-wrapper img{
+  width: 100%;
+  height: 100%;
+}
+
+.category-top p{
+  font-family: Inter;
+font-size: 20px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+margin-top: 19px;
+}
+
+.category-bottom{
+  padding-inline: 14px;
+}
+
+.category-bottom p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: justify;
+color: #6C6C6C;
+}
+
+
+.contact-info-wrapper p{
+font-family: Inter;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0em;
+color: white;
+margin-bottom: 94px;
+}
+
+.contact-info-wrapper h2{
+  font-family: Inter;
+font-size: 50px;
+font-weight: 700;
+line-height: 61px;
+letter-spacing: 0em;
+color: white;
+margin-bottom: 80px;
 }
