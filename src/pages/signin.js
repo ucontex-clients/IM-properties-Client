@@ -23,7 +23,7 @@ export default function Signin() {
         <Button text={'Create Account'} />
         <div>
           <p className="signin-option">
-            Don't have account, <a href="/">Sign up</a>
+            Don't have account, <a href="/signup">Sign up</a>
           </p>
         </div>
       </div>
