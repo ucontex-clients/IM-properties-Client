@@ -20,6 +20,8 @@ export default function Signin() {
         <Input img={"../images/Lock.png"} type={'password'}
         placeholder={'Password'} eye={'../images/Eye.png'} />
 
+        <div className="forgot-password-container"><a href="#">Forgot Password</a></div>
+
         <Button text={'Create Account'} />
         <div>
           <p className="signin-option">

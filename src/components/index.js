@@ -6,3 +6,4 @@ export * from "./SectionTabs";
 export * from "./SectionHeading";
 export * from "./ForSale";
 export * from "./Categories";
+export * from './Feedback'

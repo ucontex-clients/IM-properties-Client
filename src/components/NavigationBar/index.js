@@ -12,6 +12,14 @@ const fontStyle2 = {
     color: '#FF2442'
 }
 
+const signIn = () => {
+    window.location.assign('/signin')
+}
+
+const signUp = () => {
+    window.location.assign('/signup')
+}
+
 
 
   return (
@@ -64,8 +72,8 @@ const fontStyle2 = {
                 </ul>
                 
                 <div className="navigation-buttons-wrapper">
-                    <button className="signBtn">Sign In</button>
-                    <button className="signBtn">Sign Up</button>
+                    <button className="signBtn" onClick={signIn}>Sign In</button>
+                    <button className="signBtn" onClick={signUp}>Sign Up</button>
                 </div>
         </div>
   </div>
