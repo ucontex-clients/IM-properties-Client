@@ -7,3 +7,15 @@ export * from "./SectionHeading";
 export * from "./ForSale";
 export * from "./Categories";
 export * from './Feedback'
+export * from './PropertySection'
+export * from './FeatureSection'
+export * from './FeedbackSection'
+export * from './PropertyView'
+export * from './PropertyViewSection'
+export * from './BlogSection'
+export * from './Blog'
+
+
+
+
+

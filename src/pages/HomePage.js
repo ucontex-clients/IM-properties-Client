@@ -1,69 +1,20 @@
 import React from "react"
-import { Category, Feedback, ForSale, NavigationBar, SectionHeading, SectionTab } from "../components"
+import { Category, Feedback,
+    ForSale, NavigationBar, SectionHeading,
+    SectionTab, PropertySection, FeatureSection,
+    FeedbackSection, PropertyViewSection, BlogSection } from "../components"
 
 export default function HomePage(){
     return(
         <div>
             <NavigationBar />
             <div className="home-image-wrapper">
-                <img src="./images/image1.png"></img>
+                <img src="./images/image1.png" alt="home image"></img>
             </div>
 
-            <div className="property-tab-wrapper">
-                <SectionTab text={"Property"}/>
-            </div>
-                
-            <div className="section-heading-wrapper">
-                <SectionHeading text={'Featured Property'}/>
-            </div>
+           <PropertySection />
 
-            <div className="sample-property-wrapper">
-                <ForSale img={'./images/saleImage.png'} title={'CAMPUS GARDEN ESTATE'} 
-                desc={'Beautiful and well planned estate with a serene environment suitable for both ...'}
-                minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
-
-                <ForSale img={'./images/saleImage.png'} title={'CAMPUS GARDEN ESTATE'} 
-                desc={'Beautiful and well planned estate with a serene environment suitable for both ...'}
-                minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
-
-                <ForSale img={'./images/saleImage.png'} title={'CAMPUS GARDEN ESTATE'} 
-                desc={'Beautiful and well planned estate with a serene environment suitable for both ...'}
-                minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
-            </div>
-
-            <div className="see-more-container">
-                <p>See More</p>
-                <div className="arrow-holder-container">
-                    <div className="arrow-holder">
-                        <img src="./images/arrow.png"></img>
-                    </div>
-                    <div className="arrow-holder">
-                    <img src="./images/arrow.png"></img>
-                </div>
-                </div>
-            </div>
-
-            <div className="features-tab-wrapper">
-                <SectionTab text={"Features"}/>
-            </div>
-
-            <div className="section-heading-wrapper-features">
-                <SectionHeading text={'Core Feature'}/>
-            </div>
-
-            <div className="categories-wrapper">
-                <Category img={'./images/smartLiving.png'} title={'Smart Living'}
-                desc={'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
-
-                <Category img={'./images/ecoConstruction.png'} title={'Eco Construction'}
-                desc={'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
-
-                <Category img={'./images/attractiveLocation.png'} title={'Attractive Location'}
-                desc={'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
-
-                <Category img={'./images/modernTechnology.png'} title={'Modern Technology'}
-                desc={'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,'}/>
-            </div>
+            <FeatureSection />
 
             <div className="contact-info-wrapper">
                 <p>Contact Us</p>
@@ -74,30 +25,27 @@ export default function HomePage(){
                 </div>
             </div>
 
-            <div className="property-tab-wrapper"
-            style={{justifyContent: 'left', marginTop: '123px', marginBottom: '49px', paddingLeft: '57px'}}>
-                <SectionTab text={"Testimonials"}/>
-            </div>
-                
-            <div className="section-heading-wrapper"
-            style={{justifyContent: 'space-between', fontStyle: 'italic',
-            marginBottom: '70px', paddingLeft: '57px', paddingRight: '70px'}}>
-                <SectionHeading text={'Clients Feedbacks'}/>
-                <div className="nav-arrow-wrapper">
-                    <div className="nav-arrow-container" style={{backgroundColor: 'red'}}>
-                        <img src="./images/navArrow2.png"></img>
+            <FeedbackSection />
+            
+            <PropertyViewSection />
+            <BlogSection />
+
+            <div className="explore-blue">
+                <div className="explore-red">
+                    <div className="explore-red-left">
+                        <h3>Looking for a dream property?</h3>
+                        <p>We can help you realize your dream of a new property</p>
                     </div>
-                    <div className="nav-arrow-container" style={{backgroundColor: 'black'}}>
-                        <img src="./images/navArrow.png"></img>
+                    <div className="explore-red-right">
+                        <p>Explore Property</p>
+                        <div className="arrow-container">
+                            <img src="./images/exploreArrow.png" ></img>
+                            <img src="./images/exploreArrow.png" ></img>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="feedback-main-wrapper">
-                <Feedback img1={'./images/feedbackImage1.png'} img2={'./images/userFeedback.png'} />
-                <Feedback img1={'./images/feedbackImage1.png'} img2={'./images/userFeedback.png'} />
-                <Feedback img1={'./images/feedbackImage1.png'} img2={'./images/userFeedback.png'} />
-            </div>
         </div>
     )
 }
