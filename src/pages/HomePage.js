@@ -8,7 +8,7 @@ export default function HomePage(){
     return(
         <div>
             <NavigationBar />
-            <div className="home-image-wrapper">
+            <div className="home-image-wrapper" style={{marginTop: '79px'}}>
                 <img src="./images/image1.png" alt="home image"></img>
             </div>
 

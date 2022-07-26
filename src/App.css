@@ -187,10 +187,16 @@
 }
 
 .navigation-wrapper{
+  width: 100vw;
   padding: 7px 41px 8px 27px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .navigation-right{
