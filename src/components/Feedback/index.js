@@ -3,7 +3,7 @@ import React from "react";
 export function Feedback({img1, img2}) {
   return (
     <div>
-        <div className="feedback-wrapper" style={{backgroundColor: 'red', }}>
+        <div className="feedback-wrapper">
             <div className="feedback-image-container">
                 <img src={img1}></img>
             </div>

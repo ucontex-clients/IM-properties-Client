@@ -2,7 +2,7 @@ import React from "react"
 import { Category, Feedback,
     ForSale, NavigationBar, SectionHeading,
     SectionTab, PropertySection, FeatureSection,
-    FeedbackSection, PropertyViewSection, BlogSection } from "../components"
+    FeedbackSection, PropertyViewSection, BlogSection, SiteVideo, VideoSection } from "../components"
 
 export default function HomePage(){
     return(
@@ -24,6 +24,8 @@ export default function HomePage(){
                     <button>Call Us</button>
                 </div>
             </div>
+
+            <VideoSection />
 
             <FeedbackSection />
             
