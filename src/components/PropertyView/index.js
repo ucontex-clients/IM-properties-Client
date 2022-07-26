@@ -1,7 +1,26 @@
 import React from "react"
 
-export function PropertyView(){
+export function PropertyView({img, name, location}){
     return(
-        <div><h1>My Property</h1></div>
+        <div className="property-main-container">
+                <div className="main-view-image">
+                    <img src={img} alt='view estate picture'></img>
+                </div>
+                <div className="property-fade"></div>
+                <div className="property-view-bottom">
+                    <div>
+                        <p>{name}</p>
+                        <div className="location-wrapper">
+                            <div className="location-holder">
+                                <img src="./images/Location.png"></img>
+                            </div>
+                            <p>{location}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>View</button>
+                    </div>
+                </div>
+        </div>
     )
 }

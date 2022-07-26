@@ -3,8 +3,18 @@ import { PropertyView } from ".."
 
 export function PropertyViewSection(){
     return(
-        <div>
-            <PropertyView />
+        <div className="property-view-main-wrapper">
+            <PropertyView img={'./images/view.png'}
+            name={'Savana Estate'} location={'Abuja'}/>
+
+            <PropertyView img={'./images/view.png'}
+            name={'Savana Estate'} location={'Abuja'}/>
+
+            <PropertyView img={'./images/view.png'}
+            name={'Savana Estate'} location={'Abuja'}/>
+
+            <PropertyView img={'./images/view.png'}
+            name={'Savana Estate'} location={'Abuja'}/>
         </div>
     )
 }

@@ -239,6 +239,20 @@ padding-left: 31px;
   margin: 50px 0 58px 0;
 }
 
+.property-main-container{
+  width: 320px;
+  position: relative;
+}
+
+.property-fade{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.60);
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
 .features-tab-wrapper{
   display: flex;
   align-items: center;
@@ -382,6 +396,16 @@ max-height: 21px;
   align-items: center;
 }
 
+.blog-image-container{
+  width: 350px;
+}
+
+.blog-image-container img{
+  width: 100%;
+}
+
+
+
 .explore-red-left h3{
   font-family: Inter;
 font-size: 40px;
@@ -437,15 +461,15 @@ letter-spacing: 0em;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 justify-content: center;
-column-gap: 65px;
 padding-inline: 47px;
+column-gap: 65px;
 }
 
 .feedback-wrapper{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .feedback-white{
@@ -453,7 +477,98 @@ padding-inline: 47px;
   padding: 21px 16px;
   background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
+  position: absolute;
+  top: 269px;
+}
+
+.property-view-main-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: lightgreen;
+  margin-top: 245px;
+}
+
+.main-view-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+}
+
+.property-view-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 0 49px 35px 21px;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+
+.property-main-container:hover .property-view-bottom{
+  display: flex;
+}
+
+.property-main-container:hover .property-fade{
+  display: block;
+}
+
+.location-holder{
+  width: 12px;
+  height: 12px;
+}
+
+.property-view-bottom p:first-child{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0em;
+color: #fff;
+}
+
+.property-view-bottom p:last-child{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 300;
+line-height: 18px;
+letter-spacing: 0em;
+color: #fff;
+margin-top: 3px;
+}
+
+.property-view-bottom button{
+  padding: 10px 18px;
+  background-color: #FF1212;
+  font-family: Inter;
+font-size: 18px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0em;
+color: #fff;
+border-radius: 10px;
+cursor: pointer;
+border: none;
+}
+
+
+.location-holder img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location-wrapper{
+  display: flex;
+  column-gap: 6px;
+}
+
+.main-view-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .user-image-wrapper{
@@ -471,6 +586,21 @@ height: auto;
   display: flex;
   column-gap: 21px;
   align-items: center;
+}
+
+.feedback-image-container{
+  width: 350px;
+  overflow: hidden;
+  object-fit: fill;
+  background-color: #6C6C6C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-image-container img{
+  height: 100%;
+  width: 100%;
 }
 
 .user-feedback{
