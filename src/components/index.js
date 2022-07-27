@@ -16,6 +16,9 @@ export * from './BlogSection'
 export * from './Blog'
 export * from './SiteVideo'
 export * from './VideoSection'
+export * from './PropertiesNav'
+export * from './SingleProperty'
+
 
 
 

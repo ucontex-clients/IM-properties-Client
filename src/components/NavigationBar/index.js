@@ -39,32 +39,32 @@ const signUp = () => {
 
         <div className="navigation-right">
             <ul>
-                    <li><a href="#"
+                    <li><a href="/"
                     style={tab=='Home'? fontStyle2 : fontStyle1}
                     onClick={(e) => {
                         setTab('Home')
                     }}>Home</a></li>
-                    <li><a href="#"
+                    <li><a href="/properties"
                     style={tab=='Property'? fontStyle2 : fontStyle1}
                     onClick={(e) => {
                         setTab('Property')
                     }}>Property</a></li>
-                    <li><a href="#"
+                    <li><a href="about"
                     style={tab=='AboutUs'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('AboutUs')
                     }}>About Us</a></li>
-                    <li><a href="#"
+                    <li><a href="blog"
                     style={tab=='Blog'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('Blog')
                     }}>Blog</a></li>
-                    <li><a href="#"
+                    <li><a href="contact"
                     style={tab=='ContactUs'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('ContactUs')
                     }}>Contact Us</a></li>
-                    <li><a href="#"
+                    <li><a href="faq"
                     style={tab=='FAQ'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('FAQ')

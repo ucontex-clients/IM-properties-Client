@@ -3,6 +3,13 @@ import { ForSale, SectionHeading, SectionTab } from ".."
 
 
 export function PropertySection(){
+
+const goToProperties = (e) => {
+    window.location.assign('/properties')
+}
+
+
+
     return (
         <div>
              <div className="property-tab-wrapper">
@@ -27,7 +34,7 @@ export function PropertySection(){
                 minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
             </div>
 
-            <div className="see-more-container">
+            <div className="see-more-container" onClick={goToProperties}>
                 <p>See More</p>
                 <div className="arrow-holder-container">
                     <div className="arrow-holder">

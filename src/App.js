@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Signup from "./pages/signup";
 import Signin from "./pages/signin";
 import HomePage from "./pages/HomePage";
+import AllProperties from "./pages/AllProperties";
+import PropertyDetails from "./pages/PropertyDetails";
 
 function App() {
   return (
@@ -12,6 +14,10 @@ function App() {
         <Route path={'/'} element={<HomePage />}/>
         <Route path={'/signup'} element={<Signup />}/>
         <Route path={'/signin'} element={<Signin />}/>
+        <Route path={'/properties'} element={<AllProperties />}/>
+        <Route path={'/property'} element={<PropertyDetails />}/>
+
+
       </Routes>
     </Router>
 
