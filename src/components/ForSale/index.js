@@ -1,6 +1,12 @@
 import React from "react"
 
 export function ForSale({img, title, desc, minPrice, maxPrice, size}){
+
+    const checkOut = () => {
+        window.location.assign('/property')
+    }
+
+
     return(
         <div className="one-sale-wrapper">
             <div className="sale-image-wrapper">
@@ -33,7 +39,7 @@ export function ForSale({img, title, desc, minPrice, maxPrice, size}){
                 </div>
 
                 <div className="view-product-button-wrapper">
-                    <button className="view-product-button">VIEW</button>
+                    <button className="view-product-button" onClick={checkOut}>VIEW</button>
                 </div>
             </div>
         </div>
