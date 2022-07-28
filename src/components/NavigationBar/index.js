@@ -12,6 +12,14 @@ const fontStyle2 = {
     color: '#FF2442'
 }
 
+const signIn = () => {
+    window.location.assign('/signin')
+}
+
+const signUp = () => {
+    window.location.assign('/signup')
+}
+
 
 
   return (
@@ -31,32 +39,32 @@ const fontStyle2 = {
 
         <div className="navigation-right">
             <ul>
-                    <li><a href="#"
+                    <li><a href="/"
                     style={tab=='Home'? fontStyle2 : fontStyle1}
                     onClick={(e) => {
                         setTab('Home')
                     }}>Home</a></li>
-                    <li><a href="#"
+                    <li><a href="/properties"
                     style={tab=='Property'? fontStyle2 : fontStyle1}
                     onClick={(e) => {
                         setTab('Property')
                     }}>Property</a></li>
-                    <li><a href="#"
+                    <li><a href="about"
                     style={tab=='AboutUs'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('AboutUs')
                     }}>About Us</a></li>
-                    <li><a href="#"
+                    <li><a href="blog"
                     style={tab=='Blog'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('Blog')
                     }}>Blog</a></li>
-                    <li><a href="#"
+                    <li><a href="contact"
                     style={tab=='ContactUs'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('ContactUs')
                     }}>Contact Us</a></li>
-                    <li><a href="#"
+                    <li><a href="faq"
                     style={tab=='FAQ'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('FAQ')
@@ -64,8 +72,8 @@ const fontStyle2 = {
                 </ul>
                 
                 <div className="navigation-buttons-wrapper">
-                    <button className="signBtn">Sign In</button>
-                    <button className="signBtn">Sign Up</button>
+                    <button className="signBtn" onClick={signIn}>Sign In</button>
+                    <button className="signBtn" onClick={signUp}>Sign Up</button>
                 </div>
         </div>
   </div>
