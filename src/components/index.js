@@ -18,6 +18,11 @@ export * from './SiteVideo'
 export * from './VideoSection'
 export * from './PropertiesNav'
 export * from './SingleProperty'
+export * from './PropertyDetailBottom'
+export * from './PlotDimension'
+export * from './PlotButtons'
+
+
 
 
 
