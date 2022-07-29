@@ -38,7 +38,7 @@ export default function HomePage(){
                         <h3>Looking for a dream property?</h3>
                         <p>We can help you realize your dream of a new property</p>
                     </div>
-                    <div className="explore-red-right">
+                    <div className="explore-red-right" onClick={() => window.location.assign('/properties')}>
                         <p>Explore Property</p>
                         <div className="arrow-container">
                             <img src="./images/exploreArrow.png" ></img>

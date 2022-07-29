@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { NavigationBar, PropertyDetailBottom, SingleProperty } from "../components"
+import { NavigationBar, PropertyDetailBottom, SingleProperty, ViewPropertyLayout } from "../components"
 
 
 export default function PropertyDetails(){
@@ -9,7 +9,7 @@ export default function PropertyDetails(){
 
     return (
         <div>
-            <NavigationBar />
+            <NavigationBar page="Property" />
 
             <div className="property-detail-image-main-wrapper">
                 <div className="single-large-image-wrapper">

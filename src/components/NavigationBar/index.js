@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-export function NavigationBar() {
+export function NavigationBar({page='Home'}) {
 
-const [tab, setTab] = useState('Home')
+const [tab, setTab] = useState(page)
 
 const fontStyle1 = {
     fontWeight: 500,
