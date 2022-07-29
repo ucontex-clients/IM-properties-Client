@@ -6,6 +6,8 @@ import Signin from "./pages/signin";
 import HomePage from "./pages/HomePage";
 import AllProperties from "./pages/AllProperties";
 import PropertyDetails from "./pages/PropertyDetails";
+import FullPropertyLayout from "./pages/FullPropertyLayout";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path={'/signin'} element={<Signin />}/>
         <Route path={'/properties'} element={<AllProperties />}/>
         <Route path={'/property'} element={<PropertyDetails />}/>
+        <Route path={'/layout'} element={<FullPropertyLayout />}/>
+        <Route path={'/dashboard'} element={<Dashboard />}/>
 
 
       </Routes>
