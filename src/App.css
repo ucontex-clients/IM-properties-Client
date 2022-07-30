@@ -634,6 +634,8 @@ overflow-y: auto;
 .dashboard-main-right{
   padding-inline: 41px;
   padding-top: 7px;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .dashboard-logo-section{
