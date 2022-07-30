@@ -21,6 +21,9 @@ export * from './SingleProperty'
 export * from './PropertyDetailBottom'
 export * from './PlotDimension'
 export * from './PlotButtons'
+export * from './DashboardSideNav'
+export * from './DashboardElements'
+
 
 
 
