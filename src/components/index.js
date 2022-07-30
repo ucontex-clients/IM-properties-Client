@@ -22,7 +22,12 @@ export * from './PropertyDetailBottom'
 export * from './PlotDimension'
 export * from './PlotButtons'
 export * from './DashboardSideNav'
-export * from './DashboardElements'
+export * from './DashboardComponents/DashboardElements'
+export * from './DashboardComponents/DashboardHome'
+export * from './DashboardComponents/DashboardProperty'
+
+
+
 
 
 
