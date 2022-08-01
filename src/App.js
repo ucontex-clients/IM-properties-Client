@@ -19,7 +19,7 @@ function App() {
         <Route path={'/properties'} element={<AllProperties />}/>
         <Route path={'/property'} element={<PropertyDetails />}/>
         <Route path={'/layout'} element={<FullPropertyLayout />}/>
-        <Route path={'/dashboard'} element={<Dashboard />}/>
+        <Route path={'/about'} element={<Dashboard />}/>
 
 
       </Routes>

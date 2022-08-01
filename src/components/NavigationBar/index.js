@@ -26,7 +26,7 @@ const signUp = () => {
     <div className="navigation-wrapper">
         <div className="navigation-left">
             <div className="navigation-logo-wrapper">
-                <img src="./images/logo.png"></img>
+                <a href="/"><img src="./images/logo.png"></img></a>
             </div>
 
             <div className="search-wrapper">

@@ -4,7 +4,7 @@ export function PropertiesNav(){
     return(
         <div className="all-properties-nav-wrapper">
             <div className="all-properties-nav-logo-container">
-                <img src="./images/logo.png"></img>
+                <a href="/"><img src="./images/logo.png"></img></a>
             </div>
             <div className="all-properties-right-wrapper">
                 <div className="all-properties-home-wrapper">

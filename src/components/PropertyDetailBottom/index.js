@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { PlotDimension, PlotButtons } from ".."
+import { PlotDimension, PlotButtons, SimilarProperty } from ".."
 
 
 export function PropertyDetailBottom(){
@@ -8,6 +8,10 @@ export function PropertyDetailBottom(){
 
 const plotDimensions = [1,2,3,4,5,6,7,8,9,10,11,12].map((plot, index) => {
     return <PlotDimension key={index} />
+})
+
+const allSimilarProperty = [1,2,3].map((property, index) => {
+    return <SimilarProperty />
 })
 
 
@@ -46,21 +50,56 @@ const plotDimensions = [1,2,3,4,5,6,7,8,9,10,11,12].map((plot, index) => {
             </div>
         </div>
 
-        <div className="property-layout-wrapper">
-            <div className="property-layout-head">
-                <p>Property Layout</p>
-                <p>30 of 30 Sold</p>
+        <div style={{display:'flex', flexDirection: 'column', rowGap: '40px'}}>
+            <div className="property-layout-wrapper">
+                <div className="property-layout-head">
+                    <p>Property Layout</p>
+                    <p>30 of 30 Sold</p>
+                </div>
+
+                <div className="property-layout-main">
+                        {plotDimensions}
+                </div>
+
+                <div className="plot-button-wrapper">
+                    <PlotButtons/>
+                </div>
+            </div>
+            <div className='property-layout-wrapper'>
+                    <div className="date-picker-head">
+                        <p>Book Physical Inspection</p>
+                    </div>
+
+                    <div className="date-picker-main">
+                        <div className="select-date-wrapper">
+                            <div><img src="./images/Calendar2.png"></img></div>
+                            <p>Select Date</p>
+                        </div>
+
+                        <div>
+                            <input type='month'></input>
+                        </div>
+
+                        <div className="select-time-wrapper">
+                            <div className="select-date-wrapper">
+                                <div><img src="./images/Time.png"></img></div>
+                                <p>Select time</p>
+                            </div>
+                           <div style={{display:'flex', columnGap: '25px'}}>
+                                <button>10AM</button>
+                                <button>1PM</button>
+                           </div>
+                        </div>
+                    </div>
+
             </div>
 
-            <div className="property-layout-main">
-                    {plotDimensions}
+            <div className='similar-property-wrapper'>
+                <p className="similar-property">Similar Property</p>
+                {allSimilarProperty}
             </div>
-
-            <div className="plot-button-wrapper">
-                <PlotButtons/>
-            </div>
-
         </div>
+
        </div>
     )
 }
