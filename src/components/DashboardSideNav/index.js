@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-export function DashboardSideNav({number}){
+export function DashboardSideNav({number, activePage, setActivePage}){
 
 
     const back1 = {
@@ -18,8 +18,6 @@ export function DashboardSideNav({number}){
         color: '#000000',
     }
   
-
-    const [activePage, setActivePage] = useState('buy')
 
 
 

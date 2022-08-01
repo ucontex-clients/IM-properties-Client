@@ -876,6 +876,81 @@ border-radius: 20px;
   background-color: #fff;
 }
 
+.similar-property-wrapper{
+display: flex;
+flex-direction: column;
+row-gap: 20px;
+height: fit-content;
+}
+
+.similar-property-container{
+  padding: 13px 14px;
+  display: flex;
+  column-gap: 20px;
+  border: 1px solid #C6C5C5;
+  border-radius: 5px;
+}
+
+.similar-property-image{
+  width: 100px;
+  height: 95px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+}
+
+.similar-property-right p:first-child{
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.similar-property-right > p:last-child{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+color: #3DB2FF;
+}
+
+.similar-location-wrapper{
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 4px 10px;
+background: rgba(255, 18, 18, 0.1);
+border-radius: 20px;
+width: fit-content;
+padding-right: 35px;
+margin-block: 9px 22px;
+}
+
+.similar-location-wrapper > div {
+  width: 6px;
+  height: 7.85px;
+  display: grid;
+  place-items: center;
+}
+
+.similar-location-wrapper > div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.similar-location-wrapper > p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+color: #FF1212;
+}
+
+.similar-property-image img{
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .plot-button-main-wrapper{
   display: flex;
   justify-content: center;
@@ -1077,6 +1152,61 @@ font-weight: 700;
   grid-template-columns: 2fr 1fr;
   column-gap: 15px;
   padding-inline: 40px;
+}
+
+.date-picker-head{
+  padding: 23px 0 17px 18px;
+  border-bottom: 1px solid #C6C5C5;
+}
+
+.date-picker-head p{
+  font-family: Inter;
+font-size: 20px;
+font-weight: 700;
+}
+
+.select-date-wrapper{
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+.select-date-wrapper > div{
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+}
+
+.select-date-wrapper > div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.select-date-wrapper p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+color: #6C6C6C;
+}
+
+.select-time-wrapper{
+  padding-block: 33px 41px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.similar-property{
+  font-family: Inter;
+font-size: 20px;
+font-weight: 700;
+}
+
+.date-picker-main{
+  padding-block: 29px 48px;
+  padding-inline: 50px;
 }
 
 .watch-video-container video{

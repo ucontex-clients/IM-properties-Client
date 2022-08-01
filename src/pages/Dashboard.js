@@ -1,7 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { DashboardElement, DashboardHome, DashboardSideNav, DashboardProperty, DashboardBooking } from "../components"
+import InspectionBooking from "../components/DashboardComponents/InspectionBooking"
 
 export default function({profilePicture = './images/profilePicture.png'}){
+
+    const [activePage, setActivepage] = useState('dashboard')
+
+
     return(
         <div style={{backgroundColor: '#F5F5F5'}}>
             <div className="dashboard-nav">
@@ -14,9 +19,11 @@ export default function({profilePicture = './images/profilePicture.png'}){
 
             <div className="dashboard-main-wrapper">
                 <div className="dashboard-main-left">
-                   <DashboardSideNav />
+                   <DashboardSideNav activePage={activePage} setActivePage={setActivepage} />
                 </div>
-                    <DashboardBooking />
+                    {activePage == 'dashboard' && <DashboardHome />}
+                    {activePage == 'property' && <DashboardProperty />}
+                    {activePage == 'inspection' && <DashboardBooking />}
             </div>
         </div>
     )
