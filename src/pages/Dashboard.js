@@ -1,5 +1,5 @@
 import React from "react"
-import { DashboardElement, DashboardHome, DashboardSideNav, DashboardProperty } from "../components"
+import { DashboardElement, DashboardHome, DashboardSideNav, DashboardProperty, DashboardBooking } from "../components"
 
 export default function({profilePicture = './images/profilePicture.png'}){
     return(
@@ -16,7 +16,7 @@ export default function({profilePicture = './images/profilePicture.png'}){
                 <div className="dashboard-main-left">
                    <DashboardSideNav />
                 </div>
-                    <DashboardHome />
+                    <DashboardBooking />
             </div>
         </div>
     )

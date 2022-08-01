@@ -455,6 +455,10 @@ font-weight: 700;
   place-items: center;
 }
 
+.inspection-booking-holder{
+  margin-top: 18px;
+}
+
 .each-property-right .title {
   font-family: Inter;
 font-size: 16px;
@@ -547,6 +551,72 @@ text-align: center;
 border-radius: 50%;
 }
 
+.book-inspection-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #FF1212;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 11px 25px;
+  cursor: pointer;
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.inspection-heading-ul{
+  background-color: #000000;
+  display: flex;
+  background-color: white;
+  list-style: none;
+  padding: 40px 25px;
+  width: 100%;
+  border-top: 1px solid #3DB2FF;
+  border-left: 1px solid #3DB2FF;
+  border-right: 1px solid #3DB2FF;
+  border-radius: 5px 5px 0 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inspection-heading-ul p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+}
+
+.inspection-item-ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 25px;
+  align-items: center;
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+}
+
+/* .reschedule-cancel-wrapper{
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+} */
+
+
+.inspection-booking-bottom{
+  height: 200px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  border-right: 1px solid #3DB2FF;
+  border-left: 1px solid #3DB2FF;
+  border-bottom: 1px solid #3DB2FF;
+  margin-bottom: 200px;
+}
 .side-nav-ul{
   background-color: #fff;
   border: 1px solid rgba(61, 178, 255, 0.2);
@@ -556,6 +626,7 @@ overflow: auto;
 }
 
 .dashboard-property-logo-wrapper{
+  position: relative;
   display: flex;
   column-gap: 19px;
   align-items: center;
@@ -606,6 +677,8 @@ color: #000000;
   cursor: pointer;
   padding: 11px 29px;
 }
+
+
 
 .list-item-wrapper > div{
   width: 20px;
@@ -1294,7 +1367,7 @@ text-align: left;
 }
 
 .feedback-main-wrapper{
-  padding-inline: 50px;
+  padding-inline: 10vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 65px;
@@ -1392,6 +1465,8 @@ max-height: 21px;
   height: 527px;
   background-color: #01193D;
   margin-top: 263px;
+  display: flex;
+  justify-content: center;
 }
 
 .explore-red{
@@ -1790,7 +1865,7 @@ cursor: pointer;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 64px;
-  padding-inline: 66px 71px;
+  padding-inline: 10vw;
 }
 
 .arrow-div{
