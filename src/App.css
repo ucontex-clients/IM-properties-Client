@@ -1026,6 +1026,35 @@ border: 1px solid #C6C5C5;
   align-items: center;
 }
 
+.dashboard-referral-logo-wrapper{
+  display: flex;
+  align-items: center;
+  column-gap: 17px;
+}
+
+.dashboard-referral-logo-wrapper div{
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.dashboard-referral-logo-wrapper div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dashboard-referral-logo-wrapper p{
+font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+}
+
+
+
+
 .my-cart-number{
   position: absolute;
   background-color: hsl(0, 100%, 54%);

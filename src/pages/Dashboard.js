@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { DashboardElement, DashboardHome, DashboardSideNav, DashboardProperty, DashboardBooking } from "../components"
+import { DashboardElement, DashboardHome, DashboardSideNav, DashboardProperty, DashboardBooking, DashboardReferral } from "../components"
 import InspectionBooking from "../components/DashboardComponents/InspectionBooking"
 
 export default function({profilePicture = './images/profilePicture.png'}){
@@ -24,6 +24,7 @@ export default function({profilePicture = './images/profilePicture.png'}){
                     {activePage == 'dashboard' && <DashboardHome />}
                     {activePage == 'property' && <DashboardProperty />}
                     {activePage == 'inspection' && <DashboardBooking />}
+                    {activePage == 'referral' && <DashboardReferral />}
             </div>
         </div>
     )
