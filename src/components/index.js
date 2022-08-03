@@ -30,6 +30,8 @@ export * from './DashboardComponents/DashboardElements'
 export * from './DashboardComponents/DashboardHome'
 export * from './DashboardComponents/DashboardProperty'
 export * from './DashboardComponents/DashboardBooking'
+export * from './PaymentComponents/OneOffPayment'
+
 
 
 

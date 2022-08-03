@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { DashboardElement, DashboardHome, DashboardSideNav, DashboardProperty, DashboardBooking, DashboardReferral } from "../components"
+import { DashboardElement, DashboardHome, DashboardSideNav,
+    DashboardProperty, DashboardBooking, DashboardReferral, OneOffPayment } from "../components"
 import InspectionBooking from "../components/DashboardComponents/InspectionBooking"
 
 export default function({profilePicture = './images/profilePicture.png'}){

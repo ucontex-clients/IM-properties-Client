@@ -62,6 +62,7 @@ export function DashboardSideNav({number, activePage, setActivePage}){
                 }} style={activePage =='payment'? back1 :back2}>
                     <div style={{width: '20px', height: '16px'}}><img src="./images/payment.png"></img></div>
                     <p style={activePage =='payment'? textStyle1 :textStyle2}>Payment</p>
+                    <div className="arrow-down-holder" style={{width:'15px', height: '10px'}}><img src="./images/arrowDown.png"></img></div>
                 </div>
             </li>
             <li>
@@ -70,6 +71,7 @@ export function DashboardSideNav({number, activePage, setActivePage}){
                 }} style={activePage =='wallet'? back1 :back2}>
                     <div style={{width: '20px', height: '18.5px'}}><img src="./images/wallet.png"></img></div>
                     <p style={activePage =='wallet'? textStyle1 :textStyle2}>Wallet</p>
+                    <div className="arrow-down-holder" style={{width:'15px', height: '10px'}}><img src="./images/arrowDown.png"></img></div>
                 </div>
             </li>
             <li>
