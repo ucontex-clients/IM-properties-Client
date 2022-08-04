@@ -4,7 +4,7 @@ import { NavigationBar, OneOffPayment } from "../components"
 export default function Payment(){
     return(
         <div>
-            <NavigationBar />
+            <NavigationBar page='AboutUs'/>
             <div className="payment-main-section">
                 <OneOffPayment />
             </div>

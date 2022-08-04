@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-/* body{
+body{
   background: #F5F5F5;
-} */
+}
 
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap");
@@ -1001,6 +1001,7 @@ height: fit-content;
   column-gap: 20px;
   border: 1px solid #C6C5C5;
   border-radius: 5px;
+  background-color: #fff;
 }
 
 .similar-property-image{
@@ -1010,6 +1011,7 @@ height: fit-content;
   place-items: center;
   border-radius: 5px;
 }
+
 
 .similar-property-right p:first-child{
   font-family: Inter;
@@ -2238,6 +2240,7 @@ margin: 30px 0px 27px 0px;
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   padding-bottom: 46px;
+  background-color: #fff;
 }
 
 .sale-description{
@@ -2369,14 +2372,97 @@ color: #038566;
 .make-payment-wrapper{
   padding-bottom: 43px;
   border-bottom: 1px solid #C6C5C5;
+  text-align: center;
 }
+
+.payment-total-para{
+  margin-block: 43px 24px;
+  font-family: Inter;
+font-size: 20px;
+font-weight: 700;
+color: #6C6C6C;
+}
+
+.payment-amount-para{
+  margin-bottom: 30px;
+  font-family: Inter;
+font-size: 25px;
+font-weight: 700;
+}
+
+.payment-dropdown-div label{
+  display: block;
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+}
+
+.payment-dropdown-div select, .payment-dropdown-div p{
+  width: 100%;
+  padding: 16px 12px;
+  border-radius: 5px;
+  border: 1px solid #6C6C6C;
+  background-color: transparent;
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 600;
+  color: #6C6C6C;
+}
+
+.pay-now-button-holder{
+  margin-block: 85px 68px;
+  display: grid;
+  place-items: center;
+}
+
+.pay-now-button-holder button{
+  padding: 10px 52px;
+  font-family: Inter;
+font-size: 16px;
+font-weight: 700;
+background-color: #3DB2FF;
+border-radius: 5px;
+cursor: pointer;
+border: none;
+color: #fff;
+}
+
+.option{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 600;
+color: #6C6C6C;
+}
+
+.drop-down-container{
+  width: 100%;
+  padding: 16px 12px;
+  border-radius: 5px;
+  border: 1px solid #C6C5C5;
+  position: relative;
+}
+
+.drop-down-container > p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 600;
+color: #6C6C6C;
+}
+
+
+.payment-dropdown-arrow img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .one-off-payment-box{
   border: 1px solid #C6C5C5;
   border-radius: 5px;
   background-color: #fff;
   padding: 49px 50px;
-  margin-top: 17px;
+  margin-block: 17px 100px;
 }
 
 .arrow-div{
@@ -2558,6 +2644,7 @@ color: #000000;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
   border-bottom: 5px solid #038566;
   padding-bottom: 81px;
+  background-color: #fff;
 }
 
 .category-top{
