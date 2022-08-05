@@ -1,6 +1,6 @@
 import React from "react"
 
-export function OneOffPayment(){
+export function OneOffPayment({changePaymentMode}){
     return(
         <div className="one-off-payment-container">
             <p className="payment-top-para">Make Payment for 4 plots at <span>CAMPUS GARDEN ESTATE PORT HARCOURT</span></p>
@@ -11,9 +11,9 @@ export function OneOffPayment(){
             <div className="payment-dropdown-div">
                 <label htmlFor='payment-plan' style={{marginBottom: '26px', color: '#6C6C6C'}}>Payment plan</label>
                 <select>
-                    <option className="option">Out right payment</option>
-                    <option className="option">Installmental payment</option>
-                    <option className="option">Easy-buy plan</option>
+                    <option className="option" value='one-off'>Out right payment</option>
+                    <option className="option" value='installment'>Installmental payment</option>
+                    <option className="option" value='easy-buy'>Easy-buy plan</option>
                 </select>
             </div>
 
@@ -24,15 +24,15 @@ export function OneOffPayment(){
 
             <div className="payment-dropdown-div" style={{marginTop: '47px'}}>
                 <label htmlFor='payment-plan' style={{marginBottom: '31px', fontWeight:'700'}}>Payment Method</label>
-                <select>
+                <select name="payment" value='0'>
                     <option className="option">Paystack (card, USSD, Bank Transfer)</option>
                     <option className="option">My Wallet</option>
                     <option className="option">Bank Deposit</option>
                 </select>
+            </div>
 
-                <div className="pay-now-button-holder">
+            <div className="pay-now-button-holder">
                     <button>Pay Now</button>
-                </div>
             </div>
             </div>
         </div>

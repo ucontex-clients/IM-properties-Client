@@ -59,6 +59,7 @@ export function DashboardSideNav({number, activePage, setActivePage}){
             <li>
                 <div className="list-item-wrapper" onClick={() => {
                     setActivePage('payment')
+                    window.location.assign('/payment')
                 }} style={activePage =='payment'? back1 :back2}>
                     <div style={{width: '20px', height: '16px'}}><img src="./images/payment.png"></img></div>
                     <p style={activePage =='payment'? textStyle1 :textStyle2}>Payment</p>

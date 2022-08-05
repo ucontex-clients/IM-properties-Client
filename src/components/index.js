@@ -30,10 +30,10 @@ export * from './DashboardComponents/DashboardElements'
 export * from './DashboardComponents/DashboardHome'
 export * from './DashboardComponents/DashboardProperty'
 export * from './DashboardComponents/DashboardBooking'
+export * from './DashboardComponents/DashboardUserProfile'
 export * from './PaymentComponents/OneOffPayment'
-
-
-
+export * from './PaymentComponents/Installment'
+export * from './PaymentComponents/EasyBuy'
 
 
 
