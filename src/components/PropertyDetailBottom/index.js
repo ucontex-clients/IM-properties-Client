@@ -94,7 +94,7 @@ const allSimilarProperty = [1,2,3].map((property, index) => {
 
             </div>
 
-            <div className='similar-property-wrapper'>
+            <div className='similar-property-wrapper' style={{marginBottom: '50px'}}>
                 <p className="similar-property">Similar Property</p>
                 {allSimilarProperty}
             </div>

@@ -12,7 +12,7 @@ const displayProperties = [1, 3, 4, 8, 2,5].map((property, index) => {
 })
 
     return(
-        <div>
+        <div style={{backgroundColor: '#fff', paddingBottom:'356px'}}>
             <PropertiesNav />
 
             <div className="property-top-image-wrapper">

@@ -1,19 +1,29 @@
 import React, { useState } from "react"
-import { DashboardElement, DashboardHome, DashboardSideNav, DashboardProperty, DashboardBooking } from "../components"
+import { DashboardElement, DashboardHome, DashboardSideNav,
+    DashboardProperty, DashboardBooking, DashboardReferral, OneOffPayment, UserProfileModal, DashboardViewProfile, DashboardCreateProfile } from "../components"
 import InspectionBooking from "../components/DashboardComponents/InspectionBooking"
 
-export default function({profilePicture = './images/profilePicture.png'}){
+export default function Dashboard({profilePicture = './images/profilePicture.png'}){
 
-    const [activePage, setActivepage] = useState('dashboard')
+    const [activePage, setActivepage] = useState('create')
+    const [showModal, setShowModal] = useState(false)
+
+    const myModal = () => {
+        setShowModal(prevVal => !prevVal)
+    }
+
 
 
     return(
         <div style={{backgroundColor: '#F5F5F5'}}>
+            {showModal && <UserProfileModal profilePicture={profilePicture} myModal={myModal} setActivePage={setActivepage}/>}
             <div className="dashboard-nav">
                 <div className="dashboard-nav-logo-holder"><a href="/"><img src="./images/logo.png"></img></a></div>
                 <div className="dashboard-nav-right">
                     <div className="bell-holder"><img src="./images/bell.png"></img></div>
-                    <div className="user2-holder"><img src={profilePicture}></img></div>
+                    <div className="user2-holder" onClick={myModal}>
+                        <img src={profilePicture}></img>
+                    </div>
                 </div>
             </div>
 
@@ -24,6 +34,11 @@ export default function({profilePicture = './images/profilePicture.png'}){
                     {activePage == 'dashboard' && <DashboardHome />}
                     {activePage == 'property' && <DashboardProperty />}
                     {activePage == 'inspection' && <DashboardBooking />}
+                    {activePage == 'referral' && <DashboardReferral />}
+                    {activePage == 'view' && <DashboardViewProfile />}
+                    {activePage == 'create' && <DashboardCreateProfile />}
+
+
             </div>
         </div>
     )

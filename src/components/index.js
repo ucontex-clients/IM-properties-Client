@@ -24,12 +24,18 @@ export * from './PlotDimension'
 export * from './PlotButtons'
 export * from './DisplayWrapper'
 export * from './DashboardSideNav'
+export * from './DashboardComponents/DashboardReferral'
+export * from './CartItems'
 export * from './DashboardComponents/DashboardElements'
 export * from './DashboardComponents/DashboardHome'
 export * from './DashboardComponents/DashboardProperty'
 export * from './DashboardComponents/DashboardBooking'
-
-
+export * from './DashboardComponents/DashboardCreateProfile'
+export * from './DashboardComponents/DashboardViewProfile'
+export * from './DashboardComponents/UserProfileModal'
+export * from './PaymentComponents/OneOffPayment'
+export * from './PaymentComponents/Installment'
+export * from './PaymentComponents/EasyBuy'
 
 
 
