@@ -10,7 +10,7 @@ export function OneOffPayment({changePaymentMode}){
             <p className="payment-amount-para">N1,840,000</p>
             <div className="payment-dropdown-div">
                 <label htmlFor='payment-plan' style={{marginBottom: '26px', color: '#6C6C6C'}}>Payment plan</label>
-                <select>
+                <select value='one-off' onChange={(e) => changePaymentMode(e)}>
                     <option className="option" value='one-off'>Out right payment</option>
                     <option className="option" value='installment'>Installmental payment</option>
                     <option className="option" value='easy-buy'>Easy-buy plan</option>

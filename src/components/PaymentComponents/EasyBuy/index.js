@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 
 
-export function EasyBuy(){
+export function EasyBuy({changePaymentMode}){
 
     const [selectPeriod, setSelectPeriod] = useState('0')
 
@@ -17,7 +17,7 @@ export function EasyBuy(){
         <p className="payment-amount-para">N1,840,000</p>
         <div className="payment-dropdown-div">
             <label htmlFor='payment-plan' style={{marginBottom: '26px', color: '#6C6C6C'}}>Payment plan</label>
-            <select name="payment" value='0'>
+            <select name="payment" value='easy-buy' onChange={(e) => changePaymentMode(e)}>
                 <option className="option" value='one-off'>Out right payment</option>
                 <option className="option" value='installment'>Installmental payment</option>
                 <option className="option" value='easy-buy'>Easy-buy plan</option>
