@@ -1,5 +1,5 @@
 import React from "react"
-import { PropertiesNav, ForSale } from "../components"
+import { PropertiesNav, ForSale, NavigationBar } from "../components"
 
 export default function AllProperties(){
 
@@ -13,7 +13,7 @@ const displayProperties = [1, 3, 4, 8, 2,5].map((property, index) => {
 
     return(
         <div style={{backgroundColor: '#fff', paddingBottom:'356px'}}>
-            <PropertiesNav />
+            <NavigationBar page='Property' />
 
             <div className="property-top-image-wrapper">
                 <img src="./images/propertyTop.png"></img>
