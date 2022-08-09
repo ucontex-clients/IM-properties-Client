@@ -67,7 +67,9 @@ const allCartItems = [1,2,3,4].map((item, index) => {
                     </div>
                 </div>
 
-                <div className="layout-last-child">
+                <div className="layout-last-child" onClick={() => {
+                    window.location.assign('/add')
+                }}>
                     <div className="preview-text-holder"><p>Preview</p></div>
                     <div className="layout-last-child-image-wrapper"><img src="./images/Capture.png"></img></div>
                 </div>

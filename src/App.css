@@ -351,6 +351,12 @@ justify-content: space-between;
   cursor: pointer;
 }
 
+.plot-dimension > p{
+  font-family: Inter;
+font-size: 12px;
+font-weight: 100;
+}
+
 .dimension1{
   transform-origin: 0;
   transform: rotate(90deg);
