@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { PlotDimension, PlotButtons, SimilarProperty } from ".."
+import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews } from ".."
 
 
 export function PropertyDetailBottom(){
@@ -12,6 +12,10 @@ const plotDimensions = [1,2,3,4,5,6,7,8,9,10,11,12].map((plot, index) => {
 
 const allSimilarProperty = [1,2,3].map((property, index) => {
     return <SimilarProperty />
+})
+
+const allBuyerReviews = [1,2,3].map((review, index) => {
+    return <BuyerReviews key={index} />
 })
 
 
@@ -48,6 +52,34 @@ const allSimilarProperty = [1,2,3].map((property, index) => {
                 <p>Watch Video</p>
                 <div className="watch-video-container"><video src="./images/video1.mp4" controls></video></div>
             </div>
+
+            <div className="buyer-review-wrapper">
+                <p>10 Reviews</p>
+                {allBuyerReviews}
+                <div className="buyer-review-button"><button>10 more Review</button></div>
+            </div>
+
+            <div className="create-review-wrapper">
+                    <p>Write a review</p>
+                    <div className="write-reviews">
+                        <div className="review-label-input">
+                            <label>Name</label>
+                            <input type='text'></input>
+                        </div>
+                        <div className="review-label-input">
+                            <label>Name</label>
+                            <input type='text'></input>
+                        </div>
+                        <div className="review-label-input" id="textarea-side">
+                            <label>Message</label>
+                            <textarea type='text'></textarea>
+                        </div>
+                    </div>
+
+                    <div className="buyer-review-button" style={{marginBlock: '57px 45px'}}>
+                        <button style={{backgroundColor: '#FF1212', color: '#fff'}}>Submit Review</button>
+                        </div>                    
+            </div>
         </div>
 
         <div style={{display:'flex', flexDirection: 'column', rowGap: '40px'}}>
@@ -77,7 +109,7 @@ const allSimilarProperty = [1,2,3].map((property, index) => {
                         </div>
 
                         <div>
-                            <input type='month'></input>
+                            <input type='date'></input>
                         </div>
 
                         <div className="select-time-wrapper">

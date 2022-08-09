@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { NavigationBar, PropertyDetailBottom, SingleProperty, ViewPropertyLayout } from "../components"
 
+import {AiFillCamera} from "react-icons/ai";
 
 export default function PropertyDetails(){
 
@@ -13,6 +14,10 @@ export default function PropertyDetails(){
 
             <div className="property-detail-image-main-wrapper">
                 <div className="single-large-image-wrapper">
+                    <div className="camera-wrapper">
+                        <AiFillCamera style={{width: '24.44px', height: '21.59px', color:'#fff'}} />
+                        <p>6</p>
+                    </div>
                     <img src={viewedImage}></img>
                 </div>
                 <div className="single-small-image-wrapper">
