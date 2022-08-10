@@ -1180,6 +1180,177 @@ font-weight: 500;
   place-items: center;
 }
 
+.my-transaction-wrapper{
+  padding: 31px 35px;
+  border: 1px solid #3DB2FF;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+
+.about-image{
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.about-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-right > h3{
+  font-family: Inter;
+font-size: 25px;
+font-weight: 700;
+color: #0682D3;
+margin-bottom: 21px;
+text-align: center;
+}
+
+.check-story{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+color: #0682D3;
+margin-bottom: 38px;
+text-align: center;
+}
+
+.story{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+text-align: justify;
+}
+
+.team-section-wrapper{
+  padding: 76px 79px;
+}
+
+.team-section-wrapper >p{
+  font-family: Inter;
+font-size: 25px;
+font-weight: 700;
+color: #0682D3;
+text-align: center;
+margin-bottom: 63px;
+}
+
+.team-mate-container{
+  background: #FFFFFF;
+border-radius: 10px;
+padding: 10px;
+}
+
+.mate-name{
+  font-family: Inter;
+font-size: 25px;
+font-weight: 700;
+color: #0682D3;
+text-align: center;
+padding-block: 20px;
+}
+
+.mate-position{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.team-mate-wrapper img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.all-team-members-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.about-bottom-wrapper{
+  padding: 51px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 118px;
+  background-color: #fff;
+}
+
+.my-transaction-wrapper > p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+}
+
+.each-transaction-wrapper{
+  padding: 21px 24px;
+  background: #FFFFFF;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.each-transaction-left{
+  display: flex;
+  align-items: flex-end;
+  column-gap: 38px;
+}
+
+.each-transaction-left p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+color: #6C6C6C;
+}
+
+.each-transaction-right{
+  display: flex;
+  align-items: center;
+  column-gap: 49px;
+}
+
+.each-transaction-right p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+color:#038566;
+}
+
+.each-transaction-right > div{
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+}
+
+.each-transaction-right > div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.all-transactions-holder{
+  margin-top: 31px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
 .delete-bank-card-container > div img{
   width: 100%;
   height: 100%;
@@ -2770,7 +2941,7 @@ cursor: pointer;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 79px;
-  padding-inline: 64.05px 73px;
+  padding-inline: 64px 64px;
   column-gap: 34px;
   row-gap: 34px;
 }
@@ -3120,7 +3291,7 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 justify-content: center;
 padding-inline: 47px;
-column-gap: 65px;
+column-gap: 34px;
 }
 
 .feedback-wrapper{

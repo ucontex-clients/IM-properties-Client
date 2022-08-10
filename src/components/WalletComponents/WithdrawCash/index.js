@@ -3,7 +3,7 @@ import { AddAccountSuccess } from "../AddAccountSuccess"
 import { AddBankAccountModal } from "../AddBankAccountModal"
 
 
-export function WitdrawCash(){
+export function WithdrawCash(){
 
     const [addAccountModal, setAddAccountModal] = useState(false)
     const [viewAccountSuccess, setViewAccountSuccess] = useState(false)

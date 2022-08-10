@@ -58,7 +58,7 @@ export function DashboardSideNav({number, activePage, setActivePage}){
                 <div className="list-item-wrapper" onClick={() => {
                     setActivePage('inspection')
                 }} style={activePage =='inspection'? back1 :back2}>
-                    <div><img src="./images/inspection.png"></img></div>
+                    <div style={{width:'30px', height:'20px'}}><img src="./images/inspection.png"></img></div>
                     <p style={activePage =='inspection'? textStyle1 :textStyle2}>Inspection Booking</p>
                 </div>
             </li>
@@ -84,8 +84,8 @@ export function DashboardSideNav({number, activePage, setActivePage}){
                 <div className={openWallet ? '' : 'close-open-wallet'}>
                     <p className="wallet-option" onClick={() => setActivePage('method')}>Fund Wallet</p>
                     <p className="wallet-option" onClick={() => setActivePage('withdraw')}>Widthdraw Money</p>
-                    <p className="wallet-option" onClick={() => setActivePage('transaction')}>Account Balance</p>
-                    <p className="wallet-option" onClick={() => setActivePage('method')}>My Withdrwal</p>
+                    <p className="wallet-option">Account Balance</p>
+                    <p className="wallet-option">My Withdrawal</p>
                     <p className="wallet-option" onClick={() => setActivePage('transaction')}>My Transactions</p>
                 </div>
             </li>

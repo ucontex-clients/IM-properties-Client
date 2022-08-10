@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import { DashboardElement, DashboardHome, DashboardSideNav,
-    DashboardProperty, DashboardBooking, DashboardReferral, OneOffPayment, UserProfileModal, DashboardViewProfile, DashboardCreateProfile, DashboardBuyProperty, FundWalletCreateAccount, UploadPayment, WitdrawCash, WithdrawalAmount } from "../components"
+    DashboardProperty, DashboardBooking, DashboardReferral, OneOffPayment, UserProfileModal,
+    DashboardViewProfile, DashboardCreateProfile, DashboardBuyProperty,
+    FundWalletCreateAccount, UploadPayment, WithdrawCash, WithdrawalAmount, MyTransactions } from "../components"
 import InspectionBooking from "../components/DashboardComponents/InspectionBooking"
 
 export default function Dashboard({profilePicture = './images/profilePicture.png'}){
 
-    const [activePage, setActivepage] = useState('create')
+    const [activePage, setActivepage] = useState('dashboard')
     const [showModal, setShowModal] = useState(false)
     const [availableAccount, setAvailableAccount] = useState(true)
 
@@ -41,8 +43,10 @@ export default function Dashboard({profilePicture = './images/profilePicture.png
                     {activePage == 'buy' && <DashboardBuyProperty />}
                     {activePage == 'method' && <FundWalletCreateAccount setActivePage={setActivepage} />}
                     {activePage == 'fund' && <UploadPayment />}
-                    {activePage == 'withdraw' && !availableAccount && <WitdrawCash />}
+                    {activePage == 'withdraw' && !availableAccount && <WithdrawCash />}
                     {activePage == 'withdraw' && availableAccount && <WithdrawalAmount />}
+                    {activePage == 'transaction' && availableAccount && <MyTransactions />}
+
 
 
             </div>
