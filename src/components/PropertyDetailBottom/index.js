@@ -6,6 +6,19 @@ export function PropertyDetailBottom(){
 
     const [active, setActive] = useState('')
 
+    const [time, setTime] = useState('')
+
+    const myStyle = {
+        backgroundColor: '#FF1212',
+        color: '#fff'
+    }
+
+
+
+
+
+
+
 const plotDimensions = [1,2,3,4,5,6,7,8,9,10,11,12].map((plot, index) => {
     return <PlotDimension key={index} />
 })
@@ -117,11 +130,24 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                                 <div><img src="./images/Time.png"></img></div>
                                 <p>Select time</p>
                             </div>
-                           <div style={{display:'flex', columnGap: '25px'}}>
-                                <button>10AM</button>
-                                <button>1PM</button>
+                           <div style={{display:'flex', columnGap: '25px'}} className='time-picker'>
+                                <button style={time=='10AM' ? myStyle : {}} onClick={() => setTime('10AM')}>10AM</button>
+                                <button style={time=='1PM' ? myStyle : {}} onClick={() => setTime('1PM')}>1PM</button>
                            </div>
                         </div>
+
+                        <div className="select-location-wrapper">
+                                <div className="select-location-logo-side">
+                                    <div><img src="./images/chooseLocation.png"></img></div>
+                                    <p>Select Location</p>
+                                </div>
+                                <div className="select-location-select">
+                                    <select>
+                                        <option>Port Harcourt</option>
+                                    </select>
+                                </div>
+                        </div>
+                        <div style={{marginBlock: '78px 21px', textAlign: 'center'}} className='book-inspection-container'><button>Book Inspection</button></div>
                     </div>
 
             </div>

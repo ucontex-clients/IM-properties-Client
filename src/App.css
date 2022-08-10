@@ -351,6 +351,12 @@ justify-content: space-between;
   cursor: pointer;
 }
 
+.plot-dimension > p{
+  font-family: Inter;
+font-size: 12px;
+font-weight: 100;
+}
+
 .dimension1{
   transform-origin: 0;
   transform: rotate(90deg);
@@ -723,11 +729,42 @@ font-size: 15px;
 font-weight: 500;
 }
 
-/* .reschedule-cancel-wrapper{
-  display: flex;
-  align-items: center;
-  column-gap: 4px;
-} */
+.reschedule-cancel-wrapper p:first-child{
+color: #0682D3;
+cursor: pointer;
+}
+
+.reschedule-cancel-wrapper p:last-child{
+  color: #FF1212;
+  cursor: pointer;
+  }
+
+
+  .time-picker button{
+    font-family: PT Serif;
+font-size: 12px;
+font-weight: 700;
+padding: 6px 12px;
+color: #6C6C6C;
+cursor: pointer;
+border-radius: 5px;
+background: #F5F5F5;
+border: 1px solid #C6C5C5;
+  }
+
+  .book-inspection-container button{
+    width: 100%;
+    padding-block: 10px;
+    background-color: #FF1212;
+    font-family: Inter;
+font-size: 16px;
+font-weight: 700;
+color: white;
+border-style: none;
+cursor: pointer;
+border-radius: 5px;
+
+  }
 
 
 .inspection-booking-bottom{
@@ -1922,10 +1959,56 @@ color: #6C6C6C;
 }
 
 .select-time-wrapper{
-  padding-block: 33px 41px;
+  padding-block: 33px 33px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.select-location-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.select-location-logo-side{
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.select-location-logo-side > div {
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+}
+
+.select-location-logo-side > div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.select-location-logo-side > p {
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+color: #6C6C6C;
+}
+
+.select-location-wrapper select {
+  background: #F5F5F5;
+border: 1px solid #C6C5C5;
+border-radius: 5px;
+padding: 7px 9px;
+font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+color: #6C6C6C;
+}
+
+.select-location-wrapper select::-ms-expand{
+  display: none;
 }
 
 .similar-property{
