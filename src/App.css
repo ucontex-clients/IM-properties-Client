@@ -564,6 +564,47 @@ font-weight: 700;
   cursor: pointer;
 }
 
+.dashboard-buy-property-logo-wrapper{
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.dashboard-buy-property-logo-wrapper > div{
+  width: 15px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+}
+
+.dashboard-buy-property-logo-wrapper > div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dashboard-buy-property-logo-wrapper >p {
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+}
+
+.buy-plots{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+margin-block: 44px 16px;
+}
+
+.buy-each-property-holder{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 31px;
+  row-gap: 40px;
+  padding-bottom: 46px;
+
+}
+
 .dashboard-property-logo-wrapper > div img{
   width: 100%;
   height: 100%;
@@ -838,7 +879,455 @@ color: #000000;
   padding: 11px 29px;
 }
 
+.wallet-option{
+  margin-left: 95px;
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+color: #6C6C6C;
+padding-block: 11px;
+cursor: pointer;
+}
 
+.upload-payment-wrapper{
+background: rgba(61, 178, 255, 0.2);
+border-radius: 5px;
+padding: 31px 16px;
+}
+
+.bank-details{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+}
+
+.upload-payment-wrapper p{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 500;
+color: #6C6C6C;
+padding-block: 9px;
+}
+
+.upload-payment-wrapper p span{
+  color: #000000;
+}
+
+.upload-button-wrapper{
+  margin-top: 5px;
+  padding-inline: 81px;
+}
+
+.upload-button-wrapper input{
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+color: #6C6C6C;
+padding: 8px;
+width: 245px;
+}
+
+.upload-button-holder{
+  display: flex;
+  align-items: center;
+  column-gap: 44px;
+}
+
+.upload-button-holder button{
+  background: #3DB2FF;
+border-radius: 5px;
+padding: 8px 30px;
+font-family: Inter;
+font-size: 20px;
+font-weight: 700;
+color: #fff;
+border-style: none;
+cursor: pointer;
+}
+
+.upload-white-area{
+  background-color: #fff;
+  border: 1px solid #3DB2FF;
+  padding-inline: 50px;
+  padding-block: 68px 141px;
+  border-radius: 5px;
+}
+
+.withdraw-gray{
+  background: #F5F5F5;
+border-radius: 5px;
+padding: 21px 32px;
+}
+
+.withdraw-gray p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+color: #6C6C6C;
+}
+
+.withdraw-gray p span{
+  color: #000000;
+}
+
+.add-new-bank-account{
+  padding-inline: 71px;
+  margin-top: 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  row-gap: 8px;
+  margin-bottom: 158px;
+}
+
+.add-bank-account-modal-wrapper{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.50);
+}
+
+.add-account-modal-white{
+  padding-inline: 41px;
+  padding-block: 45px 21px;
+  background: #FFFFFF;
+border-radius: 5px;
+position: relative;
+}
+
+.bank-name-wrapper label{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 500;
+color: #6C6C6C;
+margin-bottom: 14px;
+display: block;
+}
+
+.bank-name-wrapper input, .bank-name-wrapper select{
+  padding: 17px;
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+  background: #FFFFFF;
+border: 1px solid #C6C5C5;
+border-radius: 5px;
+width: 100%;
+}
+
+.add-account-para{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+}
+
+.modal-checkbox-wrapper{
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+
+/* .modal-checkbox-wrapper input{
+  width: 25px;
+  height: 25px;
+} */
+
+.cancel-wrapper{
+  width: 24px;
+  height: 24px;
+  background: #D9D9D9;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 26px;
+  right: 33px;
+  cursor: pointer;
+}
+
+.ok-wrapper{
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+}
+
+.okay-wrapper{
+  display: grid;
+  place-items: center;
+  margin-top: 85px;
+}
+
+.success-paras{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+}
+
+.success-paras button{
+  background: #0682D3;
+border: 1px solid #C6C5C5;
+border-radius: 5px;
+font-family: Inter;
+font-size: 18px;
+font-weight: 500;
+border-style: none;
+color: #fff;
+width: 100%;
+padding-block: 12px;
+cursor: pointer;
+}
+
+.instant-withdraw-para{
+  display: flex;
+  align-items: center;
+  column-gap: 36px;
+}
+
+.merchant-part{
+  display: flex;
+  align-items: center;
+  column-gap: 11px;
+}
+
+.merchant-part > div{
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.merchant-part > div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.merchant-part{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+color: #0682D3;
+}
+
+.detail-item-holder{
+  display: flex;
+  column-gap: 45px;
+}
+
+.customer-withdrawal-detail-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 45px;
+}
+
+.customer-withdrawal-detail-wrapper p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+}
+
+.customer-withdrawal-detail-wrapper .value{
+  color: #C6C5C5;
+}
+
+.approved-wrapper{
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.approved-wrapper > div{
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.approved-wrapper > div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.delete-bank-card-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.delete-bank-card-container{
+  display: flex;
+  align-items: center;
+  column-gap: 19px;
+  cursor: pointer;
+  margin-bottom: 26px;
+}
+
+.delete-bank-card-container > div{
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.delete-bank-card-container > div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.delete-bank-card-container > p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+color: #EB3223;
+}
+
+.withdraw-amount-button{
+background: #0682D3;
+border: 1px solid #C6C5C5;
+border-radius: 5px;
+padding: 12px 100px;
+border-style: none;
+color: #fff;
+cursor: pointer;
+font-family: Inter;
+font-size: 18px;
+font-weight: 500;
+margin-bottom: 120px;
+}
+
+.instant-withdraw-para > p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+color: #6C6C6C;
+}
+
+.ok-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cancel-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-checkbox-wrapper p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+}
+
+.add-bank-account-button{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 500;
+padding: 12px 123px;
+background: #0682D3;
+border: 1px solid #C6C5C5;
+border-radius: 5px;
+color: #fff;
+border-style: none;
+cursor: pointer;
+margin-top: 43px;
+}
+
+
+.add-new-bank-account > div{
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.add-new-bank-account > div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.close-open-wallet{
+  display: none;
+}
+
+.fund-wallet-wrapper{
+background: #FFFFFF;
+border: 1px solid rgba(61, 178, 255, 0.2);
+border-radius: 5px;
+padding: 26px 46px;
+}
+
+.fund-wallet-wrapper > p{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 500;
+margin-bottom: 79px;
+}
+
+.wallet-input-holder label{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 500;
+color: #6C6C6C;
+display: block;
+margin-bottom: 14px;
+}
+
+.wallet-input-holder input, .wallet-input-holder select{
+  padding: 17px;
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+background: #FFFFFF;
+border: 1px solid #C6C5C5;
+border-radius: 5px;
+}
+
+.wallet-input-holder input:focus{
+  outline: none;
+}
+
+.create-wallet-button-holder{
+  padding: 48px 124px;
+}
+
+.create-wallet-button-holder button{
+  padding: 13px 52px;
+  background: #3DB2FF;
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+  font-family: Inter;
+font-size: 20px;
+font-weight: 700;
+color: #fff;
+}
+
+.create-wallet-button-holder{
+  text-align: center;
+}
+
+.wallet-input-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 27px;
+}
 
 .list-item-wrapper > div{
   width: 20px;
