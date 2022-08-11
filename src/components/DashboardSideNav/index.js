@@ -2,6 +2,12 @@ import React, { useState } from "react"
 
 export function DashboardSideNav({number, activePage, setActivePage}){
 
+    const [openWallet, setOpenWallet] = useState(false)
+
+    const toggleWallet = () => {
+        setOpenWallet(prevState => !prevState)
+    }
+
 
     const back1 = {
         backgroundColor: 'rgba(61, 178, 255, 0.2)'
@@ -52,7 +58,7 @@ export function DashboardSideNav({number, activePage, setActivePage}){
                 <div className="list-item-wrapper" onClick={() => {
                     setActivePage('inspection')
                 }} style={activePage =='inspection'? back1 :back2}>
-                    <div><img src="./images/inspection.png"></img></div>
+                    <div style={{width:'30px', height:'20px'}}><img src="./images/inspection.png"></img></div>
                     <p style={activePage =='inspection'? textStyle1 :textStyle2}>Inspection Booking</p>
                 </div>
             </li>
@@ -69,10 +75,18 @@ export function DashboardSideNav({number, activePage, setActivePage}){
             <li>
                 <div className="list-item-wrapper" onClick={() => {
                     setActivePage('wallet')
+                    toggleWallet()
                 }} style={activePage =='wallet'? back1 :back2}>
                     <div style={{width: '20px', height: '18.5px'}}><img src="./images/wallet.png"></img></div>
                     <p style={activePage =='wallet'? textStyle1 :textStyle2}>Wallet</p>
-                    <div className="arrow-down-holder" style={{width:'15px', height: '10px'}}><img src="./images/arrowDown.png"></img></div>
+                    <div className="arrow-down-holder" style={{width:'15px', height: '10px'}}><img src={openWallet ? "./images/arrowUp.png" : "./images/arrowDown.png"}></img></div>
+                </div>
+                <div className={openWallet ? '' : 'close-open-wallet'}>
+                    <p className="wallet-option" onClick={() => setActivePage('method')}>Fund Wallet</p>
+                    <p className="wallet-option" onClick={() => setActivePage('withdraw')}>Widthdraw Money</p>
+                    <p className="wallet-option">Account Balance</p>
+                    <p className="wallet-option">My Withdrawal</p>
+                    <p className="wallet-option" onClick={() => setActivePage('transaction')}>My Transactions</p>
                 </div>
             </li>
             <li>

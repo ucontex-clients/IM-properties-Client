@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import Payment from "./pages/Payment";
 import { UserProfileModal } from "./components";
 import AddPlot from "./pages/AddPlot";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         <Route path={'/properties'} element={<AllProperties />}/>
         <Route path={'/property'} element={<PropertyDetails />}/>
         <Route path={'/layout'} element={<FullPropertyLayout />}/>
-        <Route path={'/about'} element={<Dashboard />}/>
+        <Route path={'/contact'} element={<Dashboard />}/>
+        <Route path={'/about'} element={<About />}/>
         <Route path={'/payment'} element={<Payment />}/>
         <Route path={'/profile'} element={<UserProfileModal />}/>
         <Route path={'/add'} element={<AddPlot />}/>

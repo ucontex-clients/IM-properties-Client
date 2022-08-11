@@ -49,7 +49,7 @@ const signUp = () => {
                     onClick={(e) => {
                         setTab('Property')
                     }}>Property</a></li>
-                    <li><a href="about"
+                    <li><a href="/about"
                     style={tab=='AboutUs'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('AboutUs')
