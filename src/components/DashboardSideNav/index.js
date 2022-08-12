@@ -84,8 +84,6 @@ export function DashboardSideNav({number, activePage, setActivePage}){
                 <div className={openWallet ? '' : 'close-open-wallet'}>
                     <p className="wallet-option" onClick={() => setActivePage('method')}>Fund Wallet</p>
                     <p className="wallet-option" onClick={() => setActivePage('withdraw')}>Widthdraw Money</p>
-                    <p className="wallet-option">Account Balance</p>
-                    <p className="wallet-option">My Withdrawal</p>
                     <p className="wallet-option" onClick={() => setActivePage('transaction')}>My Transactions</p>
                 </div>
             </li>

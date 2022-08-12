@@ -9,9 +9,13 @@ import PropertyDetails from "./pages/PropertyDetails";
 import FullPropertyLayout from "./pages/FullPropertyLayout";
 import Dashboard from "./pages/Dashboard";
 import Payment from "./pages/Payment";
-import { UserProfileModal } from "./components";
+import {UserProfileModal } from "./components";
 import AddPlot from "./pages/AddPlot";
 import About from "./pages/About";
+import UploadPropertyInfo from "./pages/UploadPropertyInfo";
+import BlogPage from "./pages/BlogPage";
+import ContactUs from "./pages/ContactPage";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
@@ -22,12 +26,17 @@ function App() {
         <Route path={'/signin'} element={<Signin />}/>
         <Route path={'/properties'} element={<AllProperties />}/>
         <Route path={'/property'} element={<PropertyDetails />}/>
+        <Route path={'/blog'} element={<BlogPage />}/>
+        <Route path={'/contact'} element={<ContactUs />}/>
+        <Route path={'/FAQ'} element={<FAQ />}/>
         <Route path={'/layout'} element={<FullPropertyLayout />}/>
-        <Route path={'/contact'} element={<Dashboard />}/>
+        <Route path={'/dashboard'} element={<Dashboard />}/>
         <Route path={'/about'} element={<About />}/>
         <Route path={'/payment'} element={<Payment />}/>
         <Route path={'/profile'} element={<UserProfileModal />}/>
         <Route path={'/add'} element={<AddPlot />}/>
+        <Route path={'/upload'} element={<UploadPropertyInfo />}/>
+
 
 
 
