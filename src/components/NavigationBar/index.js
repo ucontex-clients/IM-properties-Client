@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Nav1 } from "../Nav1";
+import { Nav2 } from "../Nav2";
 
 export function NavigationBar({page='Home'}) {
 
@@ -71,10 +73,7 @@ const signUp = () => {
                     }}>FAQ</a></li>
                 </ul>
                 
-                <div className="navigation-buttons-wrapper">
-                    <button className="signBtn" onClick={signIn}>Sign In</button>
-                    <button className="signBtn" onClick={signUp}>Sign Up</button>
-                </div>
+                {tab == 'Home'? <Nav1 signIn={signIn} signUp={signUp} /> : <Nav2 />}
         </div>
   </div>
   );

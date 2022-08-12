@@ -8,6 +8,9 @@ export * from "./SectionHeading";
 export * from "./ForSale";
 export * from "./Categories";
 export * from './Feedback'
+export * from './EachFAQ'
+export * from './Nav1'
+export * from './Nav2'
 export * from './PropertySection'
 export * from './FeatureSection'
 export * from './FeedbackSection'
@@ -22,6 +25,7 @@ export * from './SingleProperty'
 export * from './SimilarProperty'
 export * from './PropertyDetailBottom'
 export * from './PlotDimension'
+export * from './News'
 export * from './PlotButtons'
 export * from './DisplayWrapper'
 export * from './DashboardSideNav'

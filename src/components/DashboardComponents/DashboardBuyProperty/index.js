@@ -22,10 +22,10 @@ export function DashboardBuyProperty(){
                 <div><img src="./images/Dashboard.png"></img></div>
                 <p>Buy Property</p>
             </div>
-            <p className="buy-plots">30 Properties available for you</p>
+            <p className="buy-plots" style={{paddingLeft: '30px'}}>30 Properties available for you</p>
             <div className="buy-each-property-holder">
                     {displayProperties}
             </div>
-    </div>
+        </div>
     )
 }

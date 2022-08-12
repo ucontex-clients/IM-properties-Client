@@ -5,7 +5,10 @@ export default function About(){
     return(
         <div>
             <NavigationBar page='AboutUs' />
-            <div className="about-image"><img src="./images/aboutImg.png"></img></div>
+            <div className="about-image">
+                <div className="who-we-are"><p>Get To Know Who <br/> We Are</p></div>
+                <img src="./images/aboutImg.png"></img>
+            </div>
             <div className="about-bottom-wrapper">
                 <div className="about-left"><img src="./images/aboutBottom.png"></img></div>
                 <div className="about-right">
