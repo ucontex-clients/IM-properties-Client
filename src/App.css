@@ -435,11 +435,12 @@ font-weight: 700;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 20;
   width: 100vw;
 }
 
 .dashboard-home-main-wrapper{
-  padding: 58px 33px;
+  padding: 137px 33px;
   height: 100vh;
   overflow-y: auto;
 }
@@ -1084,6 +1085,7 @@ border-radius: 5px;
 border-radius: 0px 0px 5px 5px;
 height: 100vh;
 overflow: auto;
+padding-top: 79px;
 }
 
 .dashboard-property-logo-wrapper{
@@ -1136,7 +1138,7 @@ color: #000000;
   column-gap: 46px;
   align-items: center;
   cursor: pointer;
-  padding: 11px 29px;
+  padding: 16px 29px;
 }
 
 .wallet-option{
@@ -1869,7 +1871,7 @@ color: #fff;
 .dashboard-main-wrapper{
   display: grid;
   grid-template-columns: 1fr 4fr;
-  margin-top: 79px;
+  height: 100vh;
 }
 
 .dashboard-main-left{
@@ -1879,7 +1881,7 @@ overflow-y: auto;
 
 .dashboard-main-right{
   padding-inline: 41px;
-  padding-top: 7px;
+  padding-top: 86px;
   height: 100vh;
   overflow-y: auto;
 }
