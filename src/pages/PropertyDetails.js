@@ -14,6 +14,13 @@ export default function PropertyDetails(){
 
             <div className="property-detail-image-main-wrapper">
                 <div className="single-large-image-wrapper">
+                    <div className="arrow-div" style={{right: '6px'}}>
+                        <img src="./images/viewfront.png"></img>
+                    </div>
+
+                    <div className="arrow-div" style={{left: '6px'}}>
+                        <img src="./images/viewback.png"></img>
+                    </div>
                     <div className="camera-wrapper">
                         <AiFillCamera style={{width: '24.44px', height: '21.59px', color:'#fff'}} />
                         <p>6</p>

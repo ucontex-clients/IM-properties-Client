@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews } from ".."
+import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews, ChooseDate} from ".."
 
 
 export function PropertyDetailBottom(){
@@ -122,7 +122,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                         </div>
 
                         <div>
-                            <input type='date'></input>
+                            <ChooseDate />
                         </div>
 
                         <div className="select-time-wrapper">
