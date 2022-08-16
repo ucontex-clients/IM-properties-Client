@@ -1,6 +1,9 @@
 import React, { useState } from "react"
 import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews, ChooseDate} from ".."
 
+import {BsFillShareFill} from "react-icons/bs"
+import {FiHeart} from "react-icons/fi"
+
 
 export function PropertyDetailBottom(){
 
@@ -45,8 +48,8 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                     </div>
                 </div>
                 <div className="share-location-wrapper">
-                    <div><img src="./images/Share.png"></img></div>
-                    <div><img src="./images/Love.png"></img></div>
+                    <div><BsFillShareFill className="imported-icon"/></div>
+                    <div><FiHeart className="imported-icon"/></div>
                 </div>
             </div>
 
