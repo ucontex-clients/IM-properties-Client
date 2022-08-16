@@ -252,7 +252,6 @@ color: #6C6C6C;
   height: 100%;
   object-fit: cover;
   color: #6C6C6C;
-  font-weight: 800;
 }
 
 .detail-property-options-and-price{
@@ -301,6 +300,24 @@ font-weight: 700;
   display: flex;
 justify-content: space-between;
   margin-top: 41px;
+}
+
+.fill-drop-wrapper{
+  position: absolute;
+  width: 16px;
+  height: 6.94px;
+  display: grid;
+  place-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  cursor: pointer;
+}
+
+.fill-drop-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .location-two-holder{
@@ -3005,6 +3022,11 @@ color: #6C6C6C;
   justify-content: space-between;
 }
 
+.select-location-select{
+  position: relative;
+  background-color: #000000;
+}
+
 .select-location-logo-side{
   display: flex;
   column-gap: 8px;
@@ -4694,4 +4716,8 @@ margin-bottom: 80px;
 .react-calendar__tile--active {
   background: #FF1212;
   color: white;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr{
+  text-decoration: none;
 }
