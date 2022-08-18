@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews, ChooseDate} from ".."
 
 import {BsFillShareFill} from "react-icons/bs"
@@ -10,6 +10,7 @@ export function PropertyDetailBottom(){
     const [active, setActive] = useState('')
 
     const [time, setTime] = useState('')
+
 
     const myStyle = {
         backgroundColor: '#FF1212',
