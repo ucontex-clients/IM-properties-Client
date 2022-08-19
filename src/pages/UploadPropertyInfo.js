@@ -57,7 +57,7 @@ export default function UploadPropertyInfo(){
                     </div>
 
                     <div className="upload-next-wrapper">
-                        <button onClick={() => window.location.assign('./upload/layout')}>Next</button>
+                        <button onClick={() => console.log('yes') }>Next</button>
                     </div>
                 </div>
             </div>

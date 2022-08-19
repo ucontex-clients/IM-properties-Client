@@ -1,6 +1,6 @@
 import React from "react"
 
-export function AdminUploadProperty(){
+export function AdminUploadProperty({setAdminPage}){
     return(
         <div className="add-property-admin">
                 <div className="upload-property-left">
@@ -53,7 +53,7 @@ export function AdminUploadProperty(){
                     </div>
 
                     <div className="upload-next-wrapper">
-                        <button onClick={() => window.location.assign('./upload/layout')}>Next</button>
+                        <button onClick={() => setAdminPage('layout')}>Next</button>
                     </div>
                 </div>
         </div>
