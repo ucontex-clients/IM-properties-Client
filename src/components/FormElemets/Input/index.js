@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-export function Input({ img, type, placeholder, eye, name, value, takeInputData }) {
+export function Input({ img, type, placeholder, eye, name, value,takeInputData }) {
 
 const eyeInput = useRef()
 
@@ -11,7 +11,6 @@ const toggleInputType = () => {
     eyeInput.current.type = 'password'
   }
 }
-
 
   return (
     <div className="input-field">
