@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { AdminAllCustomer, AdminDashboardHome, AdminDashboardProfileView, AdminNav, DashboardViewProfile, ViewCustomer } from "../components"
+import { AdminAllCustomer, AdminAllProperties, AdminDashboardHome, AdminDashboardProfileView, AdminNav, DashboardViewProfile, ViewCustomer } from "../components"
 import { AdminSideNav } from "../components"
 import { AdminUploadProperty } from "../components/AdminDashboard/AdminUploadProperty"
 import UploadPropertyInfo from "./UploadPropertyInfo"
@@ -22,6 +22,8 @@ export default function SuperAdminDashboard(){
                 {adminPage == 'view' && <ViewCustomer />}
                 {adminPage == 'edit' && <AdminDashboardProfileView />}
                 {adminPage == 'add' && <AdminUploadProperty />}
+                {adminPage == 'all' && <AdminAllProperties />}
+
 
             </div>
         </div>

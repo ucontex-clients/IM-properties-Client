@@ -4260,7 +4260,21 @@ grid-template-columns: 1fr 4fr;
 column-gap: 70px;
 padding-top: 100px;
 padding-inline: 100px;
+height: 100vh;
 overflow-y: auto;
+}
+
+.admin-all-properties-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 34px;
+  row-gap: 30px;
+  justify-content: center;
+  padding-top: 100px;
+  padding-inline: 60px;
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 200px;
 }
 
 .upload-property-right > p{

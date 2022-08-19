@@ -1,9 +1,9 @@
 import React from "react";
 
-export function Button({ text }) {
+export function Button({ text, run }) {
   return (
     <div>
-        <button className="create-account-button">{text}</button>
+        <button className="create-account-button" onClick={run}>{text}</button>
   </div>
   );
 }

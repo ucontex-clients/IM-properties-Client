@@ -26,7 +26,7 @@ export function AdminSideNav({setAdminPage}){
             </li>
 
             { showProperties && <div>
-                <li style={{paddingLeft: '50px'}}>
+                <li style={{paddingLeft: '50px'}} onClick={() => setAdminPage('all')}>
                     <p>All Properties</p>
                 </li>
 

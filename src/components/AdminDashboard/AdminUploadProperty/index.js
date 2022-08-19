@@ -10,7 +10,7 @@ export function AdminUploadProperty(){
                 </div>
 
 
-                <div className="upload-property-right">
+                <div className="upload-property-right" style={{marginBottom:'200px'}}>
                     <p style={{marginBottom:'58px'}}>About Property Info</p>
                     <div className="upload-label-container">
                         <label>Name of Property</label>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Input, Button } from "../components";
+const axios = require('axios')
 
 export default function Signin() {
 
@@ -11,7 +12,13 @@ export default function Signin() {
     })
   }
 
-console.log(body)
+const login = async () => {
+  console.log(body)
+  const response = await axios.post('https://im-properties-api.herokuapp.com/api/auth/login', body)
+  const data = response.data
+  console.log(data)
+}
+
 
 
   return (
@@ -35,7 +42,7 @@ console.log(body)
 
         <div className="forgot-password-container"><a href="#">Forgot Password</a></div>
 
-        <Button text={'Create Account'} />
+        <Button text={'Login'} run={login}/>
         <div>
           <p className="signin-option">
             Don't have account, <a href="/signup">Sign up</a>
