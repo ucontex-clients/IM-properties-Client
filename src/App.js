@@ -16,6 +16,7 @@ import UploadPropertyInfo from "./pages/UploadPropertyInfo";
 import BlogPage from "./pages/BlogPage";
 import ContactUs from "./pages/ContactPage";
 import FAQ from "./pages/FAQ";
+import SuperAdminDashboard from "./pages/SuperAdminDashboard";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path={'/profile'} element={<UserProfileModal />}/>
         <Route path={'/add'} element={<AddPlot />}/>
         <Route path={'/upload'} element={<UploadPropertyInfo />}/>
+        <Route path={'/Admin1'} element={<SuperAdminDashboard />}/>
 
 
 

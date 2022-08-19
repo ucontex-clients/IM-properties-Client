@@ -1,14 +1,26 @@
-import React from "react"
+import React, { useState } from "react"
 
 
-export function EachFAQ(){
+export function EachFAQ({question, ans}){
+
+    const [full, setFull] = useState(false)
+
+    const allValue = ans.split(' ')
+    const myAns = allValue.slice(0,15).join(' ')
+
+    const toggleFull = () => {
+        setFull(prevVal => !prevVal)
+    }
+
+
     return(
         <div className="each-FAQ">
-            <h5>What  is IM Properties</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim 
-            <div className="FAQ-arrow"><img src="./images/FAQarrow.png"></img></div></p>
+            <h5>{question}</h5>
+            <p>{full ? ans : `${myAns}...`}
+                <div className="FAQ-arrow" onClick={toggleFull}>
+                    <img src="./images/FAQarrow.png"></img>
+                </div>
+            </p>
         </div>
     )
 }

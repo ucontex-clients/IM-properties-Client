@@ -1,12 +1,8 @@
 import React from "react"
-import { NavigationBar } from "../components"
 
-
-export default function UploadPropertyInfo(){
+export function AdminUploadProperty({setAdminPage}){
     return(
-        <div>
-            <NavigationBar page='Property' />
-            <div className="upload-property-main-wrapper">
+        <div className="add-property-admin">
                 <div className="upload-property-left">
                     <p>About Property</p>
                     <p>Media</p>
@@ -14,7 +10,7 @@ export default function UploadPropertyInfo(){
                 </div>
 
 
-                <div className="upload-property-right">
+                <div className="upload-property-right" style={{marginBottom:'200px'}}>
                     <p style={{marginBottom:'58px'}}>About Property Info</p>
                     <div className="upload-label-container">
                         <label>Name of Property</label>
@@ -57,10 +53,9 @@ export default function UploadPropertyInfo(){
                     </div>
 
                     <div className="upload-next-wrapper">
-                        <button onClick={() => console.log('yes') }>Next</button>
+                        <button onClick={() => setAdminPage('layout')}>Next</button>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }

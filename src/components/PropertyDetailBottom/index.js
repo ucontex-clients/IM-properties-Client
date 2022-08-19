@@ -1,5 +1,8 @@
-import React, { useState } from "react"
-import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews } from ".."
+import React, { useRef, useState } from "react"
+import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews, ChooseDate} from ".."
+
+import {BsFillShareFill} from "react-icons/bs"
+import {FiHeart} from "react-icons/fi"
 
 
 export function PropertyDetailBottom(){
@@ -7,6 +10,7 @@ export function PropertyDetailBottom(){
     const [active, setActive] = useState('')
 
     const [time, setTime] = useState('')
+
 
     const myStyle = {
         backgroundColor: '#FF1212',
@@ -45,8 +49,8 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                     </div>
                 </div>
                 <div className="share-location-wrapper">
-                    <div><img src="./images/Share.png"></img></div>
-                    <div><img src="./images/Love.png"></img></div>
+                    <div><BsFillShareFill className="imported-icon"/></div>
+                    <div><FiHeart className="imported-icon"/></div>
                 </div>
             </div>
 
@@ -122,7 +126,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                         </div>
 
                         <div>
-                            <input type='date'></input>
+                            <ChooseDate />
                         </div>
 
                         <div className="select-time-wrapper">
@@ -145,6 +149,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                                     <select>
                                         <option>Port Harcourt</option>
                                     </select>
+                                    <div className="fill-drop-wrapper"><img src="./images/fillDrop.png"></img></div>
                                 </div>
                         </div>
                         <div style={{marginBlock: '78px 21px', textAlign: 'center'}} className='book-inspection-container'><button>Book Inspection</button></div>
