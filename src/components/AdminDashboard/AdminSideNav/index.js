@@ -19,7 +19,9 @@ export function AdminSideNav({setAdminPage}){
                 <p>Dashboard</p>
             </li>
 
-            <li onClick={toggleShowProperties}>
+            <li onClick={() => {
+                toggleShowProperties()
+                setAdminPage('all')}}>
                 <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
                 <p>Property</p>
                 <div className="admin-side-arrow-down"><img src={showProperties ? "./images/arrowUp.png" : "./images/arrowDown.png"}></img></div>

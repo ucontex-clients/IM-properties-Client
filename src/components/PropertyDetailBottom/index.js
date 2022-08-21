@@ -149,7 +149,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                                     <select>
                                         <option>Port Harcourt</option>
                                     </select>
-                                    <div className="fill-drop-wrapper"><img src="./images/fillDrop.png"></img></div>
+                                    {/* <div className="fill-drop-wrapper"><img src="./images/fillDrop.png"></img></div> */}
                                 </div>
                         </div>
                         <div style={{marginBlock: '78px 21px', textAlign: 'center'}} className='book-inspection-container'><button>Book Inspection</button></div>

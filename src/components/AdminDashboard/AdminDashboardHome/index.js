@@ -19,7 +19,7 @@ export function AdminDashboardHome(){
                 <AdminDashboardBox title='Total Property' color='rgba(255, 152, 0, 0.2)' 
                 img='./images/adminProperty.png' amount='20' />
 
-                <AdminDashboardBox title='Total Client' color='#0682D3' 
+                <AdminDashboardBox title='Total Client' color='rgba(6, 130, 211, 0.2)' 
                 img='./images/adminClient.png' amount='500' />
 
                 <AdminDashboardBox title='Total Bookings' color='rgba(255, 87, 34, 0.2)' 
