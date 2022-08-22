@@ -1,9 +1,38 @@
-import React from "react"
+import React, { useState } from "react"
 
 
-export function AdminUploadPropertyLayout({handleAddPropertyChange, addPropertyData}){
+export function AdminUploadPropertyLayout({handleAddPropertyChange, addPropertyData, setAddPropertyData}){
 
 
+    const [eachLayout, setEachLayout] = useState({
+        title:'',
+        color:'',
+        length:'',
+        width: ''})
+
+const setLayout = (e) => {
+    setEachLayout(prevLayout => {
+        return {...prevLayout, [e.target.name]: e.target.value}
+    })
+}
+
+const addToList = () => {
+    setAddPropertyData(prevLayout => {
+        return {
+            ...prevLayout,
+            layouts:[...addPropertyData.layouts, eachLayout]
+        }
+    })
+}
+
+const addAnother = () => {
+    setEachLayout({
+        title:'',
+        color:'',
+        length:'',
+        width: ''
+    })
+}
 
     return(
         <div className="add-property-admin" style={{paddingInline:'60px'}}>
@@ -34,26 +63,31 @@ export function AdminUploadPropertyLayout({handleAddPropertyChange, addPropertyD
             <div className="upload-upload-bottom">
                 <div>
                     <label htmlFor="title">Title</label>
-                    <input type='text' placeholder='Residential'/>
+                    <input type='text' placeholder='Residential' name='title' value={eachLayout.title}
+                    onChange={setLayout}/>
                 </div>
                 <p>Measurement</p>
 
                 <div className="upload-features" style={{marginBottom:'33px'}}>
                     <div>
                         <label htmlFor="length">Length</label>
-                        <input type='text' placeholder='00'/>
+                        <input type='text' placeholder='00' name="length" value={eachLayout.length}
+                        onChange={setLayout}/>
                     </div>
 
                     <div>
                         <label htmlFor="width">Width</label>
-                        <input type='text' placeholder='00'/>
+                        <input type='text' placeholder='00' name="width" value={eachLayout.width}
+                        onChange={setLayout}/>
                     </div>
                 </div>
 
                 <div className="upload-features">
                     <div>
                         <label htmlFor="cost">Cost</label>
-                        <input type='text' placeholder='00'/>
+                        <input type='text' placeholder='00'name="cost"
+                        value={eachLayout.length && eachLayout.width && addPropertyData.pricePerSm ? 
+                        eachLayout.length * eachLayout.width *addPropertyData.pricePerSm  : 'computing...'}/>
                     </div>
 
                     <div>
@@ -63,11 +97,11 @@ export function AdminUploadPropertyLayout({handleAddPropertyChange, addPropertyD
                 </div>
 
                 <div className="save-property-layout-container">
-                    <button>Save</button>
+                    <button onClick={addToList}>Save</button>
                 </div>
             </div>
 
-            <div className="upload-another-media">
+            <div className="upload-another-media" onClick={addAnother}>
                 <div><img src="./images/uploadMedia.png"></img></div>
                 <p>Add another layout</p>
             </div>

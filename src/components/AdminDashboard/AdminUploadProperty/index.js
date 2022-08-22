@@ -28,7 +28,7 @@ const addPhoto = useRef()
                         <label>Description</label>
                         <textarea type='text' placeholder="Write something about the property"
                         style={{minHeight: '150px'}} name='description'
-                        value={addPropertyData.description} onChange={handleAddPropertyChange}></textarea>
+                        value={addPropertyData.description.description} onChange={handleAddPropertyChange}></textarea>
                     </div>
 
                     <div className="upload-label-container">

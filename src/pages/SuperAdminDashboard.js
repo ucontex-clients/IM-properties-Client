@@ -13,10 +13,10 @@ export default function SuperAdminDashboard(){
     const [addPropertyData, setAddPropertyData] = useState({
         name:'',
         pricePerSm:'',
-        description:'',
+        description:{description:''},
         location:'',
         layoutPhoto:'',
-        layout: [],
+        layouts: [],
         features:'',
         pictures:'',
         video:''
@@ -24,6 +24,13 @@ export default function SuperAdminDashboard(){
 
 const handleAddPropertyChange = (e) => {
     const {name, type, files, value} = e.target
+
+    if (name == 'description'){
+        setAddPropertyData(prevData => {
+            return {...prevData, [name]:value}
+        })
+    }
+
     if (type == 'file') {
         setAddPropertyData(prevData => {
             return { ...prevData, [name]: name=='pictures'?[...addPropertyData.pictures, files]: files}
@@ -51,7 +58,8 @@ const handleAddPropertyChange = (e) => {
                 setAdminPage={setAdminPage} handleAddPropertyChange={handleAddPropertyChange}
                 addPropertyData={addPropertyData} />}
                 {adminPage == 'layout' && <AdminUploadPropertyLayout 
-                handleAddPropertyChange={handleAddPropertyChange} addPropertyData={addPropertyData}/>}
+                handleAddPropertyChange={handleAddPropertyChange} addPropertyData={addPropertyData}
+                setAddPropertyData={setAddPropertyData}/>}
                 {adminPage == 'all' && <AdminAllProperties />}
             </div>
         </div>
