@@ -9,7 +9,7 @@ export default function HomePage(){
         <div>
             <NavigationBar />
             <div className="home-image-wrapper" style={{marginTop: '79px'}}>
-                <img src="./images/image1.png" alt="home image"></img>
+                <img src="./images/newHome.png" alt="home image"></img>
             </div>
 
            <PropertySection />
