@@ -3,13 +3,10 @@ import { SiteVideo } from ".."
 
 export function VideoSection(){
     return(
-        <div>
-            <div className="video-bottom">
-                <div className="video-container">
-                    <SiteVideo videoLink="./images/video1.mp4" />
-                </div>
-            </div>
-            
-        </div>
+            <div className="all-video-wrapper">
+                <div><SiteVideo videoLink="./images/video1.mp4" /></div>
+                <div><SiteVideo videoLink="./images/video1.mp4" /></div>
+                <div><SiteVideo videoLink="./images/video1.mp4" /></div>
+            </div>    
     )
 }
