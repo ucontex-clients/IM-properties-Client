@@ -5,7 +5,7 @@ import {AiFillCamera} from "react-icons/ai";
 
 export default function PropertyDetails(){
 
-    const [viewedImage, setViewedImage] = useState('./images/largeImage.png')
+    const [viewedImage, setViewedImage] = useState('./images/main1.png')
 
 
     return (
@@ -14,13 +14,8 @@ export default function PropertyDetails(){
 
             <div className="property-detail-image-main-wrapper">
                 <div className="single-large-image-wrapper">
-                    <div className="arrow-div" style={{right: '6px'}}>
-                        <img src="./images/viewfront.png"></img>
-                    </div>
-
-                    <div className="arrow-div" style={{left: '6px'}}>
-                        <img src="./images/viewback.png"></img>
-                    </div>
+                <div className="all-property-arrow-container" style={{right:'18px'}}><img src="./images/propertyArrow.png"></img></div>
+                <div className="all-property-arrow-container" style={{left:'18px'}} id="face-left"><img src="./images/propertyArrow.png"></img></div>
                     <div className="camera-wrapper">
                         <AiFillCamera style={{width: '24.44px', height: '21.59px', color:'#fff'}} />
                         <p>6</p>
@@ -28,12 +23,12 @@ export default function PropertyDetails(){
                     <img src={viewedImage}></img>
                 </div>
                 <div className="single-small-image-wrapper">
-                    <SingleProperty checkImage={'./images/smallImage.png'} setViewedImage={setViewedImage}/>
-                    <SingleProperty checkImage={'./images/smallImage.png'} setViewedImage={setViewedImage}/>
-                    <SingleProperty checkImage={'./images/testImage2.png'} setViewedImage={setViewedImage}/>
-                    <SingleProperty checkImage={'./images/testImage2.png'} setViewedImage={setViewedImage}/>
-                    <SingleProperty checkImage={'./images/testImage3.png'} setViewedImage={setViewedImage}/>
-                    <SingleProperty checkImage={'./images/testImage3.png'} setViewedImage={setViewedImage}/>
+                    <SingleProperty checkImage={'./images/main2.png'} setViewedImage={setViewedImage}/>
+                    <SingleProperty checkImage={'./images/main3.png'} setViewedImage={setViewedImage}/>
+                    <SingleProperty checkImage={'./images/main4.png'} setViewedImage={setViewedImage}/>
+                    <SingleProperty checkImage={'./images/main1.png'} setViewedImage={setViewedImage}/>
+                    <SingleProperty checkImage={'./images/main5.png'} setViewedImage={setViewedImage}/>
+                    <SingleProperty checkImage={'./images/main2.png'} setViewedImage={setViewedImage}/>
                 </div>
             </div>
 

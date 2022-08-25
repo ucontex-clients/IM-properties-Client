@@ -37,8 +37,6 @@ const registerUser = async (e) => {
                     <img src="../images/logo.png" className="logo"></img>
                 </div>
                 <p id="signup-paragraph">Sign Up</p>
-                <Select img={'../images/UserAccount.png'} name='accountType'
-                value={formData.accountType} takeInputData={takeInputData} />
 
                <Input img={'../images/Mail.png'} type={'email'}
                placeholder={'E-mail Address'} takeInputData={takeInputData}
