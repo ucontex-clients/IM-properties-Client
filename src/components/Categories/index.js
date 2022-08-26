@@ -6,7 +6,7 @@ export function Category({img, title, desc}){
         <div className="one-category-wrapper">
             <div className="category-top">
                 <div className="category-image-wrapper">
-                    <img src={img}></img>
+                    <img src={img} alt='category icon'></img>
                 </div>
                 <p>{title}</p>
             </div>

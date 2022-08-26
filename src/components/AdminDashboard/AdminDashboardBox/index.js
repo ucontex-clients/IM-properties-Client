@@ -6,7 +6,7 @@ export function AdminDashboardBox({title, color, img, amount}){
         <div className="admin-box-wrapper">
             <div className="revenue-image-wrapper">
                 <p>{title}</p>
-                <div style={{backgroundColor:{color}}}><img src={img}></img></div>
+                <div style={{backgroundColor:{color}}}><img src={img} alt='dashboard box icon'></img></div>
             </div>
             <p>{amount}</p>
         </div>

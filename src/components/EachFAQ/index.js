@@ -18,7 +18,7 @@ export function EachFAQ({question, ans}){
             <h5>{question}</h5>
             <p>{full ? ans : `${myAns}...`}
                 <div className="FAQ-arrow" onClick={toggleFull}>
-                    <img src="./images/FAQarrow.png"></img>
+                    <img src="./images/FAQarrow.png" alt="arrow down"></img>
                 </div>
             </p>
         </div>

@@ -22,11 +22,11 @@ const plotDimensions = [1,2,3,4,5,6,7,8,9,0,1,2].map((plot, index) => {
                             <p>30 Plots</p>
                         </div>
                     </div>
-                    <div className="add-property-picture-wrapper"><img src="./images/Capture1.png"></img></div>
+                    <div className="add-property-picture-wrapper"><img src="./images/Capture1.png" alt="capture"></img></div>
                     <div className="zoom-holder">
                         <div style={{display:'flex', columnGap:'29px'}}>
-                            <div className="out-in-holder"><img src="./images/zoomOut.png"></img></div>
-                            <div className="out-in-holder"><img src="./images/zoomIn.png"></img></div>
+                            <div className="out-in-holder"><img src="./images/zoomOut.png" alt="zoom"></img></div>
+                            <div className="out-in-holder"><img src="./images/zoomIn.png" alt="zoom"></img></div>
                         </div>
                     </div>
                     <div className="add-plot-bottom">

@@ -27,7 +27,7 @@ export function AdminDashboardHome(){
             </div>
 
             <div className="graph-container" style={{marginBottom:'300px'}}>
-                <img src="./images/graph.png"></img>
+                <img src="./images/graph.png" alt="admin graph"></img>
             </div>
         </div>
     )

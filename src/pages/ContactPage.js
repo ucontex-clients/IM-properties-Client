@@ -11,21 +11,21 @@ export default function ContactUs(){
                     <p className="get-support" style={{marginTop: '23px'}}>Get Support From Our Team</p>
                     <div className="support-contact-wrapper">
                         <div className="support-contact">
-                            <div><img src="./images/Support.png"></img></div>
+                            <div><img src="./images/Support.png" alt="support"></img></div>
                             <p className="customer-care">Contact Our Customer Care</p>
                             <p className="care-email">care@improperties.com</p>
                             <p className="care-number">+234 8065-349-908</p>
                         </div>
 
                         <div className="support-contact">
-                            <div><img src="./images/Support.png"></img></div>
+                            <div><img src="./images/Support.png" alt="support"></img></div>
                             <p className="customer-care">Contact Our Marketing Team</p>
                             <p className="care-email">marketing@improperties.com</p>
                             <p className="care-number">+234 8065-349-908</p>
                         </div>
                     </div>
                 </div>
-                <div><img src="./images/BlogImage1.png"></img></div>
+                <div><img src="./images/BlogImage1.png" alt="blog"></img></div>
             </div>
             <div className="my-contact-bottom">
                 <div className="contact-bottom-wrapper">
@@ -47,7 +47,7 @@ export default function ContactUs(){
                         <div className="contact-input-wrapper" style={{position: 'relative'}}>
                             <label>Message</label>
                             <textarea type='text' style={{minHeight: '160px'}}></textarea>
-                            <div className="text-image-wrapper"><img src="./images/textIm.png"></img></div>
+                            <div className="text-image-wrapper"><img src="./images/textIm.png" alt='text'></img></div>
                         </div>
                     <div className="submit-request-wrapper">
                         <button>Submit Request</button>

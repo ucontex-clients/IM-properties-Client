@@ -17,7 +17,7 @@ export function EachTransaction(){
 
             <div className="each-transaction-right">
                 <p>N200,000</p>
-                <div><img src="./images/Downloads.png"></img></div>
+                <div><img src="./images/Downloads.png" alt="download"></img></div>
             </div>
         </div>
     )

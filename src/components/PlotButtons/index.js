@@ -7,12 +7,12 @@ export function PlotButtons(){
 
     return(
         <div className="plot-button-main-wrapper">
-                <button className={active=='view'?'plot-button2':'plot-button1'}
+                <button className={active==='view'?'plot-button2':'plot-button1'}
                 onClick={() => {
                     setActive('view')
                     window.location.assign('/layout')
                 }}>View All</button>
-                <button className={active=='buy'?'plot-button2':'plot-button1'}
+                <button className={active==='buy'?'plot-button2':'plot-button1'}
                 onClick={() => setActive('buy')}>Buy Property</button>
         </div>
     )

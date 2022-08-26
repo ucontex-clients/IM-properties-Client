@@ -14,9 +14,9 @@ const changePaymentMode = (e) => {
         <div>
             <NavigationBar page='AboutUs'/>
             <div className="payment-main-section">
-            {paymentMode == 'one-off' && <OneOffPayment changePaymentMode={changePaymentMode} />}
-                {paymentMode == 'installment' && <Installment changePaymentMode={changePaymentMode} />}
-                {paymentMode == 'easy-buy' && <EasyBuy changePaymentMode={changePaymentMode} />}
+            {paymentMode === 'one-off' && <OneOffPayment changePaymentMode={changePaymentMode} />}
+                {paymentMode === 'installment' && <Installment changePaymentMode={changePaymentMode} />}
+                {paymentMode === 'easy-buy' && <EasyBuy changePaymentMode={changePaymentMode} />}
             </div>
         </div>
     )

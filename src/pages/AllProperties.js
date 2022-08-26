@@ -1,5 +1,5 @@
 import React from "react"
-import { PropertiesNav, ForSale, NavigationBar } from "../components"
+import { ForSale, NavigationBar } from "../components"
 
 export default function AllProperties(){
 
@@ -15,7 +15,7 @@ const displayProperties = [...Array(12).keys()].map((property, index) => {
             <NavigationBar page='Property' />
 
             <div className="property-top-image-wrapper" style={{marginTop:'79px'}}>
-                <img src="./images/newBuy.png" alt="all property image"></img>
+                <img src="./images/newBuy.png" alt="all property"></img>
             </div>
 
             <div className="buy-property-heading-container">

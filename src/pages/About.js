@@ -7,10 +7,10 @@ export default function About(){
             <NavigationBar page='AboutUs' />
             <div className="about-image">
                 <div className="who-we-are"><p>Get To Know Who <br/> We Are</p></div>
-                <img src="./images/aboutImg.png"></img>
+                <img src="./images/aboutImg.png" alt="about cover"></img>
             </div>
             <div className="about-bottom-wrapper">
-                <div className="about-left"><img src="./images/aboutBottom.png"></img></div>
+                <div className="about-left"><img src="./images/aboutBottom.png" alt="user"></img></div>
                 <div className="about-right">
                     <h3>About Us - Who We Are?</h3>
                     <p className="check-story">Check out our company story and work process</p>

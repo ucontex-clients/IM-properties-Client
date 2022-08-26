@@ -1,5 +1,5 @@
 import React from "react"
-import { SectionTab, SectionHeading, Category } from ".."
+import { SectionHeading, Category } from ".."
 
 export function FeatureSection(){
     return (

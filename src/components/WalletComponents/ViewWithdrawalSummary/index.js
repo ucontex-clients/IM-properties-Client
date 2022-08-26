@@ -5,7 +5,7 @@ export function ViewWithdrawalSummary({setDetailModal}){
     return(
         <div className="add-bank-account-modal-wrapper" onClick={() => setDetailModal(false)}>
             <div className="add-account-modal-white">
-                <div className="cancel-wrapper" onClick={() => setDetailModal(false)}><img src="./images/cancel.png"></img></div>
+                <div className="cancel-wrapper" onClick={() => setDetailModal(false)}><img src="./images/cancel.png" alt="cancel"></img></div>
                 <p style={{marginBottom: '35px'}} className='add-account-para'>Bank Account Details</p>
                 <div className="customer-withdrawal-detail-wrapper">
                     <p>Account Name</p>
@@ -19,13 +19,13 @@ export function ViewWithdrawalSummary({setDetailModal}){
                     <p>Status</p>
                     <div className="approved-wrapper">
                         <p className="value">Approved</p>
-                        <div><img src="./images/Ok.png"></img></div>
+                        <div><img src="./images/Ok.png" alt="operation confirmed"></img></div>
                     </div>
                 </div>
 
                 <div className="delete-bank-card-wrapper">
                     <div className="delete-bank-card-container">
-                        <div><img src="./images/danger.png"></img></div>
+                        <div><img src="./images/danger.png" alt="danger"></img></div>
                         <p>Delete Bank Card & Re-add</p>
                     </div>
                 </div>

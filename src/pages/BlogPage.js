@@ -13,7 +13,7 @@ export default function BlogPage(){
             <NavigationBar page='Blog' />
             <div className="about-image" style={{marginTop:'79px'}}>
                 <div className="who-we-are"><p>See Latest News on <br/>IM Properties</p></div>
-                <div><img src="./images/BlogImage1.png"></img></div>
+                <div><img src="./images/BlogImage1.png" alt="blog"></img></div>
             </div>
             <div className="latest-news">
                 <p>Latest News</p>

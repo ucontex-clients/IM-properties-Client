@@ -10,8 +10,8 @@ export function ForSale({img, title, desc, minPrice, maxPrice, size}){
     return(
         <div className="one-sale-wrapper">
             <div className="sale-image-wrapper">
-                <div className="property-arrow-container"><img src="./images/propertyArrow.png"></img></div>
-                <img src={img} className="sale-image"></img>
+                <div className="property-arrow-container"><img src="./images/propertyArrow.png" alt="arrow"></img></div>
+                <img src={img} className="sale-image" alt="property cover"></img>
             </div>
 
             <div className="sales-text-wrapper">
@@ -20,7 +20,7 @@ export function ForSale({img, title, desc, minPrice, maxPrice, size}){
 
                 <div className="office-wrapper">
                     <div className="office-image-wrapper">
-                        <img src="./images/venue.png"></img>
+                        <img src="./images/venue.png" alt="venue icon"></img>
                     </div>
                     <p>Owerri, Imo, Nigeria</p>
                 </div>

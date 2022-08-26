@@ -102,7 +102,7 @@ const addAnother = () => {
             </div>
 
             <div className="upload-another-media" onClick={addAnother}>
-                <div><img src="./images/uploadMedia.png"></img></div>
+                <div><img src="./images/uploadMedia.png" alt="upload media"></img></div>
                 <p>Add another layout</p>
             </div>
 

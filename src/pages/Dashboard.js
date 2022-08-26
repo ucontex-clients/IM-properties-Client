@@ -1,9 +1,8 @@
 import React, { useState } from "react"
-import { DashboardElement, DashboardHome, DashboardSideNav,
-    DashboardProperty, DashboardBooking, DashboardReferral, OneOffPayment, UserProfileModal,
+import { DashboardHome, DashboardSideNav,
+    DashboardProperty, DashboardBooking, DashboardReferral,  UserProfileModal,
     DashboardViewProfile, DashboardCreateProfile, DashboardBuyProperty,
     FundWalletCreateAccount, UploadPayment, WithdrawCash, WithdrawalAmount, MyTransactions } from "../components"
-import InspectionBooking from "../components/DashboardComponents/InspectionBooking"
 
 export default function Dashboard({profilePicture = './images/profilePicture.png'}){
 
@@ -21,11 +20,11 @@ export default function Dashboard({profilePicture = './images/profilePicture.png
         <div style={{backgroundColor: '#F5F5F5'}}>
             {showModal && <UserProfileModal profilePicture={profilePicture} myModal={myModal} setActivePage={setActivepage}/>}
             <div className="dashboard-nav">
-                <div className="dashboard-nav-logo-holder"><a href="/"><img src="./images/logo.png"></img></a></div>
+                <div className="dashboard-nav-logo-holder"><a href="/"><img src="./images/logo.png" alt="logo"></img></a></div>
                 <div className="dashboard-nav-right">
-                    <div className="bell-holder"><img src="./images/bell.png"></img></div>
+                    <div className="bell-holder"><img src="./images/bell.png" alt="notification icon"></img></div>
                     <div className="user2-holder" onClick={myModal}>
-                        <img src={profilePicture}></img>
+                        <img src={profilePicture} alt='profile'></img>
                     </div>
                 </div>
             </div>
@@ -34,18 +33,18 @@ export default function Dashboard({profilePicture = './images/profilePicture.png
                 <div className="dashboard-main-left">
                    <DashboardSideNav activePage={activePage} setActivePage={setActivepage} />
                 </div>
-                    {activePage == 'dashboard' && <DashboardHome />}
-                    {activePage == 'property' && <DashboardProperty />}
-                    {activePage == 'inspection' && <DashboardBooking />}
-                    {activePage == 'referral' && <DashboardReferral />}
-                    {activePage == 'view' && <DashboardViewProfile />}
-                    {activePage == 'create' && <DashboardCreateProfile />}
-                    {activePage == 'buy' && <DashboardBuyProperty />}
-                    {activePage == 'method' && <FundWalletCreateAccount setActivePage={setActivepage} />}
-                    {activePage == 'fund' && <UploadPayment />}
-                    {activePage == 'withdraw' && !availableAccount && <WithdrawCash />}
-                    {activePage == 'withdraw' && availableAccount && <WithdrawalAmount />}
-                    {activePage == 'transaction' && availableAccount && <MyTransactions />}
+                    {activePage === 'dashboard' && <DashboardHome />}
+                    {activePage === 'property' && <DashboardProperty />}
+                    {activePage === 'inspection' && <DashboardBooking />}
+                    {activePage === 'referral' && <DashboardReferral />}
+                    {activePage === 'view' && <DashboardViewProfile />}
+                    {activePage === 'create' && <DashboardCreateProfile />}
+                    {activePage === 'buy' && <DashboardBuyProperty />}
+                    {activePage === 'method' && <FundWalletCreateAccount setActivePage={setActivepage} />}
+                    {activePage === 'fund' && <UploadPayment />}
+                    {activePage === 'withdraw' && !availableAccount && <WithdrawCash />}
+                    {activePage === 'withdraw' && availableAccount && <WithdrawalAmount />}
+                    {activePage === 'transaction' && availableAccount && <MyTransactions />}
 
 
 

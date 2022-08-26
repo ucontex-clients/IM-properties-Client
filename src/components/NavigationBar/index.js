@@ -28,12 +28,12 @@ const signUp = () => {
     <div className="navigation-wrapper">
         <div className="navigation-left">
             <div className="navigation-logo-wrapper">
-                <a href="/"><img src="./images/logo.png"></img></a>
+                <a href="/"><img src="./images/logo.png" alt="logo"></img></a>
             </div>
 
             <div className="search-wrapper">
                 <div className="search-image-wrapper">
-                    <img src="./images/Vector.png" className="search-image"></img>
+                    <img src="./images/Vector.png" alt="search icon" className="search-image"></img>
                 </div>
                 <input type={'text'} placeholder='Search'></input>
             </div>
@@ -42,38 +42,38 @@ const signUp = () => {
         <div className="navigation-right">
             <ul>
                     <li><a href="/"
-                    style={tab=='Home'? fontStyle2 : fontStyle1}
+                    style={tab==='Home'? fontStyle2 : fontStyle1}
                     onClick={(e) => {
                         setTab('Home')
                     }}>Home</a></li>
                     <li><a href="/properties"
-                    style={tab=='Property'? fontStyle2 : fontStyle1}
+                    style={tab==='Property'? fontStyle2 : fontStyle1}
                     onClick={(e) => {
                         setTab('Property')
                     }}>Property</a></li>
                     <li><a href="/about"
-                    style={tab=='AboutUs'? fontStyle2 : fontStyle1}
+                    style={tab==='AboutUs'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('AboutUs')
                     }}>About Us</a></li>
                     <li><a href="blog"
-                    style={tab=='Blog'? fontStyle2 : fontStyle1}
+                    style={tab==='Blog'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('Blog')
                     }}>Blog</a></li>
                     <li><a href="contact"
-                    style={tab=='ContactUs'? fontStyle2 : fontStyle1}
+                    style={tab==='ContactUs'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('ContactUs')
                     }}>Contact Us</a></li>
                     <li><a href="faq"
-                    style={tab=='FAQ'? fontStyle2 : fontStyle1}
+                    style={tab==='FAQ'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
                         setTab('FAQ')
                     }}>FAQ</a></li>
                 </ul>
                 
-                {tab == 'Home'? <Nav1 signIn={signIn} signUp={signUp} /> : <Nav2 />}
+                {tab === 'Home'? <Nav1 signIn={signIn} signUp={signUp} /> : <Nav2 />}
         </div>
   </div>
   );

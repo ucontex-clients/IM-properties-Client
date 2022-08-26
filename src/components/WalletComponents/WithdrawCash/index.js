@@ -20,9 +20,9 @@ const toggleAccountModal = () => {
             setAddAccountModal={setAddAccountModal} setViewAccountSuccess={setViewAccountSuccess} />}
             {viewAccountSuccess && <AddAccountSuccess setViewAccountSuccess={setViewAccountSuccess} />}
         <div className="dashboard-logo-section">
-            <div className="main-dashboard-holder"><img src="./images/wallet.png"></img></div>
+            <div className="main-dashboard-holder"><img src="./images/wallet.png" alt="wallet"></img></div>
             <p>Wallet</p>
-            <div className="arrow-right2-container"><img src="./images/arrowRight2.png"></img></div>
+            <div className="arrow-right2-container"><img src="./images/arrowRight2.png" alt="arrow right"></img></div>
             <p>Withdraw Cash</p>
         </div>
         <div className="upload-white-area">
@@ -31,7 +31,7 @@ const toggleAccountModal = () => {
                 <p style={{marginBottom: '41px'}}><span>Dear John Doe,</span> kindly link a default bank account to withdraw your money</p>
                 <p><span>Bank Account</span> (for withdrawal)</p>
                 <div className="add-new-bank-account">
-                        <div onClick={toggleAccountModal}><img src="./images/newAccount.png"></img></div>
+                        <div onClick={toggleAccountModal}><img src="./images/newAccount.png" alt="account"></img></div>
                         <p>Add New Bank Account</p>
                 </div>
            </div>

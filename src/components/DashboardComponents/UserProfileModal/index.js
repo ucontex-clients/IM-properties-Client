@@ -4,7 +4,7 @@ export function UserProfileModal({profilePicture, myModal, setActivePage}){
     return (<div className='user-profile-modal' onClick={myModal}>
                 <div className="user-profile-white">
                 <div className="user-profile-top">
-                    <div className="user-profile-top-image-holder"><img src={profilePicture}></img></div>
+                    <div className="user-profile-top-image-holder"><img src={profilePicture} alt='profile'></img></div>
                         <div className="user-name-holder">
                             <p>Vickywealth</p>
                             <p style={{fontWeight:'400'}}>IM1234509</p>
@@ -14,27 +14,27 @@ export function UserProfileModal({profilePicture, myModal, setActivePage}){
                     <ul className="user-profile-ul">
                     <li className="user-profile-li" style={{paddingTop: '18px'}} onClick={() => setActivePage('view')}>
                         <a href="#">Edit Profile</a>
-                        <div><img src="./images/arrowRight.png"></img></div>
+                        <div><img src="./images/arrowRight.png" alt='arrow right'></img></div>
                     </li>
                     <li className="user-profile-li" onClick={() => setActivePage('create')}>
                         <a href="#">Update Profile Picture</a>
-                        <div><img src="./images/arrowRight.png"></img></div>
+                        <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                     <li className="user-profile-li">
                         <a href="#">View Profile</a>
-                        <div><img src="./images/arrowRight.png"></img></div>
+                        <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                     <li className="user-profile-li">
                         <a href="#">Change Password</a>
-                        <div><img src="./images/arrowRight.png"></img></div>
+                        <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                     <li className="user-profile-li" >
                         <a href="#">Change Email</a>
-                        <div><img src="./images/arrowRight.png"></img></div>
+                        <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                     <li className="user-profile-li" style={{paddingBottom: '17px'}}>
                         <a href="#">Logout</a>
-                        <div><img src="./images/arrowRight.png"></img></div>
+                        <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                 </ul>
                 </div>

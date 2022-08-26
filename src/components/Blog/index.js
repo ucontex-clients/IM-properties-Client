@@ -4,7 +4,7 @@ export function Blog({img1, img2, img3, poster, date, blogTitle}){
     return(
         <div>
             <div className="blog-image-container">
-                <img src={img1} alt='blog picture'></img>
+                <img src={img1} alt='blog cover'></img>
             </div>
             
             <div className="blog-white-part">

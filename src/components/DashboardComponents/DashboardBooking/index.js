@@ -13,7 +13,7 @@ const allBookings = [1,2,3,4,5].map((booking, index) => {
         <div className="dashboard-home-main-wrapper">
             <div className="dashboard-property-logo-wrapper">
             <button className="book-inspection-button">Book Inspection</button>
-                <div><img src="./images/inspection.png"></img></div>
+                <div><img src="./images/inspection.png" alt="inspection icon"></img></div>
                 <p>Inspection Booking</p>
                 <p>2</p>
             </div>

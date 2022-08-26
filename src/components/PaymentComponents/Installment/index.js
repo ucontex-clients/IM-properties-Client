@@ -3,7 +3,7 @@ import React, { useState } from "react"
 
 export function Installment({changePaymentMode}){
 
-    const [selectPeriod, setSelectPeriod] = useState(0)
+    const [selectPeriod, setSelectPeriod] = useState('0')
 
 
 
@@ -35,7 +35,7 @@ export function Installment({changePaymentMode}){
                 
                 <div  className="period-price-wrapper" style={{marginTop:'21px'}}>
                     <div className="period-price-radio-container" value='1' onClick={(e)=>setSelectPeriod('1')}>
-                        <img src={selectPeriod==1 ? './images/radio2.png':'./images/radio1.png'}></img>
+                        <img src={selectPeriod==='1' ? './images/radio2.png':'./images/radio1.png'} alt='radio'></img>
                     </div>
                     <div className="installment-period">
                         <p>3 - 6 Months</p>
@@ -57,7 +57,7 @@ export function Installment({changePaymentMode}){
                
                 <div  className="period-price-wrapper" style={{marginTop:'21px'}}>
                     <div className="period-price-radio-container" value='2' onClick={(e)=>setSelectPeriod('2')}>
-                        <img src={selectPeriod==2 ? './images/radio2.png':'./images/radio1.png'}></img>
+                        <img src={selectPeriod==='2' ? './images/radio2.png':'./images/radio1.png'} alt='radio'></img>
                     </div>
                     <div className="installment-period">
                         <p>7 - 12 Months</p>

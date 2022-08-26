@@ -1,5 +1,5 @@
 import React from "react"
-import { SectionHeading,  SectionTab, Blog} from ".."
+import { SectionHeading, Blog} from ".."
 
 export function BlogSection(){
     return(

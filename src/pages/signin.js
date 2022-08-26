@@ -27,11 +27,12 @@ const login = async () => {
         <img
           src="../images/signupbackground.png"
           className="signup-image"
+          alt="signup background"
         ></img>
       </div>
       <div className="signupbox" id="signin-right">
         <div className="logo-container">
-          <img src="../images/logo.png" className="logo"></img>
+          <img src="../images/logo.png" className="logo" alt="logo"></img>
         </div>
         <p id="signup-paragraph">Sign In</p>
 

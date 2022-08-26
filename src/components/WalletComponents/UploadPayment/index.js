@@ -5,9 +5,9 @@ export function UploadPayment(){
     return(
     <div className="dashboard-main-right">
         <div className="dashboard-logo-section">
-            <div className="main-dashboard-holder"><img src="./images/wallet.png"></img></div>
+            <div className="main-dashboard-holder"><img src="./images/wallet.png" alt="wallet"></img></div>
             <p>Wallet</p>
-            <div className="arrow-right2-container"><img src="./images/arrowRight2.png"></img></div>
+            <div className="arrow-right2-container"><img src="./images/arrowRight2.png" alt="arrow right"></img></div>
             <p>Fund Wallet</p>
         </div>
         <div className="upload-white-area">

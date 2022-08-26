@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Button, Input, Select } from "../components"
+import { Button, Input } from "../components"
 const axios = require('axios')
 
 export default function Signup(){
@@ -14,7 +14,7 @@ const takeInputData = (e) => {
     setFormData(prevFormData => {
         return {
             ...prevFormData, 
-        [name]: type == 'checkbox' ? checked : value}
+        [name]: type === 'checkbox' ? checked : value}
     })
 }
 
@@ -30,11 +30,11 @@ const registerUser = async (e) => {
     return (
         <div className="signup-container">
             <div id="signup-left">
-                <img src='../images/signupbackground.png' className="signup-image"></img>
+                <img src='../images/signupbackground.png' className="signup-image" alt="signin background"></img>
             </div>
             <div id="signup-right">
                 <div className="logo-container">
-                    <img src="../images/logo.png" className="logo"></img>
+                    <img src="../images/logo.png" className="logo" alt="logo"></img>
                 </div>
                 <p id="signup-paragraph">Sign Up</p>
 
