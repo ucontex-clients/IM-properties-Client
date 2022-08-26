@@ -12,7 +12,7 @@ export default function PropertyDetails(){
         <div>
             <NavigationBar page="Property" />
 
-            <div className="property-detail-image-main-wrapper">
+            <div className="property-detail-image-main-wrapper" style={{marginTop:'79px'}}>
                 <div className="single-large-image-wrapper">
                 <div className="all-property-arrow-container" style={{right:'18px'}}><img src="./images/propertyArrow.png"></img></div>
                 <div className="all-property-arrow-container" style={{left:'18px'}} id="face-left"><img src="./images/propertyArrow.png"></img></div>
