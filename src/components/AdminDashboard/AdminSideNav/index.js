@@ -19,7 +19,9 @@ export function AdminSideNav({setAdminPage}){
                 <p>Dashboard</p>
             </li>
 
-            <li onClick={toggleShowProperties}>
+            <li onClick={() => {
+                toggleShowProperties()
+                setAdminPage('all')}}>
                 <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
                 <p>Property</p>
                 <div className="admin-side-arrow-down"><img src={showProperties ? "./images/arrowUp.png" : "./images/arrowDown.png"}></img></div>
@@ -40,7 +42,7 @@ export function AdminSideNav({setAdminPage}){
             </li>
 
             <li onClick={() => setAdminPage('customers')}>
-                <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
+                <div className="admin-side-icons"><img src="./images/whiteClient.png"></img></div>
                 <p>All Clients</p>
             </li>
 
@@ -49,9 +51,64 @@ export function AdminSideNav({setAdminPage}){
                 <p>Payments</p>
             </li>
 
+            <li>
+                <div className="admin-side-icons"><img src="./images/whiteWallet.png"></img></div>
+                <p>Wallet</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
+                <p>Transaction</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
+                <p>Referral</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/whiteCart.png"></img></div>
+                <p>Cart</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
+                <p>Booking</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/whiteMessage.png"></img></div>
+                <p>Message</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
+                <p>Chat</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
+                <p>Allocation Letter</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
+                <p>Blog</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
+                <p>Settings</p>
+            </li>
+
+            <li>
+                <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
+                <p>Support</p>
+            </li>
+
             <li style={{marginBottom: '300px'}}>
                 <div className="admin-side-icons"><img src="./images/dashboardLayout.png"></img></div>
-                <p>Wallet</p>
+                <p>Clients Feedback</p>
             </li>
         </ul>
     )

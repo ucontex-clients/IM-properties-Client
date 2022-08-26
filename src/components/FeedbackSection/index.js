@@ -4,14 +4,7 @@ import { SectionTab, SectionHeading, Feedback } from ".."
 export function FeedbackSection(){
     return(
         <div>
-            <div className="property-tab-wrapper"
-            style={{justifyContent: 'left', marginTop: '123px', marginBottom: '49px', paddingLeft: '57px'}}>
-                <SectionTab text={"Testimonials"}/>
-            </div>
-                
-            <div className="section-heading-wrapper"
-            style={{justifyContent: 'space-between', fontStyle: 'italic',
-            marginBottom: '70px', paddingLeft: '57px', paddingRight: '70px'}}>
+            <div className="section-heading-wrapper" id="feedback-section-heading-wrapper">
                 <SectionHeading text={'Clients Feedbacks'}/>
                 <div className="nav-arrow-wrapper">
                     <div className="nav-arrow-container" style={{backgroundColor: 'red'}}>
@@ -24,9 +17,9 @@ export function FeedbackSection(){
             </div>
 
             <div className="feedback-main-wrapper">
-                <Feedback img1={'./images/feedbackImage1.png'} img2={'./images/userFeedback.png'} />
-                <Feedback img1={'./images/feedbackImage1.png'} img2={'./images/userFeedback.png'} />
-                <Feedback img1={'./images/feedbackImage1.png'} img2={'./images/userFeedback.png'} />
+                <Feedback img1={'./images/feedback1.png'} img2={'./images/userFeedback.png'} />
+                <Feedback img1={'./images/feedback2.png'} img2={'./images/userFeedback.png'} />
+                <Feedback img1={'./images/feedback3.png'} img2={'./images/userFeedback.png'} />
             </div>
         </div>
     )

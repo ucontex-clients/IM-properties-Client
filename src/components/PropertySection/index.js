@@ -12,25 +12,28 @@ const goToProperties = (e) => {
 
     return (
         <div>
-             <div className="property-tab-wrapper">
-                <SectionTab text={"Property"}/>
-            </div>
                 
             <div className="section-heading-wrapper">
-                <SectionHeading text={'Featured Property'}/>
+                <SectionHeading text={'Property'}/>
             </div>
 
             <div className="sample-property-wrapper">
-                <ForSale img={'./images/saleImage.png'} title={'CAMPUS GARDEN ESTATE'} 
-                desc={'Beautiful and well planned estate with a serene environment suitable for both ...'}
+                <ForSale img={'./images/newProperty.png'} title={'CAMPUS GARDEN ESTATE'} 
                 minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
 
-                <ForSale img={'./images/saleImage.png'} title={'CAMPUS GARDEN ESTATE'} 
-                desc={'Beautiful and well planned estate with a serene environment suitable for both ...'}
+                <ForSale img={'./images/newProperty2.png'} title={'CAMPUS GARDEN ESTATE'} 
                 minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
 
-                <ForSale img={'./images/saleImage.png'} title={'CAMPUS GARDEN ESTATE'} 
-                desc={'Beautiful and well planned estate with a serene environment suitable for both ...'}
+                <ForSale img={'./images/newProperty3.png'} title={'CAMPUS GARDEN ESTATE'} 
+                minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
+
+<               ForSale img={'./images/newProperty.png'} title={'CAMPUS GARDEN ESTATE'} 
+                minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
+
+                <ForSale img={'./images/newProperty2.png'} title={'CAMPUS GARDEN ESTATE'} 
+                minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
+
+                <ForSale img={'./images/newProperty3.png'} title={'CAMPUS GARDEN ESTATE'} 
                 minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
             </div>
 

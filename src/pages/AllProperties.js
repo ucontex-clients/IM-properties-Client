@@ -3,10 +3,9 @@ import { PropertiesNav, ForSale, NavigationBar } from "../components"
 
 export default function AllProperties(){
 
-const displayProperties = [1, 3, 4, 8, 2,5].map((property, index) => {
+const displayProperties = [...Array(12).keys()].map((property, index) => {
     return (
-        <ForSale key={index} img={'./images/saleImage.png'} title={'CAMPUS GARDEN ESTATE'} 
-        desc={'Beautiful and well planned estate with a serene environment suitable for both ...'}
+        <ForSale key={index} img={'./images/newProperty.png'} title={'CAMPUS GARDEN ESTATE'} 
         minPrice={'300,000'} maxPrice={'540,000'} size={'30'}/>
     )
 })
@@ -15,8 +14,8 @@ const displayProperties = [1, 3, 4, 8, 2,5].map((property, index) => {
         <div style={{backgroundColor: '#fff', paddingBottom:'356px'}}>
             <NavigationBar page='Property' />
 
-            <div className="property-top-image-wrapper">
-                <img src="./images/propertyTop.png"></img>
+            <div className="property-top-image-wrapper" style={{marginTop:'79px'}}>
+                <img src="./images/newBuy.png"></img>
             </div>
 
             <div className="buy-property-heading-container">

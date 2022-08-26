@@ -47,10 +47,18 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                         <div className="location-two-holder"><img src="./images/Location2.png"></img></div>
                         <p>Obinze Umuokanne road, Owerri, Imo State</p>
                     </div>
+                    <p style={{fontSize:'18px'}}>N350,000 - N500,000</p>
                 </div>
                 <div className="share-location-wrapper">
-                    <div><BsFillShareFill className="imported-icon"/></div>
-                    <div><FiHeart className="imported-icon"/></div>
+                    <div>
+                        <p style={{background:'rgba(61, 178, 255, 0.2)', color: '#3DB2FF' }}>Book</p>
+                        <p style={{background:'rgba(3, 192, 56, 0.2)', color: '#038566' }}>View Layout</p>
+                        <p style={{background:'rgba(255, 18, 18, 0.2)', color: '#FF1212' }}>Buy</p>
+                    </div>
+                    <div className="share-love">
+                        <div className="icon-2"><BsFillShareFill className="imported-icon"/></div>
+                        <div className="icon-2"><FiHeart className="imported-icon"/></div>
+                    </div>
                 </div>
             </div>
 
@@ -100,7 +108,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
         </div>
 
         <div style={{display:'flex', flexDirection: 'column', rowGap: '40px'}}>
-            <div className="property-layout-wrapper">
+            <div className="property-layout-wrapper" style={{marginTop:'10px'}}>
                 <div className="property-layout-head">
                     <p>Property Layout</p>
                     <p>30 of 30 Sold</p>
@@ -149,7 +157,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                                     <select>
                                         <option>Port Harcourt</option>
                                     </select>
-                                    <div className="fill-drop-wrapper"><img src="./images/fillDrop.png"></img></div>
+                                    {/* <div className="fill-drop-wrapper"><img src="./images/fillDrop.png"></img></div> */}
                                 </div>
                         </div>
                         <div style={{marginBlock: '78px 21px', textAlign: 'center'}} className='book-inspection-container'><button>Book Inspection</button></div>

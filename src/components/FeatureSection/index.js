@@ -4,10 +4,6 @@ import { SectionTab, SectionHeading, Category } from ".."
 export function FeatureSection(){
     return (
         <div>
-            <div className="features-tab-wrapper">
-                <SectionTab text={"Features"}/>
-            </div>
-
             <div className="section-heading-wrapper-features">
                 <SectionHeading text={'Core Feature'}/>
             </div>

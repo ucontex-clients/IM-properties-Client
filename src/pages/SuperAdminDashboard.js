@@ -8,7 +8,40 @@ import UploadPropertyInfo from "./UploadPropertyInfo"
 
 export default function SuperAdminDashboard(){
 
-    const [adminPage, setAdminPage] = useState('edit')
+    const [adminPage, setAdminPage] = useState('home')
+
+    const [addPropertyData, setAddPropertyData] = useState({
+        name:'',
+        pricePerSm:'',
+        description:{description:''},
+        location:'',
+        layoutPhoto:'',
+        layouts: [],
+        features:'',
+        pictures:'',
+        video:''
+    })
+
+const handleAddPropertyChange = (e) => {
+    const {name, type, files, value} = e.target
+
+    if (name == 'description'){
+        setAddPropertyData(prevData => {
+            return {...prevData, [name]:value}
+        })
+    }
+
+    if (type == 'file') {
+        setAddPropertyData(prevData => {
+            return { ...prevData, [name]: name=='pictures'?[...addPropertyData.pictures, files]: files}
+        })
+    }else{
+        setAddPropertyData(prevData => {
+            return {...prevData, [e.target.name] : value}
+        })
+    }
+}
+
 
 
 
@@ -21,11 +54,13 @@ export default function SuperAdminDashboard(){
                 {adminPage == 'customers' && <AdminAllCustomer />}
                 {adminPage == 'view' && <ViewCustomer />}
                 {adminPage == 'edit' && <AdminDashboardProfileView />}
-                {adminPage == 'add' && <AdminUploadProperty setAdminPage={setAdminPage} />}
-                {adminPage == 'layout' && <AdminUploadPropertyLayout />}
+                {adminPage == 'add' && <AdminUploadProperty 
+                setAdminPage={setAdminPage} handleAddPropertyChange={handleAddPropertyChange}
+                addPropertyData={addPropertyData} />}
+                {adminPage == 'layout' && <AdminUploadPropertyLayout 
+                handleAddPropertyChange={handleAddPropertyChange} addPropertyData={addPropertyData}
+                setAddPropertyData={setAddPropertyData}/>}
                 {adminPage == 'all' && <AdminAllProperties />}
-
-
             </div>
         </div>
     )
