@@ -7,8 +7,6 @@ export function ChooseDate(){
 const [date, setDate] = useState(new Date())
 
 
- console.log(date)
-
 
     return (
         <div>
