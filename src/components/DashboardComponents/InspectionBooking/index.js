@@ -1,11 +1,10 @@
-import react from "react"
 
 export default function InspectionBooking({takeColor}){
 
     let background
 
     const useBackground = () => {
-        if (takeColor%2 ==0){
+        if (takeColor%2 ===0){
             background = {backgroundColor: '#F5F5F5'}
         } else{
             background = {backgroundColor: '#fff'}

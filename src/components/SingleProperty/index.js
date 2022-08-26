@@ -9,7 +9,7 @@ export function SingleProperty({checkImage, setViewedImage}){
     return (
         <div className="small-image-wrapper" onClick={changeView}>
             <div className="small-image-view-show"><p>View</p></div>
-            <img src={checkImage}></img>
+            <img src={checkImage} alt='check'></img>
         </div>
     )
 }

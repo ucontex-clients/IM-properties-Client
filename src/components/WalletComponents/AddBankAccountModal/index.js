@@ -5,7 +5,7 @@ export function AddBankAccountModal({toggleAccountModal, setAddAccountModal, set
     return(
         <div className="add-bank-account-modal-wrapper" onClick={()=> setAddAccountModal(false)}>
             <div className="add-account-modal-white">
-                <div className="cancel-wrapper" onClick={()=> setAddAccountModal(false)}><img src="./images/cancel.png"></img></div>
+                <div className="cancel-wrapper" onClick={()=> setAddAccountModal(false)}><img src="./images/cancel.png" alt="cancel"></img></div>
                 <p style={{marginBottom: '43px'}} className='add-account-para'>Add bank account</p>
                 <div className="bank-name-wrapper" style={{marginBottom: '30px'}}>
                     <label>Bank Name</label>

@@ -5,11 +5,11 @@ export function PropertyViewSection(){
     return(
         <div className="property-view-main-wrapper">
             <div className="arrow-div" style={{right: '12px'}}>
-                <img src="./images/viewfront.png"></img>
+                <img src="./images/viewfront.png" alt="view front"></img>
             </div>
 
             <div className="arrow-div" style={{left: '12px'}}>
-                <img src="./images/viewback.png"></img>
+                <img src="./images/viewback.png" alt="view back"></img>
             </div>
             
 

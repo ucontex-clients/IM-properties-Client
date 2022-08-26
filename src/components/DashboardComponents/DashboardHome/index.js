@@ -5,7 +5,7 @@ export function DashboardHome(){
     return(
         <div className="dashboard-main-right">
         <div className="dashboard-logo-section">
-            <div className="main-dashboard-holder"><img src="./images/dashboard.png"></img></div>
+            <div className="main-dashboard-holder"><img src="./images/dashboard.png" alt="dashboard logo"></img></div>
             <p>Dashboard</p>
         </div>
         <div className="dashboard-layout-wrapper">

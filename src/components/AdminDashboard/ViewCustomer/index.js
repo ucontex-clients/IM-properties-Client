@@ -17,7 +17,7 @@ const [userInfo, setUserInfo] = useState('property')
             <div className="dashboard-input-wrapper" style={{paddingBlock: '55px 29px'}}>
                 <p>Customer</p>
                 <div className="add-customer-button">
-                    <div><img src="./images/customerIcon.png"></img></div>
+                    <div><img src="./images/customerIcon.png" alt="customer icon"></img></div>
                     <p>Add Customer</p>
                 </div>
             </div>
@@ -26,7 +26,7 @@ const [userInfo, setUserInfo] = useState('property')
                 <div className="customer-view-top1">
                     <p style={{fontSize: '20px', marginBottom:'37px'}}>Profile</p>
                     <div>
-                        <div className="view-photo-wrapper"><img src='./images/eachUser.png'></img></div>
+                        <div className="view-photo-wrapper"><img src='./images/eachUser.png' alt="user"></img></div>
                         <p id="john" style={{color:'black'}}>John Doe</p>
                     </div>
                     <div>
@@ -76,8 +76,8 @@ const [userInfo, setUserInfo] = useState('property')
                         </table>
                 </div>
                 <div>
-                    <div className="view-photo-wrapper" style={{marginBottom:'32px'}}><img src='./images/eachUser.png'></img></div>
-                    <div className="id-holder"><img src='./images/id.png'></img></div>
+                    <div className="view-photo-wrapper" style={{marginBottom:'32px'}}><img src='./images/eachUser.png' alt="user"></img></div>
+                    <div className="id-holder"><img src='./images/id.png' alt="user id"></img></div>
                     <p style={{fontSize:'20px', fontWeight:600, color:'black'}}>Next of Kin</p>
                     <table>
                         <tr>
@@ -99,13 +99,13 @@ const [userInfo, setUserInfo] = useState('property')
             <div className="admin-user-dashboard-wrapper">
                 <ul className="admin-user-dashboard">
                     <li onClick={() => setUserInfo('property')}>
-                        <p style={userInfo=='property' ? propertyStyle: {}}>Property</p>
+                        <p style={userInfo==='property' ? propertyStyle: {}}>Property</p>
                     </li>
                     <li onClick={() => setUserInfo('bookings')}>
-                        <p style={userInfo=='bookings' ? propertyStyle: {}}>Bookings</p>
+                        <p style={userInfo==='bookings' ? propertyStyle: {}}>Bookings</p>
                     </li>
                     <li onClick={() => setUserInfo('transaction')}>
-                        <p style={userInfo=='transaction' ? propertyStyle: {}}>Transaction</p>
+                        <p style={userInfo==='transaction' ? propertyStyle: {}}>Transaction</p>
                     </li>
                 </ul>
                 <ul className="property-headers">
@@ -118,7 +118,7 @@ const [userInfo, setUserInfo] = useState('property')
                 </ul>
                 <ul  className="entries-list" style={{paddingInline:'0px'}}>
                     <li className="property-writeup">
-                        <div><img src="./images/eachProperty.png"></img></div>
+                        <div><img src="./images/eachProperty.png" alt="property cover"></img></div>
                         <div className="property-writeup-para-container">
                             <p style={{marginBottom:'10px'}}>CAMPUS GARDEN ESTATE</p>
                             <p style={{marginBottom:'10px'}}>1911.56SQ.M 141.2m x 71.2m </p>
@@ -128,14 +128,14 @@ const [userInfo, setUserInfo] = useState('property')
                     <li><p>N1,045,090</p></li>
                     <li style={{transform: 'translateX(-22px)'}}><p>Jun 03, <br/>2022</p></li>
                     <li className="entry" id="edit-delete-action">
-                        <div><img src="./images/editAction.png"></img></div>
-                        <div><img src="./images/deleteAction.png"></img></div>
+                        <div><img src="./images/editAction.png" alt="edit icon"></img></div>
+                        <div><img src="./images/deleteAction.png" alt="delete icon"></img></div>
                     </li>
                 </ul>
             </div>
 
             <div className="view-user-dashboard-wrapper">
-                    <div><img src="./images/eachProperty.png"></img></div>
+                    <div><img src="./images/eachProperty.png" alt='property cover'></img></div>
                     <div className="property-writeup-para-container">
                         <p style={{marginBottom:'10px', fontWeight:700}}>CAMPUS GARDEN ESTATE</p>
                         <p style={{marginBottom:'10px'}}>1911.56SQ.M 141.2m x 71.2m </p>

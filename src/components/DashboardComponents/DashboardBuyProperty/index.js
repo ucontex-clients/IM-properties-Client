@@ -19,7 +19,7 @@ export function DashboardBuyProperty(){
     return(
         <div className="dashboard-home-main-wrapper">
             <div className="dashboard-buy-property-logo-wrapper">
-                <div><img src="./images/Dashboard.png"></img></div>
+                <div><img src="./images/Dashboard.png" alt="buy property icon"></img></div>
                 <p>Buy Property</p>
             </div>
             <p className="buy-plots">30 Properties available for you</p>

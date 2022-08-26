@@ -4,7 +4,7 @@ export function Feedback({img1, img2}) {
   return (
         <div className="feedback-wrapper">
             <div className="feedback-image-container">
-                <img src={img1}></img>
+                <img src={img1} alt='feedback cover'></img>
             </div>
             <div className="feedback-white">
                 <p className='user-feedback'>
@@ -14,7 +14,7 @@ export function Feedback({img1, img2}) {
                 </p>
                 <div className='user-feedback-image-container'>
                     <div className="user-image-wrapper">
-                        <img src={img2}></img>
+                        <img src={img2} alt='user icon'></img>
                     </div>
                     <h3>John Doe</h3>
                 </div>

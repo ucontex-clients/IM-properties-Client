@@ -11,9 +11,9 @@ const allTransactions = [...Array(4).keys()].map((transaction, index) => {
     return(
         <div className="dashboard-main-right">
         <div className="dashboard-logo-section">
-            <div className="main-dashboard-holder"><img src="./images/wallet.png"></img></div>
+            <div className="main-dashboard-holder"><img src="./images/wallet.png" alt="wallet"></img></div>
             <p>Wallet</p>
-            <div className="arrow-right2-container"><img src="./images/myArrowRight.png"></img></div>
+            <div className="arrow-right2-container"><img src="./images/myArrowRight.png" alt="arrow right"></img></div>
             <p>My Transaction</p>
         </div>
         <div className="my-transaction-wrapper">

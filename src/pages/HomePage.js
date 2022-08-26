@@ -1,15 +1,13 @@
 import React from "react"
-import { Category, Feedback,
-    ForSale, NavigationBar, SectionHeading,
-    SectionTab, PropertySection, FeatureSection,
-    FeedbackSection, PropertyViewSection, BlogSection, SiteVideo, VideoSection } from "../components"
+import { NavigationBar, PropertySection, FeatureSection,
+    FeedbackSection, PropertyViewSection, BlogSection, VideoSection } from "../components"
 
 export default function HomePage(){
     return(
         <div>
             <NavigationBar />
             <div className="home-image-wrapper" style={{marginTop: '79px'}}>
-                <img src="./images/newHome.png" alt="home image"></img>
+                <img src="./images/newHome.png" alt="home cover"></img>
             </div>
 
            <PropertySection />
@@ -41,8 +39,8 @@ export default function HomePage(){
                     <div className="explore-red-right" onClick={() => window.location.assign('/properties')}>
                         <p>Explore Property</p>
                         <div className="arrow-container">
-                            <img src="./images/exploreArrow.png" ></img>
-                            <img src="./images/exploreArrow.png" ></img>
+                            <img src="./images/exploreArrow.png" alt="explore"></img>
+                            <img src="./images/exploreArrow.png" alt="explore"></img>
                         </div>
                     </div>
                 </div>

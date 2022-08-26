@@ -4,9 +4,9 @@ export function DashboardViewProfile(){
     return(
         <div className="dashboard-main-right">
         <div className="dashboard-logo-section">
-            <div className="main-dashboard-holder"><img src="./images/dashboard.png"></img></div>
+            <div className="main-dashboard-holder"><img src="./images/dashboard.png" alt="dashboard icon"></img></div>
             <p>Dashboard</p>
-            <div className="arrow-right2-container"><img src="./images/arrowRight2.png"></img></div>
+            <div className="arrow-right2-container"><img src="./images/arrowRight2.png" alt="arrow right"></img></div>
             <p>Profile</p>
         </div>
         <div className="dashboard-layout-wrapper" id="view-profile-right">

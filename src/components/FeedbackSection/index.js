@@ -1,5 +1,5 @@
 import React from "react"
-import { SectionTab, SectionHeading, Feedback } from ".."
+import { SectionHeading, Feedback } from ".."
 
 export function FeedbackSection(){
     return(
@@ -8,10 +8,10 @@ export function FeedbackSection(){
                 <SectionHeading text={'Clients Feedbacks'}/>
                 <div className="nav-arrow-wrapper">
                     <div className="nav-arrow-container" style={{backgroundColor: 'red'}}>
-                        <img src="./images/navArrow2.png"></img>
+                        <img src="./images/navArrow2.png" alt="nav arrow"></img>
                     </div>
                     <div className="nav-arrow-container" style={{backgroundColor: 'black'}}>
-                        <img src="./images/navArrow.png"></img>
+                        <img src="./images/navArrow.png" alt="nav arrow"></img>
                     </div>
                 </div>
             </div>

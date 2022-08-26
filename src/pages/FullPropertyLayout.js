@@ -39,7 +39,7 @@ const allCartItems = [1,2,3,4].map((item, index) => {
                     <div className="my-cart-wrapper">
                         <div className="my-cart-logo-section-wrapper">
                             <div>
-                                <img src="./images/cart.png"></img>
+                                <img src="./images/cart.png" alt="cart"></img>
                                 <p className="my-cart-number">4</p>
                             </div>
                             <p className="my-cart-para">My Cart</p>
@@ -71,7 +71,7 @@ const allCartItems = [1,2,3,4].map((item, index) => {
                     window.location.assign('/add')
                 }}>
                     <div className="preview-text-holder"><p>Preview</p></div>
-                    <div className="layout-last-child-image-wrapper"><img src="./images/Capture.png"></img></div>
+                    <div className="layout-last-child-image-wrapper"><img src="./images/Capture.png" alt="capture"></img></div>
                 </div>
             </div>
         </div>

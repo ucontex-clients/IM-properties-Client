@@ -44,7 +44,7 @@ const allFAQ = ourFAQ.map((FAQ, index) => {
             <NavigationBar page='FAQ' />
             <div className="about-image" style={{marginTop:'79px'}}>
                 <div className="who-we-are"><p>Frequently Asked Questions</p></div>
-                <div><img src="./images/FAQIm.png"></img></div>
+                <div><img src="./images/FAQIm.png" alt='FAQ cover'></img></div>
             </div>
             <div className="FAQ-bottom-wrapper">
                 {allFAQ}

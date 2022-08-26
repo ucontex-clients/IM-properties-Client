@@ -1,5 +1,5 @@
 import React from "react"
-import { ForSale, SectionHeading, SectionTab } from ".."
+import { ForSale, SectionHeading} from ".."
 
 
 export function PropertySection(){
@@ -41,10 +41,10 @@ const goToProperties = (e) => {
                 <p>See More</p>
                 <div className="arrow-holder-container">
                     <div className="arrow-holder">
-                        <img src="./images/arrow.png"></img>
+                        <img src="./images/arrow.png" alt="arrow"></img>
                     </div>
                     <div className="arrow-holder">
-                    <img src="./images/arrow.png"></img>
+                    <img src="./images/arrow.png" alt="arrow"></img>
                 </div>
                 </div>
             </div>

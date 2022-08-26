@@ -7,7 +7,7 @@ export default function EachReferralHistory({index}){
                 <li><p>{index}</p></li>
                 <li>
                     <div className="each-referral-image-wrapper">
-                        <div><img src="./images/Ellipse.png"></img></div>
+                        <div><img src="./images/Ellipse.png" alt="referral icon"></img></div>
                         <p>John Doe</p>
                     </div>
                 </li>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews, ChooseDate} from ".."
 
 import {BsFillShareFill} from "react-icons/bs"
@@ -7,7 +7,6 @@ import {FiHeart} from "react-icons/fi"
 
 export function PropertyDetailBottom(){
 
-    const [active, setActive] = useState('')
 
     const [time, setTime] = useState('')
 
@@ -44,7 +43,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                 <div className="detail-top-section">
                     <p>CAMPUS GARDEN ESTATE</p>
                     <div style={{marginTop: '5px'}} className='location-two-wrapper'>
-                        <div className="location-two-holder"><img src="./images/Location2.png"></img></div>
+                        <div className="location-two-holder"><img src="./images/Location2.png" alt="location"></img></div>
                         <p>Obinze Umuokanne road, Owerri, Imo State</p>
                     </div>
                     <p style={{fontSize:'18px'}}>N350,000 - N500,000</p>
@@ -75,7 +74,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
 
             <div className="watch-video-wrapper">
                 <p>Watch Video</p>
-                <div className="watch-video-container"><video src="./images/video1.mp4" controls></video></div>
+                <div className="watch-video-container"><video src="./images/video1.mp4" controls alt='watch'></video></div>
             </div>
 
             <div className="buyer-review-wrapper">
@@ -129,7 +128,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
 
                     <div className="date-picker-main">
                         <div className="select-date-wrapper">
-                            <div><img src="./images/Calendar2.png"></img></div>
+                            <div><img src="./images/Calendar2.png" alt="calendar"></img></div>
                             <p>Select Date</p>
                         </div>
 
@@ -139,18 +138,18 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
 
                         <div className="select-time-wrapper">
                             <div className="select-date-wrapper">
-                                <div><img src="./images/Time.png"></img></div>
+                                <div><img src="./images/Time.png" alt="time"></img></div>
                                 <p>Select time</p>
                             </div>
                            <div style={{display:'flex', columnGap: '25px'}} className='time-picker'>
-                                <button style={time=='10AM' ? myStyle : {}} onClick={() => setTime('10AM')}>10AM</button>
-                                <button style={time=='1PM' ? myStyle : {}} onClick={() => setTime('1PM')}>1PM</button>
+                                <button style={time==='10AM' ? myStyle : {}} onClick={() => setTime('10AM')}>10AM</button>
+                                <button style={time==='1PM' ? myStyle : {}} onClick={() => setTime('1PM')}>1PM</button>
                            </div>
                         </div>
 
                         <div className="select-location-wrapper">
                                 <div className="select-location-logo-side">
-                                    <div><img src="./images/chooseLocation.png"></img></div>
+                                    <div><img src="./images/chooseLocation.png" alt="location"></img></div>
                                     <p>Select Location</p>
                                 </div>
                                 <div className="select-location-select">

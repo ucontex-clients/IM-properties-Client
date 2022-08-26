@@ -53,7 +53,7 @@ const addPhoto = useRef()
                     </div>
 
                     <div className="upload-media-container" onClick={() => addPhoto.current.click()}>
-                        <div><img src="./images/uploadMedia.png"></img></div>
+                        <div><img src="./images/uploadMedia.png" alt="upload media"></img></div>
                         <p>Add more photos</p>
                         <input type='file' name="pictures" className="add-more-photos"
                         ref={addPhoto} onChange={handleAddPropertyChange}></input>

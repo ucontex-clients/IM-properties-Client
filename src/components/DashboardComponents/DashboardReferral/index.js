@@ -6,7 +6,7 @@ export function DashboardReferral(){
     return(
         <div className="dashboard-home-main-wrapper">
             <div className="dashboard-referral-logo-wrapper">
-                <div><img src="./images/Handshake.png"></img></div>
+                <div><img src="./images/Handshake.png" alt="handshake"></img></div>
                 <p>Referral</p>
             </div>
 
@@ -19,7 +19,7 @@ export function DashboardReferral(){
                     <p>Referral Link</p>
                     <p className="referral-link">https://improperties.com/register?u=IM1234509</p>
                     <div className="copy-image-wrapper">
-                        <div><img src="./images/Copy.png"></img></div>
+                        <div><img src="./images/Copy.png" alt="copy"></img></div>
                         <p>Copy</p>
                     </div>
                 </div>

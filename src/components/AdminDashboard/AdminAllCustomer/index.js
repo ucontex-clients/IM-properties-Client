@@ -15,7 +15,7 @@ export function AdminAllCustomer(){
             <div className="dashboard-input-wrapper" style={{paddingBlock: '55px 29px'}}>
                 <p>Customer</p>
                 <div className="add-customer-button">
-                    <div><img src="./images/customerIcon.png"></img></div>
+                    <div><img src="./images/customerIcon.png" alt="customer icon"></img></div>
                     <p>Add Customer</p>
                 </div>
             </div>

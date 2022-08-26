@@ -46,7 +46,7 @@ export default function UploadPropertyInfo(){
                     </div>
 
                     <div className="upload-media-container">
-                        <div><img src="./images/uploadMedia.png"></img></div>
+                        <div><img src="./images/uploadMedia.png" alt="upload media"></img></div>
                         <p>Add more photos</p>
                     </div>
 

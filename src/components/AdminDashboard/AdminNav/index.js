@@ -6,7 +6,7 @@ export function AdminNav(){
     return(
         <div className="admin-nav-wrapper">
             <div className="navigation-logo-wrapper">
-                <a href="/"><img src="./images/logo.png"></img></a>
+                <a href="/"><img src="./images/logo.png" alt="logo"></img></a>
             </div>
             <Nav2 />
         </div>
