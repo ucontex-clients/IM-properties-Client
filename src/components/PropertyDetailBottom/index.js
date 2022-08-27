@@ -3,7 +3,7 @@ import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews, ChooseDate} 
 
 import {BsFillShareFill} from "react-icons/bs"
 import {FiHeart} from "react-icons/fi"
-
+const axios = require('axios')
 
 export function PropertyDetailBottom(){
 
@@ -27,6 +27,12 @@ const handleReviewChange = (e) =>{
     setReview(prevState => {
         return {...prevState, [e.target.name]: e.target.value}
     })
+}
+
+const submitReview = async() => {
+const response = await axios.post('https://im-properties-api.herokuapp.com/api/review', review)
+const data = response.data
+console.log(data)
 }
 
 
@@ -109,7 +115,7 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                     </div>
 
                     <div className="buyer-review-button" style={{marginBlock: '57px 45px'}}>
-                        <button style={{backgroundColor: '#FF1212', color: '#fff'}} onClick={() => console.log(review)}>Submit Review</button>
+                        <button style={{backgroundColor: '#FF1212', color: '#fff'}} onClick={submitReview}>Submit Review</button>
                         </div>                    
             </div>
         </div>
