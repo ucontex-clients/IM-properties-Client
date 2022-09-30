@@ -414,7 +414,20 @@ text-align: center;
   object-fit: cover;
 }
 
+.nav-top-wrapper {
+  display: flex;
+  padding: 16px 56px;
+  align-items: center;
+  justify-content: space-between;
+}
 
+
+.nav-top-wrapper p{
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+}
 
 
 
@@ -3912,7 +3925,7 @@ border: none;
   justify-content: space-between;
   position: fixed;
   left: 0;
-  top: 0;
+  top: 77px;
   background-color: #fff;
   z-index: 10;
 }
