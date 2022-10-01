@@ -1,11 +1,12 @@
 import React from "react"
-import { NavigationBar, TeamMember } from "../components"
+import { NavigationBar, TeamMember, TopSide } from "../components"
 
 export default function About(){
     return(
         <div>
+            <TopSide />
             <NavigationBar page='AboutUs' />
-            <div className="about-image">
+            <div className="about-image" style={{marginTop:'132px'}}>
                 <div className="who-we-are"><p>Get To Know Who <br/> We Are</p></div>
                 <img src="./images/aboutImg.png" alt="about cover"></img>
             </div>

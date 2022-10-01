@@ -11,10 +11,10 @@ const displayProperties = [...Array(12).keys()].map((property, index) => {
 })
 
     return(
-        <div style={{backgroundColor: '#fff', paddingBottom:'356px'}}>
+        <div style={{backgroundColor: '#fff', paddingBottom:'356px'}} >
             <NavigationBar page='Property' />
 
-            <div className="property-top-image-wrapper" style={{marginTop:'79px'}}>
+            <div className="property-top-image-wrapper" style={{marginTop:'132px'}}>
                 <img src="./images/newBuy.png" alt="all property"></img>
             </div>
 

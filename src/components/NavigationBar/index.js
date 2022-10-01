@@ -30,48 +30,34 @@ const signUp = () => {
             <div className="navigation-logo-wrapper">
                 <a href="/"><img src="./images/logo.png" alt="logo"></img></a>
             </div>
-
-            <div className="search-wrapper">
-                <div className="search-image-wrapper">
-                    <img src="./images/Vector.png" alt="search icon" className="search-image"></img>
-                </div>
-                <input type={'text'} placeholder='Search'></input>
-            </div>
-        </div>
-
-        <div className="navigation-right">
             <ul>
                     <li><a href="/"
                     style={tab==='Home'? fontStyle2 : fontStyle1}
                     onClick={(e) => {
                         setTab('Home')
                     }}>Home</a></li>
-                    <li><a href="/properties"
-                    style={tab==='Property'? fontStyle2 : fontStyle1}
-                    onClick={(e) => {
-                        setTab('Property')
-                    }}>Property</a></li>
                     <li><a href="/about"
                     style={tab==='AboutUs'? fontStyle2 : fontStyle1}
-                    onClick={(e)=>{
+                    onClick={(e) => {
                         setTab('AboutUs')
                     }}>About Us</a></li>
-                    <li><a href="blog"
-                    style={tab==='Blog'? fontStyle2 : fontStyle1}
+                    <li><a href="/our-services"
+                    style={tab==='WhatWeDo'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
-                        setTab('Blog')
-                    }}>Blog</a></li>
-                    <li><a href="contact"
-                    style={tab==='ContactUs'? fontStyle2 : fontStyle1}
+                        setTab('WhatWeDo')
+                    }}>What we do</a></li>
+                    <li><a href="/property"
+                    style={tab==='Property'? fontStyle2 : fontStyle1}
                     onClick={(e)=>{
-                        setTab('ContactUs')
-                    }}>Contact Us</a></li>
-                    <li><a href="faq"
-                    style={tab==='FAQ'? fontStyle2 : fontStyle1}
-                    onClick={(e)=>{
-                        setTab('FAQ')
-                    }}>FAQ</a></li>
+                        setTab('Property')
+                    }}>Our Properties</a></li>
+                    <li>
+                        <button className="nav-button">Become an ESP</button>
+                    </li>
                 </ul>
+        </div>
+
+        <div className="navigation-right">
                 
                 {tab === 'Home'? <Nav1 signIn={signIn} signUp={signUp} /> : <Nav2 />}
         </div>

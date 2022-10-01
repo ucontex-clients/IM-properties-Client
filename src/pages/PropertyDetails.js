@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { NavigationBar, PropertyDetailBottom, SingleProperty} from "../components"
+import { NavigationBar, PropertyDetailBottom, SingleProperty, TopSide} from "../components"
 
 import {AiFillCamera} from "react-icons/ai";
 
@@ -10,9 +10,11 @@ export default function PropertyDetails(){
 
     return (
         <div>
+            <TopSide />
+
             <NavigationBar page="Property" />
 
-            <div className="property-detail-image-main-wrapper" style={{marginTop:'79px'}}>
+            <div className="property-detail-image-main-wrapper" style={{marginTop:'140px'}}>
                 <div className="single-large-image-wrapper">
                 <div className="all-property-arrow-container" style={{right:'18px'}}><img src="./images/propertyArrow.png" alt="arrow"></img></div>
                 <div className="all-property-arrow-container" style={{left:'18px'}} id="face-left"><img src="./images/propertyArrow.png" alt='arrow'></img></div>
