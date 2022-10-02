@@ -11,6 +11,7 @@ export default function HomePage(){
             <NavigationBar />
             <div className="home-image-wrapper" style={{marginTop: '132px'}}>
                 <img src="./images/newHome.png" alt="home cover"></img>
+                <div className="background"></div>
             </div>
 
            <PropertySection />
