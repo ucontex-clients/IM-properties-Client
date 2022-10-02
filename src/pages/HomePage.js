@@ -9,9 +9,17 @@ export default function HomePage(){
         <div>
             <TopSide />
             <NavigationBar />
-            <div className="home-image-wrapper" style={{marginTop: '132px'}}>
+            <div className="home-image-wrapper" style={{marginTop: '132px', overflow:'hidden'}}>
                 <img src="./images/newHome.png" alt="home cover"></img>
-                <div className="background"></div>
+                <div className="background" style={{paddingLeft:'64px'}}>
+                    <h1 style={{marginTop:'160px'}}>WE ARE <span style={{color:'#FF1212'}}>IM</span> PROPERTIES</h1>
+                    <p style={{marginTop:'7px'}}>you can own A Property Without Stress <br/> 
+                    and become a landlord with peace of mind</p>
+                    <div className="flex" style={{marginTop:'68px', columnGap:'39px'}}>
+                        <button>BOOK AN INSPECTION</button>
+                        <button>CONTACT US</button>
+                    </div>
+                </div>
             </div>
 
            <PropertySection />

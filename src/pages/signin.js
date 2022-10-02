@@ -41,7 +41,7 @@ const login = async () => {
         <Input img={"../images/Lock.png"} type={'password'} takeInputData={takeInputData}
         placeholder={'Password'} eye={'../images/Eye.png'} name='password' value={body.password}/>
 
-        <div className="forgot-password-container"><a href="#">Forgot Password</a></div>
+        <div className="forgot-password-container"><a href="/recover-password">Forgot Password</a></div>
 
         <Button text={'Login'} run={login}/>
         <div>

@@ -8,7 +8,7 @@ export default function Dashboard({profilePicture = './images/profilePicture.png
 
     const [activePage, setActivepage] = useState('dashboard')
     const [showModal, setShowModal] = useState(false)
-    const [availableAccount, setAvailableAccount] = useState(true)
+    const [availableAccount, setAvailableAccount] = useState(false)
 
     const myModal = () => {
         setShowModal(prevVal => !prevVal)
