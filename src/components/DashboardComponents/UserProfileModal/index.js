@@ -13,27 +13,27 @@ export function UserProfileModal({profilePicture, myModal, setActivePage}){
 
                     <ul className="user-profile-ul">
                     <li className="user-profile-li" style={{paddingTop: '18px'}} onClick={() => setActivePage('view')}>
-                        <a href="#">Edit Profile</a>
+                        <a href="/edit-profile">Edit Profile</a>
                         <div><img src="./images/arrowRight.png" alt='arrow right'></img></div>
                     </li>
                     <li className="user-profile-li" onClick={() => setActivePage('create')}>
-                        <a href="#">Update Profile Picture</a>
+                        <a href="/update-picture">Update Profile Picture</a>
                         <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                     <li className="user-profile-li">
-                        <a href="#">View Profile</a>
+                        <a href="/view-profile">View Profile</a>
                         <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                     <li className="user-profile-li">
-                        <a href="#">Change Password</a>
+                        <a href="change-password">Change Password</a>
                         <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                     <li className="user-profile-li" >
-                        <a href="#">Change Email</a>
+                        <a href="change-email">Change Email</a>
                         <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                     <li className="user-profile-li" style={{paddingBottom: '17px'}}>
-                        <a href="#">Logout</a>
+                        <a href="/logout">Logout</a>
                         <div><img src="./images/arrowRight.png" alt="arrow right"></img></div>
                     </li>
                 </ul>

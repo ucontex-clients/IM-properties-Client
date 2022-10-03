@@ -3,7 +3,7 @@ import { PlotDimension, PlotButtons, SimilarProperty, BuyerReviews, ChooseDate} 
 
 import {BsFillShareFill} from "react-icons/bs"
 import {FiHeart} from "react-icons/fi"
-
+const axios = require('axios')
 
 export function PropertyDetailBottom(){
 
@@ -17,9 +17,23 @@ export function PropertyDetailBottom(){
     }
 
 
+const [review, setReview] = useState({
+    name: '',
+    date: '',
+    message: ''
+})
 
+const handleReviewChange = (e) =>{
+    setReview(prevState => {
+        return {...prevState, [e.target.name]: e.target.value}
+    })
+}
 
-
+const submitReview = async() => {
+const response = await axios.post('https://im-properties-api.herokuapp.com/api/review', review)
+const data = response.data
+console.log(data)
+}
 
 
 const plotDimensions = [1,2,3,4,5,6,7,8,9,10,11,12].map((plot, index) => {
@@ -27,7 +41,7 @@ const plotDimensions = [1,2,3,4,5,6,7,8,9,10,11,12].map((plot, index) => {
 })
 
 const allSimilarProperty = [1,2,3].map((property, index) => {
-    return <SimilarProperty />
+    return <SimilarProperty key={index}/>
 })
 
 const allBuyerReviews = [1,2,3].map((review, index) => {
@@ -88,20 +102,20 @@ const allBuyerReviews = [1,2,3].map((review, index) => {
                     <div className="write-reviews">
                         <div className="review-label-input">
                             <label>Name</label>
-                            <input type='text'></input>
+                            <input type='text' name="name" value={review.name} onChange={handleReviewChange}></input>
                         </div>
                         <div className="review-label-input">
                             <label>Name</label>
-                            <input type='text'></input>
+                            <input type='text' name="date" value={review.date} onChange={handleReviewChange}></input>
                         </div>
                         <div className="review-label-input" id="textarea-side">
                             <label>Message</label>
-                            <textarea type='text'></textarea>
+                            <textarea type='text' name="message" value={review.message} onChange={handleReviewChange}></textarea>
                         </div>
                     </div>
 
                     <div className="buyer-review-button" style={{marginBlock: '57px 45px'}}>
-                        <button style={{backgroundColor: '#FF1212', color: '#fff'}}>Submit Review</button>
+                        <button style={{backgroundColor: '#FF1212', color: '#fff'}} onClick={submitReview}>Submit Review</button>
                         </div>                    
             </div>
         </div>
