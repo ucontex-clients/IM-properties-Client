@@ -9,6 +9,7 @@ export * from "./ForSale";
 export * from "./Categories";
 export * from './Feedback'
 export * from './EachFAQ'
+export * from './VideoData'
 export * from './Nav1'
 export * from './Nav2'
 export * from './PropertySection'

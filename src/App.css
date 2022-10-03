@@ -1,3 +1,8 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400&display=swap');
+
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";
@@ -11,17 +16,20 @@
   box-sizing: border-box;
 }
 
+button{
+  font-family: Montserrat;
+font-size: 15px;
+font-weight: 600;
+}
+
 body{
   background: #F5F5F5;
+  font-family: Monserrat;
 }
 
 /* select {
   appearance: none;
 } */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap");
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&display=swap');
 
 .signup-container {
   padding: 47px;
@@ -3682,8 +3690,33 @@ margin-right: 15px;
 width: 200px;
 }
 
+.property-bottom{
+  border: 1px solid #D9D9D9;
+border-radius: 0px 0px 5px 5px;
+}
+
+.property-description{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+color: #6C6C6C;
+line-height: 20px;
+}
+
+.property-bottom > p{
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 500;
+}
+
 .property-bottom-right >div input:focus{
   outline: none;
+}
+
+.location-bottom{
+  font-family: Montserrat;
+font-size: 12px;
+font-weight: 400;
 }
 
 .add-plot-bottom{
@@ -4003,10 +4036,10 @@ border: 1px solid #000000;
 .property-fade{
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.60);
   position: absolute;
   top: 0;
-  display: none;
+  display: block;
+  background: linear-gradient(89.86deg, rgba(74, 23, 182, 0.5) 41.23%, rgba(182, 23, 156, 0.175) 99.86%)
 }
 
 .features-tab-wrapper{
@@ -4468,9 +4501,10 @@ font-weight: 400;
 
 .property-view-main-wrapper{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 245px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 73px;
   position: relative;
+  column-gap: 60px;
 }
 
 
@@ -4971,19 +5005,16 @@ color: #6C6C6C;
   z-index: 5;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 8px;
   cursor: pointer;
 }
 
-.arrow-div img{
-  height: 20px;
-  width: 20px;
-}
 
 .see-more-container{
   display: flex;
@@ -5059,9 +5090,6 @@ text-align: left;
   height: 100%;
 }
 
-.view-product-button{
-
-}
 
 
 .search-image-wrapper{
@@ -5175,7 +5203,66 @@ cursor: pointer;
 color: #FF1212;
 }
 
-.background
+.section-container{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 80px;
+}
+
+.residual > h2{
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.residual h3{
+  font-family: Montserrat;
+font-size: 20px;
+font-weight: 600;
+color: #6C6C6C;
+}
+
+.residual p{
+  font-family: Montserrat;
+font-size: 15px;
+font-weight: 400;
+color: #6C6C6C;
+}
+
+.section1 > h2{
+  font-family: Inter;
+font-size: 25px;
+font-weight: 700;
+margin-bottom: 24px;
+}
+
+.section1  > p, .our-doings > p{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+line-height: 30px;
+color: #6C6C6C;
+text-align: justify;
+}
+
+.doings{
+  font-family: Inter;
+font-size: 18px;
+font-weight: 600;
+color: #000000;
+}
+
+.doings-images div {
+  border-radius: 5px;
+  background-color: #038566;
+  width: fit-content;
+  position: relative
+}
+
+.doings-images div img{
+  border-radius: 5px;
+}
+
 
 .one-category-wrapper{
   max-width: 270px;
@@ -5213,17 +5300,34 @@ color: #FF1212;
   object-fit: cover;
 }
 
-.all-video-wrapper{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-padding-inline: 80px;
-column-gap: 35px;
-justify-content: center;
-margin-block: 63px 24px;
-}
 
 .all-video-wrapper > div{
   border-radius: 20px;
+}
+
+.video-bottom{
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  bottom: -50px;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.video-data p:first-child{
+  font-family: Inter;
+font-size: 25px;
+font-weight: 500;
+color: #C4CDD5;
+}
+
+.video-data p:last-child{
+  font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+
 }
 
 .contact-info-wrapper{

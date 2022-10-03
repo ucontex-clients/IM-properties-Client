@@ -25,7 +25,7 @@ const signUp = () => {
 
 
   return (
-    <div className="navigation-wrapper">
+    <div className="navigation-wrapper" style={{minWidth:'900px'}}>
         <div className="navigation-left">
             <div className="navigation-logo-wrapper">
                 <a href="/"><img src="./images/logo.png" alt="logo"></img></a>
