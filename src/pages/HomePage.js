@@ -1,5 +1,6 @@
 import React from "react"
-import { NavigationBar, PropertyViewSection, VideoSection, TopSide } from "../components"
+import { NavigationBar, PropertyViewSection,
+    VideoSection, TopSide, Testinonials } from "../components"
 
 // import {IoCallOutline} from "react-icons/io"
 import {FaUsers} from "react-icons/fa"
@@ -131,7 +132,7 @@ export default function HomePage(){
 
             <div className="relative">
                 <img src="./images/testimonial.png" alt='testimonial'></img>
-                <div className="py-[57px] px-[40px] absolute top-0 left-0 w-full h-full text-center"
+                <div className="py-[57px] px-[138px] absolute top-0 left-0 w-full h-full text-center"
                 style={{backgroundColor:'rgba(0, 0, 0, 0.8)'}}>
                     <h2 className="text-[25px] text-white font-fam font-bold">Testimonials</h2>
                     <div className="nav-div" style={{left:'40px'}}>
@@ -141,7 +142,9 @@ export default function HomePage(){
                         <MdKeyboardArrowRight style={{fontSize:'24px'}}/>
                     </div>
                     
-                    
+                    <div>
+                        <Testinonials />
+                    </div>
                     
                     <div>
                         <button className="font-fam bg-mine text-white p-[10px] rounded text-xl font-medium mt-[79px]"

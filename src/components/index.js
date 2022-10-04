@@ -5,6 +5,7 @@ export * from "./FormElemets/Button";
 export * from "./NavigationBar";
 export * from "./SectionTabs";
 export * from "./SectionHeading";
+export * from "./Testimonials";
 export * from "./ForSale";
 export * from "./Categories";
 export * from './Feedback'
