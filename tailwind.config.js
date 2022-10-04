@@ -5,7 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      mycolor: "#FF1212"
+      colors: {
+        mine: '#FF1212',
+        light: '#6C6C6C'
+      },
+      fontFamily: {
+        fam: 'Montserrat'
+      }
     },
   },
   plugins: [],

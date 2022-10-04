@@ -1,9 +1,9 @@
 import React from "react"
-import { NavigationBar,
-    FeedbackSection, PropertyViewSection, BlogSection, VideoSection, TopSide } from "../components"
+import { NavigationBar, PropertyViewSection, VideoSection, TopSide } from "../components"
 
 // import {IoCallOutline} from "react-icons/io"
 import {FaUsers} from "react-icons/fa"
+import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from "react-icons/md"
 
 export default function HomePage(){
     return(
@@ -105,7 +105,7 @@ export default function HomePage(){
             <VideoSection />
 
             <div className="section1  pt-[132px] p-[65px] bg-white" >
-                <h2 style={{marginBottom:'10px'}}>Our Latest Properties</h2>
+                <h2 className="text-mine" style={{marginBottom:'10px'}}>Our Latest Properties</h2>
                 <p>Buy a landlanded property with peace of mind</p>
                 <PropertyViewSection />
                 <div className="grid place-items-center mt-[56px]">
@@ -129,10 +129,27 @@ export default function HomePage(){
                 </div>
             </div>
 
+            <div className="relative">
+                <img src="./images/testimonial.png" alt='testimonial'></img>
+                <div className="py-[57px] px-[40px] absolute top-0 left-0 w-full h-full text-center"
+                style={{backgroundColor:'rgba(0, 0, 0, 0.8)'}}>
+                    <h2 className="text-[25px] text-white font-fam font-bold">Testimonials</h2>
+                    <div className="nav-div" style={{left:'40px'}}>
+                        <MdKeyboardArrowLeft style={{fontSize:'24px'}} />
+                    </div>
+                    <div className="nav-div" style={{right:'40px'}}>
+                        <MdKeyboardArrowRight style={{fontSize:'24px'}}/>
+                    </div>
+                    
+                    
+                    
+                    <div>
+                        <button className="font-fam bg-mine text-white p-[10px] rounded text-xl font-medium mt-[79px]"
+                        style={{fontFamily:'Montserrat'}}>VIEW MORE</button>
+                    </div>
+                </div>
+            </div>
 
-
-            <FeedbackSection />
-            <BlogSection />
 
             <div className="explore-blue">
                 <div className="explore-red">
