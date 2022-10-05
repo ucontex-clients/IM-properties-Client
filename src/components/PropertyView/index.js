@@ -1,7 +1,7 @@
 import React from "react"
 import {MdLocationOn} from "react-icons/md"
 
-export function PropertyView({img, name, location}){
+export function PropertyView({img, name, location, para}){
     return(
         <div className="property-main-container">
                 <div>
@@ -17,9 +17,11 @@ export function PropertyView({img, name, location}){
                         </div>
                         <p style={{fontWeight:700, color:'#FF1212'}}>70 plots</p>
                     </div>
+                { para && <>
                     <hr className="my-[16px]" style={{height:'1px', backgroundColor:'black'}} />
                     <p className="property-description">do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, <span style={{color:'#FF2442', cursor:'pointer'}}>see more</span></p>
+                    </>}
                 </div>
         </div>
     )

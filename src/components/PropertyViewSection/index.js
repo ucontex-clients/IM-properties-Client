@@ -15,10 +15,10 @@ export function PropertyViewSection(){
             
 
             <PropertyView img={'./images/view1.png'}
-            name={'Campus Garden Estate'} location={'Jabi, Abuja, Nigeria'}/>
+            name={'Campus Garden Estate'} location={'Jabi, Abuja, Nigeria'} para={true}/>
 
             <PropertyView img={'./images/view1.png'}
-            name={'Campus Garden Estate'} location={'Jabi, Abuja, Nigeria'}/>
+            name={'Campus Garden Estate'} location={'Jabi, Abuja, Nigeria'} para={true}/>
         </div>
     )
 }

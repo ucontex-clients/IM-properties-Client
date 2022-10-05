@@ -3,16 +3,18 @@ import {FaUsers} from "react-icons/fa"
 
 export function Testinonials(){
     return (
-        <div>
-            <div className="flex items-center gap-x-[20px]">
+        <div className="bg-white rounded-[5px] p-[21px]">
+            <div className="flex items-center gap-x-[20px] pl-[15px]">
                 <div>
-                    <FaUsers />
+                    <img src="./images/user.png" alt="user"></img>
                 </div>
-                <p className="font-fam text-mine font-bold">Phil</p>
+                <p className="font-fam text-mine font-bold text-[18px]">Phil</p>
             </div>
-            <div></div>
+            <div className="mt-[47px]">
+                <video src='./images/video1.mp4' controls className="video"/>
+            </div>
             <div>
-                <p>"Lorem ipsum dolor sit amet,
+                <p className="font-fam font-normal text-light text-justify mt-[25px]">"Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et </p>
             </div>

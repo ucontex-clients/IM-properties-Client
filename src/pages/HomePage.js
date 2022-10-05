@@ -1,10 +1,11 @@
 import React from "react"
 import { NavigationBar, PropertyViewSection,
-    VideoSection, TopSide, Testinonials } from "../components"
+    VideoSection, TopSide, Testinonials, News, PropertyView } from "../components"
 
 // import {IoCallOutline} from "react-icons/io"
 import {FaUsers} from "react-icons/fa"
 import {MdKeyboardArrowRight, MdKeyboardArrowLeft} from "react-icons/md"
+import {BiChevronsRight} from "react-icons/bi"
 
 export default function HomePage(){
     return(
@@ -131,8 +132,9 @@ export default function HomePage(){
             </div>
 
             <div className="relative">
-                <img src="./images/testimonial.png" alt='testimonial'></img>
-                <div className="py-[57px] px-[138px] absolute top-0 left-0 w-full h-full text-center"
+                <img src="./images/testimonial.png" alt='testimonial'
+                style={{width:'100%', height:'100%', zIndex:'-10'}} className="absolute"></img>
+                <div className="py-[57px] px-[138px] top-0 left-0 w-full h-full text-center"
                 style={{backgroundColor:'rgba(0, 0, 0, 0.8)'}}>
                     <h2 className="text-[25px] text-white font-fam font-bold">Testimonials</h2>
                     <div className="nav-div" style={{left:'40px'}}>
@@ -142,7 +144,9 @@ export default function HomePage(){
                         <MdKeyboardArrowRight style={{fontSize:'24px'}}/>
                     </div>
                     
-                    <div>
+                    <div className="grid grid-cols-3 gap-x-[26px] mt-[93px]">
+                        <Testinonials />
+                        <Testinonials />
                         <Testinonials />
                     </div>
                     
@@ -154,21 +158,92 @@ export default function HomePage(){
             </div>
 
 
-            <div className="explore-blue">
-                <div className="explore-red">
-                    <div className="explore-red-left">
-                        <h3>Looking for a dream property?</h3>
-                        <p>We can help you realize your dream of a new property</p>
-                    </div>
-                    <div className="explore-red-right" onClick={() => window.location.assign('/properties')}>
-                        <p>Explore Property</p>
-                        <div className="arrow-container">
-                            <img src="./images/exploreArrow.png" alt="explore"></img>
-                            <img src="./images/exploreArrow.png" alt="explore"></img>
-                        </div>
+
+            <div className="px-[60px] py-[76px] bg-white">
+                <h2 className="font-bold text-[25px] font-fam text-center">Latest News Feeds</h2>
+                <div className="grid grid-cols-3 gap-x-[43px] mt-[43px]">
+                    <News />
+                    <News />
+                    <News />
+                </div>
+            </div>
+
+            <div className="pb-[56px]">
+                <h2 className="font-bold text-[25px] font-fam bg-white px-[60px] pb-[52px]">See More Properties</h2>
+                <div className="grid grid-cols-3 gap-x-[43px] p-[29px]">
+                    <PropertyView img={'./images/view1.png'}
+                    name={'Campus Garden Estate'} location={'Jabi, Abuja, Nigeria'}/>
+
+                    <PropertyView img={'./images/view1.png'}
+                    name={'Campus Garden Estate'} location={'Jabi, Abuja, Nigeria'}/>
+
+                    <PropertyView img={'./images/view1.png'}
+                    name={'Campus Garden Estate'} location={'Jabi, Abuja, Nigeria'}/>
+                </div>
+                <div className="flex items-center rounded-[8px] bg-mine p-[6px] gap-x-[5px] mt-[21px] cursor-pointer"
+                style={{width:'fit-content', margin:'auto'}}>
+                    <p className="font-fam text-white text-[18px] font-semibold">EXPLORE PROPERTY</p>
+                    <div>
+                        <BiChevronsRight style={{fontSize:'30px', color:'#fff'}}/>
                     </div>
                 </div>
             </div>
+
+            <div className="px-[126px] py-[67px] bg-white">
+                <h2 className="font-fam text-[25px] text-center font-bold">Get in Touch</h2>
+                <div className="grid grid-cols-3 gap-x-[120px] mt-[48px]">
+                    <div>
+                        <p className="font-fam text-[15px] font-bold">IM Properties</p>
+                        <div className="mt-[18px]">
+                            <p className="font-fam text-[15px] font-medium">KM 37 East West Road Port Harcourt.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p className="font-fam text-[15px] font-bold">IM Properties</p>
+                        <div className="mt-[18px]">
+                            <p className="font-fam text-[15px] font-medium">KM 37 East West Road Port Harcourt.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p className="font-fam text-[15px] font-bold">IM Properties</p>
+                        <div className="mt-[18px]">
+                            <p className="font-fam text-[15px] font-medium">KM 37 East West Road Port Harcourt.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="grid gap-x-[55px] grid-cols-2 mt-[54px]">
+                    <div className="user-input" >
+                        <div>
+                            <label htmlFor='name' className="font-fam text-[18px] font-semibold text-light">Name:</label>
+                            <input type='text' id='name' name='name' className="block mt-[9px]"></input>
+                        </div>
+                        <div className="mt-[18px]">
+                            <label htmlFor='name' className="font-fam text-[18px] font-semibold text-light">Email:</label>
+                            <input type='email' id='name' name='name' className="block mt-[9px]"></input>
+                        </div>
+                        <div className="mt-[18px]">
+                            <label htmlFor='name' className="font-fam text-[18px] font-semibold text-light">Phone:</label>
+                            <input type='tel' id='name' name='name' className="block mt-[9px]"></input>
+                        </div>
+                    </div>
+                    <div className="user-input">
+                        <div>
+                            <label htmlFor='name' className="font-fam text-[18px] font-semibold text-light">Message:</label>
+                            <textarea  id='name' name='name' className="block mt-[9px]"
+                            style={{minHeight:'215px'}}></textarea>
+                        </div>
+                        <button
+                        className="font-fam bg-mine text-white text-[20px] font-medium block mt-[36px] px-[15px] py-[10px] rounded-[5px]"
+                        style={{marginLeft:'auto'}}>
+                            SUBMIT</button>
+                    </div>
+                </div>
+            </div>
+
+            
 
         </div>
     )
