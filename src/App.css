@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap");
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
@@ -88,7 +88,7 @@ body{
 }
 
 #signup-paragraph {
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
@@ -137,7 +137,7 @@ body{
 }
 
 #agreement-paragraph {
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 500;
   line-height: 18px;
@@ -148,7 +148,7 @@ body{
 
 .signin-option {
   font-size: 15px;
-  font-family: Inter;
+  font-family: Montserrat;
   font-weight: 500;
   text-align: center;
   /* margin-block: 3px; */
@@ -168,7 +168,7 @@ body{
   border-radius: 10px;
   border-style: none;
   cursor: pointer;
-  font-family: Inter;
+  font-family: Montserrat;
   padding-block: 13px;
   margin-top: 10px;
   margin-bottom: 26px;
@@ -192,7 +192,7 @@ body{
 }
 
 .signup-input::placeholder {
-  font-family: Inter;
+  font-family: Montserrat;
   /* font-size: 7pt; */
   font-weight: 500;
   line-height: 18px;
@@ -264,7 +264,7 @@ body{
 }
 
 .customer-page-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 color: #6C6C6C;
@@ -285,14 +285,14 @@ color: #6C6C6C;
 }
 
 .view-customers-top > div p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
 }
 
 .view-customers-top td{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 500;
   color: #6C6C6C;
@@ -323,7 +323,7 @@ color: #6C6C6C;
 #john{
   text-align: center;
   margin-bottom: 20px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 30px;
 font-weight: 700;
 }
@@ -356,7 +356,7 @@ font-weight: 700;
 
 .admin-user-dashboard p{
   padding: 15px 29px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 border-radius: 5px;
@@ -383,7 +383,7 @@ cursor: pointer;
 }
 
 .property-headers p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
 text-align: center;
@@ -430,10 +430,7 @@ text-align: center;
 }
 
 .nav-top-wrapper {
-  position: fixed;
   width: 100%;
-  left: 0;
-  top: 0;
   display: flex;
   padding: 16px 56px;
   align-items: center;
@@ -443,7 +440,7 @@ text-align: center;
 
 
 .nav-top-wrapper p{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 13px;
   font-weight: 500;
   color: #fff;
@@ -459,7 +456,7 @@ text-align: center;
 
 
 .property-writeup-para-container > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -480,7 +477,7 @@ font-weight: 500;
 }
 
 .dashboard-input-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 }
@@ -495,7 +492,7 @@ font-weight: 500;
 }
 
 .admin-box-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 text-align: center;
@@ -539,7 +536,7 @@ text-align: center;
 }
 
 .revenue-image-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 400;
 color: #6C6C6C;
@@ -591,7 +588,7 @@ color: #6C6C6C;
 }
 
 .add-customer-button > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 color: #fff;
@@ -610,7 +607,7 @@ color: #fff;
 }
 
 .entries-header > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 color: #6C6C6C;
@@ -670,14 +667,14 @@ color: #6C6C6C;
 
 
 .entries-list li > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
 text-align: center;
 }
 
 .entry > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -698,7 +695,7 @@ color: #6C6C6C;
 }
 
 .admin-dashboard-ul li > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 color: #fff;
@@ -725,7 +722,7 @@ color: #fff;
 
 .all-properties-home-wrapper p a{
   text-decoration: none;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 line-height: 30px;
@@ -868,7 +865,7 @@ font-weight: 700;
   cursor: pointer;
   background: #3DB2FF;
 border-radius: 5px;
-font-family: Inter;
+font-family: Montserrat;
 font-size: 16px;
 font-weight: 700;
 color: #fff;
@@ -902,7 +899,7 @@ border-style: none;
 }
 
 .upload-another-media > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 }
@@ -919,7 +916,7 @@ font-weight: 400;
 }
 
 .plot-dimension > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 12px;
 font-weight: 100;
 }
@@ -931,7 +928,7 @@ font-weight: 100;
   top: 0;
   left: 5px;
   text-align: center;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 12px;
   font-weight: 100;
 }
@@ -942,7 +939,7 @@ font-weight: 100;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 12px;
   font-weight: 100;
 }
@@ -954,13 +951,13 @@ font-weight: 100;
   transform: translateX(-50%);
   color: #3DB2FF;
   text-align: center;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 12px;
   font-weight: 500;
 }
 
 .dimension4{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 10px;
   font-weight: 500;
 }
@@ -974,19 +971,19 @@ font-weight: 100;
 }
 
 .property-layout-head span{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 }
 
 .property-layout-head p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 }
 
 .property-layout-head p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 10px;
   font-weight: 500;
   color: #FF1212;
@@ -1049,13 +1046,13 @@ padding-inline:56px;
 
 
 .referral-history-top >div p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 }
 
 .referral-history-top >div p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 400;
 }
@@ -1069,7 +1066,7 @@ font-weight: 700;
 }
 
 .referral-history-ul p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 }
@@ -1092,7 +1089,7 @@ font-weight: 700;
 }
 
 .each-referral-ul li > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 }
@@ -1119,7 +1116,7 @@ font-weight: 400;
 }
 
 .each-referral-image-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 }
@@ -1152,13 +1149,13 @@ font-weight: 700;
 }
 
 .dashboard-buy-property-logo-wrapper >p {
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
 
 .buy-plots{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 margin-block: 44px 16px;
@@ -1188,7 +1185,7 @@ margin-block: 44px 16px;
 
 
 .who-we-are > p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 50px;
 font-weight: 700;
 color: #fff;
@@ -1196,7 +1193,7 @@ text-align: center;
 }
 
 .get-support{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 color: #fff;
@@ -1222,7 +1219,7 @@ color: #fff;
 }
 
 .customer-care{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 700;
 color: #FF2442;
@@ -1273,7 +1270,7 @@ margin-bottom: 16px;
 
 .user-right-wrapper p{
   text-decoration: none;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 line-height: 18px;
 font-weight: 500;
@@ -1305,14 +1302,14 @@ cursor: pointer;
 }
 
 .each-FAQ h5{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 700;
 margin-bottom: 16px;
 }
 
 .each-FAQ p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 padding-inline: 24px;
@@ -1343,7 +1340,7 @@ text-align: justify;
 }
 
 .contact-bottom-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 color: #FF2442;
@@ -1357,7 +1354,7 @@ margin-bottom: 32px;
 }
 
 .contact-input-wrapper label{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 margin-bottom: 10px;
@@ -1368,7 +1365,7 @@ display: block;
   background: #FFFFFF;
 border: 1px solid #C6C5C5;
 border-radius: 5px;
-font-family: Inter;
+font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 padding: 10px;
@@ -1397,7 +1394,7 @@ width: 100%;
 }
 
 .submit-request-wrapper button{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 padding: 14px 40px;
@@ -1414,7 +1411,7 @@ cursor: pointer;
 }
 
 .care-email{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -1422,7 +1419,7 @@ margin-bottom: 16px;
 }
 
 .care-number{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 500;
   color: #6C6C6C;
@@ -1461,13 +1458,13 @@ margin-bottom: 16px;
 }
 
 .each-property-right .title {
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 16px;
 font-weight: 700;
 }
 
 .each-property-right .location {
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 color: #6C6C6C;
@@ -1475,13 +1472,13 @@ padding-block: 21px;
 }
 
 .each-property-right .size {
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
 
 .each-property-right .price{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #038566;
@@ -1503,7 +1500,7 @@ padding-block: 16px;
 }
 
 .each-property-download-container p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #0682D3;
@@ -1534,13 +1531,13 @@ padding-block: 35px 18px;
 }
 
 .dashboard-property-logo-wrapper p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
 
 .dashboard-property-logo-wrapper > p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 width: 27px;
@@ -1562,7 +1559,7 @@ border-radius: 50%;
   border-radius: 20px;
   padding: 11px 25px;
   cursor: pointer;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 top: 50%;
@@ -1585,7 +1582,7 @@ transform: translateY(-50%);
 }
 
 .inspection-heading-ul p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 }
@@ -1596,7 +1593,7 @@ font-weight: 700;
   justify-content: space-between;
   padding: 23px 25px;
   align-items: center;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -1628,7 +1625,7 @@ border: 1px solid #C6C5C5;
     width: 100%;
     padding-block: 10px;
     background-color: #FF1212;
-    font-family: Inter;
+    font-family: Montserrat;
 font-size: 16px;
 font-weight: 700;
 color: white;
@@ -1672,7 +1669,7 @@ padding-top: 79px;
 } */
 
 .list-item-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #000000;
@@ -1713,7 +1710,7 @@ color: #000000;
 
 .wallet-option{
   margin-left: 95px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -1728,13 +1725,13 @@ padding: 31px 16px;
 }
 
 .bank-details{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 }
 
 .upload-payment-wrapper p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 color: #6C6C6C;
@@ -1753,7 +1750,7 @@ padding-block: 9px;
 .upload-button-wrapper input{
   background: #FFFFFF;
   border-radius: 5px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 color: #6C6C6C;
@@ -1771,7 +1768,7 @@ width: 245px;
   background: #3DB2FF;
 border-radius: 5px;
 padding: 8px 30px;
-font-family: Inter;
+font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 color: #fff;
@@ -1794,7 +1791,7 @@ padding: 21px 32px;
 }
 
 .withdraw-gray p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -1835,7 +1832,7 @@ position: relative;
 }
 
 .bank-name-wrapper label{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 color: #6C6C6C;
@@ -1845,7 +1842,7 @@ display: block;
 
 .bank-name-wrapper input, .bank-name-wrapper select{
   padding: 17px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
   background: #FFFFFF;
@@ -1855,7 +1852,7 @@ width: 100%;
 }
 
 .add-account-para{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -1899,7 +1896,7 @@ font-weight: 500;
 }
 
 .success-paras{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -1908,7 +1905,7 @@ font-weight: 500;
   background: #0682D3;
 border: 1px solid #C6C5C5;
 border-radius: 5px;
-font-family: Inter;
+font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 border-style: none;
@@ -1944,7 +1941,7 @@ cursor: pointer;
 }
 
 .merchant-part{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 color: #0682D3;
@@ -1962,7 +1959,7 @@ color: #0682D3;
 }
 
 .customer-withdrawal-detail-wrapper p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -2040,7 +2037,7 @@ font-weight: 500;
 }
 
 .about-right > h3{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 25px;
 font-weight: 700;
 color: #EB3223;
@@ -2049,7 +2046,7 @@ text-align: center;
 }
 
 .check-story{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 margin-bottom: 38px;
@@ -2057,7 +2054,7 @@ text-align: center;
 }
 
 .story{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 text-align: justify;
@@ -2068,7 +2065,7 @@ text-align: justify;
 }
 
 .team-section-wrapper >p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 25px;
 font-weight: 700;
 color: #EB3223;
@@ -2083,7 +2080,7 @@ padding: 10px;
 }
 
 .mate-name{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 25px;
 font-weight: 700;
 text-align: center;
@@ -2097,7 +2094,7 @@ padding-block: 20px;
 }
 
 .latest-news > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 25px;
 font-weight: 700;
 color: #FF2442;
@@ -2122,14 +2119,14 @@ color: #FF2442;
 }
 
 .news-admin-sign p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 margin-bottom: 5px;
 }
 
 .news-admin-sign p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 color: #6C6C6C;
@@ -2164,14 +2161,14 @@ border-radius: 10px
 }
 
 .news-text-holder p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 margin-bottom: 19px;
 }
 
 .news-text-holder p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 }
@@ -2185,7 +2182,7 @@ font-weight: 400;
 }
 
 .mate-position{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 400;
 text-align: center;
@@ -2214,7 +2211,7 @@ object-fit: cover;
 }
 
 .my-transaction-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 }
@@ -2237,7 +2234,7 @@ align-items: center;
 }
 
 .each-transaction-left p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -2250,7 +2247,7 @@ color: #6C6C6C;
 }
 
 .each-transaction-right p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color:#038566;
@@ -2283,7 +2280,7 @@ color:#038566;
 }
 
 .delete-bank-card-container > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #EB3223;
@@ -2297,14 +2294,14 @@ padding: 12px 100px;
 border-style: none;
 color: #fff;
 cursor: pointer;
-font-family: Inter;
+font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 margin-bottom: 120px;
 }
 
 .instant-withdraw-para > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -2323,13 +2320,13 @@ color: #6C6C6C;
 }
 
 .modal-checkbox-wrapper p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
 
 .add-bank-account-button{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 padding: 12px 123px;
@@ -2369,14 +2366,14 @@ padding: 26px 46px;
 }
 
 .fund-wallet-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 margin-bottom: 79px;
 }
 
 .wallet-input-holder label{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 color: #6C6C6C;
@@ -2386,7 +2383,7 @@ margin-bottom: 14px;
 
 .wallet-input-holder input, .wallet-input-holder select{
   padding: 17px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 background: #FFFFFF;
@@ -2408,7 +2405,7 @@ border-radius: 5px;
   border-radius: 5px;
   border-style: none;
   cursor: pointer;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 color: #fff;
@@ -2477,7 +2474,7 @@ overflow-y: auto;
 }
 
 .dashboard-logo-section p{
-font-family: Inter;
+font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -2490,7 +2487,7 @@ font-weight: 500;
 }
 
 .profile-update-buyer{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 padding: 17px 66px;
@@ -2508,7 +2505,7 @@ border-bottom: 1px solid #D9D9D9;
 .profile-update-row label{
   display: block;
   margin-bottom: 13px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -2516,7 +2513,7 @@ font-weight: 500;
 .profile-update-row input, .profile-update-row select{
   padding: 16px 20px;
   color: #C6C5C5;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 border: 1px solid #C6C5C5;
@@ -2546,14 +2543,14 @@ width: 100%;
 }
 
 .hi-name{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 800;
 margin-block: 31px 36px;
 }
 
 .confirm-update{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 500;
   color: #6C6C6C;
@@ -2574,7 +2571,7 @@ margin-block: 31px 36px;
 
 .view-profile-button-container button {
   padding: 13px 40px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 color: #fff;
@@ -2600,7 +2597,7 @@ cursor: pointer;
 }
 
 .next-of-kin-data{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -2616,7 +2613,7 @@ font-weight: 500;
   border-style: none;
   background-color: #3DB2FF;
   color: #fff;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 padding: 13px 143px;
@@ -2649,14 +2646,14 @@ margin-bottom: 100px;
 }
 
 .dashboard-element-text p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 margin-bottom: 10px;
 }
 
 .dashboard-element-text p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -2678,7 +2675,7 @@ color: #6C6C6C;
 }
 
 .dashboard-central > div button{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 padding: 14px 22px;
@@ -2690,13 +2687,13 @@ cursor: pointer;
 }
 
 .dashboard-central p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 }
 
 .dashboard-central p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 margin-bottom: 58px;
@@ -2745,7 +2742,7 @@ margin-bottom: 58px;
 }
 
 .user-name-holder{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 16px;
 font-weight: 500;
 display: flex;
@@ -2805,7 +2802,7 @@ row-gap: 9px;
 .user-profile-li a{
   text-decoration: none;
   color: #6C6C6C;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -2849,7 +2846,7 @@ font-weight: 500;
 
 
 .property-layout-head p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 10px;
 font-weight: 500;
 padding: 10px 8px;
@@ -2890,13 +2887,13 @@ height: fit-content;
 
 
 .similar-property-right p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 700;
 }
 
 .similar-property-right > p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 color: #3DB2FF;
@@ -2928,7 +2925,7 @@ margin-block: 9px 22px;
 }
 
 .similar-location-wrapper > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 color: #FF1212;
@@ -2950,7 +2947,7 @@ color: #FF1212;
 .plot-button-main-wrapper button{
   padding: 10px 20px;
   border-radius: 5px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 16px;
 font-weight: 700;
 border: none;
@@ -3068,7 +3065,7 @@ border: 1px solid #C6C5C5;
 }
 
 .referral-link-container p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 margin-bottom: 10px;
@@ -3080,21 +3077,21 @@ margin-bottom: 10px;
 }
 
 .item4 p:first-child, .item5 p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 margin-bottom: 15px;
 }
 
 .item4 p:last-child, .item5 p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 500;
 color: #6C6C6C;
 }
 
 .referral-link{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 color: #6C6C6C;
@@ -3128,14 +3125,14 @@ color: #6C6C6C;
 }
 
 .copy-image-wrapper p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #fff;
 }
 
 .dashboard-referral-logo-wrapper p{
-font-family: Inter;
+font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -3149,7 +3146,7 @@ font-weight: 500;
   position: absolute;
   background-color: hsl(0, 100%, 54%);
   color: white;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 8px;
   font-weight: 500;
   border-radius: 50%;
@@ -3192,7 +3189,7 @@ font-weight: 500;
 }
 
 .cart-item-ul p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
@@ -3204,7 +3201,7 @@ cursor: pointer;
 
 
 .cart-top-ul p{
-font-family: Inter;
+font-family: Montserrat;
 font-size: 18px;
 font-weight: 800;
 }
@@ -3225,7 +3222,7 @@ font-weight: 800;
   object-fit: cover;
 }
 .my-cart-para{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 }
@@ -3250,7 +3247,7 @@ font-weight: 700;
 }
 
 .preview-text-holder p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 color: #fff;
@@ -3261,7 +3258,7 @@ color: #fff;
 }
 
 .layout-head-section > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 margin-bottom: 23px;
@@ -3274,7 +3271,7 @@ margin-bottom: 23px;
 }
 
 .layout-head-section > div p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -3314,7 +3311,7 @@ color: #038566;
 
 .download-layout-button-wrapper button{
   padding: 10px 31px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 16px;
 font-weight: 700;
 color: #fff;
@@ -3344,7 +3341,7 @@ text-align: justify;
 }
 
 .property-features-wrapper p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 }
@@ -3366,7 +3363,7 @@ font-weight: 700;
 }
 
 .buyer-review-wrapper >p {
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 34px;
@@ -3394,14 +3391,14 @@ border-bottom: 1px solid #C6C5C5;
 }
 
 .review-text-side .first{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 margin-bottom: 8px;
 }
 
 .review-text-side .second{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 13px;
 font-weight: 400;
 color: #FF1212;
@@ -3409,7 +3406,7 @@ margin-bottom: 12px;
 }
 
 .review-text-side .third{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 400;
 color: #6C6C6C;
@@ -3431,13 +3428,13 @@ margin-block: 41px 45px;
 }
 
 .create-review-wrapper >p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 }
 
 .review-label-input label{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 13px;
@@ -3477,14 +3474,14 @@ padding: 10px 5px;
 }
 
 .write-reviews input, .write-reviews textarea {
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 }
 
 .buyer-review-button button{
   border-style: none;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 padding: 8px 21px;
@@ -3494,7 +3491,7 @@ background-color: #D9D9D9;
 }
 
 .watch-video-wrapper p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 }
@@ -3518,7 +3515,7 @@ font-weight: 700;
 }
 
 .date-picker-head p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 }
@@ -3543,7 +3540,7 @@ font-weight: 700;
 }
 
 .select-date-wrapper p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -3585,7 +3582,7 @@ color: #6C6C6C;
 }
 
 .select-location-logo-side > p {
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -3596,7 +3593,7 @@ color: #6C6C6C;
 border: 1px solid #C6C5C5;
 border-radius: 5px;
 padding: 7px 9px;
-font-family: Inter;
+font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 color: #6C6C6C;
@@ -3607,7 +3604,7 @@ color: #6C6C6C;
 }
 
 .similar-property{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 }
@@ -3659,7 +3656,7 @@ font-weight: 700;
 
 .add-plot-button{
   padding: 10px 31px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 16px;
 font-weight: 700;
 color: #fff;
@@ -3670,7 +3667,7 @@ border-style: none;
 }
 
 .property-bottom-right > label{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -3679,7 +3676,7 @@ margin-bottom: 7px;
 
 
 .property-bottom-right >div input{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 padding: 11px 8px;
@@ -3696,7 +3693,7 @@ border-radius: 0px 0px 5px 5px;
 }
 
 .property-description{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 color: #6C6C6C;
@@ -3743,7 +3740,7 @@ font-weight: 400;
 
 
 .add-left-head >p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 margin-bottom: 23px;
@@ -3755,7 +3752,7 @@ margin-bottom: 23px;
 }
 
 .add-left-head > div p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #6C6C6C;
@@ -3811,7 +3808,7 @@ cursor: pointer;
 }
 
 .camera-wrapper p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 color: #fff;
@@ -3857,7 +3854,7 @@ color: #fff;
 }
 
 .small-image-view-show p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 color: white;
@@ -3926,7 +3923,7 @@ cursor: pointer;
 }
 
 .buy-property-search input{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 padding-inline: 24px;
@@ -3968,9 +3965,9 @@ border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   left: 0;
-  top: 52px;
+  top: 0;
   background-color: #fff;
   z-index: 10;
 }
@@ -4003,7 +4000,7 @@ border: none;
 
 .search-wrapper input{
   width: 100%;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 line-height: 18px;
@@ -4130,7 +4127,7 @@ padding-block: 14px;
 }
 
 .calendar-date-container p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
 line-height: 30px;
@@ -4139,7 +4136,7 @@ color: #6C6C6C;
 }
 
 .read-more-blog{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
 line-height: 30px;
@@ -4212,7 +4209,7 @@ max-height: 21px;
 
 
 .explore-red-left h3{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 40px;
 font-weight: 700;
 line-height: 48px;
@@ -4221,7 +4218,7 @@ color: white;
 }
 
 .explore-red-left p{
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
@@ -4239,7 +4236,7 @@ color: white;
 }
 
 .explore-red-right p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 500;
 line-height: 30px;
@@ -4291,14 +4288,14 @@ height: fit-content;
 
 .upload-property-left > p{
   padding-block: 15px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 }
 
 .upload-media-wrapper label{
   display: block;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 600;
 color: #6C6C6C;
@@ -4311,13 +4308,13 @@ margin-bottom: 17px;
   background: #FFFFFF;
   border: 1px solid #C6C5C5;
   border-radius: 5px;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 400;
 }
 
 .first-photo{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 }
@@ -4348,7 +4345,7 @@ cursor: pointer;
 }
 
 .upload-media-container > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 }
@@ -4363,7 +4360,7 @@ font-weight: 400;
   padding: 10px 140px;
   background: #3DB2FF;
 border-radius: 5px;
-font-family: Inter;
+font-family: Montserrat;
 font-size: 16px;
 font-weight: 700;
 border-style: none;
@@ -4410,7 +4407,7 @@ overflow-y: auto;
 
 .upload-upload-bottom div > label{
   display: block;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 margin-bottom: 7px;
@@ -4421,7 +4418,7 @@ color: #6C6C6C;
   background: #FFFFFF;
   border: 1px solid #C6C5C5;
   border-radius: 5px;
-  /* font-family: Inter; */
+  /* font-family: Montserrat; */
   padding: 10px;
   font-weight: 700px;
 }
@@ -4431,7 +4428,7 @@ color: #6C6C6C;
 }
 
 .upload-upload-bottom > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 margin-block: 24px;
@@ -4448,7 +4445,7 @@ margin-block: 24px;
 }
 
 .upload-property-right > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 color: #6C6C6C;
@@ -4457,7 +4454,7 @@ color: #6C6C6C;
 .upload-label-container > label{
   display: block;
   margin-bottom: 17px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
 color: #6C6C6C;
@@ -4480,13 +4477,39 @@ color: #6C6C6C;
 outline: none;
 }
 
+.footer-wrapper{
+  padding-block: 90px 42px;
+  padding-inline: 44px;
+  background-color: #272733;
+}
+
+.footer-wrapper h3{
+  font-family: Montserrat;
+font-size: 20px;
+font-weight: 700;
+color: #fff;
+margin-bottom: 33px;
+}
+
+.footer-wrapper p, .footer-wrapper li{
+  font-family: Montserrat;
+font-size: 13px;
+font-weight: 400;
+color: #fff;
+line-height: 30px;
+}
+
+.footer-wrapper li:not(li:first-child){
+  margin-top: 24px;
+}
+
 .upload-label-container input, .upload-label-container textarea{
   width: 100%;
   padding: 16px 23px;
   background: #FFFFFF;
 border: 1px solid #C6C5C5;
 border-radius: 5px;
-font-family: Inter;
+font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 }
@@ -4558,7 +4581,7 @@ font-weight: 400;
 }
 
 .property-view-bottom p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 700;
 line-height: 22px;
@@ -4567,7 +4590,7 @@ color: #fff;
 }
 
 .property-view-bottom p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 300;
 line-height: 18px;
@@ -4579,7 +4602,7 @@ margin-top: 3px;
 .property-view-bottom button{
   padding: 10px 18px;
   background-color: #FF1212;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 700;
 line-height: 22px;
@@ -4647,7 +4670,7 @@ height: auto;
 }
 
 .user-feedback{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 line-height: 30px;
@@ -4672,7 +4695,7 @@ color: #6C6C6C;
 }
 
 .section-tab-text{
-font-family: Inter;
+font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 line-height: 18px;
@@ -4698,7 +4721,7 @@ cursor: pointer;
 }
 
 .sale-title{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 700;
 line-height: 22px;
@@ -4784,7 +4807,7 @@ color: #3DB2FF;
 
 
 .product-size{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 line-height: 18px;
@@ -4823,7 +4846,7 @@ color: #038566;
 }
 
 .view-product-button{
-font-family: Inter;
+font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 color: white;
@@ -4843,13 +4866,13 @@ cursor: pointer;
 }
 
 .payment-top-para{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 }
 
 .payment-top-para span{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 color: #038566;
@@ -4873,14 +4896,14 @@ color: #038566;
 }
 
 .make-payment-wrapper h3{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 25px;
 font-weight: 700;
 }
 
 .payment-total-para{
   margin-block: 43px 24px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 color: #6C6C6C;
@@ -4888,27 +4911,27 @@ color: #6C6C6C;
 
 .payment-amount-para{
   margin-bottom: 30px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 25px;
 font-weight: 700;
 }
 
 .payment-dropdown-div label{
   display: block;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 }
 
 .initial-deposit-para{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
 color: #6C6C6C;
 }
 
 .installment-duration-container, .period-price-wrapper{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
 color: #6C6C6C;
@@ -4951,7 +4974,7 @@ color: #6C6C6C;
   border-radius: 5px;
   border: 1px solid #6C6C6C;
   background-color: transparent;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 600;
   color: #6C6C6C;
@@ -4965,7 +4988,7 @@ color: #6C6C6C;
 
 .pay-now-button-holder button{
   padding: 10px 52px;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 16px;
 font-weight: 700;
 background-color: #3DB2FF;
@@ -4976,7 +4999,7 @@ color: #fff;
 }
 
 .option{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
 color: #6C6C6C;
@@ -4991,7 +5014,7 @@ color: #6C6C6C;
 }
 
 .drop-down-container > p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
 color: #6C6C6C;
@@ -5039,7 +5062,7 @@ color: #6C6C6C;
 }
 
 .see-more-container p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 line-height: 24px;
@@ -5071,7 +5094,7 @@ color: #0A55C6;
 }
 
 .venue-wrapper p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
 line-height: 18px;
@@ -5121,7 +5144,7 @@ text-align: left;
 
 
 .signBtn{
-font-family: Inter;
+font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 color: #FF5722;
@@ -5149,7 +5172,7 @@ cursor: pointer;
 
 .navigation-wrapper li a{
   text-decoration: none;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 color: #000000;
 }
@@ -5158,7 +5181,7 @@ color: #000000;
   background: #FF1212;
 border: 1px solid #FF1212;
 border-radius: 50px;
-font-family: Inter;
+font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 padding: 8px;
@@ -5187,7 +5210,7 @@ object-fit: cover;
 }
 
 .background > h1{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 50px;
 font-weight: 800;
 color: #fff;
@@ -5259,7 +5282,7 @@ text-align: justify;
 }
 
 .doings{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 600;
 color: #000000;
@@ -5340,14 +5363,14 @@ color: #000000;
 }
 
 .video-data p:first-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 25px;
 font-weight: 500;
 color: #C4CDD5;
 }
 
 .video-data p:last-child{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 
@@ -5385,7 +5408,7 @@ font-weight: 500;
 }
 
 .contact-info-button-wrapper button{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 text-align: center;
@@ -5401,7 +5424,7 @@ cursor: pointer;
   margin-top: -27px;
   margin-bottom: 32px;
   text-align: right;
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 18px;
 font-weight: 700;
 line-height: 22px;
@@ -5424,7 +5447,7 @@ letter-spacing: 0em;
 }
 
 .category-top p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 20px;
 font-weight: 500;
 line-height: 24px;
@@ -5438,7 +5461,7 @@ margin-top: 19px;
 }
 
 .category-bottom p{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
 line-height: 30px;
@@ -5449,7 +5472,7 @@ color: #6C6C6C;
 
 
 .contact-info-wrapper p{
-font-family: Inter;
+font-family: Montserrat;
 font-size: 20px;
 font-weight: 700;
 color: white;
@@ -5457,7 +5480,7 @@ margin-bottom: 94px;
 }
 
 .contact-info-wrapper h2{
-  font-family: Inter;
+  font-family: Montserrat;
 font-size: 50px;
 font-weight: 700;
 line-height: 61px;
@@ -5477,7 +5500,7 @@ margin-bottom: 80px;
   box-shadow: 0px 0px 4px #C6C5C5;
   border-radius: 5px;
   margin-top: 20px;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 400;
 }
@@ -5507,7 +5530,7 @@ margin-bottom: 80px;
 .react-calendar__navigation button {
   min-width: 44px;
   background: none;
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 400;
   color: #6C6C6C;
@@ -5516,7 +5539,7 @@ margin-bottom: 80px;
 
 
 .react-calendar__month-view__weekdays {
-  font-family: Inter;
+  font-family: Montserrat;
   font-size: 15px;
   font-weight: 400;
   color: #6C6C6C;

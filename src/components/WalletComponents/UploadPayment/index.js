@@ -15,7 +15,7 @@ export function UploadPayment(){
                 <h5 className="bank-details">BANK DETAILS</h5>
                 <p>Bank: <span>United Bank For Africa (UBA)</span></p>
                 <p>Account Number: <span>United Bank For Africa (UBA)</span></p>
-                <p>Account Name: <span>IM Intercontinental Limited</span></p>
+                <p>Account Name: <span>IM Montserratcontinental Limited</span></p>
                 <p>Please pay <span>N200,000</span> to above bank details</p>
                 <p>Once you have made payment; please send proof of payment, name 
                     and your IM Property username to admin via 08023981234, 09890912834
