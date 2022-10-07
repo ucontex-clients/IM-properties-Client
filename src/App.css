@@ -20,6 +20,33 @@ button{
   font-family: Montserrat;
 font-size: 15px;
 font-weight: 600;
+padding: 8px 10px;
+background-color: #FF1212;
+color: #fff;
+}
+
+.select-property select{
+  border: 1px solid #C4CDD5;
+  padding: 8px 22px;
+  font-family: Montserrat;
+font-size: 15px;
+font-weight: 500;
+}
+
+.select-property select:first-child{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.select-property option{
+  font-family: Montserrat;
+font-size: 15px;
+font-weight: 500;
+}
+
+.select-property button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 body{
@@ -3888,10 +3915,12 @@ cursor: pointer;
 .display-property-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 79px;
-  padding-inline: 64px 64px;
+  padding-inline: 32px;
   column-gap: 34px;
   row-gap: 34px;
+  min-width: 900px;
+  background-color: #fff;
+  padding-bottom: 119px;
 }
 
 .buy-property-heading-container h3{
@@ -3935,12 +3964,6 @@ border: none;
   top: 0;
 }
 
-.property-top-image-wrapper{
-  width: 100vw;
-  height: auto;
-  overflow: hidden;
-  margin-top: 79px;
-}
 
 .property-top-image-wrapper img{
   width: 100%;
@@ -4788,7 +4811,6 @@ padding-block: 14px 4px;
   font-family: Montserrat;
 font-size: 13px;
 font-weight: 700;
-color: #3DB2FF;
 }
 
 .sale-image{
@@ -4805,6 +4827,12 @@ line-height: 18px;
 letter-spacing: 0em;
 text-align: left;
 color: #038566;
+}
+
+.product-price{
+  font-family: Montserrat;
+font-size: 13px;
+font-weight: 500;
 }
 
 .thin-line{
@@ -4844,7 +4872,7 @@ color: white;
 padding: 9px 57px;
 background-color: #FF1212;
 border-style: none;
-border-radius: 20px;
+border-radius: 2px;
 cursor: pointer;
 }
 
