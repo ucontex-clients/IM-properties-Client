@@ -2073,11 +2073,6 @@ text-align: center;
 margin-bottom: 63px;
 }
 
-.team-mate-container{
-  background: #FFFFFF;
-border-radius: 10px;
-padding: 10px;
-}
 
 .mate-name{
   font-family: Montserrat;
@@ -2189,11 +2184,6 @@ text-align: center;
 margin-bottom: 20px;
 }
 
-.team-mate-wrapper img{
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
 
 .all-team-members-wrapper{
   display: grid;
@@ -2203,10 +2193,11 @@ object-fit: cover;
 }
 
 .about-bottom-wrapper{
-  padding: 51px;
+  padding-inline: 65px;
+  padding-block: 111px 72px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 118px;
+  grid-template-columns: 2fr 3fr;
+  column-gap: 81px;
   background-color: #fff;
 }
 
@@ -5290,7 +5281,6 @@ color: #000000;
 
 .doings-images div {
   border-radius: 5px;
-  background-color: #038566;
   width: fit-content;
   position: relative
 }
