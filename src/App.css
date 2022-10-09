@@ -22,7 +22,6 @@ font-size: 15px;
 font-weight: 600;
 padding: 8px 10px;
 background-color: #FF1212;
-color: #fff;
 }
 
 .select-property select{
@@ -31,6 +30,12 @@ color: #fff;
   font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
+}
+
+.prop-view-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 43px;
 }
 
 .select-property select:first-child{
@@ -2111,6 +2116,7 @@ padding-block: 20px;
 
 .latest-news{
   margin-block: 72px 67px;
+  grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   place-items: center;
 }
@@ -3406,6 +3412,7 @@ border-bottom: 1px solid #C6C5C5;
   place-items: center;
   border-radius: 50%;
   background-color: red;
+  overflow: hidden;
 }
 
 .buyer-picture img{
@@ -3439,9 +3446,7 @@ text-align: justify;
 }
 
 .buyer-review-button{
-  display: grid;
-  place-items: center;
-  margin-block: 63px 47px;
+  padding-block: 25px 12px;
 }
 
 .create-review-wrapper{
@@ -5593,4 +5598,35 @@ margin-bottom: 80px;
 
 .react-calendar__month-view__weekdays__weekday abbr{
   text-decoration: none;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .latest-news {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media only screen and (max-width: 760px) {
+  .latest-news{
+    display: flex;
+    flex-direction: column;
+    row-gap: 43px;
+  }
+
+  .prop-view-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 43px;
+  }
+
+  .property-view-main-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 73px;
+    position: relative;
+    row-gap: 43px;
+    
+  }
 }

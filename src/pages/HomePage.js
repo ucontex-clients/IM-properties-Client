@@ -266,7 +266,7 @@ export default function HomePage() {
           <h2 className="font-bold text-[25px] font-fam text-center">
             Latest News Feeds
           </h2>
-          <div className="grid grid-cols-3 gap-x-[43px] mt-[43px]">
+          <div className="latest-news gap-[43px] mt-[43px]">
             <News />
             <News />
             <News />
@@ -277,7 +277,7 @@ export default function HomePage() {
           <h2 className="font-bold text-[25px] font-fam bg-white px-[60px] pb-[52px]">
             See More Properties
           </h2>
-          <div className="grid grid-cols-3 gap-x-[43px] p-[29px]">
+          <div className="prop-view-wrapper gap-x-[43px] p-[29px]">
             <PropertyView
               img={"./images/view1.png"}
               name={"Campus Garden Estate"}

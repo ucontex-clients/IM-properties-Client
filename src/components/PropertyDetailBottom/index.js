@@ -62,7 +62,7 @@ export function PropertyDetailBottom() {
             <p>CAMPUS GARDEN ESTATE</p>
             <div style={{ marginTop: "5px" }} className="location-two-wrapper">
               <div className="location-two-holder">
-                <img src="./images/Location2.png" alt="location"></img>
+                <img src="/images/Location2.png" alt="location"></img>
               </div>
               <p>Obinze Umuokanne road, Owerri, Imo State</p>
             </div>
@@ -145,7 +145,7 @@ export function PropertyDetailBottom() {
           <p>10 Reviews</p>
           {allBuyerReviews}
           <div className="buyer-review-button">
-            <button>10 more Review</button>
+            <p className="font-fam font-bold text-[15px]">10 more Review</p>
           </div>
         </div>
 
@@ -216,7 +216,7 @@ export function PropertyDetailBottom() {
           <div className="date-picker-main">
             <div className="select-date-wrapper">
               <div>
-                <img src="./images/Calendar2.png" alt="calendar"></img>
+                <img src="/images/Calendar2.png" alt="calendar"></img>
               </div>
               <p>Select Date</p>
             </div>
@@ -228,7 +228,7 @@ export function PropertyDetailBottom() {
             <div className="select-time-wrapper">
               <div className="select-date-wrapper">
                 <div>
-                  <img src="./images/Time.png" alt="time"></img>
+                  <img src="/images/Time.png" alt="time"></img>
                 </div>
                 <p>Select time</p>
               </div>
@@ -254,7 +254,7 @@ export function PropertyDetailBottom() {
             <div className="select-location-wrapper">
               <div className="select-location-logo-side">
                 <div>
-                  <img src="./images/chooseLocation.png" alt="location"></img>
+                  <img src="/images/chooseLocation.png" alt="location"></img>
                 </div>
                 <p>Select Location</p>
               </div>
