@@ -34,7 +34,7 @@ font-weight: 500;
 
 .prop-view-wrapper{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   row-gap: 43px;
 }
 
@@ -5603,6 +5603,10 @@ margin-bottom: 80px;
 
 @media only screen and (max-width: 1000px) {
   .latest-news {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .prop-view-wrapper{
     grid-template-columns: 1fr 1fr;
   }
 }
