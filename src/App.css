@@ -1035,6 +1035,10 @@ font-weight: 700;
   width: 100vw;
 }
 
+.message-button{
+  margin-left: auto;
+}
+
 .dashboard-home-main-wrapper{
   padding: 137px 33px;
   height: 100vh;
@@ -2166,6 +2170,10 @@ color: #6C6C6C;
   object-fit: cover;
 }
 
+.news-read{
+  display: none;
+}
+
 .news-image-holder{
   width: 100%;
   display: grid;
@@ -3240,6 +3248,10 @@ font-weight: 800;
   position: relative;
 }
 
+.second-container{
+  border-left: 1.5px solid #000000;
+}
+
 .my-cart-logo-section-wrapper > div img{
   width: 100%;
   height: 100%;
@@ -3986,12 +3998,12 @@ border: none;
 
 
 .navigation-wrapper{
-  width: 100vw;
+  width: 100%;
   padding: 7px 41px 8px 27px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: static;
   left: 0;
   top: 0;
   background-color: #fff;
@@ -5070,8 +5082,8 @@ color: #6C6C6C;
 .arrow-div{
   position: absolute;
   z-index: 5;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 80%;
+  transform: translateY(-30%);
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
@@ -5195,7 +5207,6 @@ cursor: pointer;
 }
 
 .navigation-buttons-wrapper{
-  margin-left: 49px;
   display: flex;
   align-items: center;
   column-gap: 1px;
@@ -5208,6 +5219,9 @@ font-size: 15px;
 color: #000000;
 }
 
+.icons-wrap1{
+  display: none;
+}
 .nav-button{
   background: #FF1212;
 border: 1px solid #FF1212;
@@ -5235,6 +5249,7 @@ object-fit: cover;
 .background{
   width: 100em;
   height: 100em;
+  font-size: 16px;
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
@@ -5242,7 +5257,7 @@ object-fit: cover;
 
 .background > h1{
   font-family: Montserrat;
-font-size: 50px;
+font-size: 3.2em;
 font-weight: 800;
 color: #fff;
 }
@@ -5296,6 +5311,10 @@ font-weight: 400;
 color: #6C6C6C;
 }
 
+.section1{
+  font-size: 25px;
+}
+
 .section1 > h2{
   font-family: Montserrat;
 font-size: 25px;
@@ -5312,6 +5331,18 @@ color: #6C6C6C;
 text-align: justify;
 }
 
+.our-doings span{
+    font-family: Montserrat;
+font-size: 15px;
+font-weight: 700;
+color: #000000;
+cursor: pointer;
+}
+
+.residual-container{
+  grid-template-columns: 1fr 2fr;
+}
+
 .doings{
   font-family: Montserrat;
 font-size: 18px;
@@ -5319,11 +5350,22 @@ font-weight: 600;
 color: #000000;
 }
 
+
 .doings-images div {
   border-radius: 5px;
   width: fit-content;
-  position: relative
 }
+
+
+.doings1{
+  transform: translateY(38px);
+}
+
+.doings2{
+  transform: translateY(-38px);
+  margin-left: auto;
+}
+
 
 .nav-div{
   background-color: #fff;
@@ -5519,6 +5561,14 @@ color: white;
 margin-bottom: 80px;
 }
 
+.hamburger{
+  width: 50px;
+  height: 50px;
+  background-color: #038566;
+  cursor: pointer;
+  display: none;
+}
+
 
 
 
@@ -5609,15 +5659,68 @@ margin-bottom: 80px;
   .prop-view-wrapper{
     grid-template-columns: 1fr 1fr;
   }
+  
+  .doings-images{
+    display: none;
+  }
+  .section-container{
+    display: block;
+  }
+
+ 
 }
 
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
   .latest-news{
     display: flex;
     flex-direction: column;
     row-gap: 43px;
   }
+
+  .our-doings{
+    border: 1px solid #F5F5F5;
+    border-radius: 5px;
+    padding: 16px;
+    margin-top: 16px;
+  }
+
+  .doings-wrapper{
+    display: block;
+  }
+
+  .second-container{
+    padding: 0;
+    border: none;
+    margin-left: 0;
+  }
+
+  .home-image-wrapper{
+    height: 100vh;
+  }
+
+  .home-image-wrapper h2{
+    font-size: 20px;
+  }
+
+  .residual-container{
+    display: block;
+  }
+
+  .testi{
+    display: flex;
+    flex-direction: column;
+    row-gap: 43px;
+  }
+
+  .navigation-wrapper ul, .navigation-right {
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
 
   .prop-view-wrapper{
     display: flex;
@@ -5632,5 +5735,75 @@ margin-bottom: 80px;
     position: relative;
     row-gap: 43px;
     
+  }
+
+  .news-read{
+    display: block;
+  }
+
+  .touch-wrapper{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 17px;
+  }
+
+  .touch-wrapper > div:last-child{
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+    column-gap: 29px;
+    justify-content: center;
+    border-top: 1.5px solid #000000;
+    padding-top: 29px;
+  }
+
+  .drop-message{
+    display: flex;
+    flex-direction: column;
+    row-gap: 37px;
+  }
+
+  .touch-wrapper > div:not(div:last-child){
+    padding-bottom: 29px;
+  }
+
+  .opening{
+    margin-top: 0;
+  }
+
+  .message-button{
+    margin-left: 0;
+    margin: auto;
+    margin-top: 42px;
+  }
+
+  .arrow-div{
+    display: none;
+  }
+
+  .footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 54px;
+  }
+
+  .footer-wrapper > div{
+    text-align: center;
+  }
+
+  .icons-wrap1{
+    display: flex;
+  }
+
+  .icons-wrap2{
+    display: none;
+  }
+
+  .touch-main{
+    padding-inline: 48px;
+  }
+
+  .touch-wrapper > div:nth-child(2){
+    border-left: 1.5px solid #000000;
+    padding-left: 17px;
   }
 }

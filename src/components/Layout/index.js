@@ -36,13 +36,20 @@ export function Layout({ children }) {
           </ul>
         </div>
 
-        <div className="flex items-end">
+        <div className="flex justify-center relative">
+          <div className="flex items-center gap-x-[26px] icons-wrap1">
+            <FaFacebookF style={{ fontSize: "24px", color: "#fff" }} />
+            <AiOutlineTwitter style={{ fontSize: "24px", color: "#fff" }} />
+            <BsInstagram style={{ fontSize: "24px", color: "#fff" }} />
+          </div>
           <div
             style={{
               width: "50px",
               height: "50px",
               marginTop: "auto",
               marginLeft: "auto",
+              position: "absolute",
+              right: "50px",
             }}
             className="bg-mine rounded"
           ></div>
@@ -61,7 +68,7 @@ export function Layout({ children }) {
           <div>
             <p>@ 2022 IM Properties</p>
           </div>
-          <div className="flex items-center gap-x-[26px]">
+          <div className="flex items-center gap-x-[26px] icons-wrap2">
             <FaFacebookF style={{ fontSize: "24px", color: "#fff" }} />
             <AiOutlineTwitter style={{ fontSize: "24px", color: "#fff" }} />
             <BsInstagram style={{ fontSize: "24px", color: "#fff" }} />
