@@ -15,7 +15,7 @@ export function NavigationBar() {
   };
 
   return (
-    <div className="navigation-wrapper" style={{ minWidth: "900px" }}>
+    <div className="navigation-wrapper">
       <div className="navigation-left">
         <div className="navigation-logo-wrapper">
           <Link to="/">
@@ -59,11 +59,12 @@ export function NavigationBar() {
               Our Properties
             </Link>
           </li>
-          <li>
-            <button className="nav-button">Become an ESP</button>
-          </li>
         </ul>
       </div>
+
+      <button className="nav-button">Become an ESP</button>
+
+      <div className="hamburger"></div>
 
       <div className="navigation-right">
         <Nav1 />

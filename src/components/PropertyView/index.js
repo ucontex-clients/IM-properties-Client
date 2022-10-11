@@ -1,10 +1,14 @@
 import React from "react";
 import { MdLocationOn } from "react-icons/md";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 
 export function PropertyView({ img, name, location, para }) {
   return (
     <div className="property-main-container">
-      <div>
+      <div className="relative">
+        <div className="arrow-div" style={{ left: "12px" }}>
+          <MdKeyboardArrowLeft style={{ fontSize: "24px" }} />
+        </div>
         <img src={img} alt="property"></img>
       </div>
       <div className="property-bottom p-[22px]">

@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  NavigationBar,
   PropertyViewSection,
   VideoSection,
   TopSide,
@@ -12,9 +11,6 @@ import {
 import { GrLocation } from "react-icons/gr";
 import { MdOutlineCall } from "react-icons/md";
 import { AiOutlineFieldTime } from "react-icons/ai";
-import { AiOutlineTwitter } from "react-icons/ai";
-import { FaFacebookF } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
 import { FaUsers } from "react-icons/fa";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { BiChevronsRight } from "react-icons/bi";
@@ -30,7 +26,7 @@ export default function HomePage() {
             <h1 style={{ marginTop: "160px" }}>
               WE ARE <span style={{ color: "#FF1212" }}>IM</span> PROPERTIES
             </h1>
-            <p style={{ marginTop: "7px" }}>
+            <p style={{ marginTop: "0.5em" }}>
               you can own A Property Without Stress <br />
               and become a landlord with peace of mind
             </p>
@@ -49,7 +45,6 @@ export default function HomePage() {
           style={{
             padding: "85px 65px",
             backgroundColor: "#fff",
-            minWidth: "900px",
           }}
         >
           <div>
@@ -76,7 +71,7 @@ export default function HomePage() {
             </section>
             <section className="section1 mt-[71px]">
               <h2>What we do</h2>
-              <div className="flex mt-[31px]">
+              <div className="flex mt-[31px] doings-wrapper">
                 <div>
                   <div className="our-doings">
                     <div className="flex items-center gap-x-[3px]">
@@ -114,14 +109,11 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <span>Read More</span>{" "}
                     </p>
+                    <span>Read More</span>{" "}
                   </div>
                 </div>
-                <div
-                  className="ml-[34px] pl-[34px]"
-                  style={{ borderLeft: "1.5px solid #000000" }}
-                >
+                <div className="ml-[34px] pl-[34px] second-container">
                   <div className="our-doings">
                     <div className="flex items-center gap-x-[3px]">
                       <div
@@ -167,10 +159,10 @@ export default function HomePage() {
           </div>
 
           <div className="doings-images">
-            <div style={{ top: "38px" }}>
+            <div className="doings1">
               <img src="./images/doings1.png" alt="what we do"></img>
             </div>
-            <div style={{ bottom: "38px", left: "126px" }}>
+            <div className="doings2">
               <img src="./images/doings2.png" alt="what we do"></img>
             </div>
           </div>
@@ -179,9 +171,7 @@ export default function HomePage() {
         <VideoSection />
 
         <div className="section1  pt-[132px] p-[65px] bg-white">
-          <h2 className="text-mine" style={{ marginBottom: "10px" }}>
-            Our Latest Properties
-          </h2>
+          <h2 style={{ marginBottom: "10px" }}>Our Latest Properties</h2>
           <p>Buy a landlanded property with peace of mind</p>
           <PropertyViewSection />
           <div className="grid place-items-center mt-[56px]">
@@ -194,10 +184,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div
-          className="grid px-[65px] gap-x-[59px] items-center py-[76px]"
-          style={{ gridTemplateColumns: "1fr 2fr", minWidth: "900px" }}
-        >
+        <div className="grid px-[65px] gap-x-[59px] items-center py-[76px] residual-container">
           <div style={{ width: "100%", height: "100%", borderRadius: "5px" }}>
             <img
               src="./images/laptop.png"
@@ -245,7 +232,7 @@ export default function HomePage() {
               <MdKeyboardArrowRight style={{ fontSize: "24px" }} />
             </div>
 
-            <div className="grid grid-cols-3 gap-x-[26px] mt-[93px]">
+            <div className="grid grid-cols-3 gap-x-[26px] mt-[93px] testi">
               <Testinonials />
               <Testinonials />
               <Testinonials />
@@ -266,18 +253,21 @@ export default function HomePage() {
           <h2 className="font-bold text-[25px] font-fam text-center">
             Latest News Feeds
           </h2>
-          <div className="grid grid-cols-3 gap-x-[43px] mt-[43px]">
+          <div className="latest-news gap-[43px] mt-[43px]">
             <News />
             <News />
             <News />
           </div>
+          <p className="font-fam font-medium text-mine text-[15px] cursor-pointer text-center news-read">
+            READ MORE
+          </p>
         </div>
 
         <div className="pb-[56px]">
           <h2 className="font-bold text-[25px] font-fam bg-white px-[60px] pb-[52px]">
             See More Properties
           </h2>
-          <div className="grid grid-cols-3 gap-x-[43px] p-[29px]">
+          <div className="prop-view-wrapper gap-x-[43px] p-[29px]">
             <PropertyView
               img={"./images/view1.png"}
               name={"Campus Garden Estate"}
@@ -307,11 +297,11 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="px-[126px] py-[67px] bg-white">
+        <div className="px-[126px] py-[67px] bg-white touch-main">
           <h2 className="font-fam text-[25px] text-center font-bold">
             Get in Touch
           </h2>
-          <div className="grid grid-cols-3 gap-x-[120px] mt-[48px]">
+          <div className="grid grid-cols-3 gap-x-[120px] mt-[48px] touch-wrapper">
             <div>
               <p className="font-fam text-[15px] font-bold">IM Properties</p>
               <div className="mt-[18px]">
@@ -333,8 +323,8 @@ export default function HomePage() {
             </div>
 
             <div>
-              <p className="font-fam text-[15px] font-bold">Opening Hours</p>
-              <div className="mt-[18px]">
+              <p className="font-fam text-[15px] font-bold">Opening Hours:</p>
+              <div className="mt-[18px] opening">
                 <p className="font-fam text-[15px] font-medium flex items-center gap-x-[5px]">
                   <AiOutlineFieldTime style={{ fontSize: "22px" }} />
                   Mon - Sat 9am - 5pm
@@ -343,7 +333,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid gap-x-[55px] grid-cols-2 mt-[54px]">
+          <div className="grid gap-x-[55px] grid-cols-2 mt-[54px] drop-message">
             <div className="user-input">
               <div>
                 <label
@@ -403,77 +393,12 @@ export default function HomePage() {
                   style={{ minHeight: "215px" }}
                 ></textarea>
               </div>
-              <button
-                className="font-fam bg-mine text-white text-[20px] font-medium block mt-[36px] px-[15px] py-[10px] rounded-[5px]"
-                style={{ marginLeft: "auto" }}
-              >
+              <button className="font-fam bg-mine text-white text-[20px] font-medium block mt-[36px] px-[15px] py-[10px] rounded-[5px] message-button">
                 SUBMIT
               </button>
             </div>
           </div>
         </div>
-        <footer className="footer-wrapper grid grid-cols-4 gap-x-[100px]">
-          <div>
-            <h3>About Us</h3>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut{" "}
-            </p>
-          </div>
-
-          <div>
-            <h3>Helpful Link</h3>
-            <ul>
-              <li>What we do</li>
-              <li>Our Properties</li>
-              <li>Become an ESP</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Latest Posts</h3>
-            <ul>
-              <li>How to buy Property</li>
-              <li>How to make money</li>
-              <li>How to make money</li>
-            </ul>
-          </div>
-
-          <div className="flex items-end">
-            <div
-              style={{
-                width: "50px",
-                height: "50px",
-                marginTop: "auto",
-                marginLeft: "auto",
-              }}
-              className="bg-mine rounded"
-            ></div>
-          </div>
-
-          <div
-            style={{
-              gridColumn: "1/-1",
-              display: "flex",
-              marginTop: "170px",
-              justifyContent: "space-between",
-              borderTop: "1px solid #C4CDD5",
-              paddingTop: "25px",
-            }}
-          >
-            <div>
-              <p>@ 2022 IM Properties</p>
-            </div>
-            <div className="flex items-center gap-x-[26px]">
-              <FaFacebookF style={{ fontSize: "24px", color: "#fff" }} />
-              <AiOutlineTwitter style={{ fontSize: "24px", color: "#fff" }} />
-              <BsInstagram style={{ fontSize: "24px", color: "#fff" }} />
-            </div>
-            <div>
-              <p>Design: Hifertech</p>
-            </div>
-          </div>
-        </footer>
       </Layout>
     </div>
   );
