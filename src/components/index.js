@@ -50,6 +50,7 @@ export * from "./CartItems";
 export * from "./TeamMember";
 export * from "./Layout";
 export * from "./DashboardComponents/DashboardElements";
+export * from "./Modals/InspectionModal";
 export * from "./DashboardComponents/DashboardHome";
 export * from "./DashboardComponents/DashboardProperty";
 export * from "./DashboardComponents/DashboardBooking";
