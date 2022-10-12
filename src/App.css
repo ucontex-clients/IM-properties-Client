@@ -5667,6 +5667,9 @@ margin-bottom: 80px;
     display: block;
   }
 
+.home-image-wrapper{
+    height: 80vh;
+  }
  
 }
 
@@ -5687,6 +5690,10 @@ margin-bottom: 80px;
 
   .doings-wrapper{
     display: block;
+  }
+
+  .background h1{
+    font-size: 30px;
   }
 
   .second-container{
