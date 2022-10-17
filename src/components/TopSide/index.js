@@ -7,7 +7,10 @@ import { BsInstagram } from "react-icons/bs";
 
 export function TopSide() {
   return (
-    <div style={{ backgroundColor: "#000000" }} className="nav-top-wrapper">
+    <div
+      style={{ backgroundColor: "#000000" }}
+      className="nav-top-wrapper hidden md:flex"
+    >
       <section style={{ display: "flex" }}>
         <MdOutlineCall style={{ color: "#fff", marginRight: "5px" }} />
         <p>+234-806-7864-098</p>

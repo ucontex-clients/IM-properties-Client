@@ -34,12 +34,19 @@ export default function HomePage() {
               className="flex"
               style={{ marginTop: "68px", columnGap: "39px" }}
             >
-              <button>BOOK AN INSPECTION</button>
-              <button>CONTACT US</button>
+              <div className="home-button2 hidden md:block">
+                <button className="inline-block mr-[39px]">
+                  BOOK AN INSPECTION
+                </button>
+                <button>CONTACT US</button>
+              </div>
             </div>
           </div>
         </div>
-
+        <div className="home-button2 flex justify-center pt-[35px] bg-white md:hidden">
+          <button className="inline-block mr-[39px]">BOOK AN INSPECTION</button>
+          <button>CONTACT US</button>
+        </div>
         <div
           className="section-container"
           style={{

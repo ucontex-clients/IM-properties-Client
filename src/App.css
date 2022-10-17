@@ -463,7 +463,6 @@ text-align: center;
 
 .nav-top-wrapper {
   width: 100%;
-  display: flex;
   padding: 16px 56px;
   align-items: center;
   justify-content: space-between;
@@ -5269,7 +5268,7 @@ font-weight: 500;
 color: #fff;
 }
 
-.background > div button {
+.home-button2 button{
   padding: 15px 20px;
   font-family: Montserrat;
 font-size: 15px;
@@ -5278,9 +5277,10 @@ color: #fff;
 background-color: #FF1212;
 border-radius: 5px;
 cursor: pointer;
+width: fit-content;
 }
 
-.background > div button:hover{
+.home-button2 button:hover{
   background-color: #fff;
 color: #FF1212;
 }
@@ -5666,10 +5666,6 @@ margin-bottom: 80px;
   .section-container{
     display: block;
   }
-
-.home-image-wrapper{
-    height: 80vh;
-  }
  
 }
 
@@ -5696,14 +5692,14 @@ margin-bottom: 80px;
     font-size: 30px;
   }
 
+  .background p{
+    font-size: 16px;
+  }
+
   .second-container{
     padding: 0;
     border: none;
     margin-left: 0;
-  }
-
-  .home-image-wrapper{
-    height: 100vh;
   }
 
   .home-image-wrapper h2{
