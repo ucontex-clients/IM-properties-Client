@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AiOutlineMail, AiOutlineTwitter } from "react-icons/ai";
 import { MdOutlineCall } from "react-icons/md";
 import { TiLocationOutline } from "react-icons/ti";
