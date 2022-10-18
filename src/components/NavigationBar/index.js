@@ -23,7 +23,7 @@ export function NavigationBar() {
             <img src="/images/logo.png" alt="logo"></img>
           </Link>
         </div>
-        <ul>
+        <ul className="navigation-wrapper-ul">
           <li>
             <Link
               to="/"

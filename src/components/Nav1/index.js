@@ -6,7 +6,7 @@ export function Nav1({ signIn, signUp }) {
   return (
     <div className="navigation-buttons-wrapper">
       <div className="account-modal">
-        <ul className="p-[15px]">
+        <ul className="account-modal-content block">
           <li>
             <Link to="/register">Register</Link>
           </li>

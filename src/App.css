@@ -5194,13 +5194,13 @@ background-color: white;
 cursor: pointer;
 }
 
-.navigation-wrapper ul {
+.navigation-wrapper-ul {
   display: flex;
   list-style: none;
   align-items: center;
 }
 
-.navigation-wrapper ul li{
+.navigation-wrapper-ul li{
   padding-inline: 4px;
   text-align: center;
 }
@@ -5209,6 +5209,36 @@ cursor: pointer;
   display: flex;
   align-items: center;
   column-gap: 1px;
+}
+
+.account-modal{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.account-modal-content{
+  width: fit-content;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 5px;
+  right: 40px;
+  top: 110px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+}
+
+.account-modal-content a{
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 20px;
 }
 
 .navigation-wrapper li a{
