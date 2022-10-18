@@ -1,30 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiUserCircle } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { AccountModal } from "../Modals/AccountModal";
 
 export function Nav1({ signIn, signUp }) {
+  const [showModal, setShowModal] = useState(false);
+
+  console.log(showModal);
+
   return (
-    <div className="navigation-buttons-wrapper">
-      <div className="account-modal">
-        <ul className="account-modal-content block">
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-        </ul>
-      </div>
-      <BiUserCircle style={{ fontSize: "30px" }} />
-      <p
-        style={{
-          fontFamily: "Montserrat",
-          fontWeight: "500",
-          fontSize: "15px",
-        }}
+    <>
+      {showModal && <AccountModal setShowModal={setShowModal} />}
+      <div
+        className="navigation-buttons-wrapper"
+        onClick={() => setShowModal(true)}
       >
-        Account
-      </p>
-    </div>
+        <BiUserCircle style={{ fontSize: "30px" }} />
+        <p
+          style={{
+            fontFamily: "Montserrat",
+            fontWeight: "500",
+            fontSize: "15px",
+          }}
+        >
+          Account
+        </p>
+      </div>
+    </>
   );
 }

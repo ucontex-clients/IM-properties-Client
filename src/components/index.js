@@ -69,3 +69,4 @@ export * from "./WalletComponents/WithdrawalAmount";
 export * from "./WalletComponents/ViewWithdrawalSummary";
 export * from "./WalletComponents/MyTransactions";
 export * from "./WalletComponents/EachTransaction";
+export * from "./Modals/AccountModal";
