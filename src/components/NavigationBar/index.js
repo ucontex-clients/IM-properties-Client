@@ -2,6 +2,7 @@ import React from "react";
 import { Nav1 } from "../Nav1";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export function NavigationBar() {
   const page = useLocation().pathname;
@@ -19,10 +20,10 @@ export function NavigationBar() {
       <div className="navigation-left">
         <div className="navigation-logo-wrapper">
           <Link to="/">
-            <img src="./images/logo.png" alt="logo"></img>
+            <img src="/images/logo.png" alt="logo"></img>
           </Link>
         </div>
-        <ul>
+        <ul className="navigation-wrapper-ul">
           <li>
             <Link
               to="/"
@@ -64,7 +65,9 @@ export function NavigationBar() {
 
       <button className="nav-button">Become an ESP</button>
 
-      <div className="hamburger"></div>
+      <div className="hamburger">
+        <GiHamburgerMenu style={{ fontSize: "40px" }} />
+      </div>
 
       <div className="navigation-right">
         <Nav1 />

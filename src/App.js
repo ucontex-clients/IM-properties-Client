@@ -22,8 +22,8 @@ function App() {
     <Router>
       <Routes>
         <Route path={"/"} element={<HomePage />} />
-        <Route path={"/signup"} element={<Signup />} />
-        <Route path={"/signin"} element={<Signin />} />
+        <Route path={"/register"} element={<Signup />} />
+        <Route path={"/login"} element={<Signin />} />
         <Route path={"/properties"} element={<AllProperties />} />
         <Route path={"/properties/:id"} element={<PropertyDetails />} />
         {/* <Route path={"/property"} element={<PropertyDetails />} /> */}

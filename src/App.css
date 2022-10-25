@@ -463,7 +463,6 @@ text-align: center;
 
 .nav-top-wrapper {
   width: 100%;
-  display: flex;
   padding: 16px 56px;
   align-items: center;
   justify-content: space-between;
@@ -5195,13 +5194,13 @@ background-color: white;
 cursor: pointer;
 }
 
-.navigation-wrapper ul {
+.navigation-wrapper-ul {
   display: flex;
   list-style: none;
   align-items: center;
 }
 
-.navigation-wrapper ul li{
+.navigation-wrapper-ul li{
   padding-inline: 4px;
   text-align: center;
 }
@@ -5210,6 +5209,36 @@ cursor: pointer;
   display: flex;
   align-items: center;
   column-gap: 1px;
+  cursor: pointer;
+}
+
+.account-modal{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.account-modal-content{
+  width: fit-content;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 5px;
+  right: 40px;
+  top: 110px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+}
+
+.account-modal-content a{
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 20px;
 }
 
 .navigation-wrapper li a{
@@ -5269,7 +5298,7 @@ font-weight: 500;
 color: #fff;
 }
 
-.background > div button {
+.home-button2 button{
   padding: 15px 20px;
   font-family: Montserrat;
 font-size: 15px;
@@ -5278,9 +5307,10 @@ color: #fff;
 background-color: #FF1212;
 border-radius: 5px;
 cursor: pointer;
+width: fit-content;
 }
 
-.background > div button:hover{
+.home-button2 button:hover{
   background-color: #fff;
 color: #FF1212;
 }
@@ -5562,9 +5592,6 @@ margin-bottom: 80px;
 }
 
 .hamburger{
-  width: 50px;
-  height: 50px;
-  background-color: #038566;
   cursor: pointer;
   display: none;
 }
@@ -5666,7 +5693,6 @@ margin-bottom: 80px;
   .section-container{
     display: block;
   }
-
  
 }
 
@@ -5689,14 +5715,18 @@ margin-bottom: 80px;
     display: block;
   }
 
+  .background h1{
+    font-size: 30px;
+  }
+
+  .background p{
+    font-size: 16px;
+  }
+
   .second-container{
     padding: 0;
     border: none;
     margin-left: 0;
-  }
-
-  .home-image-wrapper{
-    height: 100vh;
   }
 
   .home-image-wrapper h2{
