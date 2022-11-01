@@ -54,7 +54,7 @@ export default function About() {
         <p className="font-fam text-[15px] font-medium mt-[8px]">
           At IM Properties we provide world class professional services in:
         </p>
-        <div className="grid grid-cols-2 gap-x-[33px] gap-y-[114px] mt-[49px]">
+        <div className="md:grid md:grid-cols-2 gap-x-[33px] gap-y-[114px] mt-[49px] flex flex-col">
           <div>
             <div className="flex items-center gap-x-[3px] mt-[22px]">
               <div

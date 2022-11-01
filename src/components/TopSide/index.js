@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { AiOutlineMail, AiOutlineTwitter } from "react-icons/ai";
 import { MdOutlineCall } from "react-icons/md";
 import { TiLocationOutline } from "react-icons/ti";
 import { FaFacebookF } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 export function TopSide() {
   return (

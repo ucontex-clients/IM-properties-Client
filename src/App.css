@@ -24,6 +24,10 @@ padding: 8px 10px;
 background-color: #FF1212;
 }
 
+input:focus{
+  outline: none;
+}
+
 .select-property select{
   border: 1px solid #C4CDD5;
   padding: 8px 22px;
@@ -846,13 +850,11 @@ font-weight: 700;
 }
 
 .icon-2{
-  width: 30px;
-  height: 30px;
   display: grid;
   place-items: center;
   background: rgba(61, 178, 255, 0.2);
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -3864,7 +3866,7 @@ color: #fff;
 
 .single-small-image-wrapper{
   display: grid;
-  grid-template: 1fr 1fr 1fr/1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   row-gap: 15px;
   column-gap: 15px;
 }
@@ -4391,6 +4393,13 @@ font-weight: 400;
   margin-top: 84px;
   display: grid;
   place-items: center;
+}
+
+.latest-property-search{
+  border: 1px solid #C4CDD5;
+border-radius: 5px;
+width: 50%;
+margin-left: auto;
 }
 
 .upload-next-wrapper button{
@@ -5384,6 +5393,7 @@ color: #000000;
 .doings-images div {
   border-radius: 5px;
   width: fit-content;
+  position: relative;
 }
 
 
@@ -5690,6 +5700,11 @@ margin-bottom: 80px;
   .doings-images{
     display: none;
   }
+
+  .about-bottom-wrapper{
+    display: block;
+  }
+
   .section-container{
     display: block;
   }
@@ -5835,5 +5850,42 @@ margin-bottom: 80px;
   .touch-wrapper > div:nth-child(2){
     border-left: 1.5px solid #000000;
     padding-left: 17px;
+  }
+  .property-detail-image-main-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .single-small-image-wrapper{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .property-detail-bottom-main-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail-bottom-top-section{
+    display: block;
+  }
+
+  .share-location-wrapper{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 32px;
+  }
+
+  .share-love{
+    margin-top: 0;
+  }
+
+  .about-property-wrapper{
+    border-top: 1px solid #C6C5C5;
+    border-bottom: 1px solid #C6C5C5;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
   }
 }

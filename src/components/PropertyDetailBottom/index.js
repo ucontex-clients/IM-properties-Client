@@ -55,7 +55,7 @@ export function PropertyDetailBottom() {
   });
 
   return (
-    <div className="property-detail-bottom-main-wrapper bg-white">
+    <div className="property-detail-bottom-main-wrapper bg-white md:bg-transparent">
       <div className="property-detail-bottom">
         <div className="detail-bottom-top-section">
           <div className="detail-top-section">
