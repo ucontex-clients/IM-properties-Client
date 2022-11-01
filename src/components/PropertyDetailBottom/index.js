@@ -116,7 +116,7 @@ export function PropertyDetailBottom() {
           </p>
         </div>
 
-        <div className="property-features-wrapper grid grid-cols-2">
+        <div className="property-features-wrapper flex flex-col gap-y-[25px] md:grid md:grid-cols-2">
           <div>
             <p>Estate Features</p>
             <p>Mini Pleasure Park</p>
@@ -142,14 +142,23 @@ export function PropertyDetailBottom() {
         </div>
 
         <div className="buyer-review-wrapper">
-          <p>10 Reviews</p>
-          {allBuyerReviews}
+          <div className="flex items-center justify-between">
+            <p className="font-fam font-bold text-[15px]">10 Reviews</p>
+            <p className="flex items-center gap-x-[2px] md:hidden cursor-pointer">
+              <img src="/images/write.svg" alt="write"></img>
+              <p className="font-fam text-skyblue text-[12px]">Write Review</p>
+            </p>
+          </div>
+          <div>
+            <div className="block md:hidden">{allBuyerReviews[0]}</div>
+            <div className="hidden md:block">{allBuyerReviews}</div>
+          </div>
           <div className="buyer-review-button">
             <p className="font-fam font-bold text-[15px]">10 more Review</p>
           </div>
         </div>
 
-        <div className="create-review-wrapper">
+        <div className="create-review-wrapper hidden md:block">
           <p>Write a review</p>
           <div className="write-reviews">
             <div className="review-label-input">
