@@ -5915,4 +5915,12 @@ margin-bottom: 80px;
     display: block;
   }
 
+  .my-cart-wrapper{
+  padding-inline: 21px;
+}
+
+.property-detail-image-main-wrapper, .property-detail-bottom-main-wrapper, .date-picker-main{
+  padding-inline: 10px;
+}
+
 }

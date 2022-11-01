@@ -91,13 +91,12 @@ export default function FullPropertyLayout() {
               </div>
             </div>
           </div>
-          <div className="my-cart-wrapper hidden md:block">
+          <div className="my-cart-wrapper">
             <div className="my-cart-logo-section-wrapper">
               <div>
                 <img src="./images/cart.png" alt="cart"></img>
-                <p className="my-cart-number">4</p>
               </div>
-              <p className="my-cart-para">My Cart</p>
+              <p className="my-cart-para">My Cart - 4 Items</p>
             </div>
             <ul className="cart-top-ul">
               <li className="number-plot">
@@ -112,7 +111,6 @@ export default function FullPropertyLayout() {
             <ul className="cart-top-ul">
               <li className="number-plot">
                 <p>Total</p>
-                <p>1911.56SQ.M 141.2m x 71.2m </p>
               </li>
               <li>
                 <p>N1,840,000</p>
