@@ -22,15 +22,21 @@ export default function AllProperties() {
       </div>
 
       <div className="pt-[52px] bg-white px-[42px] pb-[38px] flex justify-between items-center">
-        <div>
+        <div className="w-full">
           <h3 className="font-fam text-[18px] font-bold">
             Our Latest Properties
           </h3>
           <p className="font-fam text-[13px] font-normal text-light mt-[9px]">
             Buy a landlanded property with peace of mind
           </p>
+          <div className="md:hidden mt-[16px] mb-[25px] grid items-right">
+            <input
+              type="text"
+              className="py-[8px] latest-property-search"
+            ></input>
+          </div>
         </div>
-        <div className=" select-property">
+        <div className="hidden lg:flex md:block md:text-right select-property">
           <select>
             <option>Choose location</option>
           </select>
@@ -40,11 +46,13 @@ export default function AllProperties() {
           <select>
             <option>Max Price</option>
           </select>
-          <button>Search here</button>
+          <button className="text-white">Search here</button>
         </div>
       </div>
 
-      <div className="display-property-wrapper">{displayProperties}</div>
+      <div className="px-[32px] grid grid-cols-1 place-items-center bg-white gap-[25px] mb-[25px] md:grid-cols-2 lg:grid-cols-3">
+        {displayProperties}
+      </div>
     </Layout>
   );
 }

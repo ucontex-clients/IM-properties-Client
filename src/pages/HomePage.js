@@ -20,7 +20,10 @@ export default function HomePage() {
     <div>
       <TopSide />
       <Layout>
-        <div className="home-image-wrapper" style={{ overflow: "hidden" }}>
+        <div
+          className="home-image-wrapper h-[50vh] md:h-[80vh]"
+          style={{ overflow: "hidden" }}
+        >
           <img src="./images/newHome.png" alt="home cover"></img>
           <div className="background" style={{ paddingLeft: "64px" }}>
             <h1 style={{ marginTop: "160px" }}>
