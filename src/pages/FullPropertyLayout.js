@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { CartItems, NavigationBar, PlotDimension } from "../components";
 
 export default function FullPropertyLayout() {
+  const [cart, setCart] = useState([]);
+  console.log(cart.length);
   const plots = [
     1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1,
     2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2,
@@ -9,10 +11,10 @@ export default function FullPropertyLayout() {
   ];
 
   const availablePlots = plots.map((plot, index) => {
-    return <PlotDimension key={index} />;
+    return <PlotDimension key={index} cart={cart} setCart={setCart} />;
   });
 
-  const allCartItems = [1, 2, 3, 4].map((item, index) => {
+  const allCartItems = cart?.map((item, index) => {
     return <CartItems key={index} number={index + 1} />;
   });
 
@@ -22,7 +24,7 @@ export default function FullPropertyLayout() {
 
       <div className="view-all-layout-main-wrapper">
         <div className="layout-left-container">
-          <div className="layout-first-child">
+          <div className="layout-first-child mb-[50px]">
             <div className="layout-head-section">
               <div>
                 <p
@@ -36,7 +38,7 @@ export default function FullPropertyLayout() {
                 >
                   <img src="/images/cart.svg" alt="cart"></img>
                   <p className="text-white text-[15px] font-medium font-fam">
-                    Cart Empty
+                    {!cart.length ? "Cart Empty" : `${cart.length} Items View`}
                   </p>
                 </div>
               </div>
@@ -70,7 +72,7 @@ export default function FullPropertyLayout() {
                 >
                   <img src="/images/cart.svg" alt="cart"></img>
                   <p className="text-white text-[15px] font-medium font-fam">
-                    Cart Empty
+                    {!cart.length ? "Cart Empty" : `${cart.length} Items View`}
                   </p>
                 </div>
               </div>
@@ -86,44 +88,46 @@ export default function FullPropertyLayout() {
               >
                 <img src="/images/cart.svg" alt="cart"></img>
                 <p className="text-white text-[15px] font-medium font-fam">
-                  Cart Empty
+                  {!cart.length ? "Cart Empty" : `${cart.length} Items View`}
                 </p>
               </div>
             </div>
           </div>
-          <div className="my-cart-wrapper">
-            <div className="my-cart-logo-section-wrapper">
-              <div>
-                <img src="./images/cart.png" alt="cart"></img>
+          {cart[0] && (
+            <div className="my-cart-wrapper">
+              <div className="my-cart-logo-section-wrapper">
+                <div>
+                  <img src="./images/cart.png" alt="cart"></img>
+                </div>
+                <p className="my-cart-para">{`My Cart - ${cart.length} Items`}</p>
               </div>
-              <p className="my-cart-para">My Cart - 4 Items</p>
-            </div>
-            <ul className="cart-top-ul">
-              <li className="number-plot">
-                <p>#</p>
-                <p>Plot</p>
-              </li>
-              <li>
-                <p>Amount</p>
-              </li>
-            </ul>
-            {allCartItems}
-            <ul className="cart-top-ul">
-              <li className="number-plot">
-                <p>Total</p>
-              </li>
-              <li>
-                <p>N1,840,000</p>
-              </li>
-            </ul>
+              <ul className="cart-top-ul">
+                <li className="number-plot">
+                  <p>#</p>
+                  <p>Plot</p>
+                </li>
+                <li>
+                  <p>Amount</p>
+                </li>
+              </ul>
+              {allCartItems}
+              <ul className="cart-top-ul">
+                <li className="number-plot">
+                  <p>Total</p>
+                </li>
+                <li>
+                  <p>N1,840,000</p>
+                </li>
+              </ul>
 
-            <div
-              className="download-layout-button-wrapper"
-              style={{ marginBottom: "247px" }}
-            >
-              <button>Make Payment</button>
+              <div
+                className="download-layout-button-wrapper"
+                style={{ marginBottom: "247px" }}
+              >
+                <button>Make Payment</button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <div

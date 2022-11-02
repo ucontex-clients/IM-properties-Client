@@ -3109,6 +3109,10 @@ font-weight: 500;
 margin-bottom: 10px;
 }
 
+.view1{
+  grid-column: 1/-1;
+}
+
 .item4, .item5{
   padding: 20px 31px;
   border-radius: 5px;
@@ -3340,9 +3344,21 @@ font-weight: 700;
   cursor: pointer;
 }
 
+.layout-last-child1{
+  height: fit-content;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .layout-last-child:hover .preview-text-holder{
   display: grid;
 }
+
+.layout-last-child1:hover .preview-text-holder{
+  display: grid;
+}
+
 
 .download-layout-button-wrapper{
   display: flex;
@@ -3685,7 +3701,6 @@ font-weight: 700;
   padding-inline: 20px;
   display: grid;
   place-items: center;
-  margin-top: 48px;
 }
 
 .out-in-holder{
@@ -3765,11 +3780,12 @@ font-weight: 400;
 }
 
 .add-plot-bottom{
-  padding-inline: 69px;
+  padding-inline: 20px;
   padding-block: 20px;
-  display: flex;
-  justify-content: space-between;
+  place-items: center;
   align-items: flex-end;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
 }
 
 .zoom-holder{
@@ -3803,11 +3819,10 @@ margin-bottom: 23px;
   font-family: Montserrat;
 font-size: 15px;
 font-weight: 500;
-color: #6C6C6C;
 }
 
 .add-left-head > div p:last-child{
-  font-family: PT Serif;
+  font-family: Montserrat;
 font-size: 15px;
 font-weight: 700;
 color: #038566;
@@ -3815,7 +3830,6 @@ color: #038566;
 
 
 .add-property-wrapper{
-  display: grid;
   grid-template-columns: 2fr 1fr;
   margin-top: 90px;
   column-gap: 16px;
@@ -5716,6 +5730,10 @@ margin-bottom: 80px;
 
   .section-container{
     display: block;
+  }
+
+  .property-layout-main{
+    grid-template-columns: 1fr 1fr;
   }
  
 }
