@@ -4,6 +4,7 @@ import {
   Installment,
   NavigationBar,
   OneOffPayment,
+  PaymentAccountDetail,
 } from "../components";
 
 export default function Payment() {
@@ -26,6 +27,7 @@ export default function Payment() {
         {paymentMode === "easy-buy" && (
           <EasyBuy changePaymentMode={changePaymentMode} />
         )}
+        {paymentMode === "pay" && <PaymentAccountDetail />}
       </div>
     </div>
   );

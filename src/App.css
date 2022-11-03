@@ -4933,6 +4933,8 @@ cursor: pointer;
 }
 
 .payment-top-para{
+  padding-top: 61px;
+  border-top: 1px solid #F5F5F5;
   font-family: Montserrat;
 font-size: 15px;
 font-weight: 400;
@@ -4952,10 +4954,11 @@ color: #038566;
 }
 
 .payment-main-section{
-  margin-top: 141px;
+  margin-top: 0;
   display: flex;
   justify-content: center;
 }
+
 
 .make-payment-wrapper{
   padding-bottom: 43px;
@@ -5103,6 +5106,14 @@ color: #6C6C6C;
   margin-block: 17px 100px;
 }
 
+.one-off-payment-box2{
+  border: 1px solid #C6C5C5;
+  border-radius: 5px;
+  padding: 49px 50px;
+  margin-block: 17px 100px;
+  margin-inline: auto;
+}
+
 .arrow-div{
   position: absolute;
   z-index: 5;
@@ -5226,9 +5237,19 @@ cursor: pointer;
   align-items: center;
 }
 
+
+.account-blue{
+  background: rgba(61, 178, 255, 0.2);
+border-radius: 5px;
+}
+
 .navigation-wrapper-ul li{
   padding-inline: 4px;
   text-align: center;
+}
+
+.payment-account-top{
+  border-top: 1px solid #6C6C6C;
 }
 
 .navigation-buttons-wrapper{

@@ -151,7 +151,9 @@ export function Installment({ changePaymentMode }) {
           className="pay-now-button-holder"
           style={{ marginBlock: "50px 12px" }}
         >
-          <button>Pay Now</button>
+          <button value="pay" onClick={(e) => changePaymentMode(e)}>
+            Pay Now
+          </button>
         </div>
       </div>
     </div>

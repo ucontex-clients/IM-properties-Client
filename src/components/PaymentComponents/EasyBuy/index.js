@@ -226,7 +226,13 @@ export function EasyBuy({ changePaymentMode }) {
           className="pay-now-button-holder"
           style={{ marginBlock: "50px 12px" }}
         >
-          <button style={{ padding: "10px 100px" }}>Pay Now</button>
+          <button
+            style={{ padding: "10px 100px" }}
+            value="pay"
+            onClick={(e) => changePaymentMode(e)}
+          >
+            Pay Now
+          </button>
         </div>
       </div>
     </div>

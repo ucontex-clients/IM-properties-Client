@@ -76,7 +76,7 @@ export function OneOffPayment({ changePaymentMode }) {
         </div>
 
         <div className="pay-now-button-holder">
-          <button onClick={() => window.location.assign("/account-detail")}>
+          <button value="pay" onClick={(e) => changePaymentMode(e)}>
             Pay Now
           </button>
         </div>

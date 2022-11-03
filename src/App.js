@@ -38,7 +38,6 @@ function App() {
         <Route path={"/add"} element={<AddPlot />} />
         <Route path={"/upload"} element={<UploadPropertyInfo />} />
         <Route path={"/Admin1"} element={<SuperAdminDashboard />} />
-        <Route path={"/account-detail"} element={<PaymentAccountDetail />} />
       </Routes>
     </Router>
   );
