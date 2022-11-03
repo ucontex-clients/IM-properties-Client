@@ -3811,19 +3811,16 @@ margin-bottom: 23px;
 }
 
 .add-left-head > div{
-  display: flex;
   justify-content: space-between;
 }
 
 .add-left-head > div p:first-child{
   font-family: Montserrat;
-font-size: 15px;
 font-weight: 500;
 }
 
 .add-left-head > div p:last-child{
   font-family: Montserrat;
-font-size: 15px;
 font-weight: 700;
 color: #038566;
 }
@@ -4023,7 +4020,7 @@ border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: static;
+  position: sticky;
   left: 0;
   top: 0;
   background-color: #fff;
@@ -4949,6 +4946,7 @@ color: #038566;
 }
 
 .one-off-payment-container{
+  padding-inline: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -5101,7 +5099,6 @@ color: #6C6C6C;
 .one-off-payment-box{
   border: 1px solid #C6C5C5;
   border-radius: 5px;
-  background-color: #fff;
   padding: 49px 50px;
   margin-block: 17px 100px;
 }
@@ -5224,6 +5221,7 @@ cursor: pointer;
 
 .navigation-wrapper-ul {
   display: flex;
+  column-gap: 20px;
   list-style: none;
   align-items: center;
 }
@@ -5939,6 +5937,36 @@ margin-bottom: 80px;
 
 .property-detail-image-main-wrapper, .property-detail-bottom-main-wrapper, .date-picker-main{
   padding-inline: 10px;
+}
+
+.cart-item-ul p{
+font-size: 12px;
+font-weight: 400;
+}
+
+.number-plot{
+  column-gap: 20px;
+}
+
+.property-bottom-right >div input{
+margin-right: 0;
+}
+
+.payment-main-section{
+  margin-top: 0;
+  padding-top: 13px;
+  border-top: 1px solid #6C6C6C;
+}
+
+.one-off-payment-box{
+  border: none;
+  border-radius: 0;
+  padding-block: 49px;
+  padding-inline: 13px;
+}
+
+.make-payment-wrapper{
+  border-bottom: none;
 }
 
 }

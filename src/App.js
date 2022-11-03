@@ -8,7 +8,7 @@ import PropertyDetails from "./pages/PropertyDetails";
 import FullPropertyLayout from "./pages/FullPropertyLayout";
 import Dashboard from "./pages/Dashboard";
 import Payment from "./pages/Payment";
-import { UserProfileModal } from "./components";
+import { PaymentAccountDetail, UserProfileModal } from "./components";
 import AddPlot from "./pages/AddPlot";
 import About from "./pages/About";
 import UploadPropertyInfo from "./pages/UploadPropertyInfo";
@@ -38,6 +38,7 @@ function App() {
         <Route path={"/add"} element={<AddPlot />} />
         <Route path={"/upload"} element={<UploadPropertyInfo />} />
         <Route path={"/Admin1"} element={<SuperAdminDashboard />} />
+        <Route path={"/account-detail"} element={<PaymentAccountDetail />} />
       </Routes>
     </Router>
   );
