@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Select } from "@chakra-ui/react";
 
 export function Installment({ changePaymentMode }) {
   const [selectPeriod, setSelectPeriod] = useState("0");
@@ -9,11 +10,13 @@ export function Installment({ changePaymentMode }) {
         Make Payment for 4 plots at
         <span>CAMPUS GARDEN ESTATE PORT HARCOURT</span>
       </p>
-      <div className="block md:hidden">
+      <div className="block px-[10px] md:hidden">
         <p className="font-fam font-bold text-[15px]">
           Campus Garden Estate Port Harcourt
         </p>
-        <p className="payment-top-para">Make Payment for 4 plots at</p>
+        <p className="text-[15px] font-fam text-light mt-[11px]">
+          Make Payment for 4 plots at
+        </p>
       </div>
       <div className="one-off-payment-box">
         <div className="make-payment-wrapper">
@@ -28,7 +31,8 @@ export function Installment({ changePaymentMode }) {
           >
             Payment plan
           </label>
-          <select
+          <Select
+            variant="filled"
             name="payment"
             value="installment"
             onChange={(e) => changePaymentMode(e)}
@@ -42,7 +46,7 @@ export function Installment({ changePaymentMode }) {
             <option className="option" value="easy-buy">
               Easy-buy plan
             </option>
-          </select>
+          </Select>
         </div>
 
         <div className="payment-dropdown-div" style={{ marginTop: "43px" }}>

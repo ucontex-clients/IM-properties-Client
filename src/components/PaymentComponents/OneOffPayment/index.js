@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Select } from "@chakra-ui/react";
 
 export function OneOffPayment({ changePaymentMode }) {
   const touch = useRef();
@@ -9,11 +10,13 @@ export function OneOffPayment({ changePaymentMode }) {
         Make Payment for 4 plots at
         <span>CAMPUS GARDEN ESTATE PORT HARCOURT</span>
       </p>
-      <div className="block md:hidden">
+      <div className="block px-[10px] md:hidden">
         <p className="font-fam font-bold text-[15px]">
           Campus Garden Estate Port Harcourt
         </p>
-        <p className="payment-top-para">Make Payment for 4 plots at</p>
+        <p className="text-[15px] font-fam text-light mt-[11px]">
+          Make Payment for 4 plots at
+        </p>
       </div>
       <div className="one-off-payment-box">
         <div className="make-payment-wrapper">
@@ -28,11 +31,13 @@ export function OneOffPayment({ changePaymentMode }) {
           >
             Payment plan
           </label>
-          <div style={{ position: "relative" }}>
-            <select
+          <div>
+            <Select
+              placeholder="Choose payment mode"
+              variant="filled"
+              name="payment"
               value="one-off"
               onChange={(e) => changePaymentMode(e)}
-              ref={touch}
             >
               <option className="option" value="one-off">
                 Out right payment
@@ -43,7 +48,7 @@ export function OneOffPayment({ changePaymentMode }) {
               <option className="option" value="easy-buy">
                 Easy-buy plan
               </option>
-            </select>
+            </Select>
           </div>
         </div>
 
