@@ -1,7 +1,18 @@
 import React from "react";
 import { ForSale, Layout } from "../components";
+import axios from "axios";
+import { useQuery } from "react-query";
 
 export default function AllProperties() {
+  const { isLoading, error, data } = useQuery("properties", async () => {
+    const allProperties = await axios.get(
+      "https://im-properties-api.herokuapp.com/api/property/all"
+    );
+    return allProperties.data;
+  });
+
+  console.log(data, isLoading);
+
   const displayProperties = [...Array(12).keys()].map((property, index) => {
     return (
       <ForSale
