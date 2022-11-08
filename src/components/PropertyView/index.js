@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from "react";
 import { MdLocationOn } from "react-icons/md";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
@@ -8,6 +9,31 @@ export function PropertyView({ img, name, location, para }) {
       <div className="relative">
         <div className="arrow-div" style={{ left: "12px" }}>
           <MdKeyboardArrowLeft style={{ fontSize: "24px" }} />
+=======
+import React from "react"
+import {MdLocationOn} from "react-icons/md"
+
+export function PropertyView({img, name, location}){
+    return(
+        <div className="property-main-container">
+                <div>
+                    <img src={img}></img>
+                </div>
+                <div className="property-bottom p-[22px]">
+                    <p className="fam" style={{fontWeight:600, fontSize:'15px', marginBottom:'6px'}}>{name}</p>
+                    <p className="font-fam font-medium">N300,000   -   N540,000</p>
+                    <div className="location-bottom flex justify-between">
+                        <div className="flex items-center gap-x-[10px] mt-[7px]">
+                            <MdLocationOn />
+                            <p className="font-normal font-fam text-xs">{location}</p>
+                        </div>
+                        <p className="font-fam text-mine font-bold">70 plots</p>
+                    </div>
+                    <hr className="my-[16px]" style={{height:'1px', backgroundColor:'black'}} />
+                    <p className="text-sm font-fam">do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, <span style={{color:'#FF2442', cursor:'pointer'}}>see more</span></p>
+                </div>
+>>>>>>> Stashed changes
         </div>
         <img src={img} alt="property"></img>
       </div>

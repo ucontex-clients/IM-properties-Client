@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
+<<<<<<< Updated upstream
     extend: {
       colors: {
         mine: "#FF1212",
@@ -13,6 +14,15 @@ module.exports = {
       fontFamily: {
         fam: "Montserrat",
       },
+=======
+    fontFamily: {
+      fam: 'Montserrat'
+    },
+    extend: {
+      colors: {
+        mine: '#FF1212'
+      }
+>>>>>>> Stashed changes
     },
   },
   plugins: [],

@@ -11,9 +11,15 @@ export function VideoData({number, category, img}){
                 {img === 'estate' && <FaUsers style={{fontSize:'18px', color:'#6C6C6C'}}/>}
                 {img === 'plots' && <MdRealEstateAgent style={{fontSize:'18px', color:'#6C6C6C'}}/>}
             </div>
+<<<<<<< Updated upstream
             <div className="video-data" style={{textAlign:'center'}}>
                 <p>{number}</p>
                 <p>{category}</p>
+=======
+            <div style={{textAlign:'center'}}>
+                <p className="font-fam font-medium" style={{color:'#C4CDD5'}}>{number}</p>
+                <p className="font-fam font-medium">{category}</p>
+>>>>>>> Stashed changes
             </div>
         </div>
     )
