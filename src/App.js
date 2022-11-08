@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signup from "./pages/signup";
-import Signin from "./pages/signin";
+// import Signin from "./pages/signin";
 import HomePage from "./pages/HomePage";
 import AllProperties from "./pages/AllProperties";
 import PropertyDetails from "./pages/PropertyDetails";
@@ -22,8 +22,8 @@ function App() {
     <Router>
       <Routes>
         <Route path={"/"} element={<HomePage />} />
-        <Route path={"/register"} element={<Signup />} />
-        <Route path={"/login"} element={<Signin />} />
+        <Route path={"/account/register"} element={<Signup />} />
+        {/* <Route path={"/login"} element={<Signin />} /> */}
         <Route path={"/properties"} element={<AllProperties />} />
         <Route path={"/properties/:id"} element={<PropertyDetails />} />
         {/* <Route path={"/property"} element={<PropertyDetails />} /> */}

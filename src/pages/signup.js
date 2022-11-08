@@ -1,69 +1,109 @@
-import React, { useState } from "react"
-import { Button, Input } from "../components"
-const axios = require('axios')
+import React from "react";
+import { useState } from "react";
+import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 
-export default function Signup(){
+export default function Signup() {
+  const [activeTab, setActiveTab] = useState("0");
 
-const [formData, setFormData] = useState({
-    email:'', username:'',
-    password:''
-})
+  const style1 = {
+    fontWeight: 500,
+    fontSize: "18px",
+  };
 
-const takeInputData = (e) => {
-    const {name, value, type, checked} = e.target
-    setFormData(prevFormData => {
-        return {
-            ...prevFormData, 
-        [name]: type === 'checkbox' ? checked : value}
-    })
-}
+  const style2 = {
+    fontWeight: 700,
+    fontSize: "20px",
+  };
 
-
-const registerUser = async (e) => {
-    console.log(formData)
-    const res = await axios.post('https://im-properties-api.herokuapp.com/api/auth/register', formData)
-    const data = res.data
-    console.log(data)
-}
-
-
-    return (
-        <div className="signup-container">
-            <div id="signup-left">
-                <img src='../images/signupbackground.png' className="signup-image" alt="signin background"></img>
-            </div>
-            <div id="signup-right">
-                <div className="logo-container">
-                    <img src="../images/logo.png" className="logo" alt="logo"></img>
-                </div>
-                <p id="signup-paragraph">Sign Up</p>
-
-               <Input img={'../images/Mail.png'} type={'email'}
-               placeholder={'E-mail Address'} takeInputData={takeInputData}
-               formData={formData} value={formData.email} name='email' />
-
-               <Input img={'../images/Name.png'} type={'text'}
-                    placeholder={'Username'} takeInputData={takeInputData}
-                    formData={formData} value={formData.username} name='username'/>
-
-               <Input img={'../images/Lock.png'} type={'password'}
-                    placeholder={'Password'} eye={'../images/Eye.png'} takeInputData={takeInputData}
-                    formData={formData} value={formData.password} name='password'/>
-
-                <Input img={'../images/Handshake.png'} type={'text'}
-                    placeholder={'Referred by Vickywealth'}/>
-
-                <div className="agreement">
-                    <input type='checkbox' className="checkbox"
-                    checked={formData.agree} name='agree' onChange={takeInputData}
-                    ></input>
-                    <p id="agreement-paragraph">I agree to IM Properties Terms & Condition and Privacy Policy</p>
-                </div>
-                <Button text={'Create Account'} run={registerUser}/>
-                <div>
-                    <p className="signin-option">Already have an account, <a href="/signin">Sign in</a></p>
-                </div>
-            </div>
+  console.log(activeTab);
+  return (
+    <div className="md:grid grid-cols-2 h-[100vh]">
+      <div className="grid place-items-center">
+        <div className="text-center">
+          <img src="/images/logo.svg" alt="logo" className="m-auto"></img>
+          <h3 className="text-[25px] font-fam font-bold">
+            Become an Executive Sale Partner
+          </h3>
+          <p className="font-fam text-[18px] font-medium mt-[15px]">
+            And unlock the gates to extra income in Real Estate.
+          </p>
         </div>
-    )
+      </div>
+      <div className="bg-black px-[100px] py-[62px]">
+        <div>
+          <header className="flex gap-x-[47px] justify-center">
+            <p
+              className="font-fam text-white cursor-pointer"
+              style={activeTab === "0" ? style2 : style1}
+              onClick={() => setActiveTab("0")}
+            >
+              LOGIN
+            </p>
+            <p
+              className="font-fam text-white cursor-pointer"
+              value={"1"}
+              style={activeTab === "1" ? style2 : style1}
+              onClick={() => setActiveTab("1")}
+            >
+              REGISTER
+            </p>
+          </header>
+          <form className="mt-[23px]">
+            <section className="w-full">
+              <InputGroup py="9px" items-center>
+                <InputLeftElement
+                  pointerEvents="none"
+                  children={<img src="/images/black-user.svg" alt="user" />}
+                />
+                <Input
+                  type="text"
+                  placeholder="Executive Sales Partners"
+                  bg={"white"}
+                />
+              </InputGroup>
+              <InputGroup py="9px">
+                <InputLeftElement
+                  pointerEvents="none"
+                  children={<img src="/images/black-email.svg" alt="user" />}
+                />
+                <Input type="email" placeholder="E-mail Address" bg={"white"} />
+              </InputGroup>
+              <InputGroup py="9px">
+                <InputLeftElement
+                  pointerEvents="none"
+                  children={
+                    <img src="/images/black-username.svg" alt="email" />
+                  }
+                />
+                <Input
+                  type="text"
+                  placeholder="Password"
+                  bg={"white"}
+                  width="100%"
+                />
+              </InputGroup>
+              <InputGroup py="9px">
+                <InputLeftElement
+                  pointerEvents="none"
+                  children={<img src="/images/black-password.svg" alt="user" />}
+                />
+                <Input type="password" placeholder="Password" bg={"white"} />
+              </InputGroup>
+              <InputGroup py="9px">
+                <InputLeftElement
+                  pointerEvents="none"
+                  children={<img src="/images/black-user.svg" alt="user" />}
+                />
+                <Input
+                  type="text"
+                  placeholder="Referrer's (Optional)"
+                  bg={"white"}
+                />
+              </InputGroup>
+            </section>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
