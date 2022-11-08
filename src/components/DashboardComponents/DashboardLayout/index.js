@@ -18,6 +18,7 @@ import {
 
 export default function Dashboard({
   profilePicture = "/images/profilePicture.png",
+  children,
 }) {
   const [activePage, setActivepage] = useState("dashboard");
   const [showModal, setShowModal] = useState(false);
@@ -59,20 +60,7 @@ export default function Dashboard({
             setActivePage={setActivepage}
           />
         </div>
-        {activePage === "dashboard" && <DashboardHome />}
-        {activePage === "property" && <DashboardProperty />}
-        {activePage === "inspection" && <DashboardBooking />}
-        {activePage === "referral" && <DashboardReferral />}
-        {activePage === "view" && <DashboardViewProfile />}
-        {activePage === "create" && <DashboardCreateProfile />}
-        {activePage === "buy" && <DashboardBuyProperty />}
-        {activePage === "method" && (
-          <FundWalletCreateAccount setActivePage={setActivepage} />
-        )}
-        {activePage === "fund" && <UploadPayment />}
-        {activePage === "withdraw" && !availableAccount && <WithdrawCash />}
-        {activePage === "withdraw" && availableAccount && <WithdrawalAmount />}
-        {activePage === "transaction" && availableAccount && <MyTransactions />}
+        {children}
       </div>
     </div>
   );

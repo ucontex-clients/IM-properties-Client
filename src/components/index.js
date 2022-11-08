@@ -71,3 +71,4 @@ export * from "./WalletComponents/MyTransactions";
 export * from "./WalletComponents/EachTransaction";
 export * from "./Modals/AccountModal";
 export * from "./InspectionDate";
+export * from "./PaymentComponents/PaymentAccountDetail";

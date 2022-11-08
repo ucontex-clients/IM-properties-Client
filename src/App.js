@@ -8,7 +8,7 @@ import PropertyDetails from "./pages/PropertyDetails";
 import FullPropertyLayout from "./pages/FullPropertyLayout";
 import Dashboard from "./pages/Dashboard";
 import Payment from "./pages/Payment";
-import { UserProfileModal } from "./components";
+import { PaymentAccountDetail, UserProfileModal } from "./components";
 import AddPlot from "./pages/AddPlot";
 import About from "./pages/About";
 import UploadPropertyInfo from "./pages/UploadPropertyInfo";
