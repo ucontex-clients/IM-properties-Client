@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import { Login, Register } from "../components";
+
 
 export default function Signup() {
   const [activeTab, setActiveTab] = useState("0");
@@ -15,21 +16,26 @@ export default function Signup() {
     fontSize: "20px",
   };
 
-  console.log(activeTab);
   return (
     <div className="md:grid grid-cols-2 h-[100vh]">
-      <div className="grid place-items-center">
-        <div className="text-center">
+      <div className="grid place-items-center mt-[15px] md:mt-[0]">
+        <div className="text-center md:text-left px-[30px] md:px-[0]">
           <img src="/images/logo.svg" alt="logo" className="m-auto"></img>
-          <h3 className="text-[25px] font-fam font-bold">
+          {activeTab=== '1' && <h3 className="text-[16px] md:text-[25px] font-fam font-bold mt-[20px] md:mt-[0]">
             Become an Executive Sale Partner
-          </h3>
-          <p className="font-fam text-[18px] font-medium mt-[15px]">
+          </h3>}
+          {activeTab=== '0' && <h3 className="text-[16px] md:text-[25px] font-fam font-bold mt-[20px] md:mt-[0]">
+          Welcome Back to <span className="text-mine">IM </span>Properties 
+          </h3>}
+{   activeTab==='1' &&      <p className="font-fam text-[13px] md:text-[18px] font-medium mt-[15px] text-light md:text-black">
             And unlock the gates to extra income in Real Estate.
-          </p>
+          </p>}
+          {   activeTab==='0' &&      <p className="font-fam text-[13px] md:text-[18px] font-medium mt-[15px] text-light md:text-black">
+          A place of endless possiblities
+          </p>}
         </div>
       </div>
-      <div className="bg-black px-[100px] py-[62px]">
+      <div className="md:bg-black md:px-[100px] py-[62px] px-[36px]">
         <div>
           <header className="flex gap-x-[47px] justify-center">
             <p
@@ -48,60 +54,8 @@ export default function Signup() {
               REGISTER
             </p>
           </header>
-          <form className="mt-[23px]">
-            <section className="w-full">
-              <InputGroup py="9px" items-center>
-                <InputLeftElement
-                  pointerEvents="none"
-                  children={<img src="/images/black-user.svg" alt="user" />}
-                />
-                <Input
-                  type="text"
-                  placeholder="Executive Sales Partners"
-                  bg={"white"}
-                />
-              </InputGroup>
-              <InputGroup py="9px">
-                <InputLeftElement
-                  pointerEvents="none"
-                  children={<img src="/images/black-email.svg" alt="user" />}
-                />
-                <Input type="email" placeholder="E-mail Address" bg={"white"} />
-              </InputGroup>
-              <InputGroup py="9px">
-                <InputLeftElement
-                  pointerEvents="none"
-                  children={
-                    <img src="/images/black-username.svg" alt="email" />
-                  }
-                />
-                <Input
-                  type="text"
-                  placeholder="Password"
-                  bg={"white"}
-                  width="100%"
-                />
-              </InputGroup>
-              <InputGroup py="9px">
-                <InputLeftElement
-                  pointerEvents="none"
-                  children={<img src="/images/black-password.svg" alt="user" />}
-                />
-                <Input type="password" placeholder="Password" bg={"white"} />
-              </InputGroup>
-              <InputGroup py="9px">
-                <InputLeftElement
-                  pointerEvents="none"
-                  children={<img src="/images/black-user.svg" alt="user" />}
-                />
-                <Input
-                  type="text"
-                  placeholder="Referrer's (Optional)"
-                  bg={"white"}
-                />
-              </InputGroup>
-            </section>
-          </form>
+          {activeTab === '1' && <Register />}
+          {activeTab === '0' && <Login />}
         </div>
       </div>
     </div>

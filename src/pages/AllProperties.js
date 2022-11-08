@@ -11,8 +11,6 @@ export default function AllProperties() {
     return allProperties.data;
   });
 
-  console.log(data, isLoading);
-
   const displayProperties = [...Array(12).keys()].map((property, index) => {
     return (
       <ForSale
