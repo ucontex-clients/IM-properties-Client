@@ -8,6 +8,7 @@ import {
   PropertyView,
   Layout,
 } from "../components";
+import { Link } from "react-router-dom";
 import { GrLocation } from "react-icons/gr";
 import { MdOutlineCall } from "react-icons/md";
 import { AiOutlineFieldTime } from "react-icons/ai";
@@ -300,9 +301,12 @@ export default function HomePage() {
             className="flex items-center rounded-[8px] bg-mine py-[6px] px-[9px] gap-x-[5px] mt-[21px] cursor-pointer"
             style={{ width: "fit-content", margin: "auto" }}
           >
-            <p className="font-fam text-white text-[18px] font-semibold text-center">
+            <Link
+              to={"/properties"}
+              className="font-fam text-white text-[18px] font-semibold text-center"
+            >
               EXPLORE PROPERTY
-            </p>
+            </Link>
             <BiChevronsRight style={{ fontSize: "30px", color: "#fff" }} />
           </div>
         </div>
