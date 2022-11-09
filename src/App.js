@@ -20,6 +20,7 @@ import DashboardHomePage from "./pages/DashboardHomePage";
 import DashboardBuyPage from "./pages/DashboardBuyPage";
 import DashboardBookingPage from "./pages/DashboardBookingPage";
 import DashboardMyPropertyPage from "./pages/DashboardMyPropertyPage";
+import DashboardPaymentPage from "./pages/DashboardPaymentPage";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path={"/dashboard/buy-property"} element={<DashboardBuyPage />} />
         <Route path={"/dashboard/bookings"} element={<DashboardBookingPage />} />
         <Route path={"/dashboard/my-property"} element={<DashboardMyPropertyPage />} />
+        <Route path={"/dashboard/payment"} element={<DashboardPaymentPage/>} />
         
       </Routes>
     </Router>

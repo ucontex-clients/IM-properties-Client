@@ -1660,12 +1660,32 @@ body {
 }
 .side-nav-ul {
   background-color: #fff;
-  border: 1px solid rgba(61, 178, 255, 0.2);
   border-radius: 0px 0px 5px 5px;
-  height: 100vh;
-  overflow: auto;
   padding-top: 79px;
+  width: fit-content;
 }
+
+.payment-grids{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  align-items: center;
+  padding: 22px 16px;
+}
+
+.payment-grids li{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  
+}
+
+.payment-grids:first-child li {
+  font-family: Montserrat;
+font-size: 13px;
+font-weight: 700;
+text-align: center;
+}
+
 
 .dashboard-property-logo-wrapper {
   position: relative;
@@ -2448,7 +2468,9 @@ body {
 
 .dashboard-main-left {
   height: 100vh;
-  overflow-y: auto;
+ overflow-y: scroll;
+ background-color: #fff;
+ border-right: 1px solid #F5F5F5;
 }
 
 .dashboard-main-right {
@@ -2669,7 +2691,7 @@ body {
   grid-column: 1/-1;
   background-color: #fff;
   border-radius: 5px;
-  border: 1px solid rgba(61, 178, 255, 0.2);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   text-align: center;
   padding-block: 42px;
   margin-bottom: 415px;
@@ -2710,7 +2732,7 @@ body {
   column-gap: 17px;
   align-items: center;
   padding: 28px 22px;
-  border: 1px solid rgba(61, 178, 255, 0.2);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   background-color: #fff;
 }

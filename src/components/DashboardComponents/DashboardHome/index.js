@@ -3,7 +3,7 @@ import { DashboardElement } from "../../"
 
 export function DashboardHome(){
     return(
-        <div className="dashboard-main-right">
+        <div className="dashboard-main-right bg-white">
         <div className="dashboard-logo-section">
             <div className="main-dashboard-holder"><img src="/images/dashboard.png" alt="dashboard logo"></img></div>
             <p>Dashboard</p>

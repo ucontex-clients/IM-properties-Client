@@ -41,10 +41,7 @@ export function DashboardLayout({
 
       <div className="dashboard-main-wrapper">
         <div className="dashboard-main-left">
-          <DashboardSideNav
-            activePage={activePage}
-            setActivePage={setActivepage}
-          />
+          <DashboardSideNav/>
         </div>
         {children}
       </div>

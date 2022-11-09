@@ -75,3 +75,4 @@ export * from "./PaymentComponents/PaymentAccountDetail";
 export * from "./RegisterComponents/Register"
 export * from "./RegisterComponents/Login"
 export * from "./DashboardComponents/DashboardLayout"
+export * from "./DashboardComponents/DashboardPayment"
