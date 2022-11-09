@@ -14,7 +14,6 @@
   box-sizing: border-box;
 }
 
-<<<<<<< Updated upstream
 button {
   font-family: Montserrat;
   font-size: 15px;
@@ -60,25 +59,12 @@ input:focus {
 body {
   background: #f5f5f5;
   font-family: Monserrat;
-=======
-body{
-  background: #F5F5F5;
-  font-family: Monserrat, sans-serif;
-  overflow-x: hidden;
->>>>>>> Stashed changes
 }
 
 /* select {
   appearance: none;
 } */
 
-<<<<<<< Updated upstream
-=======
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap");
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
->>>>>>> Stashed changes
 .signup-container {
   padding: 47px;
   height: 100vh;
@@ -477,13 +463,6 @@ body{
 
 .nav-top-wrapper {
   width: 100%;
-<<<<<<< Updated upstream
-=======
-  min-width: 900px;
-  left: 0;
-  top: 0;
-  display: flex;
->>>>>>> Stashed changes
   padding: 16px 56px;
   align-items: center;
   justify-content: space-between;
@@ -1681,12 +1660,32 @@ body{
 }
 .side-nav-ul {
   background-color: #fff;
-  border: 1px solid rgba(61, 178, 255, 0.2);
   border-radius: 0px 0px 5px 5px;
-  height: 100vh;
-  overflow: auto;
   padding-top: 79px;
+  width: fit-content;
 }
+
+.payment-grids{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+  align-items: center;
+  padding: 22px 16px;
+}
+
+.payment-grids li{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  
+}
+
+.payment-grids:first-child li {
+  font-family: Montserrat;
+font-size: 13px;
+font-weight: 700;
+text-align: center;
+}
+
 
 .dashboard-property-logo-wrapper {
   position: relative;
@@ -2097,7 +2096,6 @@ body{
   padding: 76px 79px;
 }
 
-<<<<<<< Updated upstream
 .team-section-wrapper > p {
   font-family: Montserrat;
   font-size: 25px;
@@ -2105,28 +2103,6 @@ body{
   color: #eb3223;
   text-align: center;
   margin-bottom: 63px;
-=======
-.team-section-wrapper >p{
-  font-family: Inter;
-font-size: 25px;
-font-weight: 700;
-color: #EB3223;
-text-align: center;
-margin-bottom: 63px;
-}
-
-.section-container{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 80px;
-}
-
-
-.team-mate-container{
-  background: #FFFFFF;
-border-radius: 10px;
-padding: 10px;
->>>>>>> Stashed changes
 }
 
 .mate-name {
@@ -2492,7 +2468,9 @@ padding: 10px;
 
 .dashboard-main-left {
   height: 100vh;
-  overflow-y: auto;
+ overflow-y: scroll;
+ background-color: #fff;
+ border-right: 1px solid #F5F5F5;
 }
 
 .dashboard-main-right {
@@ -2713,7 +2691,7 @@ padding: 10px;
   grid-column: 1/-1;
   background-color: #fff;
   border-radius: 5px;
-  border: 1px solid rgba(61, 178, 255, 0.2);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   text-align: center;
   padding-block: 42px;
   margin-bottom: 415px;
@@ -2754,7 +2732,7 @@ padding: 10px;
   column-gap: 17px;
   align-items: center;
   padding: 28px 22px;
-  border: 1px solid rgba(61, 178, 255, 0.2);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   background-color: #fff;
 }
@@ -3731,7 +3709,6 @@ padding: 10px;
 
 .add-plot-button {
   padding: 10px 31px;
-<<<<<<< Updated upstream
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 700;
@@ -3793,52 +3770,6 @@ padding: 10px;
 
 .add-plot-bottom {
   padding-inline: 20px;
-=======
-  font-family: Inter;
-font-size: 16px;
-font-weight: 700;
-color: #fff;
-cursor: pointer;
-border-radius: 5px;
-background-color: #3DB2FF;
-border-style: none;
-}
-
-.property-bottom{
-  border: 1px solid #D9D9D9;
-border-radius: 0px 0px 5px 5px;
-
-}
-
-
-.property-bottom-right > label{
-  font-family: Inter;
-font-size: 15px;
-font-weight: 500;
-color: #6C6C6C;
-margin-bottom: 7px;
-}
-
-
-.property-bottom-right >div input{
-  font-family: Inter;
-font-size: 15px;
-font-weight: 500;
-padding: 11px 8px;
-color: #C6C5C5;
-border: 1px solid #000000;
-border-radius: 5px;
-margin-right: 15px;
-width: 200px;
-}
-
-.property-bottom-right >div input:focus{
-  outline: none;
-}
-
-.add-plot-bottom{
-  padding-inline: 69px;
->>>>>>> Stashed changes
   padding-block: 20px;
   place-items: center;
   align-items: flex-end;
@@ -4066,27 +3997,16 @@ width: 200px;
   object-fit: cover;
 }
 
-<<<<<<< Updated upstream
 .navigation-wrapper {
-=======
-
-
-.navigation-wrapper{
->>>>>>> Stashed changes
   width: 100%;
   padding: 7px 41px 8px 27px;
   display: flex;
-  min-width: 900px;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   left: 0;
-<<<<<<< Updated upstream
   top: 0;
   background-color: #fff;
-=======
-  top: 52px;
->>>>>>> Stashed changes
   z-index: 10;
 }
 
@@ -4665,47 +4585,12 @@ width: 200px;
 .property-view-main-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-<<<<<<< Updated upstream
   margin-top: 73px;
   position: relative;
   column-gap: 60px;
 }
 
 .main-view-image {
-=======
-  margin-top: 75px;
-  position: relative;
-  min-width: 900px;
-}
-
-.section1 > h2{
-  font-family: Montserrat;
-font-size: 25px;
-font-weight: 700;
-}
-
-.section1 >  p{
-  font-family: Montserrat;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 30px;
-}
-
-.doings{
-  font-family: Montserrat;
-font-size: 18px;
-font-weight: 600;
-}
-
-
-.our-doings p{
-  font-family: Montserrat;
-font-size: 15px;
-font-weight: 600;
-line-height: 25px;
-}
-.main-view-image{
->>>>>>> Stashed changes
   display: flex;
   justify-content: center;
   align-items: center;
@@ -5580,14 +5465,8 @@ line-height: 25px;
   object-fit: cover;
 }
 
-<<<<<<< Updated upstream
 .all-video-wrapper > div {
   border-radius: 20px;
-=======
-.all-video-wrapper{
-padding-inline: 65px;
-min-width: 900px;
->>>>>>> Stashed changes
 }
 
 .video-bottom {
@@ -5601,7 +5480,6 @@ min-width: 900px;
   transform: translateX(-50%);
 }
 
-<<<<<<< Updated upstream
 .video-data p:first-child {
   font-family: Montserrat;
   font-size: 25px;
@@ -5617,19 +5495,6 @@ min-width: 900px;
 
 .contact-info-wrapper {
   background: linear-gradient(90deg, #d60783 0%, #6b0707 100%);
-=======
-.video-bottom{
-  width: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-border-radius: 5px;
-bottom: -50px;
-}
-
-.contact-info-wrapper{
-  background: linear-gradient(90deg, #D60783 0%, #6B0707 100%);
->>>>>>> Stashed changes
   text-align: center;
   padding-top: 32px;
   padding-bottom: 49px;
