@@ -59,13 +59,9 @@ export default function Dashboard({
             setActivePage={setActivepage}
           />
         </div>
-        {activePage === "dashboard" && <DashboardHome />}
-        {activePage === "property" && <DashboardProperty />}
-        {activePage === "inspection" && <DashboardBooking />}
         {activePage === "referral" && <DashboardReferral />}
         {activePage === "view" && <DashboardViewProfile />}
         {activePage === "create" && <DashboardCreateProfile />}
-        {activePage === "buy" && <DashboardBuyProperty />}
         {activePage === "method" && (
           <FundWalletCreateAccount setActivePage={setActivepage} />
         )}
