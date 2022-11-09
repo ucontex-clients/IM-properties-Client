@@ -11,7 +11,7 @@ export default function AllProperties() {
     return allProperties.data;
   });
 
-  console.log(data, isLoading);
+  console.log(data)
 
   const displayProperties = [...Array(12).keys()].map((property, index) => {
     return (

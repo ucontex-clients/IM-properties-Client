@@ -8,14 +8,19 @@ import PropertyDetails from "./pages/PropertyDetails";
 import FullPropertyLayout from "./pages/FullPropertyLayout";
 import Dashboard from "./pages/Dashboard";
 import Payment from "./pages/Payment";
-import { PaymentAccountDetail, UserProfileModal } from "./components";
+import { DashboardProperty, PaymentAccountDetail, UserProfileModal } from "./components";
 import AddPlot from "./pages/AddPlot";
 import About from "./pages/About";
 import UploadPropertyInfo from "./pages/UploadPropertyInfo";
 import BlogPage from "./pages/BlogPage";
 import ContactUs from "./pages/ContactPage";
 import FAQ from "./pages/FAQ";
-import SuperAdminDashboard from "./pages/SuperAdminDashboard";
+// import SuperAdminDashboard from "./pages/SuperAdminDashboard";
+import DashboardHomePage from "./pages/DashboardHomePage";
+import DashboardBuyPage from "./pages/DashboardBuyPage";
+import DashboardBookingPage from "./pages/DashboardBookingPage";
+import DashboardMyPropertyPage from "./pages/DashboardMyPropertyPage";
+import DashboardPaymentPage from "./pages/DashboardPaymentPage";
 
 function App() {
   return (
@@ -37,7 +42,13 @@ function App() {
         <Route path={"/profile"} element={<UserProfileModal />} />
         <Route path={"/add"} element={<AddPlot />} />
         <Route path={"/upload"} element={<UploadPropertyInfo />} />
-        <Route path={"/Admin1"} element={<SuperAdminDashboard />} />
+        {/* <Route path={"/Admin1"} element={<SuperAdminDashboard />} /> */}
+        <Route path={"/dashboard/home"} element={<DashboardHomePage />} />
+        <Route path={"/dashboard/buy-property"} element={<DashboardBuyPage />} />
+        <Route path={"/dashboard/bookings"} element={<DashboardBookingPage />} />
+        <Route path={"/dashboard/my-property"} element={<DashboardMyPropertyPage />} />
+        <Route path={"/dashboard/payment"} element={<DashboardPaymentPage/>} />
+        
       </Routes>
     </Router>
   );

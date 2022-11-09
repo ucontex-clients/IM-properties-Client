@@ -1,22 +1,8 @@
 import React, { useState } from "react";
-import {
-  DashboardHome,
-  DashboardSideNav,
-  DashboardProperty,
-  DashboardBooking,
-  DashboardReferral,
-  UserProfileModal,
-  DashboardViewProfile,
-  DashboardCreateProfile,
-  DashboardBuyProperty,
-  FundWalletCreateAccount,
-  UploadPayment,
-  WithdrawCash,
-  WithdrawalAmount,
-  MyTransactions,
-} from "../components";
+import { DashboardSideNav } from "../../DashboardSideNav";
+import { UserProfileModal } from "../UserProfileModal";
 
-export default function Dashboard({
+export function DashboardLayout({
   profilePicture = "/images/profilePicture.png",
   children,
 }) {
@@ -40,12 +26,12 @@ export default function Dashboard({
       <div className="dashboard-nav">
         <div className="dashboard-nav-logo-holder">
           <a href="/">
-            <img src="./images/logo.png" alt="logo"></img>
+            <img src="/images/logo.png" alt="logo"></img>
           </a>
         </div>
         <div className="dashboard-nav-right">
           <div className="bell-holder">
-            <img src="./images/bell.png" alt="notification icon"></img>
+            <img src="/images/bell.png" alt="notification icon"></img>
           </div>
           <div className="user2-holder" onClick={myModal}>
             <img src={profilePicture} alt="profile"></img>
@@ -55,10 +41,7 @@ export default function Dashboard({
 
       <div className="dashboard-main-wrapper">
         <div className="dashboard-main-left">
-          <DashboardSideNav
-            activePage={activePage}
-            setActivePage={setActivepage}
-          />
+          <DashboardSideNav/>
         </div>
         {children}
       </div>
