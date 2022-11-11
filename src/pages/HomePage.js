@@ -1,4 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button,
+  Select,
+} from "@chakra-ui/react";
+
 import {
   PropertyViewSection,
   VideoSection,
@@ -7,6 +19,7 @@ import {
   News,
   PropertyView,
   Layout,
+  ChooseDate,
 } from "../components";
 import { Link } from "react-router-dom";
 import { GrLocation } from "react-icons/gr";
@@ -17,6 +30,21 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { BiChevronsRight } from "react-icons/bi";
 
 export default function HomePage() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [time, setTime] = useState("");
+
+  // const focusOnPage = () => {
+  //   const papers = document.getElementById("building");
+  //   papers.style.Display = "";
+  //   papers.scrollIntoView();
+  //   console.log(papers);
+  // };
+
+  const myStyle = {
+    backgroundColor: "#FF1212",
+    color: "#fff",
+  };
+
   return (
     <div>
       <TopSide />
@@ -39,10 +67,12 @@ export default function HomePage() {
               style={{ marginTop: "68px", columnGap: "39px" }}
             >
               <div className="home-button2 hidden md:block">
-                <button className="inline-block mr-[39px]">
+                <Button onClick={onOpen} className="inline-block mr-[39px]">
                   BOOK AN INSPECTION
-                </button>
-                <button>CONTACT US</button>
+                </Button>
+                <a href="#touch">
+                  <Button className="inline-block mr-[39px]">CONTACT US</Button>
+                </a>
               </div>
             </div>
           </div>
@@ -73,12 +103,13 @@ export default function HomePage() {
                 urna. Curabitur vel bibendum lorem. Morbi convallis convallis
                 diam sit amet lacinia. Aliquam in elementum tellus.{" "}
               </p>
-              <button
-                className="rounded text-white py-2 px-2 mt-[24px]"
+              <Link
+                to="/about"
+                className="p-2 rounded text-white text-[15px] px-[16px] py-[10px] mt-[30px]"
                 style={{ backgroundColor: "#FF1212" }}
               >
                 LEARN MORE
-              </button>
+              </Link>
             </section>
             <section className="section1 mt-[71px]">
               <h2>What we do</h2>
@@ -100,7 +131,9 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <span>Read More</span>{" "}
+                      <Link to="/about" href="#estate">
+                        Read More
+                      </Link>
                     </p>
                   </div>
 
@@ -121,7 +154,9 @@ export default function HomePage() {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
                     </p>
-                    <span>Read More</span>{" "}
+                    <Link to="/about" href="#property">
+                      Read More
+                    </Link>
                   </div>
                 </div>
                 <div className="ml-[34px] pl-[34px] second-container">
@@ -141,7 +176,9 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <span>Read More</span>{" "}
+                      <Link to="/about" href="#buy">
+                        Read More
+                      </Link>
                     </p>
                   </div>
 
@@ -161,7 +198,7 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <span>Read More</span>{" "}
+                      <Link to="/about">Read More</Link>
                     </p>
                   </div>
                 </div>
@@ -187,7 +224,7 @@ export default function HomePage() {
           <PropertyViewSection />
           <div className="grid place-items-center mt-[56px]">
             <button
-              className="p-2 rounded text-white"
+              className="p-2 rounded text-white text-[15px] px-[16px] py-[10px]"
               style={{ backgroundColor: "#FF1212" }}
             >
               VIEW MORE
@@ -251,7 +288,7 @@ export default function HomePage() {
 
             <div>
               <button
-                className="font-fam bg-mine text-white p-[10px] rounded text-xl font-medium mt-[79px]"
+                className="font-fam bg-mine text-white text-[15px] px-[16px] py-[10px] rounded font-medium mt-[79px]"
                 style={{ fontFamily: "Montserrat" }}
               >
                 VIEW MORE
@@ -311,7 +348,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="px-[126px] py-[67px] bg-white touch-main">
+        <div className="px-[126px] py-[67px] bg-white touch-main" id="touch">
           <h2 className="font-fam text-[25px] text-center font-bold">
             Get in Touch
           </h2>
@@ -414,6 +451,85 @@ export default function HomePage() {
           </div>
         </div>
       </Layout>
+      <Modal isOpen={isOpen} onClose={onClose} size="md">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader className="text-white">Modal</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <div className="property-layout-wrapper">
+              <div className="date-picker-head">
+                <p>Book Physical Inspection</p>
+              </div>
+
+              <div className="date-picker-main">
+                <div className="select-date-wrapper">
+                  <div>
+                    <img src="/images/Calendar2.png" alt="calendar"></img>
+                  </div>
+                  <p>Select Date</p>
+                </div>
+
+                <div>
+                  <ChooseDate />
+                </div>
+
+                <div className="select-time-wrapper">
+                  <div className="select-date-wrapper">
+                    <div>
+                      <img src="/images/Time.png" alt="time"></img>
+                    </div>
+                    <p>Select time</p>
+                  </div>
+                  <div
+                    style={{ display: "flex", columnGap: "25px" }}
+                    className="time-picker"
+                  >
+                    <button
+                      style={time === "10AM" ? myStyle : {}}
+                      onClick={() => setTime("10AM")}
+                    >
+                      10AM
+                    </button>
+                    <button
+                      style={time === "1PM" ? myStyle : {}}
+                      onClick={() => setTime("1PM")}
+                    >
+                      1PM
+                    </button>
+                  </div>
+                </div>
+
+                <div className="select-location-wrapper">
+                  <div className="select-location-logo-side">
+                    <div>
+                      <img
+                        src="/images/chooseLocation.png"
+                        alt="location"
+                      ></img>
+                    </div>
+                    <p>Select Location</p>
+                  </div>
+                  <div className="select-location-select">
+                    <Select placeholder="Select Location" w="160px">
+                      <option value="option1">Port Harcourt</option>
+                      <option value="option2">Owerri</option>
+                      <option value="option3">Uyo</option>
+                    </Select>
+                    {/* <div className="fill-drop-wrapper"><img src="./images/fillDrop.png"></img></div> */}
+                  </div>
+                </div>
+                <div
+                  style={{ marginBlock: "78px 21px", textAlign: "center" }}
+                  className="book-inspection-container"
+                >
+                  <button>Book Inspection</button>
+                </div>
+              </div>
+            </div>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 }

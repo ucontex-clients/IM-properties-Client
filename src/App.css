@@ -3699,7 +3699,7 @@ font-weight: 700;
 
 .date-picker-main {
   padding-block: 29px 48px;
-  padding-inline: 50px;
+  padding-inline: 20px;
 }
 
 .watch-video-container video {
@@ -5415,7 +5415,7 @@ font-weight: 700;
   text-align: justify;
 }
 
-.our-doings span {
+.our-doings a {
   font-family: Montserrat;
   font-size: 15px;
   font-weight: 700;

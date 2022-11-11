@@ -66,7 +66,7 @@ export default function About() {
               >
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
-              <p className="doings">Estate Development</p>
+              <p className="doings" id="estate">Estate Development</p>
             </div>
             <div className="mt-[38px]">
               <div className="rounded-[5px]">
@@ -106,7 +106,7 @@ export default function About() {
               >
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
-              <p className="doings">Buy and Sell Properties</p>
+              <p className="doings" id="property">Buy and Sell Properties</p>
             </div>
             <div className="mt-[38px]">
               <div className="rounded-[5px]">
@@ -146,7 +146,7 @@ export default function About() {
               >
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
-              <p className="doings">Property Management</p>
+              <p className="doings" id="property" >Property Management</p>
             </div>
             <div className="mt-[38px]">
               <div className="rounded-[5px]">
@@ -186,7 +186,7 @@ export default function About() {
               >
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
-              <p className="doings">Building Construction</p>
+              <p className="doings" id="building">Building Construction</p>
             </div>
             <div className="mt-[38px]">
               <div className="rounded-[5px]">
