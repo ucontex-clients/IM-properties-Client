@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import { Login, Register } from "../components";
 import { useFormik } from 'formik';
-import axios from "axios";
 
 export default function Signup() {
   const [activeTab, setActiveTab] = useState("0");

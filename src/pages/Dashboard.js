@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import {
-  DashboardHome,
   DashboardSideNav,
-  DashboardProperty,
-  DashboardBooking,
   DashboardReferral,
   UserProfileModal,
   DashboardViewProfile,
   DashboardCreateProfile,
-  DashboardBuyProperty,
   FundWalletCreateAccount,
   UploadPayment,
   WithdrawCash,

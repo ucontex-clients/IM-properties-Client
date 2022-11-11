@@ -3663,6 +3663,40 @@ text-align: center;
   font-weight: 700;
 }
 
+.payment-table{
+  margin-top: 124px;
+  width: 100%;
+  text-align: center;
+}
+
+.payment-table th, .payment-table td{
+  padding: 23px 16px;
+}
+
+.payment-table tr:nth-child(odd){
+  background-color:#F5F5F5 ;
+}
+
+.payment-table button{
+  background: rgba(61, 178, 255, 0.25);
+border-radius: 20px;
+color: #0682D3;
+line-break: auto;
+}
+
+.payment-table td, .payment-table p {
+  font-family: Montserrat;
+font-size: 12px;
+font-weight: 500;
+}
+
+.payment-table th{
+  font-family: Montserrat;
+font-size: 13px;
+font-weight: 700;
+}
+
+
 .date-picker-main {
   padding-block: 29px 48px;
   padding-inline: 50px;

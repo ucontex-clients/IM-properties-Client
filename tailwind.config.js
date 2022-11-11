@@ -9,6 +9,7 @@ module.exports = {
         skyblue: "#27A8F4",
         backblue: "#3DB2FF",
         orange: "#FF9800",
+        green: '#038566'
       },
       fontFamily: {
         fam: "Montserrat",
