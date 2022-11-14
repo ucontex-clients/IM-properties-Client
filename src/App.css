@@ -1699,7 +1699,13 @@ text-align: center;
   padding: 0;
 } */
 
-.list-item-wrapper > p {
+.dashboard-main-right{
+  overflow-x: scroll;
+  background-color: white;
+}
+
+
+.sidenav-item-wrapper > p {
   font-family: Montserrat;
   font-size: 15px;
   font-weight: 500;
@@ -1730,13 +1736,14 @@ text-align: center;
   align-items: center;
 }
 
-.list-item-wrapper {
+.sidenav-item-wrapper {
   position: relative;
   display: flex;
   column-gap: 46px;
   align-items: center;
   cursor: pointer;
-  padding: 16px 29px;
+  padding: 13px 16px;
+  border-radius: 5px;
 }
 
 .wallet-option {
@@ -2447,14 +2454,14 @@ text-align: center;
   column-gap: 27px;
 }
 
-.list-item-wrapper > div {
+.sidenav-item-wrapper > div {
   width: 20px;
   height: 20px;
   display: grid;
   place-items: center;
 }
 
-.list-item-wrapper > div img {
+.sidenav-item-wrapper > div img {
   width: 100%;
   height: 100%;
   object-fit: cover;

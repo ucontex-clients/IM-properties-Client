@@ -41,9 +41,9 @@ export function DashboardLayout({
 
       <div className="dashboard-main-wrapper">
         <div className="dashboard-main-left">
-          <DashboardSideNav/>
+          <DashboardSideNav />
         </div>
-        {children}
+        <div className="dashboard-main-right">{children}</div>
       </div>
     </div>
   );
