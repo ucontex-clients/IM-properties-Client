@@ -68,7 +68,9 @@ export function DashboardSideNav() {
                     <div>
                       <img src={page.img} alt="dashboard icon"></img>
                     </div>
-                    <p>{page.page}</p>
+                    <p style={location === page.link ? { color: "white" } : {}}>
+                      {page.page}
+                    </p>
                   </div>
                 </div>
               </Link>
