@@ -65,6 +65,16 @@ function App() {
           element={<DashboardMyPropertyPage />}
         />
         <Route path={"/dashboard/payment"} element={<DashboardPaymentPage />} />
+        <Route
+          path={"/dashboard/transactions"}
+          element={<DashboardTransactionPage />}
+        />
+        <Route path={"/dashboard/support"} element={<DashboardSupportPage />} />
+        <Route
+          path={"/dashboard/settings"}
+          element={<DashboardSettingsPage />}
+        />
+        <Route path={"/dashboard/wallet"} element={<DashboardPaymentPage />} />
       </Routes>
     </Router>
   );
