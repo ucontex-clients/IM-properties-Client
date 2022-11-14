@@ -8,7 +8,11 @@ import PropertyDetails from "./pages/PropertyDetails";
 import FullPropertyLayout from "./pages/FullPropertyLayout";
 import Dashboard from "./pages/Dashboard";
 import Payment from "./pages/Payment";
-import { DashboardProperty, PaymentAccountDetail, UserProfileModal } from "./components";
+import {
+  DashboardProperty,
+  PaymentAccountDetail,
+  UserProfileModal,
+} from "./components";
 import AddPlot from "./pages/AddPlot";
 import About from "./pages/About";
 import UploadPropertyInfo from "./pages/UploadPropertyInfo";
@@ -28,6 +32,7 @@ function App() {
       <Routes>
         <Route path={"/"} element={<HomePage />} />
         <Route path={"/account/register"} element={<Signup />} />
+        <Route path={"/account/login"} element={<Signup />} />
         {/* <Route path={"/login"} element={<Signin />} /> */}
         <Route path={"/properties"} element={<AllProperties />} />
         <Route path={"/properties/:id"} element={<PropertyDetails />} />
@@ -44,11 +49,19 @@ function App() {
         <Route path={"/upload"} element={<UploadPropertyInfo />} />
         {/* <Route path={"/Admin1"} element={<SuperAdminDashboard />} /> */}
         <Route path={"/dashboard/home"} element={<DashboardHomePage />} />
-        <Route path={"/dashboard/buy-property"} element={<DashboardBuyPage />} />
-        <Route path={"/dashboard/bookings"} element={<DashboardBookingPage />} />
-        <Route path={"/dashboard/my-property"} element={<DashboardMyPropertyPage />} />
-        <Route path={"/dashboard/payment"} element={<DashboardPaymentPage/>} />
-        
+        <Route
+          path={"/dashboard/buy-property"}
+          element={<DashboardBuyPage />}
+        />
+        <Route
+          path={"/dashboard/bookings"}
+          element={<DashboardBookingPage />}
+        />
+        <Route
+          path={"/dashboard/my-property"}
+          element={<DashboardMyPropertyPage />}
+        />
+        <Route path={"/dashboard/payment"} element={<DashboardPaymentPage />} />
       </Routes>
     </Router>
   );

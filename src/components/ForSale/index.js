@@ -2,7 +2,7 @@ import React from "react";
 
 export function ForSale({ img, title, desc, minPrice, maxPrice, size }) {
   const checkOut = () => {
-    window.location.assign("/property");
+    window.location.assign("/properties/1");
   };
 
   return (

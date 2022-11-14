@@ -6,10 +6,10 @@ export function AccountModal({ setShowModal }) {
     <div className="account-modal" onClick={() => setShowModal(false)}>
       <ul className="account-modal-content block">
         <li>
-          <Link to="/register">Register</Link>
+          <Link to="/account/register">Register</Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/account/login">Login</Link>
         </li>
       </ul>
     </div>
