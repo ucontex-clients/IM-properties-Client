@@ -4630,6 +4630,21 @@ font-weight: 700;
   align-items: center;
 }
 
+.transaction-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.all-transaction-wrapper ul:nth-child(odd){
+background-color: #F5F5F5;
+}
+
+.change-password-heading{
+  border-bottom:  1px solid #000000;
+}
+
 .main-view-image img {
   width: 100%;
   height: 100%;

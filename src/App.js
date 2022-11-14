@@ -25,6 +25,9 @@ import DashboardBuyPage from "./pages/DashboardBuyPage";
 import DashboardBookingPage from "./pages/DashboardBookingPage";
 import DashboardMyPropertyPage from "./pages/DashboardMyPropertyPage";
 import DashboardPaymentPage from "./pages/DashboardPaymentPage";
+import DashboardTransactionPage from "./pages/DashboardTransactionPage";
+import DashboardSupportPage from "./pages/DashboardSupportPage";
+import DashboardSettingsPage from "./pages/DashboardSettings";
 
 function App() {
   return (
