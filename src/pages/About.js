@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Layout, TeamMember } from "../components";
 import { FaUsers } from "react-icons/fa";
 import { useLocation, Link } from "react-router-dom";
-
+import { HashScroll } from "react-hash-scroll";
 export default function About() {
   const location = useLocation().hash;
   const scrollLink = useRef();
@@ -95,18 +95,21 @@ export default function About() {
                   }}
                 ></img>
               </div>
-              <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Praesent
-                auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
-                Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor
-                urna. Curabitur vel bibendum lorem. Morbi convallis convallis
-                diam sit amet lacinia. Aliquam in elementum tellus.
-              </p>
+              <HashScroll hash="#estate">
+                <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  eu turpis molestie, dictum est a, mattis tellus. Sed
+                  dignissim, metus nec fringilla accumsan, risus sem
+                  sollicitudin lacus, ut interdum tellus elit sed risus.
+                  Maecenas eget condimentum velit, sit amet feugiat lectus.
+                  Class aptent taciti sociosqu ad litora torquent per conubia
+                  nostra, per inceptos himenaeos. Praesent auctor purus luctus
+                  enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus
+                  ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel
+                  bibendum lorem. Morbi convallis convallis diam sit amet
+                  lacinia. Aliquam in elementum tellus.
+                </p>
+              </HashScroll>
             </div>
           </div>
           <div>
@@ -137,18 +140,21 @@ export default function About() {
                   }}
                 ></img>
               </div>
-              <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Praesent
-                auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
-                Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor
-                urna. Curabitur vel bibendum lorem. Morbi convallis convallis
-                diam sit amet lacinia. Aliquam in elementum tellus.
-              </p>
+              <HashScroll hash="#buy">
+                <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  eu turpis molestie, dictum est a, mattis tellus. Sed
+                  dignissim, metus nec fringilla accumsan, risus sem
+                  sollicitudin lacus, ut interdum tellus elit sed risus.
+                  Maecenas eget condimentum velit, sit amet feugiat lectus.
+                  Class aptent taciti sociosqu ad litora torquent per conubia
+                  nostra, per inceptos himenaeos. Praesent auctor purus luctus
+                  enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus
+                  ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel
+                  bibendum lorem. Morbi convallis convallis diam sit amet
+                  lacinia. Aliquam in elementum tellus.
+                </p>
+              </HashScroll>
             </div>
           </div>
           <div id="property">
@@ -162,9 +168,11 @@ export default function About() {
               >
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
-              <p className="doings" id="property">
-                Property Management
-              </p>
+              <HashScroll hash="#property">
+                <p className="doings" id="property">
+                  Property Management
+                </p>
+              </HashScroll>
             </div>
             <div className="mt-[38px]">
               <div className="rounded-[5px]">
@@ -204,9 +212,9 @@ export default function About() {
               >
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
-              <p className="doings" id="building">
-                Building Construction
-              </p>
+              <HashScroll hash="#building">
+                <p className="doings">Building Construction</p>
+              </HashScroll>
             </div>
             <div className="mt-[38px]">
               <div className="rounded-[5px]">
