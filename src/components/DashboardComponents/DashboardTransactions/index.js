@@ -7,7 +7,7 @@ export function DashboardTransactions() {
   });
 
   return (
-    <div className="pt-[124px] px-[30px] bg-white all-transaction-wrapper">
+    <div className="pt-[30px] px-[30px] bg-white all-transaction-wrapper">
       {allTransactions}
     </div>
   );

@@ -3,9 +3,8 @@ import { useState } from "react";
 import { Login, Register } from "../components";
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
-
-export default function Signup() {
-  const [activeTab, setActiveTab] = useState("1");
+export default function Signin() {
+  const [activeTab, setActiveTab] = useState("0");
 
   const { handleChange, values } = useFormik({
     initialValues: {
