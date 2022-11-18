@@ -131,9 +131,7 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <Link to="/about" href="#estate">
-                        Read More
-                      </Link>
+                      <Link to="/about#estate">Read More</Link>
                     </p>
                   </div>
 
@@ -154,9 +152,7 @@ export default function HomePage() {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
                     </p>
-                    <Link to="/about" href="#property">
-                      Read More
-                    </Link>
+                    <Link to="/about#property">Read More</Link>
                   </div>
                 </div>
                 <div className="ml-[34px] pl-[34px] second-container">
@@ -176,9 +172,7 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <Link to="/about" href="#buy">
-                        Read More
-                      </Link>
+                      <Link to="/about#buy">Read More</Link>
                     </p>
                   </div>
 
@@ -198,7 +192,7 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <Link to="/about">Read More</Link>
+                      <Link to="/about#building">Read More</Link>
                     </p>
                   </div>
                 </div>
