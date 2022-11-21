@@ -84,3 +84,4 @@ export * from "./MyProperty";
 export * from "./DashboardComponents/DashboardUpdateProfile";
 export * from "./DashboardComponents/DashboardPropertyDetail";
 export * from "./DashboardComponents/DashboardPropertyDetailData";
+export * from "./PaymentNav";

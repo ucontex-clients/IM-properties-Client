@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Login, Register } from "../components";
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Signup() {
   const [activeTab, setActiveTab] = useState("1");
@@ -78,6 +79,15 @@ export default function Signup() {
       <div className="md:bg-black md:px-[100px] md:py-[62px] px-[36px]">
         <div>
           <header className="flex gap-x-[47px] justify-center">
+            <div className="md:hidden flex items-center justify-between">
+              <div className="flex items-center gap-x-[29px]">
+                <img src="/images/left-arrow.svg" alt="arrow"></img>
+                <p className="font-bold text-[16px]">REGISTER</p>
+              </div>
+              <div className="hamburger">
+                <GiHamburgerMenu style={{ fontSize: "40px" }} />
+              </div>
+            </div>
             <Link to="/account/login">
               <p
                 className="font-fam text-white cursor-pointer"
