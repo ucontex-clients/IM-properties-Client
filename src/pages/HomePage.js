@@ -56,7 +56,7 @@ export default function HomePage() {
           <img src="./images/newHome.png" alt="home cover"></img>
           <div className="background" style={{ paddingLeft: "64px" }}>
             <h1 style={{ marginTop: "160px" }}>
-              WE ARE <span style={{ color: "#FF1212" }}>IM</span> PROPERTIES
+              We are <span style={{ color: "#FF1212" }}>IM</span> Properties
             </h1>
             <p style={{ marginTop: "0.5em" }}>
               you can own A Property Without Stress <br />
@@ -81,13 +81,7 @@ export default function HomePage() {
           <button className="inline-block mr-[39px]">BOOK AN INSPECTION</button>
           <button>CONTACT US</button>
         </div>
-        <div
-          className="section-container"
-          style={{
-            padding: "85px 65px",
-            backgroundColor: "#fff",
-          }}
-        >
+        <div className="section-container py-[28px] px-[19px] md:px-[65px] md:py-[85px] bg-blue-400">
           <div>
             <section className="section1">
               <h2>About IM Properties</h2>
@@ -227,7 +221,10 @@ export default function HomePage() {
         </div>
 
         <div className="grid px-[65px] gap-x-[59px] items-center py-[76px] residual-container">
-          <div style={{ width: "100%", height: "100%", borderRadius: "5px" }}>
+          <div
+            style={{ width: "100%", height: "100%", borderRadius: "5px" }}
+            className="hidden md:block"
+          >
             <img
               src="./images/laptop.png"
               alt="customer"
@@ -242,6 +239,21 @@ export default function HomePage() {
           <div className="residual">
             <h2>Earn residual income from real estate</h2>
             <h3 className="mt-[20px]">Become An Executive Sales Partner</h3>
+            <div
+              style={{ width: "100%", height: "100%", borderRadius: "5px" }}
+              className="md:hidden"
+            >
+              <img
+                src="./images/laptop.png"
+                alt="customer"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "5px",
+                  objectFit: "cover",
+                }}
+              ></img>
+            </div>
             <p className="mt-[47px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
               turpis molestie, dictum est a, mattis tellus.{" "}
@@ -261,26 +273,26 @@ export default function HomePage() {
             className="absolute"
           ></img>
           <div
-            className="py-[57px] px-[138px] top-0 left-0 w-full h-full text-center"
+            className="py-[57px] px-[19px] md:px-[138px] top-0 left-0 w-full h-full text-center"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
           >
             <h2 className="text-[25px] text-white font-fam font-bold">
               Testimonials
             </h2>
-            <div className="nav-div" style={{ left: "40px" }}>
+            <div className="nav-div md:hidden" style={{ left: "40px" }}>
               <MdKeyboardArrowLeft style={{ fontSize: "24px" }} />
             </div>
-            <div className="nav-div" style={{ right: "40px" }}>
+            <div className="nav-div md:hidden" style={{ right: "40px" }}>
               <MdKeyboardArrowRight style={{ fontSize: "24px" }} />
             </div>
 
-            <div className="grid grid-cols-3 gap-x-[26px] mt-[93px] testi">
+            <div className="md:grid gap-y-[13px] md:grid-cols-3 gap-x-[26px] mt-[93px]">
               <Testinonials />
               <Testinonials />
               <Testinonials />
             </div>
 
-            <div>
+            <div className="hidden md:block">
               <button
                 className="font-fam bg-mine text-white text-[15px] px-[16px] py-[10px] rounded font-medium mt-[79px]"
                 style={{ fontFamily: "Montserrat" }}
@@ -292,7 +304,7 @@ export default function HomePage() {
         </div>
 
         <div className="px-[60px] py-[76px] bg-white">
-          <h2 className="font-bold text-[25px] font-fam text-center">
+          <h2 className="font-bold text-[18px] md:text-[25px] font-fam md:text-center">
             Latest News Feeds
           </h2>
           <div className="latest-news gap-[43px] mt-[43px]">
