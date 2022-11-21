@@ -10,10 +10,10 @@ export function TeamMember() {
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         ></img>
       </div>
-      <p className="font-fam text-[20px] font-bold mt-[18px]">
+      <p className="font-fam text-[13px] md:text-[20px] font-bold mt-[18px]">
         Marcellonus Chimezia
       </p>
-      <p className="font-fam text-[18px] mt-[11px] font-semibold text-light">
+      <p className="font-fam text-[12px] md:text-[18px] mt-[3px] md:mt-[0] font-semibold text-light">
         Managing Director
       </p>
     </div>

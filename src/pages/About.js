@@ -7,16 +7,8 @@ export default function About() {
   const location = useLocation().hash;
   const scrollLink = useRef();
 
-  useEffect(() => {
-    if (location) {
-      scrollLink.current.click();
-      console.log(location);
-    }
-  }, []);
-
   return (
     <Layout>
-      <Link to={`${location}`} className="hidden" ref={scrollLink}></Link>
       <div className="about-image">
         <div className="who-we-are">
           <p>
@@ -25,7 +17,7 @@ export default function About() {
         </div>
         <img src="./images/aboutImg.png" alt="about cover"></img>
       </div>
-      <div className="about-bottom-wrapper">
+      <div className="about-bottom-wrapper px-[22px] md:px-[65px]">
         <div className="doings-images">
           <div style={{ top: "38px" }}>
             <img src="./images/doings1.png" alt="what we do"></img>
@@ -61,7 +53,10 @@ export default function About() {
         </div>
       </div>
 
-      <section className="px-[70px] pt-[42px] pb-[90px]">
+      <section
+        className="px-[22px] md:px-[70px] pt-[42px] pb-[90px]"
+        style={{ backgroundColor: "#F7F7FB" }}
+      >
         <h3 className="font-fam text-[25px] font-bold">What we do</h3>
         <p className="font-fam text-[15px] font-medium mt-[8px]">
           At IM Properties we provide world class professional services in:
@@ -246,11 +241,11 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-[59px] bg-white pt-[55px] pb-[77px]">
+      <section className="px-[22px] md:px-[59px] bg-white pt-[55px] pb-[77px]">
         <h3 className="font-fam text-[25px] font-bold mb-[77px]">
           Meet the Team
         </h3>
-        <div className="grid grid-cols-3 gap-x-[29px]">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-[29px]">
           <TeamMember />
           <TeamMember />
           <TeamMember />

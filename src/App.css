@@ -2230,7 +2230,6 @@ text-align: center;
 }
 
 .about-bottom-wrapper {
-  padding-inline: 65px;
   padding-block: 111px 72px;
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -5386,6 +5385,10 @@ background-color: #F5F5F5;
   color: #ff1212;
 }
 
+.home-button2 {
+  padding-inline: 22px;
+}
+
 .section-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -5885,9 +5888,6 @@ background-color: #F5F5F5;
     display: none;
   }
 
-  .touch-main {
-    padding-inline: 48px;
-  }
 
   .touch-wrapper > div:nth-child(2) {
     border-left: 1.5px solid #000000;
@@ -5991,5 +5991,17 @@ background-color: #F5F5F5;
 
   .make-payment-wrapper {
     border-bottom: none;
+  }
+
+  .section1 > h2 {
+    font-size: 18px;
+  }
+
+  .about-image {
+    height: 80vw;
+  }
+
+  .who-we-are > p:first-child {
+    font-size: 25px;
   }
 }

@@ -81,7 +81,7 @@ export default function HomePage() {
           <button className="inline-block mr-[39px]">BOOK AN INSPECTION</button>
           <button>CONTACT US</button>
         </div>
-        <div className="section-container py-[28px] px-[19px] md:px-[65px] md:py-[85px] bg-blue-400">
+        <div className="section-container py-[28px] px-[19px] md:px-[65px] md:py-[85px]">
           <div>
             <section className="section1">
               <h2>About IM Properties</h2>
@@ -206,7 +206,7 @@ export default function HomePage() {
 
         <VideoSection />
 
-        <div className="section1  pt-[132px] p-[65px] bg-white">
+        <div className="section1  pt-[132px] p-[22px] md:p-[65px] bg-white">
           <h2 style={{ marginBottom: "10px" }}>Our Latest Properties</h2>
           <p>Buy a landlanded property with peace of mind</p>
           <PropertyViewSection />
@@ -220,7 +220,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="grid px-[65px] gap-x-[59px] items-center py-[76px] residual-container">
+        <div className="grid px-[22px] md:px-[65px] gap-x-[59px] items-center py-[76px] residual-container">
           <div
             style={{ width: "100%", height: "100%", borderRadius: "5px" }}
             className="hidden md:block"
@@ -303,7 +303,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="px-[60px] py-[76px] bg-white">
+        <div className="px-[22px] md:px-[60px] py-[76px] bg-white">
           <h2 className="font-bold text-[18px] md:text-[25px] font-fam md:text-center">
             Latest News Feeds
           </h2>
@@ -318,7 +318,7 @@ export default function HomePage() {
         </div>
 
         <div className="pb-[56px]">
-          <h2 className="font-bold text-[25px] font-fam bg-white px-[60px] pb-[52px]">
+          <h2 className="font-bold text-[25px] font-fam bg-white px-[22px] md:px-[60px] pb-[52px]">
             See More Properties
           </h2>
           <div className="prop-view-wrapper gap-x-[43px] p-[29px]">
@@ -354,7 +354,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="px-[126px] py-[67px] bg-white touch-main" id="touch">
+        <div className="px-[22px] md:px-[48px] py-[67px] bg-white" id="touch">
           <h2 className="font-fam text-[25px] text-center font-bold">
             Get in Touch
           </h2>
