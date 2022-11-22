@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import Payment from "./pages/Payment";
 import {
   DashboardProperty,
+  DashboardPropertyDetail,
   PaymentAccountDetail,
   UserProfileModal,
 } from "./components";
@@ -28,6 +29,9 @@ import DashboardPaymentPage from "./pages/DashboardPaymentPage";
 import DashboardTransactionPage from "./pages/DashboardTransactionPage";
 import DashboardSupportPage from "./pages/DashboardSupportPage";
 import DashboardSettingsPage from "./pages/DashboardSettings";
+import DashboardProfilePage from "./pages/DashboardProfilePage";
+import Login from "./pages/login";
+import EditProfilePage from "./pages/EditProfile";
 
 function App() {
   return (
@@ -35,7 +39,7 @@ function App() {
       <Routes>
         <Route path={"/"} element={<HomePage />} />
         <Route path={"/account/register"} element={<Signup />} />
-        <Route path={"/account/login"} element={<Signup />} />
+        <Route path={"/account/login"} element={<Login />} />
         {/* <Route path={"/login"} element={<Signin />} /> */}
         <Route path={"/properties"} element={<AllProperties />} />
         <Route path={"/properties/:id"} element={<PropertyDetails />} />
@@ -44,7 +48,8 @@ function App() {
         <Route path={"/contact"} element={<ContactUs />} />
         <Route path={"/FAQ"} element={<FAQ />} />
         <Route path={"/layout"} element={<FullPropertyLayout />} />
-        <Route path={"/dashboard"} element={<Dashboard />} />
+        <Route path={"/dashboard"} element={<EditProfilePage />} />
+        <Route path={"/dashboard/profile/edit"} element={<EditProfilePage />} />
         <Route path={"/about"} element={<About />} />
         <Route path={"/payment"} element={<Payment />} />
         <Route path={"/profile"} element={<UserProfileModal />} />
@@ -65,6 +70,21 @@ function App() {
           element={<DashboardMyPropertyPage />}
         />
         <Route path={"/dashboard/payment"} element={<DashboardPaymentPage />} />
+        <Route
+          path={"/dashboard/transactions"}
+          element={<DashboardTransactionPage />}
+        />
+        <Route path={"/dashboard/support"} element={<DashboardSupportPage />} />
+        <Route
+          path={"/dashboard/settings"}
+          element={<DashboardSettingsPage />}
+        />
+        <Route path={"/dashboard/wallet"} element={<DashboardPaymentPage />} />
+        <Route path={"/dashboard/profile"} element={<DashboardProfilePage />} />
+        <Route
+          path={"/dashboard/my-property/detail"}
+          element={<DashboardPropertyDetail />}
+        />
       </Routes>
     </Router>
   );

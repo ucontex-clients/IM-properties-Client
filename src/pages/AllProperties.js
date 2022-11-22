@@ -57,7 +57,9 @@ export default function AllProperties() {
           <select>
             <option>Max Price</option>
           </select>
-          <button className="text-white">Search here</button>
+          <button className="text-white bg-mine px-[16px] py-[13px]">
+            Search here
+          </button>
         </div>
       </div>
 

@@ -108,6 +108,55 @@ export function DashboardSettings() {
           </Button>
         </Flex>
       )}
+
+      {activeTab === "email" && (
+        <Flex flexDir="column" className="md:w-[60%] px-[100px]">
+          <FormControl>
+            <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+              Current Email
+            </FormLabel>
+            <InputGroup>
+              <Input type="email" placeholder="Johndoe@example.com" />
+            </InputGroup>
+          </FormControl>
+
+          <FormControl mt="20px">
+            <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+              New Email
+            </FormLabel>
+            <InputGroup>
+              <Input type="email" placeholder="Johndoe@example.com" />
+            </InputGroup>
+          </FormControl>
+
+          <FormControl mt="20px">
+            <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+              Password
+            </FormLabel>
+            <InputGroup>
+              <Input type="password" placeholder="***********" />
+              <InputRightElement
+                pointerEvents="cursor"
+                children={
+                  <BsFillEyeFill
+                    cursor={"pointer"}
+                    fontSize={"20px"}
+                    color="#6C6C6C"
+                  />
+                }
+              />
+            </InputGroup>
+          </FormControl>
+          <Button
+            className="font-fam text-white mt-[44px] mx-auto"
+            backgroundColor="#FF1212"
+            _hover="none"
+            px="86px"
+          >
+            Save
+          </Button>
+        </Flex>
+      )}
     </Box>
   );
 }

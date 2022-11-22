@@ -80,3 +80,8 @@ export * from "./DashboardComponents/DashboardTransactions";
 export * from "./EachDashboardTransaction";
 export * from "./DashboardComponents/DashboardSupport";
 export * from "./DashboardComponents/DashboardSettings";
+export * from "./MyProperty";
+export * from "./DashboardComponents/DashboardUpdateProfile";
+export * from "./DashboardComponents/DashboardPropertyDetail";
+export * from "./DashboardComponents/DashboardPropertyDetailData";
+export * from "./PaymentNav";
