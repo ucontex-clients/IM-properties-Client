@@ -32,6 +32,7 @@ import DashboardSettingsPage from "./pages/DashboardSettings";
 import DashboardProfilePage from "./pages/DashboardProfilePage";
 import Login from "./pages/login";
 import EditProfilePage from "./pages/EditProfile";
+import "./assets/css/mobile.css";
 
 function App() {
   return (

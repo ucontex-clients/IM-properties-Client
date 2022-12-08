@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { DashboardSideNav } from "../../DashboardSideNav";
 import { UserProfileModal } from "../UserProfileModal";
+import MobileTop from "./mobile_topbar";
 
 export function DashboardLayout({
   profilePicture = "/images/profilePicture.png",
@@ -57,8 +58,8 @@ export function DashboardLayout({
     }
   });
 
-  return (
-    <div style={{ backgroundColor: "#fff" }}>
+  return (<>
+    <div className="full_ah container" style={{ backgroundColor: "#fff" }}>
       <div className="dashboard-nav justify-between bg-white">
         <div className="flex items-center">
           <a href="/">
@@ -87,5 +88,14 @@ export function DashboardLayout({
         <div className="right-second mt-[85px]">{children}</div>
       </div>
     </div>
+
+    <div className="mobile_ah container">
+      <MobileTop
+        table={
+          <div className="">{children}</div>
+        }
+      />
+    </div>
+  </>
   );
 }

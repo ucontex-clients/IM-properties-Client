@@ -1,0 +1,26 @@
+/* .full_ah {
+    display: flex;
+} */
+
+.mobile_ah {
+    display: none;
+}
+
+.flex_btw_ah {
+    display: flex;
+    justify-content: space-between;
+}
+
+.green_ah {
+    color: green;
+}
+
+@media (max-width:425px) {
+    .mobile_ah {
+        display: block;
+    }
+
+    .full_ah {
+        display: none;
+    }
+}
