@@ -1,5 +1,5 @@
 import React from "react"
-import { DashboardBuyProperty, DashboardLayout, D } from "../components"
+import { DashboardBuyProperty, DashboardLayout } from "../components"
 
 export default function DashboardBuyPage(){
     return(

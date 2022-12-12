@@ -1,7 +1,3 @@
-/* .full_ah {
-    display: flex;
-} */
-
 .mobile_ah {
     display: none;
 }
@@ -22,5 +18,11 @@
 
     .full_ah {
         display: none;
+    }
+
+    .mobile_dashboard_ah {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }

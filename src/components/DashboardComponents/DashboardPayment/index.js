@@ -267,7 +267,6 @@ export function DashboardPayment() {
             </>
           })
         }
-
       </table>
 
 
@@ -282,11 +281,12 @@ export function DashboardPayment() {
             </ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-              <Flex className="gap-x-[20px]">
+              <div className="gap-x-[20px]">
                 <Box>
                   <label>Enter Amount (N)</label>
                   <Input mt="10px" placeholder="Enter Amount"></Input>
                 </Box>
+                <br />
                 <Box>
                   <label>Choose Payment Method</label>
                   <Select placeholder="*Choose*" mt="10px">
@@ -296,7 +296,7 @@ export function DashboardPayment() {
                     <option value="installment">Initial Deposit</option>
                   </Select>
                 </Box>
-              </Flex>
+              </div>
             </ModalBody>
 
             <Box className="justify-center text-center">
@@ -305,7 +305,7 @@ export function DashboardPayment() {
                 mt="20px"
                 backgroundColor={"#3DB2FF"}
                 onClick={() => setDetails(true)}
-                _hover="none"
+                _hover="red"
               >
                 Pay Now
               </Button>
@@ -331,7 +331,7 @@ export function DashboardPayment() {
               <div className="py-[31px] px-[16px] max-w-[600px]">
                 <p className="font-fam text-[15px] font-bold">BANK DETAILS</p>
                 <section
-                  className="grid grid-cols-2 gap-y-[30px] gap-x-[10px] mt-[10px]"
+                  className="grid grid-cols-2 gap-y-[10px] gap-x-[10px] mt-[10px]"
                   style={{ gridTemplateColumns: "2fr 5fr" }}
                 >
                   <p className="font-fam text-[15px] font-medium text-light">
@@ -363,18 +363,19 @@ export function DashboardPayment() {
                   and your IM Property username to admin via 08023981234,
                   09890912834 or upload it here
                 </p>
-                <section className="md:flex hidden gap-y-[10px] flex-col md:flex-row gap-x-[10px] mt-[40px]">
+                <section className="md:flex gap-y-[10px] flex-col md:flex-row gap-x-[10px] mt-[5px]">
+                  <p className="text-[15px] font-medium mt-[10px] md:mt-[7px] font-fam text-light md:text-left text-center cursor-pointer">
+                    Upload proof of payment
+                  </p>
                   <input
                     type="file"
-                    className="font-fam text-[15px] text-light bg-white p-[7px] rounded-[5px] w-[50%]"
+                    className="font-fam text-[15px] text-light bg-white p-[7px] rounded-[5px] w-[50%]" style={{ marginLeft: "25%" }}
                   ></input>
-                  <button className="text-[15px] bg-backblue text-white py-[13px] px-[35px] rounded-[5px]  m-auto">
+                  <br />
+                  <button className="text-[15px] bg-backblue text-white py-[13px] px-[35px] rounded-[5px] mt-2" style={{ marginLeft: "25%" }}>
                     Submit
                   </button>
                 </section>
-                <p className="text-[15px] font-medium mt-[15px] md:mt-[7px] font-fam text-light md:text-left text-center cursor-pointer">
-                  Upload proof of payment
-                </p>
               </div>
             </ModalBody>
           </ModalContent>

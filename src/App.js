@@ -11,6 +11,7 @@ import Payment from "./pages/Payment";
 import {
   DashboardProperty,
   DashboardPropertyDetail,
+  FundWalletCreateAccount,
   PaymentAccountDetail,
   UserProfileModal,
 } from "./components";
@@ -33,6 +34,7 @@ import DashboardProfilePage from "./pages/DashboardProfilePage";
 import Login from "./pages/login";
 import EditProfilePage from "./pages/EditProfile";
 import "./assets/css/mobile.css";
+import FundWalletPage from "./pages/DashboardWalletPage";
 
 function App() {
   return (
@@ -80,7 +82,7 @@ function App() {
           path={"/dashboard/settings"}
           element={<DashboardSettingsPage />}
         />
-        <Route path={"/dashboard/wallet"} element={<DashboardPaymentPage />} />
+        <Route path={"/dashboard/wallet"} element={<FundWalletPage />} />
         <Route path={"/dashboard/profile"} element={<DashboardProfilePage />} />
         <Route
           path={"/dashboard/my-property/detail"}
