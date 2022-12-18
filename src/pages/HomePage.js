@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Modal,
   ModalOverlay,
@@ -43,6 +43,17 @@ export default function HomePage() {
   const myStyle = {
     backgroundColor: "#FF1212",
     color: "#fff",
+  };
+  let [property, setProperty] = useState([]);
+  const [url, setUrl] = useState("https://alert-battledress-boa.cyclic.app/api/property/all");
+
+  useEffect(() => {
+    loadProperties();
+  }, []);
+  let loadProperties = () => {
+    fetch(url)
+      .then(e => e.json())
+      .then(res => setProperty(res.slice(-3)))
   };
 
   return (
@@ -219,7 +230,7 @@ export default function HomePage() {
               className="p-2 rounded text-white text-[15px] px-[16px] py-[10px]"
               style={{ backgroundColor: "#FF1212" }}
             >
-              VIEW MORE
+              <Link to="/properties">VIEW MORE</Link>
             </button>
           </div>
         </div>
@@ -326,23 +337,32 @@ export default function HomePage() {
             See More Properties
           </h2>
           <div className="prop-view-wrapper gap-x-[43px] p-[29px]">
-            <PropertyView
-              img={"./images/view1.png"}
-              name={"Campus Garden Estate"}
-              location={"Jabi, Abuja, Nigeria"}
-            />
-
-            <PropertyView
-              img={"./images/view1.png"}
-              name={"Campus Garden Estate"}
-              location={"Jabi, Abuja, Nigeria"}
-            />
-
-            <PropertyView
-              img={"./images/view1.png"}
-              name={"Campus Garden Estate"}
-              location={"Jabi, Abuja, Nigeria"}
-            />
+            {
+              property.map((e, i) => {
+                let numberOfPlot = e.plotLayout.length;
+                let address = e.location.address + " " + e.location.LGA + " " + e.location.city + " " + e.location.state;
+                let price;
+                let price2;
+                e.plotLayout.map((a, b) => {
+                  let arr = [];
+                  arr.push(a.price)
+                  price = Math.max(...arr)
+                  price2 = Math.min(arr)
+                });
+                return <>
+                  <PropertyView
+                    img={"./images/view1.png"}
+                    name={e.name}
+                    location={address}
+                    para={true}
+                    about={e.about}
+                    plots={numberOfPlot}
+                    highPrice={price}
+                    lowPrice={price2}
+                  />
+                </>
+              })
+            }
           </div>
           <div
             className="flex items-center rounded-[8px] bg-mine py-[6px] px-[9px] gap-x-[5px] mt-[21px] cursor-pointer"
