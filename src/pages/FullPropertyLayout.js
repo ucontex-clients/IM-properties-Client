@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { CartItems, NavigationBar, PlotDimension } from "../components";
 
 export default function FullPropertyLayout() {
   const [cart, setCart] = useState([]);
-  console.log(cart.length);
   const plots = [
     1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1,
     2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2,
@@ -18,6 +18,19 @@ export default function FullPropertyLayout() {
     return <CartItems key={index} number={index + 1} />;
   });
 
+  useEffect(() => {
+    loadProperty();
+  }, []);
+  let id = useParams();
+  const [url] = useState("https://alert-battledress-boa.cyclic.app/api/property/single/" + id.id);
+  let [property, setProperty] = useState({});
+
+  let loadProperty = () => {
+    fetch(url)
+      .then(e => e.json())
+      .then(res => setProperty(res.data))
+  };
+
   return (
     <div className="layout-modal-wrapper bg-white">
       <NavigationBar page="Property" />
@@ -28,9 +41,9 @@ export default function FullPropertyLayout() {
             <div className="layout-head-section">
               <div>
                 <p
-                  style={{ color: "black", fontWeight: 700, fontSize: "15px" }}
+                  style={{ color: "black", fontWeight: 700, fontSize: "15px", textTransform: "uppercase" }}
                 >
-                  CAMPUS GARDEN ESTATE PORT HARCOURT
+                  {property?.name}
                 </p>
                 <div
                   className="hidden md:flex items-center gap-x-[6px] py-[12px] px-[5px] rounded-[5px] cursor-pointer"
@@ -48,7 +61,7 @@ export default function FullPropertyLayout() {
                   className="text-[15px] font-bold font-fam mt-[10px]"
                   style={{ color: "#038566" }}
                 >
-                  30 Plots remaining
+                  {property?.plotLayout?.length} Plots remaining
                 </p>
               </div>
 
@@ -78,7 +91,19 @@ export default function FullPropertyLayout() {
               </div>
             </div>
 
-            <div className="all-layout-wrapper">{availablePlots}</div>
+            <div className="all-layout-wrapper">
+              {
+                property?.plotLayout?.map((e, i) => {
+                  return <PlotDimension key={i}
+                    area={e.width * e.length}
+                    price={e.price}
+                    width={e.width}
+                    length={e.length}
+                    setCart={setCart}
+                  />;
+                })
+              }
+            </div>
 
             <div className="download-layout-button-wrapper">
               <button>Download Layout</button>
