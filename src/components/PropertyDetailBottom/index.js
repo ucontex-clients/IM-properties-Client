@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import {
   PlotDimension,
   PlotButtons,
@@ -6,13 +7,18 @@ import {
   BuyerReviews,
   ChooseDate,
 } from "..";
-
 import { BsFillShareFill } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 const axios = require("axios");
 
 export function PropertyDetailBottom() {
+  useEffect(() => {
+    loadProperty();
+  }, []);
   const [time, setTime] = useState("");
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  // const [, set] = useState("");
 
   const myStyle = {
     backgroundColor: "#FF1212",
@@ -31,15 +37,6 @@ export function PropertyDetailBottom() {
     });
   };
 
-  const submitReview = async () => {
-    const response = await axios.post(
-      "https://im-properties-api.herokuapp.com/api/review",
-      review
-    );
-    const data = response.data;
-    console.log(data);
-  };
-
   const plotDimensions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
     (plot, index) => {
       return <PlotDimension key={index} />;
@@ -54,17 +51,50 @@ export function PropertyDetailBottom() {
     return <BuyerReviews key={index} />;
   });
 
+  let id = useParams();
+  const submitReview = async () => {
+    let url = "https://alert-battledress-boa.cyclic.app/api/review/create/" + id.id;
+    let data = { message }
+    if (message.length >= 8) {
+      await fetch(url, {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzhmNzVhOWE1MGJmNjNlZDNjNTExNjUiLCJyb2xlIjoibm9ybWFsQWRtaW4iLCJpYXQiOjE2NzA1NDU2MDgsImV4cCI6MTY3MzEzNzYwOH0.xopzgQH16saT9xJLxRVhtAhoDo26s3NQNY2lgd0Gttk`
+        },
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+        .then((e) => e.json())
+        .then(res => {
+          setMessage("");
+          setName("");
+          loadProperty();
+        })
+    }
+
+
+  };
+
+  const [url] = useState("https://alert-battledress-boa.cyclic.app/api/property/single/" + id.id);
+  let [property, setProperty] = useState({});
+
+  let loadProperty = () => {
+    fetch(url)
+      .then(e => e.json())
+      .then(res => setProperty(res.data))
+  };
+
   return (
     <div className="property-detail-bottom-main-wrapper bg-white md:bg-transparent">
       <div className="property-detail-bottom">
         <div className="detail-bottom-top-section">
           <div className="detail-top-section">
-            <p>CAMPUS GARDEN ESTATE</p>
+            <p style={{ textTransform: "uppercase" }}>{property?.name}</p>
             <div style={{ marginTop: "5px" }} className="location-two-wrapper">
               <div className="location-two-holder">
                 <img src="/images/Location2.png" alt="location"></img>
               </div>
-              <p>Obinze Umuokanne road, Owerri, Imo State</p>
+              <p>{property?.location?.address}, {property?.location?.LGA}, {property?.location?.city}, {property?.location?.state}</p>
             </div>
             <p style={{ fontSize: "18px" }}>N350,000 - N500,000</p>
           </div>
@@ -109,28 +139,27 @@ export function PropertyDetailBottom() {
         <div className="about-property-wrapper">
           <p>About Property</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat
+            {property?.about}
           </p>
         </div>
 
         <div className="property-features-wrapper flex flex-col gap-y-[25px] md:grid md:grid-cols-2">
           <div>
             <p>Estate Features</p>
-            <p>Mini Pleasure Park</p>
-            <p>Hotel</p>
-            <p>Shopping Mall</p>
-            <p>Swimming Pool</p>
-            <p>ITC</p>
-            <p>Central Driange System</p>
-            <p>Gas Supply System</p>
-            <p>Luxury Plan</p>
+            {property?.estateFeatures?.map((e, i) => {
+              return (
+                <p>{e}</p>
+              )
+            })}
+
           </div>
           <div>
             <p>Property Features</p>
-            <p>Dry Land</p>
+            {property?.propertyFeatures?.map((e, i) => {
+              return (
+                <p>{e}</p>
+              )
+            })}
           </div>
         </div>
 
@@ -143,19 +172,24 @@ export function PropertyDetailBottom() {
 
         <div className="buyer-review-wrapper">
           <div className="flex items-center justify-between">
-            <p className="font-fam font-bold text-[15px]">10 Reviews</p>
+            <p className="font-fam font-bold text-[15px]">{property?.reviews?.length} Review(s)</p>
             <p className="flex items-center gap-x-[2px] md:hidden cursor-pointer">
               <img src="/images/write.svg" alt="write"></img>
               <p className="font-fam text-skyblue text-[12px]">Write Review</p>
             </p>
           </div>
           <div>
-            <div className="block md:hidden">{allBuyerReviews[0]}</div>
-            <div className="hidden md:block">{allBuyerReviews}</div>
+
+            {property.length == 0 ? <div className="hidden md:block">No Review On This Property Yet</div> :
+              property?.reviews?.map((e, i) => {
+                return <BuyerReviews key={i} review={e.message} />
+              })
+            }
+
           </div>
-          <div className="buyer-review-button">
+          {/* <div className="buyer-review-button">
             <p className="font-fam font-bold text-[15px]">10 more Review</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="create-review-wrapper hidden md:block">
@@ -166,11 +200,11 @@ export function PropertyDetailBottom() {
               <input
                 type="text"
                 name="name"
-                value={review.name}
-                onChange={handleReviewChange}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               ></input>
             </div>
-            <div className="review-label-input">
+            {/* <div className="review-label-input">
               <label>Name</label>
               <input
                 type="text"
@@ -178,14 +212,14 @@ export function PropertyDetailBottom() {
                 value={review.date}
                 onChange={handleReviewChange}
               ></input>
-            </div>
+            </div> */}
             <div className="review-label-input" id="textarea-side">
               <label>Message</label>
               <textarea
                 type="text"
                 name="message"
-                value={review.message}
-                onChange={handleReviewChange}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
           </div>
@@ -196,7 +230,7 @@ export function PropertyDetailBottom() {
           >
             <button
               style={{ backgroundColor: "#FF1212", color: "#fff" }}
-              onClick={submitReview}
+              onClick={() => submitReview()}
             >
               Submit Review
             </button>
@@ -208,13 +242,23 @@ export function PropertyDetailBottom() {
         <div className="property-layout-wrapper" style={{ marginTop: "10px" }}>
           <div className="property-layout-head">
             <p>Property Layout</p>
-            <p>30 of 30 Sold</p>
+            <p>0 of {property?.plotLayout?.length} Sold</p>
           </div>
 
-          <div className="property-layout-main">{plotDimensions}</div>
+          <div className="property-layout-main">
+            {
+              property?.plotLayout?.slice(0, 6).map((e, i) => {
+                return <PlotDimension key={i}
+                  area={e.width * e.length}
+                  price={e.price}
+                  width={e.width}
+                  length={e.length}
+                />;
+              })
+            }</div>
 
           <div className="plot-button-wrapper">
-            <PlotButtons />
+            <PlotButtons id={id.id} />
           </div>
         </div>
         <div className="property-layout-wrapper">

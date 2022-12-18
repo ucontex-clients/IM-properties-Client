@@ -50,7 +50,7 @@ function App() {
         <Route path={"/blog"} element={<BlogPage />} />
         <Route path={"/contact"} element={<ContactUs />} />
         <Route path={"/FAQ"} element={<FAQ />} />
-        <Route path={"/layout"} element={<FullPropertyLayout />} />
+        <Route path={"/layout/:id"} element={<FullPropertyLayout />} />
         <Route path={"/dashboard"} element={<EditProfilePage />} />
         <Route path={"/dashboard/profile/edit"} element={<EditProfilePage />} />
         <Route path={"/about"} element={<About />} />

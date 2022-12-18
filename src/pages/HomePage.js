@@ -349,8 +349,10 @@ export default function HomePage() {
                   price = Math.max(...arr)
                   price2 = Math.min(arr)
                 });
+                console.log(e._id)
                 return <>
                   <PropertyView
+                    key={i}
                     img={"./images/view1.png"}
                     name={e.name}
                     location={address}
@@ -359,6 +361,7 @@ export default function HomePage() {
                     plots={numberOfPlot}
                     highPrice={price}
                     lowPrice={price2}
+                    id={e._id}
                   />
                 </>
               })

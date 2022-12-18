@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function PlotDimension({ cart, setCart }) {
+export function PlotDimension({ cart, setCart, width, length, price, area }) {
   const [selected, setSelected] = useState(false);
 
   const borderStyle1 = {
@@ -25,10 +25,10 @@ export function PlotDimension({ cart, setCart }) {
         style={selected ? borderStyle2 : borderStyle1}
         onClick={addToCart}
       >
-        <p className="dimension1">15.3m</p>
-        <p className="dimension2">30.6m</p>
-        <p className="dimension3">N360,000</p>
-        <p className="dimension4">464.89 SQ.M</p>
+        <p className="dimension1">{width}m</p>
+        <p className="dimension2">{length}m</p>
+        <p className="dimension3">N{price}</p>
+        <p className="dimension4">{area} SQ.M</p>
       </div>
       <p>School</p>
     </div>

@@ -18,6 +18,13 @@
     width: 200px;
 }
 
+#propDes_ah2 p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+}
+
 @media (max-width:425px) {
     .mobile_ah {
         display: block;

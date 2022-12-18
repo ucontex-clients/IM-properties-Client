@@ -39,6 +39,7 @@ export function PropertyViewSection() {
               plots={numberOfPlot}
               highPrice={price}
               lowPrice={price2}
+              id={e._id}
             />
           </>
         })
