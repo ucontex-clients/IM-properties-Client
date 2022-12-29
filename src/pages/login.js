@@ -2,10 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { Login, Register } from "../components";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function Signin() {
   const [activeTab, setActiveTab] = useState("0");
+  const [success, setSuccess] = useState("");
 
+  let navigate = useNavigate()
   const { handleChange, values } = useFormik({
     initialValues: {
       role: "ESP",
@@ -17,13 +19,6 @@ export default function Signin() {
     },
   });
 
-  // useEffect(() => {
-  //   const submitDetail = async() => {
-  //     const submitResponse = await axios.get("https://im-properties-api.herokuapp.com/api/auth/register", values)
-  //   }
-  //   submitDetail()
-  // },[])
-
   const style1 = {
     fontWeight: 500,
     fontSize: "18px",
@@ -33,6 +28,38 @@ export default function Signin() {
     fontWeight: 700,
     fontSize: "20px",
   };
+
+  let login = async () => {
+    let data = { email: values.email, password: values.password };
+    let url = "https://alert-battledress-boa.cyclic.app/api/auth/login";
+    const response = await fetch(url, {
+      headers: {
+        "content-type": "application/json"
+      },
+      method: "POST",
+      body: JSON.stringify(data)
+    });
+    if (response.status === 200) {
+      await response.json()
+        .then((e) => {
+          localStorage.setItem("imUserId", e.id)
+          localStorage.setItem("imToken", e.token)
+        })
+      setSuccess("Login Successful.")
+      const t1 = setTimeout(() => {
+        setSuccess("");
+        navigate("/")
+        clearTimeout(t1);
+      }, 1500);
+    } else {
+      setSuccess("Invalid Email or Password!")
+      const t1 = setTimeout(() => {
+        setSuccess("");
+        clearTimeout(t1);
+      }, 1500);
+    }
+  };
+
 
   return (
     <div className="md:grid grid-cols-2 md:h-[100vh]">
@@ -95,6 +122,7 @@ export default function Signin() {
               </p>
             </Link>
           </header>
+          <h3 style={{ color: "black", textAlign: "center", background: "whitesmoke" }}>{success}</h3>
           {activeTab === "1" && (
             <Register
               handleChange={handleChange}
@@ -107,6 +135,7 @@ export default function Signin() {
               handleChange={handleChange}
               values={values}
               setActiveTab={setActiveTab}
+              login={() => login()}
             />
           )}
         </div>

@@ -1,25 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { CartItems, NavigationBar, PlotDimension } from "../components";
 
 export default function FullPropertyLayout() {
-  const [cart, setCart] = useState([]);
-  const plots = [
-    1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1,
-    2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2,
-    3, 4, 5, 6, 7, 8,
-  ];
-
-  const availablePlots = plots.map((plot, index) => {
-    return <PlotDimension key={index} cart={cart} setCart={setCart} />;
-  });
-
-  const allCartItems = cart?.map((item, index) => {
-    return <CartItems key={index} number={index + 1} />;
-  });
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("imcart")));
+  const [total, setTotal] = useState(0);
+  let navigate = useNavigate();
+  let arr = [];
+  let num;
 
   useEffect(() => {
     loadProperty();
+    getTotal()
   }, []);
   let id = useParams();
   const [url] = useState("https://alert-battledress-boa.cyclic.app/api/property/single/" + id.id);
@@ -28,7 +20,49 @@ export default function FullPropertyLayout() {
   let loadProperty = () => {
     fetch(url)
       .then(e => e.json())
-      .then(res => setProperty(res.data))
+      .then(res => {
+        setProperty(res.data)
+        localStorage.setItem("improperty", JSON.stringify(res.data))
+      })
+  };
+  let addCart = (e) => {
+    if (cart !== null) {
+      cart.push(e)
+      localStorage.setItem("imcart", JSON.stringify(cart))
+      loadCart()
+      getTotal()
+    } else {
+      let cartt = [];
+      cartt.push(e)
+      localStorage.setItem("imcart", JSON.stringify(cartt))
+      loadCart()
+      getTotal()
+    }
+  };
+  let loadCart = () => {
+    setCart(JSON.parse(localStorage.getItem("imcart")));
+  };
+  let removeItem = (i) => {
+    let cartt = JSON.parse(localStorage.getItem("imcart"));
+    cartt.splice(i, 1)
+    localStorage.setItem("imcart", JSON.stringify(cartt))
+    getTotal();
+    loadCart();
+  };
+
+  let getTotal = () => {
+    let carttt = JSON.parse(localStorage.getItem("imcart"));
+    carttt.map((e, i) => {
+      arr.push(e.price)
+      console.log(arr)
+    })
+    num = arr.reduce((a, b) => a + b, 0);
+    setTotal(num)
+  };
+
+  let makePayment = () => {
+    localStorage.setItem("impay", total)
+    navigate("/payment")
   };
 
   return (
@@ -51,7 +85,7 @@ export default function FullPropertyLayout() {
                 >
                   <img src="/images/cart.svg" alt="cart"></img>
                   <p className="text-white text-[15px] font-medium font-fam">
-                    {!cart.length ? "Cart Empty" : `${cart.length} Items View`}
+                    {!cart?.length ? "Cart Empty" : `${cart?.length} Items View`}
                   </p>
                 </div>
               </div>
@@ -85,7 +119,7 @@ export default function FullPropertyLayout() {
                 >
                   <img src="/images/cart.svg" alt="cart"></img>
                   <p className="text-white text-[15px] font-medium font-fam">
-                    {!cart.length ? "Cart Empty" : `${cart.length} Items View`}
+                    {!cart?.length ? "Cart Empty" : `${cart?.length} Items View`}
                   </p>
                 </div>
               </div>
@@ -99,7 +133,7 @@ export default function FullPropertyLayout() {
                     price={e.price}
                     width={e.width}
                     length={e.length}
-                    setCart={setCart}
+                    cart={() => addCart(e)}
                   />;
                 })
               }
@@ -113,19 +147,18 @@ export default function FullPropertyLayout() {
               >
                 <img src="/images/cart.svg" alt="cart"></img>
                 <p className="text-white text-[15px] font-medium font-fam">
-                  {!cart.length ? "Cart Empty" : `${cart.length} Items View`}
+                  {!cart?.length ? "Cart Empty" : `${cart?.length} Items View`}
                 </p>
               </div>
             </div>
           </div>
-          {cart[0] && (
-            <div className="my-cart-wrapper">
-              <div className="my-cart-logo-section-wrapper">
-                <div>
-                  <img src="./images/cart.png" alt="cart"></img>
-                </div>
-                <p className="my-cart-para">{`My Cart - ${cart.length} Items`}</p>
-              </div>
+          {/* {cart[0] && ( */}
+          <div className="my-cart-wrapper">
+            <div className="my-cart-logo-section-wrapper">
+              <p className="my-cart-para">{`My Cart - ${cart ? cart?.length : 0} Items`}</p>
+            </div>
+            {cart?.length === 0 ?
+              <div className="my-cart-para">Empty Cart</div> :
               <ul className="cart-top-ul">
                 <li className="number-plot">
                   <p>#</p>
@@ -135,24 +168,38 @@ export default function FullPropertyLayout() {
                   <p>Amount</p>
                 </li>
               </ul>
-              {allCartItems}
-              <ul className="cart-top-ul">
-                <li className="number-plot">
-                  <p>Total</p>
-                </li>
-                <li>
-                  <p>N1,840,000</p>
-                </li>
-              </ul>
+            }
 
-              <div
-                className="download-layout-button-wrapper"
-                style={{ marginBottom: "247px" }}
-              >
-                <button>Make Payment</button>
-              </div>
+            {/* {allCartItems} */}
+
+            {cart?.map((e, i) => {
+              return <CartItems
+                key={i}
+                number={i + 1}
+                area={e.width * e.length}
+                length={e.length}
+                width={e.width}
+                price={e.price}
+                remove={() => removeItem(i)}
+              />
+            })}
+            <ul className="cart-top-ul">
+              <li className="number-plot">
+                <p>Total</p>
+              </li>
+              <li>
+                <p>N{cart?.length == 0 ? 0 : total}</p>
+              </li>
+            </ul>
+
+            <div
+              className="download-layout-button-wrapper"
+            // style={{ marginBottom: "247px" }}
+            >
+              <button onClick={() => makePayment()}>Make Payment</button>
             </div>
-          )}
+          </div>
+          {/* // )} */}
         </div>
 
         <div
@@ -165,7 +212,8 @@ export default function FullPropertyLayout() {
             <p>Preview</p>
           </div>
           <div className="layout-last-child-image-wrapper">
-            <img src="./images/Capture.png" alt="capture"></img>
+            {/* <img src="./images/Capture.png" alt="capture"></img> */}
+            <img src="https://cdn.pixabay.com/photo/2017/11/07/20/43/christmas-tree-2928142__480.jpg" alt="capture"></img>
           </div>
         </div>
       </div>

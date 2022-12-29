@@ -13,9 +13,10 @@ export function PlotDimension({ cart, setCart, width, length, price, area }) {
 
   const addToCart = () => {
     setSelected((prevValue) => !prevValue);
-    setCart((prevCart) => {
-      return [...prevCart, 1];
-    });
+    // setCart((prevCart) => {
+    //   return [...prevCart, 1];
+    // });
+    cart()
   };
 
   return (

@@ -1,15 +1,15 @@
 import React from "react";
 
-export function CartItems({ number }) {
+export function CartItems(props) {
   return (
     <ul className="cart-item-ul">
       <li className="number-plot">
-        <p>{number}</p>
-        <p>490.89SQ.M 40.6m x 20.3m CG-003</p>
+        <p>{props.number}</p>
+        <p>{props.area}SQ.M {props.length}m x {props.width}m</p>
       </li>
       <li className="amount-remove">
-        <p>N560,000</p>
-        <p className="hidden md:block text-mine cursor-pointer">Remove</p>
+        <p>N{props.price}</p>
+        <p className="hidden md:block text-mine cursor-pointer" onClick={props.remove}>Remove</p>
         <img
           src="/images/remove.svg"
           alt="remove"

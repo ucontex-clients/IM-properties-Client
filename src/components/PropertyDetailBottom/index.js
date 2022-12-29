@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Calendar from "react-calendar";
 import {
   PlotDimension,
   PlotButtons,
@@ -16,45 +17,27 @@ export function PropertyDetailBottom() {
     loadProperty();
   }, []);
   const [time, setTime] = useState("");
+  const [userId, setUserId] = useState("637fcc36ba2d01eeebbde173");
+  const [userName, setUserName] = useState("Anonymous");
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
-  // const [, set] = useState("");
+  const [date, setDate] = useState(new Date());
 
   const myStyle = {
     backgroundColor: "#FF1212",
     color: "#fff",
   };
 
-  const [review, setReview] = useState({
-    name: "",
-    date: "",
-    message: "",
-  });
-
-  const handleReviewChange = (e) => {
-    setReview((prevState) => {
-      return { ...prevState, [e.target.name]: e.target.value };
-    });
-  };
-
-  const plotDimensions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
-    (plot, index) => {
-      return <PlotDimension key={index} />;
-    }
-  );
 
   const allSimilarProperty = [1, 2, 3].map((property, index) => {
     return <SimilarProperty key={index} />;
   });
 
-  const allBuyerReviews = [1, 2, 3].map((review, index) => {
-    return <BuyerReviews key={index} />;
-  });
 
   let id = useParams();
   const submitReview = async () => {
     let url = "https://alert-battledress-boa.cyclic.app/api/review/create/" + id.id;
-    let data = { message }
+    let data = { message, createdBy: name }
     if (message.length >= 8) {
       await fetch(url, {
         headers: {
@@ -75,9 +58,39 @@ export function PropertyDetailBottom() {
 
   };
 
+  const submitBooking = async () => {
+    let url = "https://alert-battledress-boa.cyclic.app/api/booking/createbooking/" + id.id;
+    // let data = {
+    //   time, location: property.location.city, date: new Date(date).toISOString(), userName,
+    //   propertyID: property._id, propertyName: property.name, userId
+    // };
+    let location = property.location.city;
+    let year = new Date(date).getFullYear();
+    let day = new Date(date).getDate();
+    let month = new Date(date).getMonth();
+    let data = {
+      time, location, date: new Date(date).toISOString()
+    };
+    console.log(data)
+    await fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzg0M2VhN2IwMmNjZWFjY2M3MDVkMjciLCJyb2xlIjoiRVNQIiwiaWF0IjoxNjY5NjExMzY4LCJleHAiOjE2NzIyMDMzNjh9.lkadpsrcRZe9YqShwnxelqIUkk5eElwut4_-CC1I1RI`
+      },
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+      .then((e) => e.json())
+      .then(res => {
+        console.log(res.status)
+        setTime("");
+        setDate(new Date())
+      })
+
+  };
+
   const [url] = useState("https://alert-battledress-boa.cyclic.app/api/property/single/" + id.id);
   let [property, setProperty] = useState({});
-
   let loadProperty = () => {
     fetch(url)
       .then(e => e.json())
@@ -182,7 +195,17 @@ export function PropertyDetailBottom() {
 
             {property.length == 0 ? <div className="hidden md:block">No Review On This Property Yet</div> :
               property?.reviews?.map((e, i) => {
-                return <BuyerReviews key={i} review={e.message} />
+                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                let year = new Date(e.createdAt).getFullYear();
+                let day = new Date(e.createdAt).getDate();
+                let month = new Date(e.createdAt).getMonth();
+                let actualDate = day + " " + months[month] + ", " + year;
+                if (e.createdBy == undefined) {
+                  e.createdBy = "Anonymous"
+                } else {
+                  e.createdBy = e.createdBy
+                }
+                return <BuyerReviews key={i} review={e.message} date={actualDate} name={e.createdBy} />
               })
             }
 
@@ -275,7 +298,7 @@ export function PropertyDetailBottom() {
             </div>
 
             <div>
-              <ChooseDate />
+              <Calendar onChange={setDate} value={date} />
             </div>
 
             <div className="select-time-wrapper">
@@ -313,7 +336,7 @@ export function PropertyDetailBottom() {
               </div>
               <div className="select-location-select">
                 <select>
-                  <option>Port Harcourt</option>
+                  <option>{property?.location?.city}</option>
                 </select>
                 {/* <div className="fill-drop-wrapper"><img src="./images/fillDrop.png"></img></div> */}
               </div>
@@ -322,7 +345,7 @@ export function PropertyDetailBottom() {
               style={{ marginBlock: "78px 21px", textAlign: "center" }}
               className="book-inspection-container"
             >
-              <button>Book Inspection</button>
+              <button onClick={() => submitBooking()}>Book Inspection</button>
             </div>
           </div>
         </div>

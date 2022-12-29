@@ -7,6 +7,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Signup() {
   const [activeTab, setActiveTab] = useState("1");
+  const [success, setSuccess] = useState("");
 
   const { handleChange, values } = useFormik({
     initialValues: {
@@ -25,6 +26,36 @@ export default function Signup() {
   //   }
   //   submitDetail()
   // },[])
+
+  let register = async () => {
+    let data = values;
+    let url = "https://alert-battledress-boa.cyclic.app/api/auth/register";
+
+    const response = await fetch(url, {
+      headers: {
+        "content-type": "application/json"
+      },
+      method: "POST",
+      body: JSON.stringify(data)
+    });
+    if (response.status === 200) {
+      await response.json()
+      setSuccess("Registration completed successfully. Proceed to Login.")
+      values = { role: 'ESP', email: '', username: '', password: '', referedBy: '', }
+      const t1 = setTimeout(() => {
+        setSuccess("");
+        clearTimeout(t1);
+      }, 4000);
+    } else {
+      setSuccess("Error Occured.")
+      const t1 = setTimeout(() => {
+        setSuccess("");
+        clearTimeout(t1);
+      }, 4000);
+    }
+  };
+
+ 
 
   const style1 = {
     fontWeight: 500,
@@ -106,11 +137,14 @@ export default function Signup() {
               </p>
             </Link>
           </header>
+
+          <h3 style={{ color: "black", textAlign: "center", background: "whitesmoke" }}>{success}</h3>
           {activeTab === "1" && (
             <Register
               handleChange={handleChange}
               values={values}
               setActiveTab={setActiveTab}
+              register={() => register()}
             />
           )}
           {activeTab === "0" && (
