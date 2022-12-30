@@ -17,7 +17,7 @@ export function PropertyDetailBottom() {
     loadProperty();
   }, []);
   const [time, setTime] = useState("");
-  const [userId, setUserId] = useState("637fcc36ba2d01eeebbde173");
+  const [userId, setUserId] = useState(localStorage.getItem("imUserId"));
   const [userName, setUserName] = useState("Anonymous");
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
@@ -60,29 +60,27 @@ export function PropertyDetailBottom() {
 
   const submitBooking = async () => {
     let url = "https://alert-battledress-boa.cyclic.app/api/booking/createbooking/" + id.id;
-    // let data = {
-    //   time, location: property.location.city, date: new Date(date).toISOString(), userName,
-    //   propertyID: property._id, propertyName: property.name, userId
-    // };
     let location = property.location.city;
     let year = new Date(date).getFullYear();
     let day = new Date(date).getDate();
-    let month = new Date(date).getMonth();
+    let month = new Date(date).getMonth() + 1;
+    let datee = year + "-" + month + "-" + day
+
     let data = {
-      time, location, date: new Date(date).toISOString()
+      time, date: datee, location
     };
     console.log(data)
+    let token = localStorage.getItem("imToken");
     await fetch(url, {
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzg0M2VhN2IwMmNjZWFjY2M3MDVkMjciLCJyb2xlIjoiRVNQIiwiaWF0IjoxNjY5NjExMzY4LCJleHAiOjE2NzIyMDMzNjh9.lkadpsrcRZe9YqShwnxelqIUkk5eElwut4_-CC1I1RI`
+        "Authorization": `Bearer ${token}`
       },
       method: "POST",
       body: JSON.stringify(data)
     })
       .then((e) => e.json())
       .then(res => {
-        console.log(res.status)
         setTime("");
         setDate(new Date())
       })
@@ -313,14 +311,14 @@ export function PropertyDetailBottom() {
                 className="time-picker"
               >
                 <button
-                  style={time === "10AM" ? myStyle : {}}
-                  onClick={() => setTime("10AM")}
+                  style={time === "10am" ? myStyle : {}}
+                  onClick={() => setTime("10am")}
                 >
                   10AM
                 </button>
                 <button
-                  style={time === "1PM" ? myStyle : {}}
-                  onClick={() => setTime("1PM")}
+                  style={time === "1pm" ? myStyle : {}}
+                  onClick={() => setTime("1pm")}
                 >
                   1PM
                 </button>

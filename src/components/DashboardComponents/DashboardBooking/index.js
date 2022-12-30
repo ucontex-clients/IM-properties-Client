@@ -2,9 +2,10 @@ import React from "react";
 import InspectionBooking from "../InspectionBooking";
 
 export function DashboardBooking() {
-  const allBookings = [1, 2, 3, 4, 5].map((booking, index) => {
-    return <InspectionBooking key={index} takeColor={index} />;
-  });
+
+  // const allBookings = [1, 2, 3, 4, 5].map((booking, index) => {
+  //   return <InspectionBooking key={index} takeColor={index} />;
+  // });
 
   return (
     <div className="dashboard-home-main-wrapper bg-white">
@@ -29,7 +30,7 @@ export function DashboardBooking() {
             <p>Action</p>
           </li>
         </ul>
-        {allBookings}
+        {<InspectionBooking />}
         <div className="inspection-booking-bottom"></div>
       </div>
     </div>
