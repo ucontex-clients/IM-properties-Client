@@ -3,10 +3,6 @@ import InspectionBooking from "../InspectionBooking";
 
 export function DashboardBooking() {
 
-  // const allBookings = [1, 2, 3, 4, 5].map((booking, index) => {
-  //   return <InspectionBooking key={index} takeColor={index} />;
-  // });
-
   return (
     <div className="dashboard-home-main-wrapper bg-white">
       <div className="inspection-booking-holder">

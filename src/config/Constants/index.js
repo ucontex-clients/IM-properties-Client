@@ -1,3 +1,5 @@
+import IMG from "../../assets/images/wallet.svg";
+
 export const sideNavList = [
   {
     page: "Dashboard",
@@ -38,8 +40,8 @@ export const sideNavList = [
   {
     page: "Wallet",
     link: "/dashboard/wallet",
-    img: "/images/wallet.svg",
-    img2: "/images/wallet2.svg",
+    img: IMG,
+    img2: IMG,
   },
   {
     page: "Network",
