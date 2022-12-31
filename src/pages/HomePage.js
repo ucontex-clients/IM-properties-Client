@@ -349,7 +349,6 @@ export default function HomePage() {
                   price = Math.max(...arr)
                   price2 = Math.min(arr)
                 });
-                console.log(e._id)
                 return <>
                   <PropertyView
                     key={i}

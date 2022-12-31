@@ -52,9 +52,8 @@ export default function FullPropertyLayout() {
 
   let getTotal = () => {
     let carttt = JSON.parse(localStorage.getItem("imcart"));
-    carttt.map((e, i) => {
+    carttt?.map((e, i) => {
       arr.push(e.price)
-      console.log(arr)
     })
     num = arr.reduce((a, b) => a + b, 0);
     setTotal(num)
