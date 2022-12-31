@@ -39,7 +39,8 @@ export function ViewCustomer() {
       style={{
         backgroundColor: "#fff",
         marginTop: "8px",
-        marginBottom: "104px"
+        marginBottom: "104px",
+        paddingBottom: "104px"
       }}
     >
       <div className="dashboard-input-wrapper" style={{ padding: "21px 20px" }}>
