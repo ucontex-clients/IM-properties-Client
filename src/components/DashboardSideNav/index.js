@@ -25,8 +25,8 @@ export function DashboardSideNav(props) {
       .then((e) => e.json())
       .then(res => {
         setUser(res)
-        let id = res._id.length;
-        setShortId(res._id.substr(id - 5))
+        let id = res?._id.length;
+        setShortId(res._id?.substr(id - 5))
       })
   };
 
