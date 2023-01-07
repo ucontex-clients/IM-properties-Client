@@ -20,6 +20,7 @@ export function PropertyDetailBottom() {
   const [userId, setUserId] = useState(localStorage.getItem("imUserId"));
   const [userName, setUserName] = useState("Anonymous");
   const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState("");
   const [name, setName] = useState("");
   const [date, setDate] = useState(new Date());
 
@@ -69,7 +70,6 @@ export function PropertyDetailBottom() {
     let data = {
       time, date: datee, location
     };
-    console.log(data)
     let token = localStorage.getItem("imToken");
     await fetch(url, {
       headers: {
@@ -83,6 +83,11 @@ export function PropertyDetailBottom() {
       .then(res => {
         setTime("");
         setDate(new Date())
+        setSuccess("Booking Made.")
+        const t1 = setTimeout(() => {
+          setSuccess("")
+          clearTimeout(t1);
+        }, 2000);
       })
 
   };
@@ -298,6 +303,8 @@ export function PropertyDetailBottom() {
             <div>
               <Calendar onChange={setDate} value={date} />
             </div>
+
+            <p style={{ color: "red" }}>{success}</p>
 
             <div className="select-time-wrapper">
               <div className="select-date-wrapper">
