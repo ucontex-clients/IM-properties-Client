@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { BiUserCircle } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import { AccountModal } from "../Modals/AccountModal";
 
 export function Nav1({ signIn, signUp }) {
@@ -24,6 +25,10 @@ export function Nav1({ signIn, signUp }) {
     checkUser();
   };
 
+  let logout = () => {
+    window.confirm("Do you want to Logout?") ? logoutUser() : console.log("")
+  };
+
   return (
     <>
       {showModal && <AccountModal setShowModal={setShowModal} />}
@@ -41,16 +46,31 @@ export function Nav1({ signIn, signUp }) {
         >
           Account
         </p> :
-          <p
-            style={{
-              fontFamily: "Montserrat",
-              fontWeight: "500",
-              fontSize: "15px",
-            }}
-            onClick={() => logoutUser()}
-          >
-            Logout
-          </p>}
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "30px" }}>
+            <Link to="/dashboard/home">
+              <p
+                style={{
+                  fontFamily: "Montserrat",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                }}
+              >
+                Dashboard
+              </p>
+            </Link>
+            <p
+              style={{
+                fontFamily: "Montserrat",
+                fontWeight: "500",
+                fontSize: "15px",
+              }}
+              onClick={() => logout()}
+            >
+              Logout
+            </p>
+          </div>
+
+        }
 
       </div>
     </>
