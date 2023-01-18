@@ -3,27 +3,23 @@ import { Select } from "@chakra-ui/react";
 
 export function Installment({ changePaymentMode }) {
   const [selectPeriod, setSelectPeriod] = useState("0");
-
+  let num = JSON.parse(localStorage.getItem("imcart"));
+  let totalDue = localStorage.getItem("impay");
+  let property = JSON.parse(localStorage.getItem("improperty"));
+  let [paymentType, setPaymentType] = useState("");
   return (
     <div className="one-off-payment-container">
       <p className="payment-top-para hidden md:block">
-        Make Payment for 4 plots at
-        <span>CAMPUS GARDEN ESTATE PORT HARCOURT</span>
+        Make Payment for  {num.length} plots at
+        <span> {property.name}</span>
       </p>
-      <div className="block px-[10px] md:hidden">
-        <p className="font-fam font-bold text-[15px]">
-          Campus Garden Estate Port Harcourt
-        </p>
-        <p className="text-[15px] font-fam text-light mt-[11px]">
-          Make Payment for 4 plots at
-        </p>
-      </div>
+
       <div className="one-off-payment-box">
         <div className="make-payment-wrapper">
           <h3>Make Payment</h3>
         </div>
         <p className="payment-total-para">Total</p>
-        <p className="payment-amount-para">N1,840,000</p>
+        <p className="payment-amount-para">N{totalDue}</p>
         <div className="payment-dropdown-div">
           <label
             htmlFor="payment-plan"
@@ -43,9 +39,6 @@ export function Installment({ changePaymentMode }) {
             <option className="option" value="installment">
               Installmental payment
             </option>
-            <option className="option" value="easy-buy">
-              Easy-buy plan
-            </option>
           </Select>
         </div>
 
@@ -56,10 +49,10 @@ export function Installment({ changePaymentMode }) {
           >
             Amount (N)
           </label>
-          <p>736,600</p>
+          <p>{totalDue * 0.4}</p>
         </div>
         <p className="initial-deposit-para" style={{ marginTop: "12px" }}>
-          Pay 40% (N736,600) initial deposite and pay the balance later
+          Pay 40% ({totalDue * 0.4}) initial deposit and pay the balance later
         </p>
 
         <div
@@ -85,20 +78,22 @@ export function Installment({ changePaymentMode }) {
             </div>
             <div className="installment-period">
               <p>3 - 6 Months</p>
-              <p>N1,214,400</p>
+              <p>N{Math.floor(totalDue * 0.6 * 1.1)}</p>
+              <p>10% Interest</p>
             </div>
             <div className="installment-period">
+              <p>Payment of </p>
+              <p>N{Math.floor(totalDue * 0.6 * 1.1 / 3)} Monthly</p>
+            </div>
+
+            {/* <div className="installment-period">
               <p>12 Oct 2022</p>
               <p>N404,666.66</p>
             </div>
             <div className="installment-period">
               <p>12 Oct 2022</p>
               <p>N404,666.66</p>
-            </div>
-            <div className="installment-period">
-              <p>12 Oct 2022</p>
-              <p>N404,666.66</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="period-price-wrapper" style={{ marginTop: "21px" }}>
@@ -118,20 +113,21 @@ export function Installment({ changePaymentMode }) {
             </div>
             <div className="installment-period">
               <p>7 - 12 Months</p>
-              <p>N1,446,120</p>
+              <p>N{Math.floor(totalDue * 0.6 * 1.3)}</p>
+              <p>30% Interest</p>
             </div>
             <div className="installment-period">
+              <p>Payment of </p>
+              <p> N{Math.floor(totalDue * 0.6 * 1.3 / 7)} Monthly</p>
+            </div>
+            {/* <div className="installment-period">
               <p>12 Oct 2022</p>
               <p>N404,666.66</p>
             </div>
             <div className="installment-period">
               <p>12 Oct 2022</p>
               <p>N404,666.66</p>
-            </div>
-            <div className="installment-period">
-              <p>12 Oct 2022</p>
-              <p>N404,666.66</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -142,12 +138,12 @@ export function Installment({ changePaymentMode }) {
           >
             Payment Method
           </label>
-          <select>
-            <option className="option">
-              Paystack (card, USSD, Bank Transfer)
+          <select name="payment" value={paymentType} onChange={(e) => setPaymentType(e.target.value)} >
+            <option className="option" value="">---</option>
+            <option className="option" value="flutter">
+              FlutterWave
             </option>
-            <option className="option">My Wallet</option>
-            <option className="option">Bank Deposit</option>
+            <option className="option" value="bank-deposit">Bank Deposit</option>
           </select>
         </div>
 
@@ -155,7 +151,7 @@ export function Installment({ changePaymentMode }) {
           className="pay-now-button-holder"
           style={{ marginBlock: "50px 12px" }}
         >
-          <button value="pay" onClick={(e) => changePaymentMode(e)}>
+          <button value={paymentType} onClick={(e) => changePaymentMode(e)}>
             Pay Now
           </button>
         </div>

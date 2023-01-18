@@ -1,9 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export function ForSale({ img, title, desc, minPrice, maxPrice, size }) {
-  const checkOut = () => {
-    window.location.assign("/property");
-  };
+export function ForSale({ img, title, desc, minPrice, maxPrice, size, address, id }) {
 
   return (
     <div className="one-sale-wrapper">
@@ -18,31 +16,36 @@ export function ForSale({ img, title, desc, minPrice, maxPrice, size }) {
         <h3>{title}</h3>
         <div className="flex items-center justify-between">
           <p className="product-price">
-            {`N${minPrice}`} - {`N${maxPrice}`}
+            {/* {`N${minPrice}`} - {`N${maxPrice}`} */}
+            {`N${minPrice}`}
           </p>
-          <p className="font-fam font-bold text-[12px] text-mine">{`${size} Plots`}</p>
+          <p className="font-fam font-bold text-[12px] text-mine">{`${size} Plot(s)`}</p>
         </div>
 
         <div className="office-wrapper">
           <div className="office-image-wrapper">
-            <img src="/images/venue.png" alt="venue icon"></img>
+            <img style={{ marginTop: "-40px" }} src="/images/venue.png" alt="venue icon"></img>
           </div>
-          <p>Owerri, Imo, Nigeria</p>
+          <p style={{ height: "60px", textOverflow: "ellipsis" }}>{address}</p>
         </div>
         <hr />
-        <div>
-          <h4 className="font-fam mt-[8px] mb-[6] font-medium text-[13px]">
+        <div id="propDes_ah2">
+          <h4 className="font-fam mt-[8px] mb-[6] font-medium text-[13px]" >
             About
           </h4>
-          <p className="font-fam font-normal text-[13px]">
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip
-          </p>
+          <span style={{ display: "flex", justifyContent: "space-between" }}>
+            <p className="font-fam font-normal text-[13px]">
+              {desc}
+            </p>
+            {/* <p className="font-fam font-normal text-[13px]" style={{ cursor: "pointer" }}>See More</p> */}
+          </span>
         </div>
         <div className="view-product-button-wrapper">
-          <button className="view-product-button" onClick={checkOut}>
-            Buy Now
-          </button>
+          <Link to={"/properties/" + id}>
+            <button className="view-product-button">
+              Buy Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

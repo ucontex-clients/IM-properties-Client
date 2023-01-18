@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Nav1 } from "../Nav1";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -13,6 +13,15 @@ export function NavigationBar() {
   const fontStyle2 = {
     fontWeight: 800,
     color: "#FF2442",
+  };
+
+  const [show, setShow] = useState("none");
+  let hide = () => {
+    if (show == "none") {
+      setShow("block")
+    } else {
+      setShow("none")
+    }
   };
 
   return (
@@ -61,7 +70,7 @@ export function NavigationBar() {
             <Link
               to="/"
               style={page === "/" ? fontStyle2 : fontStyle1}
-              onClick={(e) => {}}
+              onClick={(e) => { }}
             >
               Home
             </Link>
@@ -70,7 +79,7 @@ export function NavigationBar() {
             <Link
               to="/about"
               style={page === "/about" ? fontStyle2 : fontStyle1}
-              onClick={(e) => {}}
+              onClick={(e) => { }}
             >
               About Us
             </Link>
@@ -79,7 +88,7 @@ export function NavigationBar() {
             <Link
               to="/what"
               style={page === "/what" ? fontStyle2 : fontStyle1}
-              onClick={(e) => {}}
+              onClick={(e) => { }}
             >
               What we do
             </Link>
@@ -88,7 +97,7 @@ export function NavigationBar() {
             <Link
               to="/properties"
               style={page === "/properties" ? fontStyle2 : fontStyle1}
-              onClick={(e) => {}}
+              onClick={(e) => { }}
             >
               Our Properties
             </Link>
@@ -98,8 +107,51 @@ export function NavigationBar() {
 
       <button className="nav-button">Become an ESP</button>
 
-      <div className="hamburger">
-        <GiHamburgerMenu style={{ fontSize: "40px" }} />
+      <div className="">
+        <div className="mobile_ah container">
+          <GiHamburgerMenu style={{ fontSize: "40px" }} onClick={() => hide()} />
+
+          <div className="" style={{
+            display: show, position: "absolute", background: "white",
+            marginLeft: "-50px", padding: "20px", fontSize: "12px"
+          }}>
+            <Link
+              to="/"
+              style={page === "/" ? fontStyle2 : fontStyle1}
+              onClick={(e) => { }}
+            >
+              Home
+            </Link>
+            <br />
+            <br />
+            <Link
+              to="/about"
+              style={page === "/about" ? fontStyle2 : fontStyle1}
+              onClick={(e) => { }}
+            >
+              About Us
+            </Link>
+            <br />
+            <br />
+            <Link
+              to="/what"
+              style={page === "/what" ? fontStyle2 : fontStyle1}
+              onClick={(e) => { }}
+            >
+              What we do
+            </Link>
+            <br />
+            <br />
+            <Link
+              to="/properties"
+              style={page === "/properties" ? fontStyle2 : fontStyle1}
+              onClick={(e) => { }}
+            >
+              Our Properties
+            </Link>
+
+          </div>
+        </div>
       </div>
 
       <div className="navigation-right">

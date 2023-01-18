@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Layout, TeamMember } from "../components";
 import { FaUsers } from "react-icons/fa";
-
+import { useLocation, Link } from "react-router-dom";
+import { HashScroll } from "react-hash-scroll";
 export default function About() {
+  const location = useLocation().hash;
+  const scrollLink = useRef();
+
   return (
     <Layout>
       <div className="about-image">
@@ -13,13 +17,13 @@ export default function About() {
         </div>
         <img src="./images/aboutImg.png" alt="about cover"></img>
       </div>
-      <div className="about-bottom-wrapper">
+      <div className="about-bottom-wrapper px-[22px] md:px-[65px]">
         <div className="doings-images">
           <div style={{ top: "38px" }}>
             <img src="./images/doings1.png" alt="what we do"></img>
           </div>
           <div style={{ bottom: "38px", left: "126px" }}>
-            <img src="./images/doings2.png" alt="what we do"></img>
+            <img src="/images/doings2.png" alt="what we do"></img>
           </div>
         </div>
         <div className="about-right">
@@ -49,13 +53,16 @@ export default function About() {
         </div>
       </div>
 
-      <section className="px-[70px] pt-[42px] pb-[90px]">
+      <section
+        className="px-[22px] md:px-[70px] pt-[42px] pb-[90px]"
+        style={{ backgroundColor: "#F7F7FB" }}
+      >
         <h3 className="font-fam text-[25px] font-bold">What we do</h3>
         <p className="font-fam text-[15px] font-medium mt-[8px]">
           At IM Properties we provide world class professional services in:
         </p>
         <div className="md:grid md:grid-cols-2 gap-x-[33px] gap-y-[114px] mt-[49px] flex flex-col">
-          <div>
+          <div id="estate">
             <div className="flex items-center gap-x-[3px] mt-[22px]">
               <div
                 style={{
@@ -66,47 +73,9 @@ export default function About() {
               >
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
-              <p className="doings">Estate Development</p>
-            </div>
-            <div className="mt-[38px]">
-              <div className="rounded-[5px]">
-                <img
-                  src="./images/develop.png"
-                  alt="property"
-                  style={{
-                    width: "100%",
-                    height: "50%",
-                    objectFit: "cover",
-                    borderRadius: "5px",
-                  }}
-                ></img>
-              </div>
-              <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Praesent
-                auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
-                Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor
-                urna. Curabitur vel bibendum lorem. Morbi convallis convallis
-                diam sit amet lacinia. Aliquam in elementum tellus.
+              <p className="doings" id="estate">
+                Estate Development
               </p>
-            </div>
-          </div>
-          <div>
-            <div className="flex items-center gap-x-[3px] mt-[22px]">
-              <div
-                style={{
-                  padding: "5px",
-                  border: "1px dashed black",
-                  borderRadius: "2px",
-                }}
-              >
-                <FaUsers style={{ color: "#6C6C6C" }} />
-              </div>
-              <p className="doings">Buy and Sell Properties</p>
             </div>
             <div className="mt-[38px]">
               <div className="rounded-[5px]">
@@ -121,18 +90,21 @@ export default function About() {
                   }}
                 ></img>
               </div>
-              <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Praesent
-                auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
-                Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor
-                urna. Curabitur vel bibendum lorem. Morbi convallis convallis
-                diam sit amet lacinia. Aliquam in elementum tellus.
-              </p>
+              <HashScroll hash="#estate">
+                <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  eu turpis molestie, dictum est a, mattis tellus. Sed
+                  dignissim, metus nec fringilla accumsan, risus sem
+                  sollicitudin lacus, ut interdum tellus elit sed risus.
+                  Maecenas eget condimentum velit, sit amet feugiat lectus.
+                  Class aptent taciti sociosqu ad litora torquent per conubia
+                  nostra, per inceptos himenaeos. Praesent auctor purus luctus
+                  enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus
+                  ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel
+                  bibendum lorem. Morbi convallis convallis diam sit amet
+                  lacinia. Aliquam in elementum tellus.
+                </p>
+              </HashScroll>
             </div>
           </div>
           <div>
@@ -146,12 +118,61 @@ export default function About() {
               >
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
-              <p className="doings">Property Management</p>
+              <p className="doings" id="property">
+                Buy and Sell Properties
+              </p>
             </div>
             <div className="mt-[38px]">
               <div className="rounded-[5px]">
                 <img
-                  src="./images/management.png"
+                  src="/images/develop.png"
+                  alt="property"
+                  style={{
+                    width: "100%",
+                    height: "50%",
+                    objectFit: "cover",
+                    borderRadius: "5px",
+                  }}
+                ></img>
+              </div>
+              <HashScroll hash="#buy">
+                <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                  eu turpis molestie, dictum est a, mattis tellus. Sed
+                  dignissim, metus nec fringilla accumsan, risus sem
+                  sollicitudin lacus, ut interdum tellus elit sed risus.
+                  Maecenas eget condimentum velit, sit amet feugiat lectus.
+                  Class aptent taciti sociosqu ad litora torquent per conubia
+                  nostra, per inceptos himenaeos. Praesent auctor purus luctus
+                  enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus
+                  ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel
+                  bibendum lorem. Morbi convallis convallis diam sit amet
+                  lacinia. Aliquam in elementum tellus.
+                </p>
+              </HashScroll>
+            </div>
+          </div>
+          <div id="property">
+            <div className="flex items-center gap-x-[3px] mt-[22px]">
+              <div
+                style={{
+                  padding: "5px",
+                  border: "1px dashed black",
+                  borderRadius: "2px",
+                }}
+              >
+                <FaUsers style={{ color: "#6C6C6C" }} />
+              </div>
+              <HashScroll hash="#property">
+                <p className="doings" id="property">
+                  Property Management
+                </p>
+              </HashScroll>
+            </div>
+            <div className="mt-[38px]">
+              <div className="rounded-[5px]">
+                <img
+                  src="/images/management.png"
                   alt="property"
                   style={{
                     width: "100%",
@@ -186,12 +207,14 @@ export default function About() {
               >
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
-              <p className="doings">Building Construction</p>
+              <HashScroll hash="#building">
+                <p className="doings">Building Construction</p>
+              </HashScroll>
             </div>
             <div className="mt-[38px]">
               <div className="rounded-[5px]">
                 <img
-                  src="./images/construction.png"
+                  src="/images/sell.png"
                   alt="property"
                   style={{
                     width: "100%",
@@ -218,11 +241,11 @@ export default function About() {
         </div>
       </section>
 
-      <section className="px-[59px] bg-white pt-[55px] pb-[77px]">
+      <section className="px-[22px] md:px-[59px] bg-white pt-[55px] pb-[77px]">
         <h3 className="font-fam text-[25px] font-bold mb-[77px]">
           Meet the Team
         </h3>
-        <div className="grid grid-cols-3 gap-x-[29px]">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-[29px]">
           <TeamMember />
           <TeamMember />
           <TeamMember />

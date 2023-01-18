@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Calendar from "react-calendar";
 import {
   PlotDimension,
   PlotButtons,
@@ -6,65 +8,109 @@ import {
   BuyerReviews,
   ChooseDate,
 } from "..";
-
 import { BsFillShareFill } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 const axios = require("axios");
 
 export function PropertyDetailBottom() {
+  useEffect(() => {
+    loadProperty();
+  }, []);
   const [time, setTime] = useState("");
+  const [userId, setUserId] = useState(localStorage.getItem("imUserId"));
+  const [userName, setUserName] = useState("Anonymous");
+  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState("");
+  const [name, setName] = useState("");
+  const [date, setDate] = useState(new Date());
 
   const myStyle = {
     backgroundColor: "#FF1212",
     color: "#fff",
   };
 
-  const [review, setReview] = useState({
-    name: "",
-    date: "",
-    message: "",
-  });
-
-  const handleReviewChange = (e) => {
-    setReview((prevState) => {
-      return { ...prevState, [e.target.name]: e.target.value };
-    });
-  };
-
-  const submitReview = async () => {
-    const response = await axios.post(
-      "https://im-properties-api.herokuapp.com/api/review",
-      review
-    );
-    const data = response.data;
-    console.log(data);
-  };
-
-  const plotDimensions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(
-    (plot, index) => {
-      return <PlotDimension key={index} />;
-    }
-  );
 
   const allSimilarProperty = [1, 2, 3].map((property, index) => {
     return <SimilarProperty key={index} />;
   });
 
-  const allBuyerReviews = [1, 2, 3].map((review, index) => {
-    return <BuyerReviews key={index} />;
-  });
+
+  let id = useParams();
+  const submitReview = async () => {
+    let url = "https://alert-battledress-boa.cyclic.app/api/review/create/" + id.id;
+    let data = { message, createdBy: name }
+    if (message.length >= 8) {
+      await fetch(url, {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzhmNzVhOWE1MGJmNjNlZDNjNTExNjUiLCJyb2xlIjoibm9ybWFsQWRtaW4iLCJpYXQiOjE2NzA1NDU2MDgsImV4cCI6MTY3MzEzNzYwOH0.xopzgQH16saT9xJLxRVhtAhoDo26s3NQNY2lgd0Gttk`
+        },
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+        .then((e) => e.json())
+        .then(res => {
+          setMessage("");
+          setName("");
+          loadProperty();
+        })
+    }
+
+
+  };
+
+  const submitBooking = async () => {
+    let url = "https://alert-battledress-boa.cyclic.app/api/booking/createbooking/" + id.id;
+    let location = property.location.city;
+    let year = new Date(date).getFullYear();
+    let day = new Date(date).getDate();
+    let month = new Date(date).getMonth() + 1;
+    let datee = year + "-" + month + "-" + day
+
+    let data = {
+      time, date: datee, location
+    };
+    let token = localStorage.getItem("imToken");
+    await fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      method: "POST",
+      body: JSON.stringify(data)
+    })
+      .then((e) => e.json())
+      .then(res => {
+        setTime("");
+        setDate(new Date())
+        setSuccess("Booking Made.")
+        const t1 = setTimeout(() => {
+          setSuccess("")
+          clearTimeout(t1);
+        }, 2000);
+      })
+
+  };
+
+  const [url] = useState("https://alert-battledress-boa.cyclic.app/api/property/single/" + id.id);
+  let [property, setProperty] = useState({});
+  let loadProperty = () => {
+    fetch(url)
+      .then(e => e.json())
+      .then(res => setProperty(res.data))
+  };
 
   return (
     <div className="property-detail-bottom-main-wrapper bg-white md:bg-transparent">
       <div className="property-detail-bottom">
         <div className="detail-bottom-top-section">
           <div className="detail-top-section">
-            <p>CAMPUS GARDEN ESTATE</p>
+            <p style={{ textTransform: "uppercase" }}>{property?.name}</p>
             <div style={{ marginTop: "5px" }} className="location-two-wrapper">
               <div className="location-two-holder">
                 <img src="/images/Location2.png" alt="location"></img>
               </div>
-              <p>Obinze Umuokanne road, Owerri, Imo State</p>
+              <p>{property?.location?.address}, {property?.location?.LGA}, {property?.location?.city}, {property?.location?.state}</p>
             </div>
             <p style={{ fontSize: "18px" }}>N350,000 - N500,000</p>
           </div>
@@ -109,28 +155,27 @@ export function PropertyDetailBottom() {
         <div className="about-property-wrapper">
           <p>About Property</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat
+            {property?.about}
           </p>
         </div>
 
         <div className="property-features-wrapper flex flex-col gap-y-[25px] md:grid md:grid-cols-2">
           <div>
             <p>Estate Features</p>
-            <p>Mini Pleasure Park</p>
-            <p>Hotel</p>
-            <p>Shopping Mall</p>
-            <p>Swimming Pool</p>
-            <p>ITC</p>
-            <p>Central Driange System</p>
-            <p>Gas Supply System</p>
-            <p>Luxury Plan</p>
+            {property?.estateFeatures?.map((e, i) => {
+              return (
+                <p>{e}</p>
+              )
+            })}
+
           </div>
           <div>
             <p>Property Features</p>
-            <p>Dry Land</p>
+            {property?.propertyFeatures?.map((e, i) => {
+              return (
+                <p>{e}</p>
+              )
+            })}
           </div>
         </div>
 
@@ -143,19 +188,34 @@ export function PropertyDetailBottom() {
 
         <div className="buyer-review-wrapper">
           <div className="flex items-center justify-between">
-            <p className="font-fam font-bold text-[15px]">10 Reviews</p>
+            <p className="font-fam font-bold text-[15px]">{property?.reviews?.length} Review(s)</p>
             <p className="flex items-center gap-x-[2px] md:hidden cursor-pointer">
               <img src="/images/write.svg" alt="write"></img>
               <p className="font-fam text-skyblue text-[12px]">Write Review</p>
             </p>
           </div>
           <div>
-            <div className="block md:hidden">{allBuyerReviews[0]}</div>
-            <div className="hidden md:block">{allBuyerReviews}</div>
+
+            {property.length == 0 ? <div className="hidden md:block">No Review On This Property Yet</div> :
+              property?.reviews?.map((e, i) => {
+                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                let year = new Date(e.createdAt).getFullYear();
+                let day = new Date(e.createdAt).getDate();
+                let month = new Date(e.createdAt).getMonth();
+                let actualDate = day + " " + months[month] + ", " + year;
+                if (e.createdBy == undefined) {
+                  e.createdBy = "Anonymous"
+                } else {
+                  e.createdBy = e.createdBy
+                }
+                return <BuyerReviews key={i} review={e.message} date={actualDate} name={e.createdBy} />
+              })
+            }
+
           </div>
-          <div className="buyer-review-button">
+          {/* <div className="buyer-review-button">
             <p className="font-fam font-bold text-[15px]">10 more Review</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="create-review-wrapper hidden md:block">
@@ -166,11 +226,11 @@ export function PropertyDetailBottom() {
               <input
                 type="text"
                 name="name"
-                value={review.name}
-                onChange={handleReviewChange}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               ></input>
             </div>
-            <div className="review-label-input">
+            {/* <div className="review-label-input">
               <label>Name</label>
               <input
                 type="text"
@@ -178,14 +238,14 @@ export function PropertyDetailBottom() {
                 value={review.date}
                 onChange={handleReviewChange}
               ></input>
-            </div>
+            </div> */}
             <div className="review-label-input" id="textarea-side">
               <label>Message</label>
               <textarea
                 type="text"
                 name="message"
-                value={review.message}
-                onChange={handleReviewChange}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
             </div>
           </div>
@@ -196,7 +256,7 @@ export function PropertyDetailBottom() {
           >
             <button
               style={{ backgroundColor: "#FF1212", color: "#fff" }}
-              onClick={submitReview}
+              onClick={() => submitReview()}
             >
               Submit Review
             </button>
@@ -208,13 +268,23 @@ export function PropertyDetailBottom() {
         <div className="property-layout-wrapper" style={{ marginTop: "10px" }}>
           <div className="property-layout-head">
             <p>Property Layout</p>
-            <p>30 of 30 Sold</p>
+            <p>0 of {property?.plotLayout?.length} Sold</p>
           </div>
 
-          <div className="property-layout-main">{plotDimensions}</div>
+          <div className="property-layout-main">
+            {
+              property?.plotLayout?.slice(0, 6).map((e, i) => {
+                return <PlotDimension key={i}
+                  area={e.width * e.length}
+                  price={e.price}
+                  width={e.width}
+                  length={e.length}
+                />;
+              })
+            }</div>
 
           <div className="plot-button-wrapper">
-            <PlotButtons />
+            <PlotButtons id={id.id} />
           </div>
         </div>
         <div className="property-layout-wrapper">
@@ -231,8 +301,10 @@ export function PropertyDetailBottom() {
             </div>
 
             <div>
-              <ChooseDate />
+              <Calendar onChange={setDate} value={date} />
             </div>
+
+            <p style={{ color: "red" }}>{success}</p>
 
             <div className="select-time-wrapper">
               <div className="select-date-wrapper">
@@ -246,14 +318,14 @@ export function PropertyDetailBottom() {
                 className="time-picker"
               >
                 <button
-                  style={time === "10AM" ? myStyle : {}}
-                  onClick={() => setTime("10AM")}
+                  style={time === "10am" ? myStyle : {}}
+                  onClick={() => setTime("10am")}
                 >
                   10AM
                 </button>
                 <button
-                  style={time === "1PM" ? myStyle : {}}
-                  onClick={() => setTime("1PM")}
+                  style={time === "1pm" ? myStyle : {}}
+                  onClick={() => setTime("1pm")}
                 >
                   1PM
                 </button>
@@ -269,7 +341,7 @@ export function PropertyDetailBottom() {
               </div>
               <div className="select-location-select">
                 <select>
-                  <option>Port Harcourt</option>
+                  <option>{property?.location?.city}</option>
                 </select>
                 {/* <div className="fill-drop-wrapper"><img src="./images/fillDrop.png"></img></div> */}
               </div>
@@ -278,7 +350,7 @@ export function PropertyDetailBottom() {
               style={{ marginBlock: "78px 21px", textAlign: "center" }}
               className="book-inspection-container"
             >
-              <button>Book Inspection</button>
+              <button onClick={() => submitBooking()}>Book Inspection</button>
             </div>
           </div>
         </div>

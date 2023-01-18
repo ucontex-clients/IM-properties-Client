@@ -1,0 +1,42 @@
+.mobile_ah {
+    display: none;
+}
+
+.flex_btw_ah {
+    display: flex;
+    justify-content: space-between;
+}
+
+.green_ah {
+    color: green;
+}
+
+#propDes_ah p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+}
+
+#propDes_ah2 p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+}
+
+@media (max-width:425px) {
+    .mobile_ah {
+        display: block;
+    }
+
+    .full_ah {
+        display: none;
+    }
+
+    .mobile_dashboard_ah {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ForSale, Layout } from "../components";
 import axios from "axios";
 import { useQuery } from "react-query";
 
 export default function AllProperties() {
-  const { isLoading, error, data } = useQuery("properties", async () => {
-    const allProperties = await axios.get(
-      "https://im-properties-api.herokuapp.com/api/property/all"
-    );
-    return allProperties.data;
-  });
+  let [property, setProperty] = useState([]);
+  const [url, setUrl] = useState("https://alert-battledress-boa.cyclic.app/api/property/all");
 
-  console.log(data)
+  useEffect(() => {
+    loadProperties();
+  }, []);
+  let loadProperties = () => {
+    fetch(url)
+      .then(e => e.json())
+      .then(res => setProperty(res))
+  };
 
-  const displayProperties = [...Array(12).keys()].map((property, index) => {
+
+  const displayProperties = [...Array(6).keys()].map((property, index) => {
     return (
       <ForSale
         key={index}
@@ -57,11 +61,38 @@ export default function AllProperties() {
           <select>
             <option>Max Price</option>
           </select>
-          <button className="text-white">Search here</button>
+          <button className="text-white bg-mine px-[16px] py-[13px]">
+            Search here
+          </button>
         </div>
       </div>
 
       <div className="px-[32px] grid grid-cols-1 place-items-center bg-white gap-[25px] mb-[25px] md:grid-cols-2 lg:grid-cols-3">
+        {property.map((e, i) => {
+          let numberOfPlot = e.plotLayout.length;
+          let address = e.location?.address + " " + e.location?.LGA + " " + e.location?.city + " " + e.location?.state;
+          let price;
+          let price2;
+          e.plotLayout.map((a, b) => {
+            let arr = [];
+            arr.push(a.price)
+            price = Math.max(...arr)
+            price2 = Math.min(arr)
+          });
+          return (
+            <ForSale
+              key={i}
+              img={"./images/newProperty.png"}
+              title={e.name}
+              minPrice={price2}
+              // maxPrice={price}
+              size={numberOfPlot}
+              desc={e.about}
+              address={address}
+              id={e._id}
+            />
+          )
+        })}
         {displayProperties}
       </div>
     </Layout>

@@ -1,21 +1,25 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Select } from "@chakra-ui/react";
 
 export function OneOffPayment({ changePaymentMode }) {
   const touch = useRef();
+  let num = JSON.parse(localStorage.getItem("imcart"));
+  let totalDue = localStorage.getItem("impay");
+  let property = JSON.parse(localStorage.getItem("improperty"));
+  let [paymentType, setPaymentType] = useState("");
 
   return (
     <div className="one-off-payment-container">
       <p className="payment-top-para hidden md:block">
-        Make Payment for 4 plots at
-        <span>CAMPUS GARDEN ESTATE PORT HARCOURT</span>
+        Make Payment for {num.length} plots at
+        <span> {property.name}</span>
       </p>
       <div className="block px-[10px] md:hidden">
         <p className="font-fam font-bold text-[15px]">
-          Campus Garden Estate Port Harcourt
+          {property.name},{property.location.city}
         </p>
         <p className="text-[15px] font-fam text-light mt-[11px]">
-          Make Payment for 4 plots at
+          Make Payment for {num.length} plots at
         </p>
       </div>
       <div className="one-off-payment-box">
@@ -23,7 +27,7 @@ export function OneOffPayment({ changePaymentMode }) {
           <h3>Make Payment</h3>
         </div>
         <p className="payment-total-para">Total</p>
-        <p className="payment-amount-para">N1,840,000</p>
+        <p className="payment-amount-para">N{totalDue}</p>
         <div className="payment-dropdown-div">
           <label
             htmlFor="payment-plan"
@@ -33,7 +37,6 @@ export function OneOffPayment({ changePaymentMode }) {
           </label>
           <div>
             <Select
-              placeholder="Choose payment mode"
               variant="filled"
               name="payment"
               value="one-off"
@@ -44,9 +47,6 @@ export function OneOffPayment({ changePaymentMode }) {
               </option>
               <option className="option" value="installment">
                 Installmental payment
-              </option>
-              <option className="option" value="easy-buy">
-                Easy-buy plan
               </option>
             </Select>
           </div>
@@ -59,7 +59,7 @@ export function OneOffPayment({ changePaymentMode }) {
           >
             Amount (N)
           </label>
-          <p>1,840,000</p>
+          <p>{totalDue}</p>
         </div>
 
         <div className="payment-dropdown-div" style={{ marginTop: "47px" }}>
@@ -70,18 +70,18 @@ export function OneOffPayment({ changePaymentMode }) {
             Payment Method
           </label>
           <div style={{ position: "relative" }}>
-            <select name="payment" value="0">
-              <option className="option">
-                Paystack (card, USSD, Bank Transfer)
+            <select name="payment" value={paymentType} onChange={(e) => setPaymentType(e.target.value)}>
+              <option className="option" value="">---</option>
+              <option className="option" value="flutter">
+                FlutterWave
               </option>
-              <option className="option">My Wallet</option>
-              <option className="option">Bank Deposit</option>
+              <option className="option" value="bank-deposit">Bank Deposit</option>
             </select>
           </div>
         </div>
 
         <div className="pay-now-button-holder">
-          <button value="pay" onClick={(e) => changePaymentMode(e)}>
+          <button value={paymentType} onClick={(e) => changePaymentMode(e)}>
             Pay Now
           </button>
         </div>

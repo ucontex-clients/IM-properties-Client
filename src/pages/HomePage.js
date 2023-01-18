@@ -1,5 +1,16 @@
-<<<<<<< Updated upstream
-import React from "react";
+import React, { useEffect, useState } from "react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button,
+  Select,
+} from "@chakra-ui/react";
+
 import {
   PropertyViewSection,
   VideoSection,
@@ -8,7 +19,9 @@ import {
   News,
   PropertyView,
   Layout,
+  ChooseDate,
 } from "../components";
+import { Link } from "react-router-dom";
 import { GrLocation } from "react-icons/gr";
 import { MdOutlineCall } from "react-icons/md";
 import { AiOutlineFieldTime } from "react-icons/ai";
@@ -17,6 +30,32 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { BiChevronsRight } from "react-icons/bi";
 
 export default function HomePage() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [time, setTime] = useState("");
+
+  // const focusOnPage = () => {
+  //   const papers = document.getElementById("building");
+  //   papers.style.Display = "";
+  //   papers.scrollIntoView();
+  //   console.log(papers);
+  // };
+
+  const myStyle = {
+    backgroundColor: "#FF1212",
+    color: "#fff",
+  };
+  let [property, setProperty] = useState([]);
+  const [url, setUrl] = useState("https://alert-battledress-boa.cyclic.app/api/property/all");
+
+  useEffect(() => {
+    loadProperties();
+  }, []);
+  let loadProperties = () => {
+    fetch(url)
+      .then(e => e.json())
+      .then(res => setProperty(res.slice(-3)))
+  };
+
   return (
     <div>
       <TopSide />
@@ -28,7 +67,7 @@ export default function HomePage() {
           <img src="./images/newHome.png" alt="home cover"></img>
           <div className="background" style={{ paddingLeft: "64px" }}>
             <h1 style={{ marginTop: "160px" }}>
-              WE ARE <span style={{ color: "#FF1212" }}>IM</span> PROPERTIES
+              We are <span style={{ color: "#FF1212" }}>IM</span> Properties
             </h1>
             <p style={{ marginTop: "0.5em" }}>
               you can own A Property Without Stress <br />
@@ -39,25 +78,38 @@ export default function HomePage() {
               style={{ marginTop: "68px", columnGap: "39px" }}
             >
               <div className="home-button2 hidden md:block">
-                <button className="inline-block mr-[39px]">
+                <Button onClick={onOpen} className="inline-block mr-[39px]">
                   BOOK AN INSPECTION
-                </button>
-                <button>CONTACT US</button>
+                </Button>
+                <a href="#touch">
+                  <Button className="inline-block mr-[39px]">CONTACT US</Button>
+                </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="home-button2 flex justify-center pt-[35px] bg-white md:hidden">
-          <button className="inline-block mr-[39px]">BOOK AN INSPECTION</button>
-          <button>CONTACT US</button>
+
+        <div className="full_ah container home-button2 flex justify-center pt-[35px] bg-white md:hidden">
+          <button className="inline-block mr-[39px]" onClick={onOpen}>
+            BOOK AN INSPECTION
+          </button>
+          <a href="#touch">
+            <button>CONTACT US</button>
+          </a>
         </div>
-        <div
-          className="section-container"
-          style={{
-            padding: "85px 65px",
-            backgroundColor: "#fff",
-          }}
-        >
+
+        <div className="mobile_ah container">
+          <div className="home-button2 flex justify-center pt-[35px] bg-white md:hidden">
+            <button className="inline-block mr-[39px]" onClick={onOpen}>
+              BOOK AN INSPECTION
+            </button>
+            <Link to="/about">
+              <button>CONTACT US</button>
+            </Link>
+
+          </div>
+        </div>
+        <div className="section-container py-[28px] px-[19px] md:px-[65px] md:py-[85px]">
           <div>
             <section className="section1">
               <h2>About IM Properties</h2>
@@ -73,12 +125,13 @@ export default function HomePage() {
                 urna. Curabitur vel bibendum lorem. Morbi convallis convallis
                 diam sit amet lacinia. Aliquam in elementum tellus.{" "}
               </p>
-              <button
-                className="rounded text-white py-2 px-2 mt-[24px]"
+              <Link
+                to="/about"
+                className="p-2 rounded text-white text-[15px] px-[16px] py-[10px] mt-[30px]"
                 style={{ backgroundColor: "#FF1212" }}
               >
                 LEARN MORE
-              </button>
+              </Link>
             </section>
             <section className="section1 mt-[71px]">
               <h2>What we do</h2>
@@ -100,7 +153,7 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <span>Read More</span>{" "}
+                      <Link to="/about#estate">Read More</Link>
                     </p>
                   </div>
 
@@ -121,7 +174,7 @@ export default function HomePage() {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
                     </p>
-                    <span>Read More</span>{" "}
+                    <Link to="/about#property">Read More</Link>
                   </div>
                 </div>
                 <div className="ml-[34px] pl-[34px] second-container">
@@ -141,7 +194,7 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <span>Read More</span>{" "}
+                      <Link to="/about#buy">Read More</Link>
                     </p>
                   </div>
 
@@ -157,34 +210,11 @@ export default function HomePage() {
                         <FaUsers style={{ color: "#6C6C6C" }} />
                       </div>
                       <p className="doings">Building Construction</p>
-=======
-import React from "react"
-import { NavigationBar,
-    FeedbackSection, PropertyViewSection, BlogSection, VideoSection, TopSide } from "../components"
-
-// import {IoCallOutline} from "react-icons/io"
-import {FaUsers} from "react-icons/fa"
-
-export default function HomePage(){
-    return(
-        <div>
-            <TopSide />
-            <NavigationBar />
-            <div className="home-image-wrapper" style={{marginTop: '132px', overflow:'hidden'}}>
-                <img src="./images/newHome.png" alt="home cover"></img>
-                <div className="background" style={{paddingLeft:'64px'}}>
-                    <h1 style={{marginTop:'160px'}}>WE ARE <span style={{color:'#FF1212'}}>IM</span> PROPERTIES</h1>
-                    <p style={{marginTop:'7px'}}>you can own A Property Without Stress <br/> 
-                    and become a landlord with peace of mind</p>
-                    <div className="flex" style={{marginTop:'68px', columnGap:'39px'}}>
-                        <button>BOOK AN INSPECTION</button>
-                        <button>CONTACT US</button>
->>>>>>> Stashed changes
                     </div>
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <span>Read More</span>{" "}
+                      <Link to="/about#building">Read More</Link>
                     </p>
                   </div>
                 </div>
@@ -202,25 +232,27 @@ export default function HomePage(){
           </div>
         </div>
 
-<<<<<<< Updated upstream
         <VideoSection />
 
-        <div className="section1  pt-[132px] p-[65px] bg-white">
+        <div className="section1  pt-[132px] p-[22px] md:p-[65px] bg-white">
           <h2 style={{ marginBottom: "10px" }}>Our Latest Properties</h2>
           <p>Buy a landlanded property with peace of mind</p>
           <PropertyViewSection />
           <div className="grid place-items-center mt-[56px]">
             <button
-              className="p-2 rounded text-white"
+              className="p-2 rounded text-white text-[15px] px-[16px] py-[10px]"
               style={{ backgroundColor: "#FF1212" }}
             >
-              VIEW MORE
+              <Link to="/properties">VIEW MORE</Link>
             </button>
           </div>
         </div>
 
-        <div className="grid px-[65px] gap-x-[59px] items-center py-[76px] residual-container">
-          <div style={{ width: "100%", height: "100%", borderRadius: "5px" }}>
+        <div className="grid px-[22px] md:px-[65px] gap-x-[59px] items-center py-[76px] residual-container">
+          <div
+            style={{ width: "100%", height: "100%", borderRadius: "5px" }}
+            className="hidden md:block"
+          >
             <img
               src="./images/laptop.png"
               alt="customer"
@@ -235,6 +267,21 @@ export default function HomePage(){
           <div className="residual">
             <h2>Earn residual income from real estate</h2>
             <h3 className="mt-[20px]">Become An Executive Sales Partner</h3>
+            <div
+              style={{ width: "100%", height: "100%", borderRadius: "5px" }}
+              className="md:hidden"
+            >
+              <img
+                src="./images/laptop.png"
+                alt="customer"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  borderRadius: "5px",
+                  objectFit: "cover",
+                }}
+              ></img>
+            </div>
             <p className="mt-[47px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
               turpis molestie, dictum est a, mattis tellus.{" "}
@@ -254,108 +301,28 @@ export default function HomePage(){
             className="absolute"
           ></img>
           <div
-            className="py-[57px] px-[138px] top-0 left-0 w-full h-full text-center"
+            className="py-[57px] px-[19px] md:px-[138px] top-0 left-0 w-full h-full text-center"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
           >
             <h2 className="text-[25px] text-white font-fam font-bold">
               Testimonials
             </h2>
-            <div className="nav-div" style={{ left: "40px" }}>
+            <div className="nav-div md:hidden" style={{ left: "40px" }}>
               <MdKeyboardArrowLeft style={{ fontSize: "24px" }} />
             </div>
-            <div className="nav-div" style={{ right: "40px" }}>
+            <div className="nav-div md:hidden" style={{ right: "40px" }}>
               <MdKeyboardArrowRight style={{ fontSize: "24px" }} />
-=======
-            <div className="section-container" style={{padding:'85px 65px',backgroundColor: '#fff', minWidth:'900px'}}>
-                <div>
-                    <section className='section1'>
-                        <h2>About IM Properties</h2>
-                        <p style={{textAlign:'justify'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis
-                            molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla
-                            accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.
-                            Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti
-                            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                            Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
-                            Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur
-                            vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam
-                            in elementum tellus. </p>
-                            <button className="rounded text-white py-2 px-2 mt-[24px]" style={{backgroundColor:'#FF1212'}}>LEARN MORE</button>
-                    </section>
-                    <section className="section1 mt-[71px]">
-                        <h2>What we do</h2>
-                        <div className="flex mt-[31px]">
-                            <div>
-                                <div className="our-doings">
-                                    <div className="flex items-center gap-x-[3px]">
-                                        <div style={{padding:'5px', border:'1px dashed black', borderRadius:'2px'}}>
-                                            <FaUsers style={{color:'#6C6C6C'}} />
-                                        </div>
-                                        <p className='doings'>Estate Development</p>
-                                    </div>
-                                    <p className="mt-[20px]" style={{color: '#6C6C6C'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Etiam eu turpis molestie, dictum est a,
-                                        mattis tellus. <span>Read More</span> </p>
-                                </div>
-
-                                <div className="our-doings">
-                                    <div className="flex items-center gap-x-[3px] mt-[22px]">
-                                        <div style={{padding:'5px', border:'1px dashed black', borderRadius:'2px'}}>
-                                            <FaUsers style={{color:'#6C6C6C'}} />
-                                        </div>
-                                        <p className='doings'>Property Management</p>
-                                    </div>
-                                    <p className="mt-[20px]" style={{color: '#6C6C6C'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Etiam eu turpis molestie, dictum est a,
-                                        mattis tellus. <span>Read More</span> </p>
-                                </div>
-                            </div>
-                            <div className="ml-[34px] pl-[34px]" style={{borderLeft: '1.5px solid #000000'}}>
-                                <div className="our-doings">
-                                    <div className="flex items-center gap-x-[3px]">
-                                        <div style={{padding:'5px', border:'1px dashed black', borderRadius:'2px'}}>
-                                            <FaUsers style={{color:'#6C6C6C'}} />
-                                        </div>
-                                        <p className='doings'>Buy & Sell Properties</p>
-                                    </div>
-                                    <p className="mt-[20px]" style={{color: '#6C6C6C'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Etiam eu turpis molestie, dictum est a,
-                                        mattis tellus. <span>Read More</span> </p>
-                                </div>
-
-                                <div className="our-doings">
-                                    <div className="flex items-center gap-x-[3px] mt-[22px]">
-                                        <div style={{padding:'5px', border:'1px dashed black', borderRadius:'2px'}}>
-                                            <FaUsers style={{color:'#6C6C6C'}} />
-                                        </div>
-                                        <p className='doings'>Building Construction</p>
-                                    </div>
-                                    <p className="mt-[20px]" style={{color: '#6C6C6C'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Etiam eu turpis molestie, dictum est a,
-                                        mattis tellus. <span>Read More</span> </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-
-                <div className="doings-images">
-                    <div className="relative top-[38px]" style={{top:'38px'}}><img src="./images/doings1.png" alt="what we do"></img></div>
-                    <div className="relative bottom-[-38px] left-[165px]" style={{bottom:'38px', left:'126px'}}><img src="./images/doings2.png" alt="what we do"></img></div>
-                </div>
->>>>>>> Stashed changes
             </div>
 
-            <div className="grid grid-cols-3 gap-x-[26px] mt-[93px] testi">
+            <div className="md:grid gap-y-[13px] md:grid-cols-3 gap-x-[26px] mt-[93px]">
               <Testinonials />
               <Testinonials />
               <Testinonials />
             </div>
 
-<<<<<<< Updated upstream
-            <div>
+            <div className="hidden md:block">
               <button
-                className="font-fam bg-mine text-white p-[10px] rounded text-xl font-medium mt-[79px]"
+                className="font-fam bg-mine text-white text-[15px] px-[16px] py-[10px] rounded font-medium mt-[79px]"
                 style={{ fontFamily: "Montserrat" }}
               >
                 VIEW MORE
@@ -363,35 +330,9 @@ export default function HomePage(){
             </div>
           </div>
         </div>
-=======
-            <div className="section1  pt-[132px] p-[65px] bg-white" >
-                <h2 style={{marginBottom:'10px'}}>Our Latest Properties</h2>
-                <p>Buy a landlanded property with peace of mind</p>
-                <PropertyViewSection />
-                <div className="grid place-items-center mt-[56px]">
-                    <button className="p-2 rounded text-white" style={{backgroundColor:'#FF1212'}}>VIEW MORE</button>
-                </div>
-            </div>
 
-            <div className="grid px-[65px] gap-x-[59px] items-center py-[76px]"
-            style={{gridTemplateColumns:'1fr 2fr', minWidth:'900px'}}>
-                <div style={{width:'100%', height:'100%', borderRadius:'5px'}}>
-                    <img src="./images/laptop.png" alt="customer"
-                    style={{width:'100%', height:'100%', borderRadius:'5px', objectFit:'cover'}}></img>
-                </div>
-                <div className="residual">
-                    <h2 className="font-fam font-bold" style={{fontSize:'30px'}}>Earn residual income from real estate</h2>
-                    <h3 className="mt-[20px] font-semibold font-xl font-fam " style={{color:'#6C6C6C'}}>Become An Executive Sales Partner</h3>
-                    <p className="mt-[47px] font-normal font-[15px] font-fam" style={{color:'#6C6C6C'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
-                        dictum est a, mattis tellus. </p>
-                        <p className="mt-[47px] font-normal font-[15px] font-fam" style={{color:'#6C6C6C'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
-                            dictum est a, mattis tellus. </p>
-                </div>
-            </div>
->>>>>>> Stashed changes
-
-        <div className="px-[60px] py-[76px] bg-white">
-          <h2 className="font-bold text-[25px] font-fam text-center">
+        <div className="px-[22px] md:px-[60px] py-[76px] bg-white">
+          <h2 className="font-bold text-[18px] md:text-[25px] font-fam md:text-center">
             Latest News Feeds
           </h2>
           <div className="latest-news gap-[43px] mt-[43px]">
@@ -405,40 +346,54 @@ export default function HomePage(){
         </div>
 
         <div className="pb-[56px]">
-          <h2 className="font-bold text-[25px] font-fam bg-white px-[60px] pb-[52px]">
+          <h2 className="font-bold text-[25px] font-fam bg-white px-[22px] md:px-[60px] pb-[52px]">
             See More Properties
           </h2>
           <div className="prop-view-wrapper gap-x-[43px] p-[29px]">
-            <PropertyView
-              img={"./images/view1.png"}
-              name={"Campus Garden Estate"}
-              location={"Jabi, Abuja, Nigeria"}
-            />
-
-            <PropertyView
-              img={"./images/view1.png"}
-              name={"Campus Garden Estate"}
-              location={"Jabi, Abuja, Nigeria"}
-            />
-
-            <PropertyView
-              img={"./images/view1.png"}
-              name={"Campus Garden Estate"}
-              location={"Jabi, Abuja, Nigeria"}
-            />
+            {
+              property.map((e, i) => {
+                let numberOfPlot = e.plotLayout.length;
+                let address = e.location.address + " " + e.location.LGA + " " + e.location.city + " " + e.location.state;
+                let price;
+                let price2;
+                e.plotLayout.map((a, b) => {
+                  let arr = [];
+                  arr.push(a.price)
+                  price = Math.max(...arr)
+                  price2 = Math.min(arr)
+                });
+                return <>
+                  <PropertyView
+                    key={i}
+                    img={"./images/view1.png"}
+                    name={e.name}
+                    location={address}
+                    para={true}
+                    about={e.about}
+                    plots={numberOfPlot}
+                    highPrice={price}
+                    lowPrice={price2}
+                    id={e._id}
+                  />
+                </>
+              })
+            }
           </div>
           <div
             className="flex items-center rounded-[8px] bg-mine py-[6px] px-[9px] gap-x-[5px] mt-[21px] cursor-pointer"
             style={{ width: "fit-content", margin: "auto" }}
           >
-            <p className="font-fam text-white text-[18px] font-semibold text-center">
+            <Link
+              to={"/properties"}
+              className="font-fam text-white text-[18px] font-semibold text-center"
+            >
               EXPLORE PROPERTY
-            </p>
+            </Link>
             <BiChevronsRight style={{ fontSize: "30px", color: "#fff" }} />
           </div>
         </div>
 
-        <div className="px-[126px] py-[67px] bg-white touch-main">
+        <div className="px-[22px] md:px-[48px] py-[67px] bg-white" id="touch">
           <h2 className="font-fam text-[25px] text-center font-bold">
             Get in Touch
           </h2>
@@ -541,6 +496,85 @@ export default function HomePage(){
           </div>
         </div>
       </Layout>
+      <Modal isOpen={isOpen} onClose={onClose} size="md">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader className="text-white">Modal</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <div className="property-layout-wrapper">
+              <div className="date-picker-head">
+                <p>Book Physical Inspection</p>
+              </div>
+
+              <div className="date-picker-main">
+                <div className="select-date-wrapper">
+                  <div>
+                    <img src="/images/Calendar2.png" alt="calendar"></img>
+                  </div>
+                  <p>Select Date</p>
+                </div>
+
+                <div>
+                  <ChooseDate />
+                </div>
+
+                <div className="select-time-wrapper">
+                  <div className="select-date-wrapper">
+                    <div>
+                      <img src="/images/Time.png" alt="time"></img>
+                    </div>
+                    <p>Select time</p>
+                  </div>
+                  <div
+                    style={{ display: "flex", columnGap: "25px" }}
+                    className="time-picker"
+                  >
+                    <button
+                      style={time === "10AM" ? myStyle : {}}
+                      onClick={() => setTime("10AM")}
+                    >
+                      10AM
+                    </button>
+                    <button
+                      style={time === "1PM" ? myStyle : {}}
+                      onClick={() => setTime("1PM")}
+                    >
+                      1PM
+                    </button>
+                  </div>
+                </div>
+
+                <div className="select-location-wrapper">
+                  <div className="select-location-logo-side">
+                    <div>
+                      <img
+                        src="/images/chooseLocation.png"
+                        alt="location"
+                      ></img>
+                    </div>
+                    <p>Select Location</p>
+                  </div>
+                  <div className="select-location-select">
+                    <Select placeholder="Select Location" w="160px">
+                      <option value="option1">Port Harcourt</option>
+                      <option value="option2">Owerri</option>
+                      <option value="option3">Uyo</option>
+                    </Select>
+                    {/* <div className="fill-drop-wrapper"><img src="./images/fillDrop.png"></img></div> */}
+                  </div>
+                </div>
+                <div
+                  style={{ marginBlock: "78px 21px", textAlign: "center" }}
+                  className="book-inspection-container"
+                >
+                  <button>Book Inspection</button>
+                </div>
+              </div>
+            </div>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 }

@@ -1,53 +1,150 @@
-import { Avatar, Flex, Text } from "@chakra-ui/react"
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Avatar, Flex, Text } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { sideNavList } from "../../config/Constants";
+import Menu from "../../assets/images/menu.svg";
+export function DashboardSideNav(props) {
+  const location = useLocation().pathname;
+  const navStyle = { backgroundColor: "#FF1212" };
+  let [user, setUser] = useState({});
+  let [shortId, setShortId] = useState("");
+  useEffect(() => {
+    getUser();
+  }, []);
 
-export function DashboardSideNav(){
+  let getUser = () => {
+    let url = "https://alert-battledress-boa.cyclic.app/api/user/single";
+    let token = localStorage.getItem("imToken");
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      method: "GET"
+    })
+      .then((e) => e.json())
+      .then(res => {
+        setUser(res)
+        let id = res?._id.length;
+        setShortId(res._id?.substr(id - 5))
+      })
+  };
 
 
-    const sideNavList = [
-        {page:"Dashboard",link:"/dashboard/home"},
-        {page:"Buy Property",link:"/dashboard/buy-property"},
-        {page:"My Property",link:"/dashboard/my-property"},
-        {page:"Bookings",link:"/dashboard/bookings"},
-        {page:"Payment",link:"/dashboard/payment"},
-        {page:"Transactions",link:"/dashboard/transactions"},
-        {page:"Wallet",link:"/dashboard/wallet"},
-        {page:"Network",link:"/dashboard/network"},
-        {page:"Profile",link:"/dashboard/profile"},
-        {page:"Support",link:"/dashboard/support"},
-        {page:"Settings",link:"/dashboard/settings"},
-        {page:"Logout",link:"/dashboard/logout"}
+  return (<>
+    <div className="full_ah">
+      <Flex flexDir="column" align="center" mt="124px">
+        <Avatar src="/images/buyer.png" />
+        <Text className="font-fam mt-[19px] font-bold text-[15px]" style={{ textTransform: "capitalize" }}>{user.username}</Text>
+        <Text className="font-fam mt-[9px] font-bold text-[15px]" style={{ textTransform: "uppercase" }}>
+          IM{shortId}
+        </Text>
+      </Flex>
+      <ul className="side-nav-ul">
+        {sideNavList.map((page, idx) => {
+          return (
+            <li key={idx}>
+              <Link to={page.link}>
+                <div style={{ paddingInline: "16px" }}>
+                  <div
+                    className="sidenav-item-wrapper"
+                    style={
+                      location === page.link ||
+                        (location === "/dashboard" && page.page === "Profile")
+                        ? navStyle
+                        : {}
+                    }
+                  >
+                    <div>
+                      <img
+                        src={location === page.link ? page.img2 : page.img}
+                        alt={page.page}
+                      ></img>
+                    </div>
+                    <p
+                      style={
+                        location === page.link ||
+                          (location === "/dashboard" && page.page === "Profile")
+                          ? { color: "white" }
+                          : {}
+                      }
+                    >
+                      {page.page}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
 
-    ]
-  
-
-
-
-    return(
-        <div>
-            <Flex marginTop='124px' flexDir='column' align='center'>
-                <Avatar src="/images/buyer.png" />
-                <Text className="font-fam mt-[19px] font-bold text-[15px]">Elvis</Text>
-                <Text className="font-fam mt-[9px] font-bold text-[15px]">IM1234509</Text>
-                
-            </Flex>
-        <ul className="side-nav-ul">
-                {
-                    sideNavList.map((page,idx)=>{
-                        return <li key={idx} style={{paddingInline:'16px'}}>
-                       <Link to={page.link} style={{width:'fit-content'}}>
-                        <div className="list-item-wrapper">
-                            <div><img src="/images/dashboard.png" alt="dashboard icon"></img></div>
-                            <p>{page.page}</p>
-                        </div>
-                            </Link>
-                    </li>
-                    })
-                }
- 
-        
-        </ul>
+    <div className="mobile_ah">
+      <div className="flex_btw_ah justify-between mx-3">
+        <div onClick={props.click}>
+          <img src={Menu} alt="menu" style={{ height: "50px" }} />
         </div>
-    )
+
+        <div style={{ display: props.display }}>
+          <Flex flexDir="column" align="center" mt="124px">
+            <a href="/">
+              <img
+                src="/images/logo.png"
+                alt="logo"
+                className="w-[94px] h-[64px]"
+              ></img>
+            </a>
+          </Flex>
+          <ul className="">
+            {sideNavList.map((page, idx) => {
+              return (
+                <li key={idx}>
+                  <Link to={page.link}>
+                    <div style={{ paddingInline: "16px" }}>
+                      <div
+                        className="sidenav-item-wrapper"
+                        style={
+                          location === page.link ||
+                            (location === "/dashboard" && page.page === "Profile")
+                            ? navStyle
+                            : {}
+                        }
+                      >
+                        <div>
+                          <img
+                            src={location === page.link ? page.img2 : page.img}
+                            alt="dashboard icon"
+                          ></img>
+                        </div>
+                        <p
+                          style={
+                            location === page.link ||
+                              (location === "/dashboard" && page.page === "Profile")
+                              ? { color: "white" }
+                              : {}
+                          }
+                        >
+                          {page.page}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <Flex flexDir="column" align="center" mt="">
+          <Avatar src="/images/buyer.png" />
+          <Text className="font-fam mt-[19px] font-bold text-[15px]" style={{ textTransform: "capitalize" }}>{user.username}</Text>
+          <Text className="font-fam mt-[9px] font-bold text-[15px]" style={{ textTransform: "uppercase" }}>
+            IM{shortId}
+          </Text>
+        </Flex>
+      </div>
+    </div>
+  </>
+  );
 }

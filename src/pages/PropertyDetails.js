@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Layout, PropertyDetailBottom, SingleProperty } from "../components";
-
 import { AiFillCamera } from "react-icons/ai";
+import { useParams } from "react-router-dom";
 
 export default function PropertyDetails() {
   const [viewedImage, setViewedImage] = useState("/images/main1.png");
+  let [property, setProperty] = useState([]);
+  let id = useParams();
+  const [url, setUrl] = useState("https://alert-battledress-boa.cyclic.app/api/property/single/" + id.id);
+
+
+  useEffect(() => {
+    loadProperties();
+  }, []);
+  let loadProperties = () => {
+    fetch(url)
+      .then(e => e.json())
+      .then(res => setProperty(res))
+  };
 
   return (
     <Layout>
