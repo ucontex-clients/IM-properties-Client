@@ -99,13 +99,13 @@ export default function HomePage() {
         </div>
 
         <div className="mobile_ah container">
-          <div className="home-button2 flex justify-center pt-[35px] bg-white md:hidden">
+          <div className="home-button3 flex justify-center pt-[35px] bg-white md:hidden">
             <button className="inline-block mr-[39px]" onClick={onOpen}>
               BOOK AN INSPECTION
             </button>
-            <Link to="/about">
+            <a href="#touch">
               <button>CONTACT US</button>
-            </Link>
+            </a>
 
           </div>
         </div>

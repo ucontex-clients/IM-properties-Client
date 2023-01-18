@@ -5380,6 +5380,18 @@ background-color: #F5F5F5;
   width: fit-content;
 }
 
+.home-button3 button {
+  padding: 5px 10px;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ff1212;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+}
+
 .home-button2 button:hover {
   background-color: #fff;
   color: #ff1212;
