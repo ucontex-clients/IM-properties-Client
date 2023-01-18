@@ -88,13 +88,26 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="home-button2 flex justify-center pt-[35px] bg-white md:hidden">
+
+        <div className="full_ah container home-button2 flex justify-center pt-[35px] bg-white md:hidden">
           <button className="inline-block mr-[39px]" onClick={onOpen}>
             BOOK AN INSPECTION
           </button>
           <a href="#touch">
             <button>CONTACT US</button>
           </a>
+        </div>
+
+        <div className="mobile_ah container">
+          <div className="home-button2 flex justify-center pt-[35px] bg-white md:hidden">
+            <button className="inline-block mr-[39px]" onClick={onOpen}>
+              BOOK AN INSPECTION
+            </button>
+            <Link to="/about">
+              <button>CONTACT US</button>
+            </Link>
+
+          </div>
         </div>
         <div className="section-container py-[28px] px-[19px] md:px-[65px] md:py-[85px]">
           <div>
