@@ -85,7 +85,6 @@ export function NavigationBar() {
             <Link
               to="/"
               style={page === "/" ? fontStyle2 : fontStyle1}
-              onClick={(e) => { }}
             >
               Home
             </Link>
@@ -94,7 +93,6 @@ export function NavigationBar() {
             <Link
               to="/about"
               style={page === "/about" ? fontStyle2 : fontStyle1}
-              onClick={(e) => { }}
             >
               About Us
             </Link>
@@ -103,7 +101,6 @@ export function NavigationBar() {
             <Link
               to="/what"
               style={page === "/what" ? fontStyle2 : fontStyle1}
-              onClick={(e) => { }}
             >
               What we do
             </Link>
@@ -112,7 +109,6 @@ export function NavigationBar() {
             <Link
               to="/properties"
               style={page === "/properties" ? fontStyle2 : fontStyle1}
-              onClick={(e) => { }}
             >
               Our Properties
             </Link>
