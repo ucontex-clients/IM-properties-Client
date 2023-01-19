@@ -42,11 +42,12 @@ export function Login({ setActiveTab, handleChange, values, login }) {
           />
         </InputGroup>
       </section>
-      <p className="mt-[13px] text-[16px] font-medium font-fam text-white text-right">Forgot Password</p>
+      <p className="full_ah mt-[13px] text-[16px] font-medium font-fam text-white text-right">Forgot Password</p>
+      <p className="mobile_ah  mt-[13px] text-[16px] font-medium font-fam text-right">Forgot Password</p>
       <section className="grid place-items-center mt-[24px]">
         <Button onClick={() => login()} colorScheme='red' bgColor='#FF1212' py='13px' color="white" width='100%' fontSize='20px' style={{ fontWeight: 700 }}>Login</Button>
       </section>
-      <p style={{ color: "white" }} className="mt-[13px] text-[10px] font-fam md:hidden">Do not have an account? <span className="font-bold ml-[15px]" onClick={() => setActiveTab('1')}>REGISTER</span></p>
+      <p style={{ color: "red" }} className="mt-[13px] text-[10px] font-fam md:hidden">Do not have an account? <span className="font-bold ml-[15px]" onClick={() => setActiveTab('1')}>REGISTER</span></p>
     </form>
   )
 }
