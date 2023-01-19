@@ -55,7 +55,7 @@ export default function Signup() {
     }
   };
 
- 
+
 
   const style1 = {
     fontWeight: 500,
@@ -71,7 +71,7 @@ export default function Signup() {
     <div className="md:grid grid-cols-2 md:h-[100vh]">
       <div className="grid place-items-center mt-[15px] md:mt-[0] h-fit md:h-full">
         <div className="text-center md:text-left px-[30px] md:px-[0]">
-          <Link>
+          <Link to="/">
             <img src="/images/logo.svg" alt="logo1" className="m-auto"></img>
           </Link>
           {activeTab === "1" && values.role === "ESP" && (
