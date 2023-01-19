@@ -115,6 +115,7 @@ export function NavigationBar() {
             display: show, position: "absolute", background: "white",
             marginLeft: "-50px", padding: "20px", fontSize: "12px"
           }}>
+
             <Link
               to="/"
               style={page === "/" ? fontStyle2 : fontStyle1}
