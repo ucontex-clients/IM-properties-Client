@@ -65,7 +65,9 @@ export default function Signin() {
     <div className="md:grid grid-cols-2 md:h-[100vh]">
       <div className="grid place-items-center mt-[15px] md:mt-[0] h-fit md:h-full">
         <div className="text-center md:text-left px-[30px] md:px-[0]">
-          <img src="/images/logo.svg" alt="logo1" className="m-auto"></img>
+          <Link to="/" >
+            <img src="/images/logo.svg" alt="logo1" className="m-auto"></img>
+          </Link>
           {activeTab === "1" && values.role === "ESP" && (
             <h3 className="text-[16px] md:text-[25px] font-fam font-bold mt-[20px] md:mt-[0]">
               Become an Executive Sale Partner
