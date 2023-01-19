@@ -3,7 +3,7 @@ import { SiteVideo, VideoData } from ".."
 
 export function VideoSection() {
     let [property, setProperty] = useState([]);
-    let [size, setSize] = useState("");
+    let [size, setSize] = useState(0);
     const [url, setUrl] = useState("https://alert-battledress-boa.cyclic.app/api/property/all");
 
 
@@ -35,9 +35,9 @@ export function VideoSection() {
                     <VideoData number='200' category={'Landlords'} img={'landlords'} />
                 </div>
                 <div className="mobile_ah container py-[38px] px-[41px] flex" style={{ justifyContent: 'space-between' }}>
-                    <VideoData number={property.length} category={'Total Estates'} img={'estate'} />
-                    <VideoData number={size} category={'Total Plots'} img={'plots'} />
-                    <VideoData number='200' category={'Landlords'} img={'landlords'} />
+                    <VideoData number={property.length} category={'Total Estates'}  />
+                    <VideoData number={size} category={'Total Plots'}  />
+                    <VideoData number='200' category={'Landlords'} />
                 </div>
             </div>
         </div>
