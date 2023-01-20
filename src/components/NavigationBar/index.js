@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Nav1 } from "../Nav1";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -22,6 +22,30 @@ export function NavigationBar() {
     } else {
       setShow("none")
     }
+  };
+
+  const [found, setFound] = useState(true);
+  useEffect(() => {
+    checkUser();
+  }, [found]);
+
+  let checkUser = () => {
+    if (localStorage.getItem("imToken") == null) {
+      setFound(true)
+    } else {
+      setFound(false)
+    }
+  };
+
+  let logoutUser = () => {
+    setShow("none")
+    localStorage.removeItem("imToken")
+    localStorage.removeItem("imUserId")
+    checkUser();
+  };
+
+  let logout = () => {
+    window.confirm("Do you want to Logout?") ? logoutUser() : console.log("")
   };
 
   return (
@@ -118,22 +142,43 @@ export function NavigationBar() {
             </Link>
             <br />
             <br />
-            <Link
-              to="/account/login"
-              style={page === "/account/login" ? fontStyle2 : fontStyle1}
-              onClick={(e) => { setShow("none") }}
-            >
-              Login
-            </Link>
-            <br />
-            <br />
-            <Link
-              to="/account/register"
-              style={page === "/account/register" ? fontStyle2 : fontStyle1}
-              onClick={(e) => { setShow("none") }}
-            >
-              Register
-            </Link>
+            {
+              found ? <div>
+                <Link
+                  to="/account/login"
+                  style={page === "/account/login" ? fontStyle2 : fontStyle1}
+                  onClick={(e) => { setShow("none") }}
+                >
+                  Login
+                </Link>
+                <br />
+                <br />
+                <Link
+                  to="/account/register"
+                  style={page === "/account/register" ? fontStyle2 : fontStyle1}
+                  onClick={(e) => { setShow("none") }}
+                >
+                  Register
+                </Link>
+              </div> : <div>
+                <Link
+                  to="/dashboard/home"
+                  style={page === "/dashboard/home" ? fontStyle2 : fontStyle1}
+                  onClick={(e) => { setShow("none") }}
+                >
+                  Dashboard
+                </Link>
+                <br />
+                <br />
+                <Link
+                  to="/"
+                  onClick={() => logout()}
+                >
+                  Logout
+                </Link>
+              </div>
+            }
+
 
           </div>
         </div>
