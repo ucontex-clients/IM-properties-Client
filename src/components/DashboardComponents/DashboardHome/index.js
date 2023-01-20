@@ -1,7 +1,30 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { DashboardElement } from "../../";
 
 export function DashboardHome() {
+
+  let [user, setUser] = useState({});
+  useEffect(() => {
+    getUser();
+  }, []);
+
+  let getUser = () => {
+    let url = "https://alert-battledress-boa.cyclic.app/api/user/single";
+    let token = localStorage.getItem("imToken");
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      method: "GET"
+    })
+      .then((e) => e.json())
+      .then(res => {
+        setUser(res)
+      })
+  };
   return (<>
     <div className="full_ah dashboard-main-right bg-white">
       <div className="dashboard-layout-wrapper mt-[0px]">
@@ -24,7 +47,7 @@ export function DashboardHome() {
           text="My Referral"
         />
         <div className="dashboard-central">
-          <p>Dear John Doe, we have properties available for you</p>
+          <p>Dear {user.firstname} {user.lastname}, we have properties available for you</p>
           <div>
             <button>View Properties</button>
           </div>
