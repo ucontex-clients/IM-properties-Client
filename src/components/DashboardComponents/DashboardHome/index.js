@@ -80,7 +80,7 @@ export function DashboardHome() {
         </div>
         <br />
         <div className="dashboard-central">
-          <p>Dear John Doe, we have properties available for you</p>
+          <p>Dear {user.firstname} {user.lastname}, we have properties available for you</p>
           <div>
             <button>View Properties</button>
           </div>
