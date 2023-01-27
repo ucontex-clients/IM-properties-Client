@@ -4,7 +4,7 @@ import { SiteVideo, VideoData } from ".."
 export function VideoSection() {
     let [property, setProperty] = useState([]);
     let [size, setSize] = useState(0);
-    const [url, setUrl] = useState("https://alert-battledress-boa.cyclic.app/api/property/all");
+    const [url, setUrl] = useState("https://im-property.herokuapp.com/api/property/all");
 
 
     useEffect(() => {

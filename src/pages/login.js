@@ -31,7 +31,7 @@ export default function Signin() {
 
   let login = async () => {
     let data = { email: values.email, password: values.password };
-    let url = "https://alert-battledress-boa.cyclic.app/api/auth/login";
+    let url = "https://im-property.herokuapp.com/api/auth/login";
     const response = await fetch(url, {
       headers: {
         "content-type": "application/json"

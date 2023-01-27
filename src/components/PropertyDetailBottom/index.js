@@ -37,7 +37,7 @@ export function PropertyDetailBottom() {
 
   let id = useParams();
   const submitReview = async () => {
-    let url = "https://alert-battledress-boa.cyclic.app/api/review/create/" + id.id;
+    let url = "https://im-property.herokuapp.com/api/review/create/" + id.id;
     let data = { message, createdBy: name }
     if (message.length >= 8) {
       await fetch(url, {
@@ -60,7 +60,7 @@ export function PropertyDetailBottom() {
   };
 
   const submitBooking = async () => {
-    let url = "https://alert-battledress-boa.cyclic.app/api/booking/createbooking/" + id.id;
+    let url = "https://im-property.herokuapp.com/api/booking/createbooking/" + id.id;
     let location = property.location.city;
     let year = new Date(date).getFullYear();
     let day = new Date(date).getDate();
@@ -92,7 +92,7 @@ export function PropertyDetailBottom() {
 
   };
 
-  const [url] = useState("https://alert-battledress-boa.cyclic.app/api/property/single/" + id.id);
+  const [url] = useState("https://im-property.herokuapp.com/api/property/single/" + id.id);
   let [property, setProperty] = useState({});
   let loadProperty = () => {
     fetch(url)

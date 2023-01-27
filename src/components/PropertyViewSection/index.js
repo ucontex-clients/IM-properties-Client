@@ -3,7 +3,7 @@ import { PropertyView } from "..";
 
 export function PropertyViewSection() {
   let [property, setProperty] = useState([]);
-  const [url, setUrl] = useState("https://alert-battledress-boa.cyclic.app/api/property/all");
+  const [url, setUrl] = useState("https://im-property.herokuapp.com/api/property/all");
 
   useEffect(() => {
     loadProperties();

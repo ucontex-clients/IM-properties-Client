@@ -5,7 +5,7 @@ import { useQuery } from "react-query";
 
 export default function AllProperties() {
   let [property, setProperty] = useState([]);
-  const [url, setUrl] = useState("https://alert-battledress-boa.cyclic.app/api/property/all");
+  const [url, setUrl] = useState("https://im-property.herokuapp.com/api/property/all");
 
   useEffect(() => {
     loadProperties();

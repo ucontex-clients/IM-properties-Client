@@ -7,7 +7,7 @@ export default function PropertyDetails() {
   const [viewedImage, setViewedImage] = useState("/images/main1.png");
   let [property, setProperty] = useState([]);
   let id = useParams();
-  const [url, setUrl] = useState("https://alert-battledress-boa.cyclic.app/api/property/single/" + id.id);
+  const [url, setUrl] = useState("https://im-property.herokuapp.com/api/property/single/" + id.id);
 
 
   useEffect(() => {

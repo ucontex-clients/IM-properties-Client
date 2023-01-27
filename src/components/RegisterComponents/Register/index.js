@@ -4,6 +4,7 @@ import { FaUserFriends, FaUserCircle, FaHandshake } from "react-icons/fa"
 import { MdEmail } from "react-icons/md"
 import { RiLockPasswordFill } from "react-icons/ri"
 import { HiOutlineEye } from "react-icons/hi"
+import { Link } from "react-router-dom";
 
 export function Register({ handleChange, values, setActiveTab, register }) {
   const [passwordMode, setPasswordMode] = useState('password')
@@ -88,9 +89,11 @@ export function Register({ handleChange, values, setActiveTab, register }) {
         <p className="text-[12px] font-medium md:text-white font-fam">I agree to IM Properties Terms & Condition and Privacy Policy</p>
       </section>
       <section className="grid place-items-center mt-[24px]">
-        <Button onClick={() => register()} colorScheme='red' bgColor='#FF1212' py='13px' color="white" width='100%' fontSize='20px' style={{ fontWeight: 700 }}>Create Account</Button>
+        <Button onClick={register} colorScheme='red' bgColor='#FF1212' py='13px' color="white" width='100%' fontSize='20px' style={{ fontWeight: 700 }}>Create Account</Button>
       </section>
-      <p className="mt-[13px] text-[10px] font-fam text-center md:hidden">Already have an account? <span className="font-bold ml-[15px]" onClick={() => setActiveTab('0')}>LOGIN</span></p>
+      <Link to="/account/login">
+        <p className="mt-[13px] text-[10px] font-fam text-center md:hidden">Already have an account? <span className="font-bold ml-[15px]">LOGIN</span></p>
+      </Link>
     </form>
   )
 }

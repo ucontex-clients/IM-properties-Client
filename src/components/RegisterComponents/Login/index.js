@@ -3,6 +3,7 @@ import { Input, InputGroup, InputLeftElement, Button, InputRightElement } from "
 import { MdEmail } from "react-icons/md"
 import { RiLockPasswordFill } from "react-icons/ri"
 import { HiOutlineEye } from "react-icons/hi"
+import { Link } from "react-router-dom";
 
 
 export function Login({ setActiveTab, handleChange, values, login }) {
@@ -47,7 +48,9 @@ export function Login({ setActiveTab, handleChange, values, login }) {
       <section className="grid place-items-center mt-[24px]">
         <Button onClick={() => login()} colorScheme='red' bgColor='#FF1212' py='13px' color="white" width='100%' fontSize='20px' style={{ fontWeight: 700 }}>Login</Button>
       </section>
-      <p style={{ color: "red" }} className="mt-[13px] text-[10px] font-fam md:hidden">Do not have an account? <span className="font-bold ml-[15px]" onClick={() => setActiveTab('1')}>REGISTER</span></p>
+      <Link to="/account/register">
+        <p style={{ color: "red" }} className="mt-[13px] text-[10px] font-fam md:hidden">Do not have an account? <span className="font-bold ml-[15px]">REGISTER</span></p>        
+      </Link>
     </form>
   )
 }

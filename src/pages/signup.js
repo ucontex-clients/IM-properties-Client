@@ -2,12 +2,13 @@ import React from "react";
 import { useState } from "react";
 import { Login, Register } from "../components";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Signup() {
   const [activeTab, setActiveTab] = useState("1");
   const [success, setSuccess] = useState("");
+  const navigate = useNavigate()
 
   const { handleChange, values } = useFormik({
     initialValues: {
@@ -29,7 +30,7 @@ export default function Signup() {
 
   let register = async () => {
     let data = values;
-    let url = "https://alert-battledress-boa.cyclic.app/api/auth/register";
+    let url = "https://im-property.herokuapp.com/api/auth/register";
 
     const response = await fetch(url, {
       headers: {
@@ -46,7 +47,9 @@ export default function Signup() {
         setSuccess("");
         clearTimeout(t1);
       }, 4000);
+      navigate("/account/login")
     } else {
+      console.log(response)
       setSuccess("Error Occured.")
       const t1 = setTimeout(() => {
         setSuccess("");
@@ -114,11 +117,11 @@ export default function Signup() {
           <header className="flex gap-x-[47px] justify-center">
             <div className="md:hidden flex items-center justify-between">
               <div className="flex items-center gap-x-[29px]">
-                <img src="/images/left-arrow.svg" alt="arrow"></img>
+                {/* <img src="/images/left-arrow.svg" alt="arrow"></img> */}
                 <p className="font-bold text-[16px]">REGISTER</p>
               </div>
               <div className="hamburger">
-                <GiHamburgerMenu style={{ fontSize: "40px" }} />
+                {/* <GiHamburgerMenu style={{ fontSize: "40px" }} /> */}
               </div>
             </div>
             <Link to="/account/login">
