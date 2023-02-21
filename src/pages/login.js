@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Login, Register } from "../components";
 import { useFormik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
+
 export default function Signin() {
   const [activeTab, setActiveTab] = useState("0");
   const [success, setSuccess] = useState("");
@@ -10,12 +11,8 @@ export default function Signin() {
   let navigate = useNavigate()
   const { handleChange, values } = useFormik({
     initialValues: {
-      role: "ESP",
       email: "",
-      username: "",
-      password: "",
-      referedBy: "",
-      terms: "false",
+      password: ""
     },
   });
 
@@ -30,7 +27,7 @@ export default function Signin() {
   };
 
   let login = async () => {
-    let data = { email: values.email, password: values.password };
+    let data = values;
     let url = "https://im-property.herokuapp.com/api/auth/login";
     const response = await fetch(url, {
       headers: {
@@ -44,11 +41,12 @@ export default function Signin() {
         .then((e) => {
           localStorage.setItem("imUserId", e.id)
           localStorage.setItem("imToken", e.token)
+          localStorage.setItem("imUserName", e.username)
         })
       setSuccess("Login Successful.")
       const t1 = setTimeout(() => {
         setSuccess("");
-        navigate("/")
+        navigate("/");
         clearTimeout(t1);
       }, 1500);
     } else {
