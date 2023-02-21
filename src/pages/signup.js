@@ -10,9 +10,9 @@ export default function Signup() {
   const [success, setSuccess] = useState("");
   const navigate = useNavigate()
 
-  const { handleChange, values } = useFormik({
+  let { handleChange, values } = useFormik({
     initialValues: {
-      role: "ESP",
+      role: "",
       email: "",
       username: "",
       password: "",
@@ -41,13 +41,18 @@ export default function Signup() {
     });
     if (response.status === 200) {
       await response.json()
-      setSuccess("Registration completed successfully. Proceed to Login.")
-      values = { role: 'ESP', email: '', username: '', password: '', referedBy: '', }
+        .then((e) => {
+          localStorage.setItem("imUserId", e.id)
+          localStorage.setItem("imToken", e.token)
+          localStorage.setItem("imUserName", e.username)
+        })
+      setSuccess("Registration completed successfully.")
+      values = { role: '', email: '', username: '', password: '', referedBy: '', }
       const t1 = setTimeout(() => {
         setSuccess("");
         clearTimeout(t1);
-      }, 4000);
-      navigate("/account/login")
+      }, 3000);
+      navigate("/dashboard/profile/edit");
     } else {
       console.log(response)
       setSuccess("Error Occured.")
