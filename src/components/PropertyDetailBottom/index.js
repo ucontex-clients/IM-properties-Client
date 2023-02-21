@@ -16,8 +16,9 @@ export function PropertyDetailBottom() {
   useEffect(() => {
     loadProperty();
   }, []);
+
   const [time, setTime] = useState("");
-  const [userId, setUserId] = useState(localStorage.getItem("imUserId"));
+  const userId = localStorage.getItem("imUserName");
   const [userName, setUserName] = useState("Anonymous");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
@@ -37,13 +38,14 @@ export function PropertyDetailBottom() {
 
   let id = useParams();
   const submitReview = async () => {
+    let token = localStorage.getItem("imToken");
     let url = "https://im-property.herokuapp.com/api/review/create/" + id.id;
     let data = { message, createdBy: name }
     if (message.length >= 8) {
       await fetch(url, {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzhmNzVhOWE1MGJmNjNlZDNjNTExNjUiLCJyb2xlIjoibm9ybWFsQWRtaW4iLCJpYXQiOjE2NzA1NDU2MDgsImV4cCI6MTY3MzEzNzYwOH0.xopzgQH16saT9xJLxRVhtAhoDo26s3NQNY2lgd0Gttk`
+          "Authorization": `Bearer ${token}`
         },
         method: "POST",
         body: JSON.stringify(data)
@@ -94,10 +96,14 @@ export function PropertyDetailBottom() {
 
   const [url] = useState("https://im-property.herokuapp.com/api/property/single/" + id.id);
   let [property, setProperty] = useState({});
+  let [max, setMax] = useState(0);
   let loadProperty = () => {
-    fetch(url)
-      .then(e => e.json())
-      .then(res => setProperty(res.data))
+    axios.get(url)
+    .then((response) => {
+      setProperty(response.data.message.data);
+      setMax(response.data.message);
+    })
+    console.log(property);
   };
 
   return (
@@ -112,7 +118,7 @@ export function PropertyDetailBottom() {
               </div>
               <p>{property?.location?.address}, {property?.location?.LGA}, {property?.location?.city}, {property?.location?.state}</p>
             </div>
-            <p style={{ fontSize: "18px" }}>N350,000 - N500,000</p>
+            <p style={{ fontSize: "18px" }}>{max?.minimumPrice ? max?.minimumPrice : "N350,000"} - {max?.maximumPrice ? max?.maximumPrice : "N500,000"}</p>
           </div>
           <div className="share-location-wrapper">
             <div>
@@ -196,17 +202,18 @@ export function PropertyDetailBottom() {
           </div>
           <div>
 
-            {property.length == 0 ? <div className="hidden md:block">No Review On This Property Yet</div> :
+            {property?.reviews?.length === 0 ? <div className="hidden md:block">No Review On This Property Yet</div> :
               property?.reviews?.map((e, i) => {
                 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
                 let year = new Date(e.createdAt).getFullYear();
                 let day = new Date(e.createdAt).getDate();
                 let month = new Date(e.createdAt).getMonth();
                 let actualDate = day + " " + months[month] + ", " + year;
-                if (e.createdBy == undefined) {
-                  e.createdBy = "Anonymous"
+                let createdBy = e.addedBy;
+                if (createdBy === undefined) {
+                  createdBy = "Anonymous"
                 } else {
-                  e.createdBy = e.createdBy
+                  createdBy = e.addedBy
                 }
                 return <BuyerReviews key={i} review={e.message} date={actualDate} name={e.createdBy} />
               })
