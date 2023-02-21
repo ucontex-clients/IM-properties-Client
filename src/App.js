@@ -32,7 +32,7 @@ import DashboardSupportPage from "./pages/DashboardSupportPage";
 import DashboardSettingsPage from "./pages/DashboardSettings";
 import DashboardProfilePage from "./pages/DashboardProfilePage";
 import Login from "./pages/login";
-import EditProfilePage from "./pages/EditProfile";
+import EditProfile from "./pages/EditProfile";
 import "./assets/css/mobile.css";
 import FundWalletPage from "./pages/DashboardWalletPage";
 
@@ -45,14 +45,14 @@ function App() {
         <Route path={"/account/login"} element={<Login />} />
         {/* <Route path={"/login"} element={<Signin />} /> */}
         <Route path={"/properties"} element={<AllProperties />} />
-        <Route path={"/properties/:id"} element={<PropertyDetails />} />
+        <Route path={"/properties/single/:id"} element={<PropertyDetails />} />
         {/* <Route path={"/property"} element={<PropertyDetails />} /> */}
         <Route path={"/blog"} element={<BlogPage />} />
         <Route path={"/contact"} element={<ContactUs />} />
         <Route path={"/FAQ"} element={<FAQ />} />
         <Route path={"/layout/:id"} element={<FullPropertyLayout />} />
-        <Route path={"/dashboard"} element={<EditProfilePage />} />
-        <Route path={"/dashboard/profile/edit"} element={<EditProfilePage />} />
+        <Route path={"/dashboard"} element={<EditProfile />} />
+        <Route path={"/dashboard/profile/edit"} element={<EditProfile />} />
         <Route path={"/about"} element={<About />} />
         <Route path={"/payment"} element={<Payment />} />
         <Route path={"/profile"} element={<UserProfileModal />} />

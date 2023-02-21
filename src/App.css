@@ -1020,7 +1020,7 @@ body {
 }
 
 .dashboard-home-main-wrapper {
-  padding: 30px 33px;
+  padding: 30px 18px 0px 18px;
   height: 100vh;
   overflow-y: scroll;
   padding-bottom: 150px;
@@ -1466,6 +1466,7 @@ body {
 
 .inspection-booking-holder {
   margin-top: 18px;
+  position: relative !important;
 }
 
 .each-property-right .title {
@@ -2117,7 +2118,7 @@ text-align: center;
 }
 
 .latest-news {
-  margin-block: 72px 67px;
+  /*margin-block: 72px 67px;*/
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   place-items: center;
@@ -4035,7 +4036,7 @@ font-weight: 700;
 
 .navigation-wrapper {
   width: 100%;
-  padding: 7px 41px 8px 27px;
+  padding: 7px 31px 8px 27px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4562,8 +4563,8 @@ font-weight: 700;
 }
 
 .footer-wrapper {
-  padding-block: 90px 42px;
-  padding-inline: 44px;
+  padding-block: 60px 42px;
+  padding-inline: 34px;
   background-color: #272733;
 }
 
@@ -4645,6 +4646,7 @@ background-color: #F5F5F5;
 
 .change-password-heading{
   border-bottom:  1px solid #000000;
+  margin-bottom: 50px;
 }
 
 .main-view-image img {
@@ -4895,8 +4897,8 @@ background-color: #F5F5F5;
 }
 
 .sale-image {
-  width: 100%;
-  height: 100%;
+  width: 350px;
+  height: 250px;
 }
 
 .product-size {
@@ -5332,7 +5334,7 @@ background-color: #F5F5F5;
   padding: 8px;
   color: #fff;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .home-image-wrapper {
@@ -5834,7 +5836,7 @@ background-color: #F5F5F5;
   .property-view-main-wrapper {
     display: flex;
     flex-direction: column;
-    margin-top: 73px;
+    margin-top: 60px;
     position: relative;
     row-gap: 43px;
   }
