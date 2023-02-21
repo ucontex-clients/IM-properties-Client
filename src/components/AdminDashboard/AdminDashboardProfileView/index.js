@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -14,8 +15,13 @@ export function AdminDashboardProfileView({ setPage }) {
   let [occupation, setOccupation] = useState("");
   let [address, setAddress] = useState("");
   let [city, setCity] = useState("");
+  let [nextofkin, setNextOfKin] = useState("");
+  let [kin_phone, setKin_phone] = useState("");
+  let [kin_address, setKin_address] = useState("");
   let [loading, setLoading] = useState(true);
   let navigate = useNavigate();
+  let [profile, setProfile] = useState(null);
+  let [Id, setId] = useState(null);
 
   useEffect(() => {
     getUser();
@@ -44,33 +50,46 @@ export function AdminDashboardProfileView({ setPage }) {
         setOccupation(res.occupation)
         setAddress(res.address)
         setCity(res.city)
+        setNextOfKin(res.nextofkin)
+        setKin_phone(res.kin_phone)
+        setKin_address(res.kin_address)
       })
   };
 
-  let updateUser = async () => {
+  const updateUser = async (e) => {
     setLoading(false)
     let url = "https://alert-battledress-boa.cyclic.app/api/user/addprofile";
     let token = localStorage.getItem("imToken");
-    let data = {
-      firstname, lastname, gender, country, state, lga,
-      phone1, date_of_birth, occupation, address, city
-    }
-    console.log(data)
-    await fetch(url, {
+
+    const formData = new FormData();
+    formData.append("firstname", firstname);
+    formData.append("lastname", lastname);
+    formData.append("gender", gender);
+    formData.append("occupation", occupation);
+    formData.append("date_of_birth", date_of_birth);
+    formData.append("city", city);
+    formData.append("country", country);
+    formData.append("address", address);
+    formData.append("phone1", phone1);
+    formData.append("lga", lga);
+    formData.append("state", state);
+    formData.append("nextofkin", nextofkin);
+    formData.append("kin_phone", kin_phone);
+    formData.append("kin_address", kin_address);
+    formData.append("images", profile);
+    formData.append("images", Id);
+
+
+  
+    const response = await axios.patch(url, formData, {
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`
-      },
-      method: "PATCH",
-      body: JSON.stringify(data)
-    })
-      .then((e) => e.json())
-      .then(res => {
-        console.log(res)
-        // setPage("2")
-        navigate("/dashboard/profile")
-      })
-    setLoading(true)
+        'Authorization' : `Basic ${token}`
+      }
+    });
+    if (response.status === 200){
+        navigate("/dashboard/profile");
+    }else console.log(response.error.message);
+        setLoading(true)
   };
 
   return (
@@ -81,6 +100,7 @@ export function AdminDashboardProfileView({ setPage }) {
         style={{ marginTop: "100px" }}
       >
         <p className="profile-update-buyer">Update Profile</p>
+      
         <div className="update-profile-main">
           <div className="profile-update-row">
             <div>
@@ -129,9 +149,6 @@ export function AdminDashboardProfileView({ setPage }) {
             </div>
             <div>
               <label>State</label>
-              {/* <select value="*choose*">
-                <option>Rivers</option>
-              </select> */}
               <input type="text" value={state} onChange={(e) => setState(e.target.value)}></input>
             </div>
           </div>
@@ -158,35 +175,36 @@ export function AdminDashboardProfileView({ setPage }) {
             </div>
             <div>
               <label>Upload a photograph</label>
-              <input type="file"></input>
+              <input name="images" type="file" onChange={(e) => setProfile(e.target.files[0])}></input>
             </div>
             <div>
               <label>Upload Valid ID </label>
-              <input type="file"></input>
+              <input name="images" type="file" onChange={(e) => setId(e.target.files[0])}></input>
             </div>
           </div>
 
-          <p className="next-of-kin-data">Next of kin</p>
+          <p className="next-of-kin-data"><strong>NEXT OF KIN</strong></p>
 
           <div className="profile-update-row">
             <div>
               <label>Full Name</label>
-              <input type="text" placeholder="Full Name"></input>
+              <input type="text" placeholder="Full Name" value={nextofkin} onChange={(e) => setNextOfKin(e.target.value)}></input>
             </div>
             <div>
               <label>Phone Number</label>
-              <input type="text" placeholder="Phone Number"></input>
+              <input type="text" placeholder="Phone Number" value={kin_phone} onChange={(e) => setKin_phone(e.target.value)}></input>
             </div>
             <div>
               <label>Address</label>
-              <input type="text" placeholder="Address"></input>
+              <input type="text" placeholder="Address" value={kin_address} onChange={(e) => setKin_address(e.target.value)}></input>
             </div>
           </div>
 
           <div className="save-profile-button-container">
-            <button onClick={() => updateUser()}>{loading ? "Save Profile" : "Saving"}</button>
+            <button onClick={(e) => updateUser()}>{loading ? "Save Profile" : "Saving"}</button>
           </div>
         </div>
+
       </div>
     </div>
   );
