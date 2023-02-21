@@ -3,6 +3,7 @@ import { NavigationBar } from "../NavigationBar";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
+import { IoMdRocket} from "react-icons/io";
 
 export function Layout({ children }) {
   return (
@@ -49,20 +50,24 @@ export function Layout({ children }) {
               marginTop: "auto",
               marginLeft: "auto",
               position: "absolute",
-              right: "50px",
+              right: "0px",
             }}
             className="bg-mine rounded"
-          ></div>
+          >
+            <a href="#top">
+              <IoMdRocket style={{ fontSize: "50px", color: "#fff", paddingTop: "5px", paddingBottom: "5px"}} />
+            </a>
+          </div>
         </div>
 
         <div
           style={{
             gridColumn: "1/-1",
             display: "flex",
-            marginTop: "170px",
+            marginTop: "120px",
             justifyContent: "space-between",
             borderTop: "1px solid #C4CDD5",
-            paddingTop: "25px",
+            paddingTop: "20px",
           }}
         >
           <div>
