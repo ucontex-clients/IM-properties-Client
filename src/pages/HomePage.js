@@ -234,7 +234,7 @@ export default function HomePage() {
 
         <VideoSection />
 
-        <div className="section1  pt-[132px] p-[22px] md:p-[65px] bg-white">
+        <div className="section1  pt-[100px] p-[22px] md:p-[65px] bg-white">
           <h2 style={{ marginBottom: "10px" }}>Our Latest Properties</h2>
           <p>Buy a landlanded property with peace of mind</p>
           <PropertyViewSection />
@@ -266,7 +266,7 @@ export default function HomePage() {
           </div>
           <div className="residual">
             <h2>Earn residual income from real estate</h2>
-            <h3 className="mt-[20px]">Become An Executive Sales Partner</h3>
+            <h4 className="mt-[15px] mb-[20px]">Become An Executive Sales Partner</h4>
             <div
               style={{ width: "100%", height: "100%", borderRadius: "5px" }}
               className="md:hidden"
@@ -282,14 +282,22 @@ export default function HomePage() {
                 }}
               ></img>
             </div>
-            <p className="mt-[47px]">
+            <p className="mt-[30px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
               turpis molestie, dictum est a, mattis tellus.{" "}
             </p>
-            <p className="mt-[47px]">
+            <p className="mt-[40px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
               turpis molestie, dictum est a, mattis tellus.{" "}
             </p>
+            <div className="grid place-items-center mt-[56px]">
+              <button
+                className="p-2 rounded text-white text-[15px] px-[16px] py-[10px]"
+                style={{ backgroundColor: "#FF1212" }}
+              >
+                <Link to="/properties">BECOME AN ESP</Link>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -301,7 +309,7 @@ export default function HomePage() {
             className="absolute"
           ></img>
           <div
-            className="py-[57px] px-[19px] md:px-[138px] top-0 left-0 w-full h-full text-center"
+            className="py-[57px] px-[0px] md:px-[138px] top-0 left-0 w-full h-full text-center"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
           >
             <h2 className="text-[25px] text-white font-fam font-bold">
@@ -314,7 +322,7 @@ export default function HomePage() {
               <MdKeyboardArrowRight style={{ fontSize: "24px" }} />
             </div>
 
-            <div className="md:grid gap-y-[13px] md:grid-cols-3 gap-x-[26px] mt-[93px]">
+            <div className="md:grid gap-y-[13px] md:grid-cols-3 gap-x-[0px] mt-[93px]">
               <Testinonials />
               <Testinonials />
               <Testinonials />
@@ -335,18 +343,16 @@ export default function HomePage() {
           <h2 className="font-bold text-[18px] md:text-[25px] font-fam md:text-center">
             Latest News Feeds
           </h2>
-          <div className="latest-news gap-[43px] mt-[43px]">
-            <News />
-            <News />
+          <div className="latest-news gap-[43px] mt-[23px]">
             <News />
           </div>
-          <p className="font-fam font-medium text-mine text-[15px] cursor-pointer text-center news-read">
-            READ MORE
+          <p className="font-fam font-medium text-mine text-[15px] cursor-pointer text-center news-read mt-[30px]">
+            <Link to="/properties">READ MORE</Link>
           </p>
         </div>
 
         <div className="pb-[56px]">
-          <h2 className="font-bold text-[25px] font-fam bg-white px-[22px] md:px-[60px] pb-[52px]">
+          <h2 className="font-bold text-[25px] font-fam bg-white px-[22px] md:px-[60px] pb-[12px]">
             See More Properties
           </h2>
           <div className="prop-view-wrapper gap-x-[43px] p-[29px]">
