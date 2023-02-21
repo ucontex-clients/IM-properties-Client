@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export function ForSale({ img, title, desc, minPrice, maxPrice, size, address, id }) {
+
+
+  useEffect(() => {
+    setSrc(img[0])
+  }, []);
+    
+  var num = 0;
+  let [src, setSrc] = useState(img[0]);
+  const handleChange = () => {
+    //console.log(i);
+    //num = (num + 1 + img.length) % img.length;
+    let i = num < img.length ? num++ % img.length : 0;
+    setSrc(img[i]);
+    console.log(i);
+  };
 
   return (
     <div className="one-sale-wrapper">
       <div className="sale-image-wrapper">
         <div className="property-arrow-container">
-          <img src="/images/propertyArrow.png" alt="arrow"></img>
+          <img src="/images/propertyArrow.png" onClick={handleChange} alt="arrow"></img>
         </div>
-        <img src={img} className="sale-image" alt="property cover"></img>
+        <img src={src} className="sale-image" width="343px" height="230px" alt="property cover" id="sale-image"></img>
       </div>
 
       <div className="sales-text-wrapper">
@@ -41,7 +56,7 @@ export function ForSale({ img, title, desc, minPrice, maxPrice, size, address, i
           </span>
         </div>
         <div className="view-product-button-wrapper">
-          <Link to={"/properties/" + id}>
+          <Link to={"/properties/single/" + id}>
             <button className="view-product-button">
               Buy Now
             </button>
