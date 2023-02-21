@@ -5,17 +5,19 @@ import { useQuery } from "react-query";
 
 export default function AllProperties() {
   let [property, setProperty] = useState([]);
-  const [url, setUrl] = useState("https://im-property.herokuapp.com/api/property/all");
+  let url = "https://im-property.herokuapp.com/api/property/all";
 
   useEffect(() => {
     loadProperties();
   }, []);
+
   let loadProperties = () => {
     fetch(url)
       .then(e => e.json())
       .then(res => setProperty(res))
   };
 
+  console.log(property);
 
   const displayProperties = [...Array(6).keys()].map((property, index) => {
     return (
@@ -73,6 +75,7 @@ export default function AllProperties() {
           let address = e.location?.address + " " + e.location?.LGA + " " + e.location?.city + " " + e.location?.state;
           let price;
           let price2;
+          let img = e.imagesURLs;
           e.plotLayout.map((a, b) => {
             let arr = [];
             arr.push(a.price)
@@ -82,7 +85,7 @@ export default function AllProperties() {
           return (
             <ForSale
               key={i}
-              img={"./images/newProperty.png"}
+              img={img} //"./images/newProperty.png"}
               title={e.name}
               minPrice={price2}
               // maxPrice={price}
