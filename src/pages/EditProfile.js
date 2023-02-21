@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   AdminDashboardProfileView,
   DashboardLayout,
-  DashboardUpdateProfile,
+  DashboardViewProfile,
 } from "../components";
 
 export default function EditProfilePage() {
@@ -11,7 +11,7 @@ export default function EditProfilePage() {
   return (
     <DashboardLayout>
       {page === "1" && <AdminDashboardProfileView setPage={setPage} />}
-      {page === "2" && <DashboardUpdateProfile />}
+      {page === "2" && <DashboardViewProfile />}
     </DashboardLayout>
   );
 }

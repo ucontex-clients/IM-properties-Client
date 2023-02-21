@@ -13,18 +13,20 @@ export function PropertyView({ img, name, location, para, about, plots, highPric
           </div>
           <img src={img} alt="property"></img>
         </div>
-        <div className="property-bottom p-[22px]">
+        <div className="property-bottom p-[12px]">
           <p style={{ fontWeight: 600, fontSize: "15px", marginBottom: "6px", textTransform: "capitalize" }}>
             {name}
           </p>
           {/* <p style={{ fontWeight: 500 }}>N{lowPrice}- N{highPrice}</p> */}
-          <p style={{ fontWeight: 500 }}>N{lowPrice}</p>
+          <p style={{ fontWeight: 500 }}>N{lowPrice} - N{highPrice}</p>
           <div className="location-bottom flex justify-between">
             <div className="flex items-center gap-x-[10px] mt-[7px]">
               <MdLocationOn />
               <p style={{ fontWeight: 400, textTransform: "capitalize" }}>{location}</p>
             </div>
-            <p style={{ fontWeight: 700, color: "#FF1212" }}>{plots} plot(s)</p>
+            <div className=" items-right ml-[7px] mt-[7px]">
+              <p style={{ fontWeight: 700, color: "#FF1212", fontSize:"9px" }}>{plots} plot(s)</p>
+            </div>
           </div>
           {para && (
             <>

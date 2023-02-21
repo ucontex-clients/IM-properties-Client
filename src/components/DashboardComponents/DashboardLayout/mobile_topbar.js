@@ -59,7 +59,7 @@ export default function MobileTop(props, {
 
     const [show, setShow] = useState("none");
     let hide = () => {
-        if (show == "none") {
+        if (show === "none") {
             setShow("block")
         } else {
             setShow("none")

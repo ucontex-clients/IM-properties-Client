@@ -11,7 +11,7 @@ import {
 
 export function DashboardSupport() {
   return (
-    <Box className="pt-[124px] bg-white px-[100px]">
+    <Box className="pt-[80px] bg-white px-[40px]">
       <Flex flexDir="column" className="md:w-[60%]">
         <FormControl>
           <FormLabel className="mb-[12px] font-fam text-light text-[15px]">

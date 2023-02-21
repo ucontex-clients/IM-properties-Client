@@ -19,11 +19,11 @@ export function DashboardSettings() {
   const style1 = { fontWeight: "700", color: "#05540D" };
 
   return (
-    <Box className="pt-[100px] bg-white">
+    <Box className="pt-[80px] bg-white">
       <Flex
         mb="96px"
         pb="10px"
-        className="change-password-heading gap-x-[100px] pl-[100px]"
+        className="change-password-heading gap-x-[35px] pl-[40px]"
       >
         <Text
           className="text-[15px] font-medium font-fam cursor-pointer"
@@ -41,7 +41,7 @@ export function DashboardSettings() {
         </Text>
       </Flex>
       {activeTab === "password" && (
-        <Flex flexDir="column" className="md:w-[60%] px-[100px]">
+        <Flex flexDir="column" className="md:w-[60%] px-[50px]">
           <FormControl>
             <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
               Current Password
@@ -110,7 +110,7 @@ export function DashboardSettings() {
       )}
 
       {activeTab === "email" && (
-        <Flex flexDir="column" className="md:w-[60%] px-[100px]">
+        <Flex flexDir="column" className="md:w-[60%] px-[50px]">
           <FormControl>
             <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
               Current Email

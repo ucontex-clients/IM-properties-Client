@@ -98,7 +98,7 @@ export function DashboardViewProfile() {
             </div>
           </div>
 
-          <p className="next-of-kin-data">Next of kin</p>
+          <p className="next-of-kin-data"><strong>NEXT OF KIN</strong></p>
 
           <div className="profile-update-row">
             <div>

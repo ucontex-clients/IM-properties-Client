@@ -7,7 +7,7 @@ import { HiOutlineEye } from "react-icons/hi"
 import { Link } from "react-router-dom";
 
 export function Register({ handleChange, values, setActiveTab, register }) {
-  const [passwordMode, setPasswordMode] = useState('password')
+  const [passwordMode, setPasswordMode] = useState('password');
 
   const toggleStyle = (e) => {
     if (passwordMode === 'text') {
@@ -28,7 +28,7 @@ export function Register({ handleChange, values, setActiveTab, register }) {
           />
           <Select placeholder='Select option' bg={"white"}
             style={{ paddingLeft: '35px', fontFamily: 'Montserrat' }} name='role' onChange={handleChange} >
-            <option value='Buyer'>Buyer</option>
+            <option value='buyer'>Buyer</option>
             <option value='ESP'>Executive Sales Partner (ESP)</option>
           </Select>
         </InputGroup>

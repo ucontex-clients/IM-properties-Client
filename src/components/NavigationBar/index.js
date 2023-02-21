@@ -17,7 +17,7 @@ export function NavigationBar() {
 
   const [show, setShow] = useState("none");
   let hide = () => {
-    if (show == "none") {
+    if (show === "none") {
       setShow("block")
     } else {
       setShow("none")
@@ -96,7 +96,7 @@ export function NavigationBar() {
         </ul>
       </div>
 
-      <button className="nav-button">Become an ESP</button>
+      <button className="nav-button item-center">Become an ESP</button>
 
       <div className="">
         <div className="mobile_ah container">
