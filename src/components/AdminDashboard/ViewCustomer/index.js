@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Text, Avatar, Box, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+
 export function ViewCustomer() {
   const propertyStyle = {
     background: "rgba(255, 18, 18, 0.2)",
@@ -10,12 +11,15 @@ export function ViewCustomer() {
   const [userInfo, setUserInfo] = useState("property");
   const [user, setUser] = useState({});
   const [shortId, setShortId] = useState("");
+  let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getUser();
   }, [])
 
+
   let getUser = () => {
+    setLoading(false);
     let url = "https://alert-battledress-boa.cyclic.app/api/user/single";
     let token = localStorage.getItem("imToken");
     fetch(url, {
@@ -31,6 +35,7 @@ export function ViewCustomer() {
         let id = res._id.length;
         setShortId(res._id.substr(id - 5))
       })
+      setLoading(true);
   };
 
   return (
@@ -57,7 +62,7 @@ export function ViewCustomer() {
       <div className="view-customers-top mt-[71px]">
         <div>
           <Flex columnGap="36px">
-            <Avatar />
+            <Avatar src={user.pictureupload}/>
             <Box>
               <Text className="font-fam font-bold text-[20px]" style={{ textTransform: "capitalize" }}>{user.firstname} {" "} {user.lastname}</Text>
               <Text className="font-fam font-medium text-[15px] text-light mt-[3px]" style={{ textTransform: "uppercase" }}>
@@ -114,22 +119,22 @@ export function ViewCustomer() {
         </div>
         <div className="id-side">
           <p className="mb-[24px] font-medium text-[15px]">Valid ID</p>
-          <img src="/images/id.png" alt="user id"></img>
+          <img src={user.idupload} alt="user id"></img>
           <p className="mt-[24px] font-fam text-[15px] font-semibold">
             Next of Kin
           </p>
           <table>
             <tr>
               <td>Name:</td>
-              <td>Emmanuel John</td>
+              <td>{loading ? user?.kin?.nextofkin : "Name"}</td>
             </tr>
             <tr>
               <td>Phone:</td>
-              <td>+2347034192605</td>
+              <td>{loading ? user?.kin?.kin_phone : "Phone"}</td>
             </tr>
             <tr>
               <td>Address:</td>
-              <td>25 Stadium road Port Harcourt</td>
+              <td>{loading ? user?.kin?.kin_address : "Address"}</td>
             </tr>
           </table>
         </div>
