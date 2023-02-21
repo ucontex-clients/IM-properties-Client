@@ -33,6 +33,7 @@ export default function InspectionBooking({ takeColor }) {
             .then((e) => e.json())
             .then(res => {
                 setBooking(res)
+                console.log(booking);
             })
     };
 
@@ -57,11 +58,11 @@ export default function InspectionBooking({ takeColor }) {
     return (<>
         {booking?.length === 0 ? <div className="mx-2   ">No Booking Yet</div> : booking?.map((e, i) => {
             console.log(e)
-            let year = new Date(e.date).getFullYear();
-            let day = new Date(e.date).getDate();
-            let month = new Date(e.date).getMonth() + 1;
+            let year = new Date(e.Date).getFullYear();
+            let day = new Date(e.Date).getDate();
+            let month = new Date(e.Date).getMonth() + 1;
             let date = year + "/" + month + "/" + day;
-            let id = e._id.substring(e._id.length, e._id.length - 4)
+            let id = e.ID.substring(e.ID.length, e.ID.length - 4)
 
             if (i % 2 === 0) {
                 background = { backgroundColor: '#F5F5F5' }
@@ -72,10 +73,10 @@ export default function InspectionBooking({ takeColor }) {
                 <ul className="inspection-item-ul mx-2" style={background}>
                     <li><p style={{ color: '#6C6C6C' }}>IM {id}</p></li>
                     <li><p>{e.Property}</p></li>
-                    <li><p>{e.location}</p></li>
+                    <li><p>{e.Location}</p></li>
                     <li><p>{date} {"  "} {e.time}</p></li>
-                    <li><p>{e.status}</p></li>
-                    <li><div className="reschedule-cancel-wrapper"><p>Reschedule</p> <p onClick={() => cancelBooking(e._id)}>Cancel</p></div></li>
+                    <li><p>{e.Status}</p></li>
+                    <li><div className="reschedule-cancel-wrapper"><p>Reschedule</p> <p onClick={() => cancelBooking(e.ID)}>Cancel</p></div></li>
                 </ul>
             </>
             )
