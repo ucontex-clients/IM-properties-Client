@@ -10,6 +10,7 @@ import {
   Button,
   Select,
 } from "@chakra-ui/react";
+import Carousel from 'react-bootstrap/Carousel';
 
 import {
   PropertyViewSection,
@@ -19,6 +20,7 @@ import {
   News,
   PropertyView,
   Layout,
+  MobileTestimonial,
   ChooseDate,
 } from "../components";
 import { Link } from "react-router-dom";
@@ -61,19 +63,58 @@ export default function HomePage() {
       <TopSide />
       <Layout>
         <div
-          className="home-image-wrapper h-[50vh] md:h-[80vh]"
-          style={{ overflow: "hidden" }}
+          className="home-image-wrapper h-[100%] md:h-[100%]"
         >
-          <img src="./images/newHome.png" alt="home cover"></img>
-          <div className="background" style={{ paddingLeft: "64px" }}>
-            <h1 style={{ marginTop: "160px" }}>
-              We are <span style={{ color: "#FF1212" }}>IM</span> Properties
-            </h1>
-            <p style={{ marginTop: "0.5em" }}>
-              you can own A Property Without Stress <br />
-              and become a landlord with peace of mind
-            </p>
-            <div
+          {/*<img src="./images/newHome.png" alt="home cover"></img>*/}
+          <div className="slider-block flex md:w-[80%] w-[70%] justify-center mt-[30px] mb-[50px]">
+            <Carousel fade interval={5000}>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/newHome.png"
+                  alt="First slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/newHome.png"
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/newHome.png"
+                  alt="Third slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/newHome.png"
+                  alt="Fourth slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="./images/newHome.png"
+                  alt="Fifth slide"
+                />
+              </Carousel.Item>
+            </Carousel>
+          </div>
+          <div className="background full_ah text-center">
+              <h1>
+                Leading Real Estate Company In Nigeria {/*<span style={{ color: "#FF1212" }}>IM</span> Properties*/}
+              </h1>
+              <p style={{ marginTop: "2em", lineHeight: "25px" }}>
+                Own A Property Without Stress <br />
+                Across The Country
+              </p>
+            
+            {/*<div
               className="flex"
               style={{ marginTop: "68px", columnGap: "39px" }}
             >
@@ -85,28 +126,29 @@ export default function HomePage() {
                   <Button className="inline-block mr-[39px]">CONTACT US</Button>
                 </a>
               </div>
-            </div>
+            </div>*/}
           </div>
-        </div>
-
-        <div className="full_ah container home-button2 flex justify-center pt-[35px] bg-white md:hidden">
-          <button className="inline-block mr-[39px]" onClick={onOpen}>
-            BOOK AN INSPECTION
-          </button>
-          <a href="#touch">
-            <button>CONTACT US</button>
-          </a>
-        </div>
-
-        <div className="mobile_ah container">
-          <div className="home-button3 flex justify-center pt-[35px] bg-white md:hidden">
-            <button className="inline-block mr-[39px]" onClick={onOpen}>
-              BOOK AN INSPECTION
+          <div className="background text-center mobile_ah">
+            <h1 style={{ lineHeight: "30px", fontSize: "25px", fontFamily: "Montserrat", fontStyle: "normal", color: "#fff", fontWeight: 600 }}>
+              Leading Real Estate <br></br>Company In Nigeria {/*<span style={{ color: "#FF1212" }}>IM</span> Properties*/}
+            </h1>
+            <p style={{ marginTop: "2em", lineHeight: "25px", fontSize: "15px", fontFamily: "Montserrat", fontStyle: "normal", color: "#fff", fontWeight: 400 }}>
+              Own A Property Without Stress <br />
+              Across The Country
+            </p>
+          </div>
+          <div className="full_ah container home-button2 flex justify-center pt-[35px] pb-[30px] bg-black">
+            <button className="inline-block mr-[0px]" onClick={onOpen}>
+              BOOK FREE INSPECTION
             </button>
-            <a href="#touch">
-              <button>CONTACT US</button>
-            </a>
+          </div>
 
+          <div className="mobile_ah container">
+            <div className="home-button3 flex justify-center pt-[35px] pb-[30px] bg-black md:hidden">
+              <button className="inline-block mr-[0px]" onClick={onOpen}>
+                BOOK FREE INSPECTION
+              </button>
+            </div>
           </div>
         </div>
         <div className="section-container py-[28px] px-[19px] md:px-[65px] md:py-[85px]">
@@ -310,24 +352,26 @@ export default function HomePage() {
           ></img>
           <div
             className="py-[57px] px-[0px] md:px-[138px] top-0 left-0 w-full h-full text-center"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
+            style={{ backgroundColor: "#272733" }}
           >
             <h2 className="text-[25px] text-white font-fam font-bold">
               Testimonials
             </h2>
-            <div className="nav-div md:hidden" style={{ left: "40px" }}>
+            {/*<div className="nav-div md:hidden" style={{ left: "40px" }}>
               <MdKeyboardArrowLeft style={{ fontSize: "24px" }} />
             </div>
             <div className="nav-div md:hidden" style={{ right: "40px" }}>
               <MdKeyboardArrowRight style={{ fontSize: "24px" }} />
-            </div>
+              </div>*/}
 
-            <div className="md:grid gap-y-[13px] md:grid-cols-3 gap-x-[0px] mt-[93px]">
+            <div className="full_ah md:grid gap-y-[13px] md:grid-cols-3 gap-x-[0px] mt-[93px]">
               <Testinonials />
               <Testinonials />
               <Testinonials />
             </div>
-
+            <div className="mobile_ah mt-[63px] flex justify-center">
+              <MobileTestimonial />
+            </div>
             <div className="hidden md:block">
               <button
                 className="font-fam bg-mine text-white text-[15px] px-[16px] py-[10px] rounded font-medium mt-[79px]"
@@ -440,7 +484,7 @@ export default function HomePage() {
               <div>
                 <label
                   htmlFor="name"
-                  className="font-fam text-[18px] font-semibold text-light"
+                  className="font-fam text-[18px] font-semibold text-dark"
                 >
                   Name:
                 </label>
@@ -454,7 +498,7 @@ export default function HomePage() {
               <div className="mt-[18px]">
                 <label
                   htmlFor="name"
-                  className="font-fam text-[18px] font-semibold text-light"
+                  className="font-fam text-[18px] font-semibold text-black"
                 >
                   Email:
                 </label>
@@ -468,7 +512,7 @@ export default function HomePage() {
               <div className="mt-[18px]">
                 <label
                   htmlFor="name"
-                  className="font-fam text-[18px] font-semibold text-light"
+                  className="font-fam text-[18px] font-semibold text-black"
                 >
                   Phone:
                 </label>
@@ -484,7 +528,7 @@ export default function HomePage() {
               <div>
                 <label
                   htmlFor="name"
-                  className="font-fam text-[18px] font-semibold text-light"
+                  className="font-fam text-[18px] font-semibold text-black"
                 >
                   Message:
                 </label>

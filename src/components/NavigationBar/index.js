@@ -9,10 +9,14 @@ export function NavigationBar() {
 
   const fontStyle1 = {
     fontWeight: 500,
+    color: "#fff"
   };
   const fontStyle2 = {
     fontWeight: 800,
     color: "#FF2442",
+  };
+  const fontStyle3 = {
+    fontWeight: 500,
   };
 
   const [show, setShow] = useState("none");
@@ -98,9 +102,9 @@ export function NavigationBar() {
 
       <button className="nav-button item-center">Become an ESP</button>
 
-      <div className="">
+      <div className="mobile-container">
         <div className="mobile_ah container">
-          <GiHamburgerMenu style={{ fontSize: "40px" }} onClick={() => hide()} />
+          <GiHamburgerMenu style={{ fontSize: "40px", color: "#fff" }} onClick={() => hide()} />
 
           <div className="" style={{
             display: show, position: "absolute", background: "white",
@@ -108,7 +112,7 @@ export function NavigationBar() {
           }}>
             <Link
               to="/"
-              style={page === "/" ? fontStyle2 : fontStyle1}
+              style={page === "/" ? fontStyle2 : fontStyle3}
               onClick={(e) => { setShow("none") }}
             >
               Home
@@ -117,7 +121,7 @@ export function NavigationBar() {
             <br />
             <Link
               to="/about"
-              style={page === "/about" ? fontStyle2 : fontStyle1}
+              style={page === "/about" ? fontStyle2 : fontStyle3}
               onClick={(e) => { setShow("none") }}
             >
               About Us
@@ -126,7 +130,7 @@ export function NavigationBar() {
             <br />
             <Link
               to="/what"
-              style={page === "/what" ? fontStyle2 : fontStyle1}
+              style={page === "/what" ? fontStyle2 : fontStyle3}
               onClick={(e) => { setShow("none") }}
             >
               What we do
@@ -135,7 +139,7 @@ export function NavigationBar() {
             <br />
             <Link
               to="/properties"
-              style={page === "/properties" ? fontStyle2 : fontStyle1}
+              style={page === "/properties" ? fontStyle2 : fontStyle3}
               onClick={(e) => { setShow("none") }}
             >
               Our Properties
@@ -146,7 +150,7 @@ export function NavigationBar() {
               found ? <div>
                 <Link
                   to="/account/login"
-                  style={page === "/account/login" ? fontStyle2 : fontStyle1}
+                  style={page === "/account/login" ? fontStyle2 : fontStyle3}
                   onClick={(e) => { setShow("none") }}
                 >
                   Login
@@ -155,7 +159,7 @@ export function NavigationBar() {
                 <br />
                 <Link
                   to="/account/register"
-                  style={page === "/account/register" ? fontStyle2 : fontStyle1}
+                  style={page === "/account/register" ? fontStyle2 : fontStyle3}
                   onClick={(e) => { setShow("none") }}
                 >
                   Register
@@ -163,7 +167,7 @@ export function NavigationBar() {
               </div> : <div>
                 <Link
                   to="/dashboard/home"
-                  style={page === "/dashboard/home" ? fontStyle2 : fontStyle1}
+                  style={page === "/dashboard/home" ? fontStyle2 : fontStyle3}
                   onClick={(e) => { setShow("none") }}
                 >
                   Dashboard

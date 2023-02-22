@@ -36,12 +36,13 @@ export function Nav1({ signIn, signUp }) {
         className="navigation-buttons-wrapper"
         onClick={() => setShowModal(true)}
       >
-        <BiUserCircle style={{ fontSize: "30px" }} />
+        <BiUserCircle style={{ fontSize: "30px", color:"#fff" }} />
         {found ? <p
           style={{
             fontFamily: "Montserrat",
             fontWeight: "500",
             fontSize: "15px",
+            color: "#fff"
           }}
         >
           Account
@@ -53,6 +54,7 @@ export function Nav1({ signIn, signUp }) {
                   fontFamily: "Montserrat",
                   fontWeight: "500",
                   fontSize: "15px",
+                  color: "#fff"
                 }}
               >
                 Dashboard
@@ -63,6 +65,7 @@ export function Nav1({ signIn, signUp }) {
                 fontFamily: "Montserrat",
                 fontWeight: "500",
                 fontSize: "15px",
+                color: "#fff"
               }}
               onClick={() => logout()}
             >
