@@ -26,7 +26,7 @@ export function VideoSection() {
     };
     return (
         <div className="all-video-wrapper section1" style={{ backgroundColor: '#fff' }}>
-            <h2 className="pl-[35px] mb-[34px]">Watch Our Video</h2>
+            <h2 className="pl-[20px] mb-[13px] md:mb-[34px]">Watch Our Video</h2>
             <div style={{ position: 'relative' }}>
                 <SiteVideo videoLink="./images/video1.mp4" />
                 <div className="full_ah container py-[38px] px-[41px] flex video-bottom" style={{ justifyContent: 'space-between' }}>

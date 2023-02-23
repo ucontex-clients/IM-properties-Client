@@ -3,11 +3,11 @@ import React from "react";
 export function EachDashboardTransaction() {
   return (
     <ul className="transaction-wrapper px-[20px] py-[16px]">
-      <li className="font-fam text-[15px] font-medium text-light">
+      <li className="font-fam text-[15px] font-medium text-black">
         Payment CGE -005 <br />
         IM-27189-1659905498
       </li>
-      <li className="font-fam text-[15px] font-medium text-light">
+      <li className="font-fam text-[15px] font-medium text-black">
         Aug 8 2022. 9AM
       </li>
       <li></li>

@@ -66,44 +66,36 @@ export default function HomePage() {
           className="home-image-wrapper h-[100%] md:h-[100%]"
         >
           {/*<img src="./images/newHome.png" alt="home cover"></img>*/}
-          <div className="slider-block flex md:w-[80%] w-[70%] justify-center mt-[30px] mb-[50px]">
-            <Carousel fade interval={5000}>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="./images/newHome.png"
-                  alt="First slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="./images/newHome.png"
-                  alt="Second slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="./images/newHome.png"
-                  alt="Third slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="./images/newHome.png"
-                  alt="Fourth slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src="./images/newHome.png"
-                  alt="Fifth slide"
-                />
-              </Carousel.Item>
-            </Carousel>
+          <div className="slider-block flex md:w-[80%] md:h-[40%] w-[312px] h-[190px] justify-center mt-[30px] mb-[35px] md:mb-[50px]">
+            <div id="carouselExampleIndicators" className="carousel slide carouselContainer" data-ride="carousel">
+
+              <div class="carousel-inner flex">
+                <div class="carousel-item active">
+                  <img src="./images/newHome.png" class="d-block w-100" alt="First Slide" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/build1.png" class="d-block w-100" alt="Second slide" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/build2.png" class="d-block w-100" alt="Third slide" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/build3.png" class="d-block w-100" alt="Fourth slide" />
+                </div>
+                <div class="carousel-item">
+                  <img src="./images/build4.png" class="d-block w-100" alt="Fifth slide" />
+                </div>
+              </div>
+              <div className="forCarousel flex mt-[70px]">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                </ol>
+              </div>
+            </div>
           </div>
           <div className="background full_ah text-center">
               <h1>
@@ -138,8 +130,8 @@ export default function HomePage() {
             </p>
           </div>
           <div className="full_ah container home-button2 flex justify-center pt-[35px] pb-[30px] bg-black">
-            <button className="inline-block mr-[0px]" onClick={onOpen}>
-              BOOK FREE INSPECTION
+            <button  className="inline-block mr-[0px]" onClick={onOpen}>
+              <span style={{ fontVariant: 'small-caps' }}>BOOK FREE INSPECTION</span>
             </button>
           </div>
 
@@ -154,7 +146,7 @@ export default function HomePage() {
         <div className="section-container py-[28px] px-[19px] md:px-[65px] md:py-[85px]">
           <div>
             <section className="section1">
-              <h2>About IM Properties</h2>
+              <h2>About Us</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
@@ -165,15 +157,14 @@ export default function HomePage() {
                 auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
                 Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor
                 urna. Curabitur vel bibendum lorem. Morbi convallis convallis
-                diam sit amet lacinia. Aliquam in elementum tellus.{" "}
+                diam sit amet lacinia.{" "}<Link
+                  to="/about"
+                  className="ml-[5px] text-danger"
+                  style={{fontWeight: 600, fontVariant: 'small-caps'}}
+                >
+                  Learn More
+                </Link>
               </p>
-              <Link
-                to="/about"
-                className="p-2 rounded text-white text-[15px] px-[16px] py-[10px] mt-[30px]"
-                style={{ backgroundColor: "#FF1212" }}
-              >
-                LEARN MORE
-              </Link>
             </section>
             <section className="section1 mt-[71px]">
               <h2>What we do</h2>
@@ -195,7 +186,7 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <Link to="/about#estate">Read More</Link>
+                      <Link to="/about#estate"></Link>
                     </p>
                   </div>
 
@@ -216,7 +207,7 @@ export default function HomePage() {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
                     </p>
-                    <Link to="/about#property">Read More</Link>
+                    <Link to="/about#property"></Link>
                   </div>
                 </div>
                 <div className="ml-[34px] pl-[34px] second-container">
@@ -236,7 +227,7 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <Link to="/about#buy">Read More</Link>
+                      <Link to="/about#buy"></Link>
                     </p>
                   </div>
 
@@ -256,7 +247,7 @@ export default function HomePage() {
                     <p className="mt-[20px]">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <Link to="/about#building">Read More</Link>
+                      <Link to="/about#building"></Link>
                     </p>
                   </div>
                 </div>
@@ -282,10 +273,10 @@ export default function HomePage() {
           <PropertyViewSection />
           <div className="grid place-items-center mt-[56px]">
             <button
-              className="p-2 rounded text-white text-[15px] px-[16px] py-[10px]"
-              style={{ backgroundColor: "#FF1212" }}
+              className="pl-[35.232px] pr-[35.232px] rounded text-white text-[13px] px-[16px] py-[10.25px]"
+              style={{ backgroundColor: "#FF1212", fontVariant: "small-caps" }}
             >
-              <Link to="/properties">VIEW MORE</Link>
+              <Link to="/properties">View More</Link>
             </button>
           </div>
         </div>
@@ -334,10 +325,10 @@ export default function HomePage() {
             </p>
             <div className="grid place-items-center mt-[56px]">
               <button
-                className="p-2 rounded text-white text-[15px] px-[16px] py-[10px]"
-                style={{ backgroundColor: "#FF1212" }}
+                className="pl-[42.756px] pr-[42.756px] rounded text-white text-[15px] px-[16px] py-[11.25px]"
+                style={{ backgroundColor: "#FF1212", fontVariant: "small-caps" }}
               >
-                <Link to="/properties">BECOME AN ESP</Link>
+                <Link to="/properties">Become An Esp</Link>
               </button>
             </div>
           </div>
@@ -430,7 +421,7 @@ export default function HomePage() {
             }
           </div>
           <div
-            className="flex items-center rounded-[8px] bg-mine py-[6px] px-[9px] gap-x-[5px] mt-[21px] cursor-pointer"
+            className="flex items-center rounded-[8px] bg-mine py-[7.5px] px-[9px] gap-x-[5px] mt-[21px] cursor-pointer"
             style={{ width: "fit-content", margin: "auto" }}
           >
             <Link
@@ -484,7 +475,8 @@ export default function HomePage() {
               <div>
                 <label
                   htmlFor="name"
-                  className="font-fam text-[18px] font-semibold text-dark"
+                  className="font-fam text-[18px] font-semibold"
+                  style={{color: "#6c6c6c", fontWeight: 400}}
                 >
                   Name:
                 </label>
@@ -498,7 +490,8 @@ export default function HomePage() {
               <div className="mt-[18px]">
                 <label
                   htmlFor="name"
-                  className="font-fam text-[18px] font-semibold text-black"
+                  className="font-fam text-[18px] font-semibold"
+                  style={{ color: "#6c6c6c", fontWeight: 400 }}
                 >
                   Email:
                 </label>
@@ -512,7 +505,8 @@ export default function HomePage() {
               <div className="mt-[18px]">
                 <label
                   htmlFor="name"
-                  className="font-fam text-[18px] font-semibold text-black"
+                  className="font-fam text-[18px] font-semibold"
+                  style={{ color: "#6c6c6c", fontWeight: 400 }}
                 >
                   Phone:
                 </label>
@@ -528,7 +522,8 @@ export default function HomePage() {
               <div>
                 <label
                   htmlFor="name"
-                  className="font-fam text-[18px] font-semibold text-black"
+                  className="font-fam text-[18px] font-semibold"
+                  style={{ color: "#6c6c6c", fontWeight: 400 }}
                 >
                   Message:
                 </label>
@@ -539,7 +534,9 @@ export default function HomePage() {
                   style={{ minHeight: "215px" }}
                 ></textarea>
               </div>
-              <button className="font-fam bg-mine text-white text-[20px] font-medium block mt-[36px] px-[15px] py-[10px] rounded-[5px] message-button">
+              <button 
+              className="font-fam bg-mine text-white text-[20px] font-medium block mt-[36px] px-[32.29px] py-[12.5px] rounded-[5px] message-button"
+              style={{fontVariant: "all-small-caps"}}>
                 SUBMIT
               </button>
             </div>
