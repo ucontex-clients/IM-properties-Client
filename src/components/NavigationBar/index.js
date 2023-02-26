@@ -9,7 +9,7 @@ export function NavigationBar() {
 
   const fontStyle1 = {
     fontWeight: 500,
-    color: "#fff"
+    color: "#000"
   };
   const fontStyle2 = {
     fontWeight: 800,
@@ -99,8 +99,13 @@ export function NavigationBar() {
           </li>
         </ul>
       </div>
-
-      <button className="nav-button item-center">Become an ESP</button>
+      <Link 
+      to="/ESP"
+      onClick={(e) => {}}
+      >
+        <button className="nav-button item-center">Become an ESP</button>
+      </Link>
+      
 
       <div className="mobile-container">
         <div className="mobile_ah container">

@@ -28,34 +28,58 @@ export default function About() {
         </div>
         <div className="about-right">
           <h2 className="font-fam text-[25px] font-bold mb-[27px]">
+            Invest In IM Properties
+          </h2>
+          <p className="story text-black">
+            Land & landed property investment with us guarantees you, 
+            Instant allocation, free inspection, no government fee, no 
+            agent fee, no bush entry, free survey,  complimentary deed 
+            of conveyance and more.
+          </p>
+          <h2 className="font-fam text-[25px] font-bold mt-[30px] mb-[27px]">
             About IM Properties
           </h2>
-          <p className="story text-light">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+          <p className="story text-black">
+            IM PROPERTIES has inscribed on her brand, Luxury with peace of 
+            mind and  affordable deliverables in Real Estate development 
+            over the years in Nigeria.
+
           </p>
-          <p className="story mt-[30px] text-light">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+          <p className="story mt-[30px] text-black">
+            Our  exciting Team is poised at delivering genuine property
+            that guarantees your peace of mind during purchase, sale,  and
+            leasing of land and landed property. We deliver positive results
+            and high value for client through a mix of expert analysis, market
+            Knowledge talent and collaboration. 
           </p>
         </div>
       </div>
-
+      <div className="text-center" style={{ backgroundColor: "#F7F7FB"}}>
+        <div className="px-[61px] py-[65.5px] md:py-[106px] md:px-[450px]">
+          <h3 className="font-fam text-[18px] font-bold">
+            VISION
+          </h3>
+          <p className="font-fam text-[15px] mt-[10px] md:mt-[30px]">
+            To be the no.1 real estate company in sub-sahara Africa and the world.
+          </p>
+          <h3 className="font-fam text-[18px] font-bold mt-[91px]">
+            MISION
+          </h3>
+          <p className="font-fam text-[15px] mt-[10px] md:mt-[30px]">
+            To bring the real estate dream of many  into reality with our total commitment to affordable
+            housing and multi payment plans and support.
+          </p>
+          <h3 className="font-fam text-[18px] font-bold mt-[91px]">
+            OUR CORE VALUE
+          </h3>
+          <p className="font-fam text-[15px] mt-[10px] md:mt-[30px]">
+            Integrity | Trust | Affordability
+          </p>
+        </div>
+      </div>
       <section
         className="px-[22px] md:px-[70px] pt-[42px] pb-[90px]"
-        style={{ backgroundColor: "#F7F7FB" }}
+        style={{ backgroundColor: "#fff" }}
       >
         <h3 className="font-fam text-[25px] font-bold">What we do</h3>
         <p className="font-fam text-[15px] font-medium mt-[8px]">
@@ -74,7 +98,7 @@ export default function About() {
                 <FaUsers style={{ color: "#6C6C6C" }} />
               </div>
               <p className="doings" id="estate">
-                Estate Development
+                Real Estate Advisory
               </p>
             </div>
             <div className="mt-[38px]">
@@ -91,18 +115,9 @@ export default function About() {
                 ></img>
               </div>
               <HashScroll hash="#estate">
-                <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.
-                  Maecenas eget condimentum velit, sit amet feugiat lectus.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos. Praesent auctor purus luctus
-                  enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus
-                  ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel
-                  bibendum lorem. Morbi convallis convallis diam sit amet
-                  lacinia. Aliquam in elementum tellus.
+                <p className="font-fam mt-[17px] text-[15px] font-medium text-black text-justify">
+                  As a leading firm in the industry. We draw from our vast 
+                  and deep knowledge of the Real Estate industry to give ...
                 </p>
               </HashScroll>
             </div>
@@ -136,18 +151,10 @@ export default function About() {
                 ></img>
               </div>
               <HashScroll hash="#buy">
-                <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.
-                  Maecenas eget condimentum velit, sit amet feugiat lectus.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos. Praesent auctor purus luctus
-                  enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus
-                  ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel
-                  bibendum lorem. Morbi convallis convallis diam sit amet
-                  lacinia. Aliquam in elementum tellus.
+                <p className="font-fam mt-[17px] text-[15px] font-medium text-black text-justify">
+                  Every property Marketed by IM PROPERTIES  are fully owned by us. We do due diligence 
+                  during the acquisition stage, prepare the sites before we put them out for sales.
+                  We also offer flexible payment plans and incentives to make acquiring your property easier.
                 </p>
               </HashScroll>
             </div>
@@ -182,17 +189,11 @@ export default function About() {
                   }}
                 ></img>
               </div>
-              <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Praesent
-                auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
-                Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor
-                urna. Curabitur vel bibendum lorem. Morbi convallis convallis
-                diam sit amet lacinia. Aliquam in elementum tellus.
+              <p className="font-fam mt-[17px] text-[15px] font-medium text-black text-justify">
+                We don't only sell lands, We bring to bear our experience 
+                and expertise in developing luxury and state-of-the-art 
+                property for sale and for rent.
+
               </p>
             </div>
           </div>
@@ -224,17 +225,12 @@ export default function About() {
                   }}
                 ></img>
               </div>
-              <p className="font-fam mt-[17px] text-[15px] font-medium text-light text-justify">
+              <p className="font-fam mt-[17px] text-[15px] font-medium text-black text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
                 metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
                 interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Praesent
-                auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
-                Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor
-                urna. Curabitur vel bibendum lorem. Morbi convallis convallis
-                diam sit amet lacinia. Aliquam in elementum tellus.
+                sit amet feugiat lectus.
               </p>
             </div>
           </div>

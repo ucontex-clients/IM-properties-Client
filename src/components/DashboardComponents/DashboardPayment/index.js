@@ -216,7 +216,7 @@ export function DashboardPayment() {
     </div>
 
 
-    <div className="mobile_ah bg-white px-[33px]">
+    <div className="mobile_ah bg-white px-[33px]"> 
       <table className="payment-table">
         {
           data.map((e, i) => {

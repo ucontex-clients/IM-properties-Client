@@ -35,6 +35,7 @@ import Login from "./pages/login";
 import EditProfile from "./pages/EditProfile";
 import "./assets/css/mobile.css";
 import FundWalletPage from "./pages/DashboardWalletPage";
+import EspPage from "./pages/EspPage";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <Routes>
         <Route path={"/"} element={<HomePage />} />
         <Route path={"/account/register"} element={<Signup />} />
+        <Route path={"/ESP"} element={<EspPage />} />
         <Route path={"/account/login"} element={<Login />} />
         {/* <Route path={"/login"} element={<Signin />} /> */}
         <Route path={"/properties"} element={<AllProperties />} />

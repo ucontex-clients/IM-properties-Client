@@ -36,25 +36,25 @@ export function Nav1({ signIn, signUp }) {
         className="navigation-buttons-wrapper"
         onClick={() => setShowModal(true)}
       >
-        <BiUserCircle style={{ fontSize: "30px", color:"#fff" }} />
+        <BiUserCircle style={{ fontSize: "30px", color:"#000" }} />
         {found ? <p
           style={{
             fontFamily: "Montserrat",
             fontWeight: "500",
             fontSize: "15px",
-            color: "#fff"
+            color: "#000"
           }}
         >
           Account
         </p> :
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "30px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "30px", marginRight: "30px" }}>
             <Link to="/dashboard/home">
               <p
                 style={{
                   fontFamily: "Montserrat",
                   fontWeight: "500",
                   fontSize: "15px",
-                  color: "#fff"
+                  color: "#000"
                 }}
               >
                 Dashboard
@@ -65,7 +65,7 @@ export function Nav1({ signIn, signUp }) {
                 fontFamily: "Montserrat",
                 fontWeight: "500",
                 fontSize: "15px",
-                color: "#fff"
+                color: "#000"
               }}
               onClick={() => logout()}
             >

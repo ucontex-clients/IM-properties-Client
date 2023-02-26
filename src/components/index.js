@@ -7,6 +7,7 @@ export * from "./SectionTabs";
 export * from "./SectionHeading";
 export * from "./Testimonials";
 export * from "./MobileTestimonial";
+export * from "./Esp";
 export * from "./ForSale";
 export * from "./Categories";
 export * from "./Feedback";

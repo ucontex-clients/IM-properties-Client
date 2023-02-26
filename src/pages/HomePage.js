@@ -10,7 +10,6 @@ import {
   Button,
   Select,
 } from "@chakra-ui/react";
-import Carousel from 'react-bootstrap/Carousel';
 
 import {
   PropertyViewSection,
@@ -63,27 +62,27 @@ export default function HomePage() {
       <TopSide />
       <Layout>
         <div
-          className="home-image-wrapper h-[100%] md:h-[100%]"
+          className="home-image-wrapper h-[100%] md:h-[600px]"
         >
-          {/*<img src="./images/newHome.png" alt="home cover"></img>*/}
-          <div className="slider-block flex md:w-[80%] md:h-[40%] w-[312px] h-[190px] justify-center mt-[30px] mb-[35px] md:mb-[50px]">
+          <div className="layer full_ah"></div>
+          <div className="mobile_ah slider-block flex w-[312px] h-[190px] justify-center ml-[56.59px] mr-[60px] mt-[30px] mb-[35px]">
             <div id="carouselExampleIndicators" className="carousel slide carouselContainer" data-ride="carousel">
 
               <div class="carousel-inner flex">
                 <div class="carousel-item active">
-                  <img src="./images/newHome.png" class="d-block w-100" alt="First Slide" />
+                  <img src="./images/newHome.png" class="d-block w-100" width="312px" height="159px" alt="First Slide" />
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/build1.png" class="d-block w-100" alt="Second slide" />
+                  <img src="./images/build1.png" class="d-block w-100" width="312px" height="159px" alt="Second slide" />
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/build2.png" class="d-block w-100" alt="Third slide" />
+                  <img src="./images/build2.png" class="d-block w-100" width="312px" height="159px" alt="Third slide" />
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/build3.png" class="d-block w-100" alt="Fourth slide" />
+                  <img src="./images/build3.png" class="d-block w-100" width="312px" height="159px" alt="Fourth slide" />
                 </div>
                 <div class="carousel-item">
-                  <img src="./images/build4.png" class="d-block w-100" alt="Fifth slide" />
+                  <img src="./images/build4.png" class="d-block w-100" width="312px" height="159px" alt="Fifth slide" />
                 </div>
               </div>
               <div className="forCarousel flex mt-[70px]">
@@ -97,16 +96,18 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="background full_ah text-center">
+          <div className="background full_ah ml-[64px] mt-[180px] mr-[720px]" style={{ position: "absolute"}}>
               <h1>
-                Leading Real Estate Company In Nigeria {/*<span style={{ color: "#FF1212" }}>IM</span> Properties*/}
+                We are <span style={{ color: "#FF1212" }}>IM</span> Properties
               </h1>
-              <p style={{ marginTop: "2em", lineHeight: "25px" }}>
-                Own A Property Without Stress <br />
-                Across The Country
+              <p style={{ marginTop: "2em", lineHeight: "2" }}>
+              Land & landed property investment with us guarantees you,
+              Instant allocation, free inspection, no government fee,
+              no agent fee, no bush entry, free survey,  complimentary
+              deed of conveyance and more.
               </p>
             
-            {/*<div
+            <div
               className="flex"
               style={{ marginTop: "68px", columnGap: "39px" }}
             >
@@ -114,26 +115,28 @@ export default function HomePage() {
                 <Button onClick={onOpen} className="inline-block mr-[39px]">
                   BOOK AN INSPECTION
                 </Button>
-                <a href="#touch">
-                  <Button className="inline-block mr-[39px]">CONTACT US</Button>
+                <a href="#touch" style={{ textDecoration: "none"}}>
+                  <Button className="inline-block mr-[39px]" style={{ backgroundColor: "white", color: "red"}}>CONTACT US</Button>
                 </a>
               </div>
-            </div>*/}
+            </div>
           </div>
-          <div className="background text-center mobile_ah">
+          <div className="background text-center mobile_ah mt-[46px] px-[23px]">
             <h1 style={{ lineHeight: "30px", fontSize: "25px", fontFamily: "Montserrat", fontStyle: "normal", color: "#fff", fontWeight: 600 }}>
-              Leading Real Estate <br></br>Company In Nigeria {/*<span style={{ color: "#FF1212" }}>IM</span> Properties*/}
+              Invest in IM Properties {/*<span style={{ color: "#FF1212" }}>IM</span> Properties*/}
             </h1>
             <p style={{ marginTop: "2em", lineHeight: "25px", fontSize: "15px", fontFamily: "Montserrat", fontStyle: "normal", color: "#fff", fontWeight: 400 }}>
-              Own A Property Without Stress <br />
-              Across The Country
+              Land & landed property investment with us guarantees you, 
+              Instant allocation, free inspection, no government fee, 
+              no agent fee, no bush entry, free survey,  complimentary 
+              deed of conveyance and more.
             </p>
           </div>
-          <div className="full_ah container home-button2 flex justify-center pt-[35px] pb-[30px] bg-black">
+          {/*<div className="full_ah container home-button2 flex justify-center pt-[35px] pb-[30px]">
             <button  className="inline-block mr-[0px]" onClick={onOpen}>
               <span style={{ fontVariant: 'small-caps' }}>BOOK FREE INSPECTION</span>
             </button>
-          </div>
+          </div>*/}
 
           <div className="mobile_ah container">
             <div className="home-button3 flex justify-center pt-[35px] pb-[30px] bg-black md:hidden">
@@ -146,18 +149,17 @@ export default function HomePage() {
         <div className="section-container py-[28px] px-[19px] md:px-[65px] md:py-[85px]">
           <div>
             <section className="section1">
-              <h2>About Us</h2>
+              <h2 className="mb-[12px] md:mb-[24px]">About IM Properties</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
-                metus nec fringilla accumsan, risus sem sollicitudin lacus, ut
-                interdum tellus elit sed risus. Maecenas eget condimentum velit,
-                sit amet feugiat lectus. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Praesent
-                auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
-                Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor
-                urna. Curabitur vel bibendum lorem. Morbi convallis convallis
-                diam sit amet lacinia.{" "}<Link
+                IM PROPERTIES has inscribed on her brand, Luxury with peace of 
+                mind and  affordable deliverables in Real Estate development over the years in Nigeria.
+              </p>
+              <p>
+                Our  exciting Team is poised at delivering genuine property that 
+                guarantees your peace of mind during purchase, sale,  and leasing of 
+                land and landed property. We deliver positive results and high value 
+                for client through a mix of expert analysis, market Knowledge talent 
+                and collaboration. {" "}<Link
                   to="/about"
                   className="ml-[5px] text-danger"
                   style={{fontWeight: 600, fontVariant: 'small-caps'}}
@@ -204,8 +206,9 @@ export default function HomePage() {
                       <p className="doings">Property Management</p>
                     </div>
                     <p className="mt-[20px]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
+                      We don't only sell lands, We bring to bear our experience and 
+                      expertise in developing luxury and state-of-the-art property 
+                      for sale and for rent. {" "}
                     </p>
                     <Link to="/about#property"></Link>
                   </div>
@@ -242,11 +245,11 @@ export default function HomePage() {
                       >
                         <FaUsers style={{ color: "#6C6C6C" }} />
                       </div>
-                      <p className="doings">Building Construction</p>
+                      <p className="doings">Real Estate Advisory</p>
                     </div>
                     <p className="mt-[20px]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
+                      As a leading firm in the industry. We draw from our vast and 
+                      deep knowledge of the Real Estate industry to give ...{" "}
                       <Link to="/about#building"></Link>
                     </p>
                   </div>
@@ -336,26 +339,25 @@ export default function HomePage() {
 
         <div className="relative">
           <img
-            src="./images/testimonial.png"
+            src="./images/newHome.png"
             alt="testimonial"
             style={{ width: "100%", height: "100%", zIndex: "-10" }}
             className="absolute"
           ></img>
           <div
-            className="py-[57px] px-[0px] md:px-[138px] top-0 left-0 w-full h-full text-center"
-            style={{ backgroundColor: "#272733" }}
+            className="py-[57px] px-[0px] md:px-[138px] top-0 left-0 w-full h-full text-center test-layer"
           >
             <h2 className="text-[25px] text-white font-fam font-bold">
               Testimonials
             </h2>
-            {/*<div className="nav-div md:hidden" style={{ left: "40px" }}>
+            <div className="nav-div" style={{ left: "40px" }}>
               <MdKeyboardArrowLeft style={{ fontSize: "24px" }} />
             </div>
-            <div className="nav-div md:hidden" style={{ right: "40px" }}>
+            <div className="nav-div" style={{ right: "40px" }}>
               <MdKeyboardArrowRight style={{ fontSize: "24px" }} />
-              </div>*/}
+              </div>
 
-            <div className="full_ah md:grid gap-y-[13px] md:grid-cols-3 gap-x-[0px] mt-[93px]">
+            <div className="full_ah md:grid gap-y-[13px] md:grid-cols-3 gap-x-[26px] mt-[93px]">
               <Testinonials />
               <Testinonials />
               <Testinonials />
