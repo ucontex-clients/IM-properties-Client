@@ -350,10 +350,10 @@ export default function HomePage() {
             <h2 className="text-[25px] text-white font-fam font-bold">
               Testimonials
             </h2>
-            <div className="nav-div" style={{ left: "40px" }}>
+            <div className="nav-div full_ah" style={{ left: "40px" }}>
               <MdKeyboardArrowLeft style={{ fontSize: "24px" }} />
             </div>
-            <div className="nav-div" style={{ right: "40px" }}>
+            <div className="nav-div full_ah" style={{ right: "40px" }}>
               <MdKeyboardArrowRight style={{ fontSize: "24px" }} />
               </div>
 

@@ -3,7 +3,7 @@ import React from "react";
 export function MobileTestimonial() {
     return (
     <div>
-        <div className="flex items-center gap-x-[20px] pl-[15px] mb-[20px]">
+        <div className="flex items-center gap-x-[20px] pl-[22px] mb-[20px]">
                 <div>
                   <img src="./images/user.png" alt="user"></img>
                 </div>
@@ -28,8 +28,8 @@ export function MobileTestimonial() {
                         <img src="./images/build4.png" class="d-block w-100" alt="Fifth slide" />
                     </div>
                 </div>
-                <div className="flex justify-center text-center">
-                    <p className="font-fam font-normal text-[15px] lh-[1.5] text-white mt-[20px]">
+                <div className="">
+                    <p className="font-fam font-normal text-[15px] lh-[1.5] text-white px-[10px] mt-[20px]">
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et{" "}
                     </p>
