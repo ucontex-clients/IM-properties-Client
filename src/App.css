@@ -5498,7 +5498,6 @@ background-color: #F5F5F5;
   font-weight: 400;
   line-height: 30px;
   color: #6c6c6c;
-  text-align: justify;
 }
 
 .our-doings a {
@@ -5839,13 +5838,23 @@ background-color: #F5F5F5;
   .our-doings {
     border: 1px solid #f5f5f5;
     border-radius: 5px;
-    padding: 16px;
-    margin-top: 16px;
+    padding: 0px;
+    margin-top: 0px;
+  }
+  .our-doings > p{
+    line-height: 20px;
+    word-spacing: 0px;
   }
 
   .doings-wrapper {
-    display: block;
+    display: flex;
   }
+    .doings {
+      font-family: Montserrat;
+      font-size: 13px;
+      font-weight: 600;
+      color: #000000;
+    }
 
   .background h1 {
     font-size: 20px;
@@ -5860,6 +5869,22 @@ background-color: #F5F5F5;
       justify-content: center;
       flex-wrap: wrap;
       position: relative;
+  }
+  .home-social{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    column-gap: 20px;
+    align-content: flex-end;
+    position: absolute;
+    margin-top: 30px;
+    right: 0;
+    margin-right: 10px;
+  }
+  .home-social div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .test-layer{
     background: #272733;
@@ -5900,7 +5925,7 @@ background-color: #F5F5F5;
   .property-view-main-wrapper {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 25px;
     position: relative;
     row-gap: 43px;
   }

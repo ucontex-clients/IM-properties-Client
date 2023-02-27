@@ -14,9 +14,11 @@ export function NavigationBar() {
   const fontStyle2 = {
     fontWeight: 800,
     color: "#FF2442",
+    fontSize: "18px"
   };
   const fontStyle3 = {
     fontWeight: 500,
+    fontSize: "18px"
   };
 
   const [show, setShow] = useState("none");
@@ -108,17 +110,18 @@ export function NavigationBar() {
       
 
       <div className="mobile-container">
-        <div className="mobile_ah container">
+        <div className="mobile_ah">
           <GiHamburgerMenu style={{ fontSize: "40px", color: "#fff" }} onClick={() => hide()} />
 
           <div className="" style={{
             display: show, position: "absolute", background: "white",
-            marginLeft: "-50px", padding: "20px", fontSize: "12px"
+            marginLeft: "-150px", padding: "20px", fontSize: "12px", width: "300px", marginTop: "10px"
           }}>
             <Link
               to="/"
               style={page === "/" ? fontStyle2 : fontStyle3}
               onClick={(e) => { setShow("none") }}
+              className="font-fam"
             >
               Home
             </Link>
@@ -128,6 +131,7 @@ export function NavigationBar() {
               to="/about"
               style={page === "/about" ? fontStyle2 : fontStyle3}
               onClick={(e) => { setShow("none") }}
+              className="font-fam"
             >
               About Us
             </Link>
@@ -137,6 +141,7 @@ export function NavigationBar() {
               to="/what"
               style={page === "/what" ? fontStyle2 : fontStyle3}
               onClick={(e) => { setShow("none") }}
+              className="font-fam"
             >
               What we do
             </Link>
@@ -146,6 +151,7 @@ export function NavigationBar() {
               to="/properties"
               style={page === "/properties" ? fontStyle2 : fontStyle3}
               onClick={(e) => { setShow("none") }}
+              className="font-fam"
             >
               Our Properties
             </Link>
@@ -157,6 +163,7 @@ export function NavigationBar() {
                   to="/account/login"
                   style={page === "/account/login" ? fontStyle2 : fontStyle3}
                   onClick={(e) => { setShow("none") }}
+                  className="font-fam"
                 >
                   Login
                 </Link>
@@ -166,6 +173,7 @@ export function NavigationBar() {
                   to="/account/register"
                   style={page === "/account/register" ? fontStyle2 : fontStyle3}
                   onClick={(e) => { setShow("none") }}
+                  className="font-fam"
                 >
                   Register
                 </Link>
@@ -174,6 +182,7 @@ export function NavigationBar() {
                   to="/dashboard/home"
                   style={page === "/dashboard/home" ? fontStyle2 : fontStyle3}
                   onClick={(e) => { setShow("none") }}
+                    className="font-fam"
                 >
                   Dashboard
                 </Link>
@@ -182,6 +191,8 @@ export function NavigationBar() {
                 <Link
                   to="/"
                   onClick={() => logout()}
+                  style={fontStyle3}
+                    className="font-fam"
                 >
                   Logout
                 </Link>

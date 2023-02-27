@@ -8,7 +8,7 @@ export default function PropertyDetails() {
   const [viewedImage, setViewedImage] = useState("/images/main1.png");
   let [property, setProperty] = useState({});
   let id = useParams();
-  const url = "https://im-property.herokuapp.com/api/property/single/" + id.id;
+  const url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/property/single/" + id.id;
 
 
   useEffect(() => {

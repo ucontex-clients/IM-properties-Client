@@ -28,7 +28,7 @@ export default function Signin() {
 
   let login = async () => {
     let data = values;
-    let url = "https://im-property.herokuapp.com/api/auth/login";
+    let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/auth/login";
     const response = await fetch(url, {
       headers: {
         "content-type": "application/json"

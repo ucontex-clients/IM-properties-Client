@@ -3,7 +3,7 @@ import { ForSale } from "../../ForSale";
 
 export function DashboardBuyProperty() {
   let [property, setProperty] = useState([]);
-  let url = "https://im-property.herokuapp.com/api/property/all";  //im-property.herokuapp.com
+  let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/property/all";  //im-property.herokuapp.com
 
   useEffect(() => {
     loadProperties();

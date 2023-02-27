@@ -14,8 +14,10 @@ export function Layout({ children }) {
         <div>
           <h3>About Us</h3>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut{" "}
+            IM PROPERTIES has inscribed on her brand, 
+            Luxury with peace of mind and  affordable 
+            deliverables in Real Estate development over 
+            the years in Nigeria....{" "}
           </p>
         </div>
 

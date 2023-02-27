@@ -20,7 +20,7 @@ export function ViewCustomer() {
 
   let getUser = () => {
     setLoading(false);
-    let url = "https://alert-battledress-boa.cyclic.app/api/user/single";
+    let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/user/single";
     let token = localStorage.getItem("imToken");
     fetch(url, {
       headers: {

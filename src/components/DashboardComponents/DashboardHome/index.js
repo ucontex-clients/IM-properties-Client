@@ -11,7 +11,7 @@ export function DashboardHome() {
   }, []);
 
   let getUser = () => {
-    let url = "https://im-property.herokuapp.com/api/user/single";
+    let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/user/single";
     let token = localStorage.getItem("imToken");
     fetch(url, {
       headers: {

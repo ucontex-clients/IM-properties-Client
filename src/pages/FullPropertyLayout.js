@@ -15,7 +15,7 @@ export default function FullPropertyLayout() {
   }, []);
 
   let id = useParams();
-  const [url] = useState("https://im-property.herokuapp.com/api/property/single/" + id.id);
+  const [url] = useState("https://nice-tan-harp-seal-wrap.cyclic.app/api/property/single/" + id.id);
   let [property, setProperty] = useState({});
 
   let loadProperty = () => {

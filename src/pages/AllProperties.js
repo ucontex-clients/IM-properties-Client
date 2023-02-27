@@ -5,7 +5,7 @@ import { useQuery } from "react-query";
 
 export default function AllProperties() {
   let [property, setProperty] = useState([]);
-  let url = "https://im-property.herokuapp.com/api/property/all";
+  let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/property/all";
 
   useEffect(() => {
     loadProperties();

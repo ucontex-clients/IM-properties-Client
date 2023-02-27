@@ -34,7 +34,7 @@ export function MobileTestimonial() {
                         eiusmod tempor incididunt ut labore et{" "}
                     </p>
                 </div>
-                <div className="forCarousel flex mt-[50px]">
+                <div className="forCarousel flex hidden mt-[50px]">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>

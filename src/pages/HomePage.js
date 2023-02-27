@@ -10,6 +10,10 @@ import {
   Button,
   Select,
 } from "@chakra-ui/react";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { FaFacebookF } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 
 import {
   PropertyViewSection,
@@ -46,7 +50,7 @@ export default function HomePage() {
     color: "#fff",
   };
   let [property, setProperty] = useState([]);
-  const [url, setUrl] = useState("https://im-property.herokuapp.com/api/property/all");
+  const [url, setUrl] = useState("https://nice-tan-harp-seal-wrap.cyclic.app/api/property/all");
 
   useEffect(() => {
     loadProperties();
@@ -65,7 +69,22 @@ export default function HomePage() {
           className="home-image-wrapper h-[100%] md:h-[600px]"
         >
           <div className="layer full_ah"></div>
-          <div className="mobile_ah slider-block flex w-[312px] h-[190px] justify-center ml-[56.59px] mr-[60px] mt-[30px] mb-[35px]">
+          <div className="home-social mobile_ah flex">
+            <div className="bg-white" style={{ width: "22px", height: "22px", borderRadius: "50%", border: "2px solid #fff"}}>
+              <FaFacebookF style={{ fontSize: "18px", color: "#000" }} />
+            </div>
+            <div className="mt-[38px]" style={{ width: "25px", height: "25px", borderRadius: "50%", border: "2px solid #fff" }}>
+              <AiOutlineTwitter style={{ fontSize: "18px", color: "#fff" }} />
+            </div>
+            <div className="mt-[38px]" style={{ width: "25px", height: "25px", borderRadius: "50%", border: "2px solid #000" }}>
+              <BsInstagram style={{ fontSize: "20px", color: "#fff", margin: "0px" }} />
+            </div>
+            <div className="mt-[280px]" style={{ width: "25px", height: "25px", borderRadius: "50%", border: "2px solid #000" }}>
+              <BsWhatsapp style={{ fontSize: "20px", color: "#fff", margin: "0px" }} />
+            </div>
+          </div>
+          <div className="mobile_ah slider-block flex w-[312px] h-[190px] justify-center ml-[56.59px] mr-[60px] mt-[30px] mb-[20px]">
+            
             <div id="carouselExampleIndicators" className="carousel slide carouselContainer" data-ride="carousel">
 
               <div class="carousel-inner flex">
@@ -85,7 +104,7 @@ export default function HomePage() {
                   <img src="./images/build4.png" class="d-block w-100" width="312px" height="159px" alt="Fifth slide" />
                 </div>
               </div>
-              <div className="forCarousel flex mt-[70px]">
+              <div className="forCarousel hidden flex mt-[70px]">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -121,7 +140,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="background text-center mobile_ah mt-[46px] px-[23px]">
+          <div className="background text-center mobile_ah px-[28px]">
             <h1 style={{ lineHeight: "30px", fontSize: "25px", fontFamily: "Montserrat", fontStyle: "normal", color: "#fff", fontWeight: 600 }}>
               Invest in IM Properties {/*<span style={{ color: "#FF1212" }}>IM</span> Properties*/}
             </h1>
@@ -159,53 +178,28 @@ export default function HomePage() {
                 guarantees your peace of mind during purchase, sale,  and leasing of 
                 land and landed property. We deliver positive results and high value 
                 for client through a mix of expert analysis, market Knowledge talent 
-                and collaboration. {" "}<Link
-                  to="/about"
-                  className="ml-[5px] text-danger"
-                  style={{fontWeight: 600, fontVariant: 'small-caps'}}
-                >
-                  Learn More
-                </Link>
+                and collaboration. {" "}
               </p>
             </section>
-            <section className="section1 mt-[71px]">
+            <section className="section1 mt-[35px] md:mt-[71px]">
               <h2>What we do</h2>
-              <div className="flex mt-[31px] doings-wrapper">
+              <div className="flex mt-[24px] md:mt-[31px] doings-wrapper">
                 <div>
-                  <div className="our-doings">
-                    <div className="flex items-center gap-x-[3px]">
+                  <div className="our-doings mr-[25px]">
+                    <div className="flex items-center gap-x-[3px] md:mt-[22px]">
                       <div
                         style={{
                           padding: "5px",
                           border: "1px dashed black",
                           borderRadius: "2px",
                         }}
-                      >
-                        <FaUsers style={{ color: "#6C6C6C" }} />
-                      </div>
-                      <p className="doings">Estate Development</p>
-                    </div>
-                    <p className="mt-[20px]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <Link to="/about#estate"></Link>
-                    </p>
-                  </div>
-
-                  <div className="our-doings">
-                    <div className="flex items-center gap-x-[3px] mt-[22px]">
-                      <div
-                        style={{
-                          padding: "5px",
-                          border: "1px dashed black",
-                          borderRadius: "2px",
-                        }}
+                        className="hidden md:block"
                       >
                         <FaUsers style={{ color: "#6C6C6C" }} />
                       </div>
                       <p className="doings">Property Management</p>
                     </div>
-                    <p className="mt-[20px]">
+                    <p className="mt-[20px] text-[15px]">
                       We don't only sell lands, We bring to bear our experience and 
                       expertise in developing luxury and state-of-the-art property 
                       for sale and for rent. {" "}
@@ -215,33 +209,14 @@ export default function HomePage() {
                 </div>
                 <div className="ml-[34px] pl-[34px] second-container">
                   <div className="our-doings">
-                    <div className="flex items-center gap-x-[3px]">
+                    <div className="flex items-center gap-x-[3px] md:mt-[22px]">
                       <div
                         style={{
                           padding: "5px",
                           border: "1px dashed black",
                           borderRadius: "2px",
                         }}
-                      >
-                        <FaUsers style={{ color: "#6C6C6C" }} />
-                      </div>
-                      <p className="doings">Buy & Sell Properties</p>
-                    </div>
-                    <p className="mt-[20px]">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Etiam eu turpis molestie, dictum est a, mattis tellus.{" "}
-                      <Link to="/about#buy"></Link>
-                    </p>
-                  </div>
-
-                  <div className="our-doings">
-                    <div className="flex items-center gap-x-[3px] mt-[22px]">
-                      <div
-                        style={{
-                          padding: "5px",
-                          border: "1px dashed black",
-                          borderRadius: "2px",
-                        }}
+                        className="hidden md:block"
                       >
                         <FaUsers style={{ color: "#6C6C6C" }} />
                       </div>
@@ -256,6 +231,15 @@ export default function HomePage() {
                 </div>
               </div>
             </section>
+            <div className="mt-[10px] md:mt-[20px]">
+              <Link
+                to="/about"
+                className="ml-[0px] text-danger text-[12px] md:text-[15px]"
+                style={{ fontWeight: 600, fontVariant: 'small-caps' }}
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
 
           <div className="doings-images">
@@ -270,9 +254,9 @@ export default function HomePage() {
 
         <VideoSection />
 
-        <div className="section1  pt-[100px] p-[22px] md:p-[65px] bg-white">
+        <div className="section1 pt-[50px]  md:pt-[100px] p-[22px] md:p-[65px] bg-white">
           <h2 style={{ marginBottom: "10px" }}>Our Latest Properties</h2>
-          <p>Buy a landlanded property with peace of mind</p>
+          <p>Buy a landed property with peace of mind</p>
           <PropertyViewSection />
           <div className="grid place-items-center mt-[56px]">
             <button
@@ -302,7 +286,7 @@ export default function HomePage() {
           </div>
           <div className="residual">
             <h2>Earn residual income from real estate</h2>
-            <h4 className="mt-[15px] mb-[20px]">Become An Executive Sales Partner</h4>
+            <h4 className="mt-[15px] mb-[20px] font-fam">Become An Executive Sales Partner</h4>
             <div
               style={{ width: "100%", height: "100%", borderRadius: "5px" }}
               className="md:hidden"
@@ -365,9 +349,9 @@ export default function HomePage() {
             <div className="mobile_ah mt-[63px] flex justify-center">
               <MobileTestimonial />
             </div>
-            <div className="hidden md:block">
+            <div className="">
               <button
-                className="font-fam bg-mine text-white text-[15px] px-[16px] py-[10px] rounded font-medium mt-[79px]"
+                className="font-fam bg-mine text-white text-[15px] px-[16px] py-[10px] rounded font-medium mt-[50px] md:mt-[79px]"
                 style={{ fontFamily: "Montserrat" }}
               >
                 VIEW MORE
@@ -376,7 +360,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="px-[22px] md:px-[60px] py-[76px] bg-white">
+        <div className="px-[22px] md:px-[60px] py-[40px] md:py-[76px] bg-white">
           <h2 className="font-bold text-[18px] md:text-[25px] font-fam md:text-center">
             Latest News Feeds
           </h2>
@@ -389,7 +373,7 @@ export default function HomePage() {
         </div>
 
         <div className="pb-[56px]">
-          <h2 className="font-bold text-[25px] font-fam bg-white px-[22px] md:px-[60px] pb-[12px]">
+          <h2 className="font-bold text-[20px] font-fam bg-white px-[22px] md:px-[60px] pb-[12px]">
             See More Properties
           </h2>
           <div className="prop-view-wrapper gap-x-[43px] p-[29px]">
@@ -445,7 +429,7 @@ export default function HomePage() {
               <p className="font-fam text-[15px] font-bold">IM Properties</p>
               <div className="mt-[18px]">
                 <p className="font-fam text-[15px] font-medium flex gap-x-[5px]">
-                  <GrLocation style={{ fontSize: "22px" }} />
+                  <GrLocation className="hidden md:block" style={{ fontSize: "22px" }} />
                   KM 37 East West Road Port Harcourt.
                 </p>
               </div>
@@ -455,7 +439,7 @@ export default function HomePage() {
               <p className="font-fam text-[15px] font-bold">Give us a call</p>
               <div className="mt-[18px]">
                 <p className="font-fam text-[15px] font-medium flex items-center gap-x-[5px]">
-                  <MdOutlineCall style={{ fontSize: "22px" }} />
+                  <MdOutlineCall className="hidden md:block" style={{ fontSize: "22px" }} />
                   +234-806-7864-098
                 </p>
               </div>

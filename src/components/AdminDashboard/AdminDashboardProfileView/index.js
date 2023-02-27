@@ -28,7 +28,7 @@ export function AdminDashboardProfileView({ setPage }) {
   }, [])
 
   let getUser = () => {
-    let url = "https://alert-battledress-boa.cyclic.app/api/user/single";
+    let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/user/single";
     let token = localStorage.getItem("imToken");
     fetch(url, {
       headers: {
@@ -105,15 +105,15 @@ export function AdminDashboardProfileView({ setPage }) {
           <div className="profile-update-row">
             <div>
               <label>First Name</label>
-              <input type="text" placeholder="First Name" value={firstname} onChange={(e) => setFirst(e.target.value)}></input>
+              <input type="text" placeholder="First Name" value={firstname} onChange={(e) => setFirst(e.target.value)} required></input>
             </div>
             <div>
               <label>Last Name</label>
-              <input type="text" placeholder="Last Name" value={lastname} onChange={(e) => setLast(e.target.value)}></input>
+              <input type="text" placeholder="Last Name" value={lastname} onChange={(e) => setLast(e.target.value)} required></input>
             </div>
             <div>
               <label>Gender</label>
-              <select value={gender} onChange={(e) => setGender(e.target.value)}>
+              <select value={gender} onChange={(e) => setGender(e.target.value)} required>
                 <option value="- - -">---</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -124,7 +124,7 @@ export function AdminDashboardProfileView({ setPage }) {
           <div className="profile-update-row">
             <div>
               <label>Phone 1</label>
-              <input type="text" placeholder="Phone Number" value={phone1} onChange={(e) => setPhone1(e.target.value)}></input>
+              <input type="text" placeholder="Phone Number" value={phone1} onChange={(e) => setPhone1(e.target.value)} required></input>
             </div>
             {/* <div>
               <label>Phone 2</label>
@@ -132,14 +132,14 @@ export function AdminDashboardProfileView({ setPage }) {
             </div> */}
             <div>
               <label>Date of Birth</label>
-              <input type="date" placeholder="DD-MM-YY" value={date_of_birth} onChange={(e) => setDOB(e.target.value)}></input>
+              <input type="date" placeholder="DD-MM-YY" value={date_of_birth} onChange={(e) => setDOB(e.target.value)} required></input>
             </div>
           </div>
 
           <div className="profile-update-row">
             <div>
               <label>Occupation</label>
-              <input type="text" value={occupation} onChange={(e) => setOccupation(e.target.value)}></input>
+              <input type="text" value={occupation} onChange={(e) => setOccupation(e.target.value)} required></input>
             </div>
             <div>
               <label>Country</label>
@@ -149,22 +149,22 @@ export function AdminDashboardProfileView({ setPage }) {
             </div>
             <div>
               <label>State</label>
-              <input type="text" value={state} onChange={(e) => setState(e.target.value)}></input>
+              <input type="text" value={state} onChange={(e) => setState(e.target.value)} required></input>
             </div>
           </div>
 
           <div className="profile-update-row">
             <div>
               <label>City</label>
-              <input type="text" placeholder="City" value={city} onChange={(e) => setCity(e.target.value)}></input>
+              <input type="text" placeholder="City" value={city} onChange={(e) => setCity(e.target.value)} required></input>
             </div>
             <div>
               <label>LGA</label>
-              <input type="text" placeholder="City" value={lga} onChange={(e) => setLga(e.target.value)}></input>
+              <input type="text" placeholder="City" value={lga} onChange={(e) => setLga(e.target.value)} required></input>
             </div>
             <div>
               <label>Address</label>
-              <input type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)}></input>
+              <input type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} required></input>
             </div>
           </div>
 
@@ -175,11 +175,11 @@ export function AdminDashboardProfileView({ setPage }) {
             </div>
             <div>
               <label>Upload a photograph</label>
-              <input name="images" type="file" onChange={(e) => setProfile(e.target.files[0])}></input>
+              <input name="images" type="file" onChange={(e) => setProfile(e.target.files[0])} required></input>
             </div>
             <div>
               <label>Upload Valid ID </label>
-              <input name="images" type="file" onChange={(e) => setId(e.target.files[0])}></input>
+              <input name="images" type="file" onChange={(e) => setId(e.target.files[0])} required></input>
             </div>
           </div>
 
@@ -188,15 +188,15 @@ export function AdminDashboardProfileView({ setPage }) {
           <div className="profile-update-row">
             <div>
               <label>Full Name</label>
-              <input type="text" placeholder="Full Name" value={nextofkin} onChange={(e) => setNextOfKin(e.target.value)}></input>
+              <input type="text" placeholder="Full Name" value={nextofkin} onChange={(e) => setNextOfKin(e.target.value)} required></input>
             </div>
             <div>
               <label>Phone Number</label>
-              <input type="text" placeholder="Phone Number" value={kin_phone} onChange={(e) => setKin_phone(e.target.value)}></input>
+              <input type="text" placeholder="Phone Number" value={kin_phone} onChange={(e) => setKin_phone(e.target.value)} required></input>
             </div>
             <div>
               <label>Address</label>
-              <input type="text" placeholder="Address" value={kin_address} onChange={(e) => setKin_address(e.target.value)}></input>
+              <input type="text" placeholder="Address" value={kin_address} onChange={(e) => setKin_address(e.target.value)} required></input>
             </div>
           </div>
 

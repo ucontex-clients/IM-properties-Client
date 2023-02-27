@@ -22,7 +22,7 @@ export default function InspectionBooking({ takeColor }) {
     useBackground()
 
     let getBooking = () => {
-        let url = "https://im-property.herokuapp.com/api/booking/getuserbooking";
+        let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/booking/getuserbooking";
         let token = localStorage.getItem("imToken");
         fetch(url, {
             headers: {
@@ -39,7 +39,7 @@ export default function InspectionBooking({ takeColor }) {
     };
 
     let cancelBooking = (e) => {
-        let url = "https://im-property.herokuapp.com/api/booking/cancelbooking/" + e;
+        let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/booking/cancelbooking/" + e;
         let token = localStorage.getItem("imToken");
         fetch(url, {
             headers: {

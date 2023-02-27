@@ -30,7 +30,7 @@ export default function Signup() {
 
   let register = async () => {
     let data = values;
-    let url = "https://im-property.herokuapp.com/api/auth/register";
+    let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/auth/register";
 
     const response = await fetch(url, {
       headers: {
