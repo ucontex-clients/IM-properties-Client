@@ -13,6 +13,7 @@ export default function FullPropertyLayout() {
     loadProperty();
     getTotal()
   }, []);
+
   let id = useParams();
   const [url] = useState("https://im-property.herokuapp.com/api/property/single/" + id.id);
   let [property, setProperty] = useState({});
@@ -127,12 +128,13 @@ export default function FullPropertyLayout() {
             <div className="all-layout-wrapper">
               {
                 property?.plotLayout?.map((e, i) => {
+                  console.log(e);
                   return <PlotDimension key={i}
                     area={e.width * e.length}
                     price={e.price}
                     width={e.width}
                     length={e.length}
-                    cart={() => addCart(e)}
+                    addCart={() => addCart(e)}
                   />;
                 })
               }
@@ -187,7 +189,7 @@ export default function FullPropertyLayout() {
                 <p>Total</p>
               </li>
               <li>
-                <p>N{cart?.length == 0 ? 0 : total}</p>
+                <p>N{cart?.length === 0 ? 0 : total}</p>
               </li>
             </ul>
 

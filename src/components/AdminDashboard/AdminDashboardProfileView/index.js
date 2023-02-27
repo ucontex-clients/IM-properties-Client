@@ -58,7 +58,7 @@ export function AdminDashboardProfileView({ setPage }) {
 
   const updateUser = async (e) => {
     setLoading(false)
-    let url = "https://alert-battledress-boa.cyclic.app/api/user/addprofile";
+    let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/user/addprofile";
     let token = localStorage.getItem("imToken");
 
     const formData = new FormData();

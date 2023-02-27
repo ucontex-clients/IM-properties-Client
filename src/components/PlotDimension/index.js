@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export function PlotDimension({ cart, setCart, width, length, price, area }) {
+export function PlotDimension({ addCart, setCart, width, length, price, area }) {
   const [selected, setSelected] = useState(false);
 
   const borderStyle1 = {
@@ -11,12 +11,20 @@ export function PlotDimension({ cart, setCart, width, length, price, area }) {
     border: "1px solid #FF1212",
   };
 
+  useEffect(() => {
+    if(typeof addCart === "function"){
+      console.log("initialized");
+    }else console.log("Not yet");
+  }, []);
+
+  //let e = width;
   const addToCart = () => {
+    console.log("clicked");
     setSelected((prevValue) => !prevValue);
     // setCart((prevCart) => {
     //   return [...prevCart, 1];
     // });
-    cart()
+    addCart();
   };
 
   return (
