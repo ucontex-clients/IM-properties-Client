@@ -1,8 +1,9 @@
 import { Avatar, Flex, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { sideNavList } from "../../config/Constants";
 import Menu from "../../assets/images/menu.svg";
+import Back from '../../assets/images/left-arrow.svg';
 
 export function DashboardSideNav(props) {
   const location = useLocation().pathname;
@@ -32,6 +33,7 @@ export function DashboardSideNav(props) {
         setShortId(res._id?.substr(id - 5))
       })
   };
+  const navigate = useNavigate();
 
 
   return (<>
@@ -84,13 +86,14 @@ export function DashboardSideNav(props) {
     </div>
 
     <div className="mobile_ah">
-      <div className="flex_btw_ah mt-[10px] mb-[10px] justify-between mx-3">
-        <div onClick={props.click}>
-          <img src={Menu} alt="menu" style={{ height: "40px" }} />
+      <div className="flex_btw_ah items-center mt-[10px] mb-[10px] justify-between">
+        <div className="flex justify-center items-center" style={{flexWrap: "wrap", flexDirection: "row", gap: "20px"}}>
+          <img onClick={() => navigate(-1)} src={Back} alt="Back" style={{height: "15px"}} />
+          <img onClick={props.click} src={Menu} alt="menu" style={{ height: "40px" }} />
         </div>
 
-        <div style={{ display: props.display }}>
-          <Flex flexDir="column" align="center" mt="124px">
+        <div className="mt-[66px]" style={{ display: props.display, position: "absolute", background: "#b2beb5", top: "0", border: "1px solid #b2beb5" }}>
+          <Flex flexDir="column" align="center" mt="0px">
             <a href="/">
               <img
                 src="/images/logo.png"
@@ -139,13 +142,15 @@ export function DashboardSideNav(props) {
           </ul>
         </div>
 
-        <Flex flexDir="column" align="center" mt="">
-          <Avatar src="/images/buyer.png" />
-          <Text className="font-fam mt-[5px] font-bold text-[15px]" style={{ textTransform: "capitalize" }}>{user.username}</Text>
-          <Text className="font-fam mt-[0px] font-bold text-[15px]" style={{ textTransform: "uppercase" }}>
-            IM{shortId}
-          </Text>
-        </Flex>
+        <div className="flex" style={{flexWrap: "wrap", flexDirection: "row"}}>
+          <div className="text-center mr-[20px]">
+            <Text className="font-fam mt-[5px] font-bold text-[15px]" style={{ textTransform: "capitalize" }}>{user.username}</Text>
+            <Text className="font-fam mt-[0px] font-bold text-[15px]" style={{ textTransform: "uppercase" }}>
+              IM{shortId}
+            </Text>
+          </div>
+          <div><Avatar src={user.pictureupload} /></div>
+        </div>
       </div>
     </div>
   </>

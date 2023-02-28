@@ -284,7 +284,6 @@ body {
 }
 
 .admin-dashboard-right {
-  padding-inline: 56px;
   background-color: #fff;
   height: 100vh;
   overflow-y: auto;
@@ -5386,6 +5385,7 @@ background-color: #F5F5F5;
 
 .slider-block{
   justify-content: center;
+  width: 80vw;
 }
 
 .home-image-wrapper > img {
@@ -5842,8 +5842,11 @@ background-color: #F5F5F5;
     margin-top: 0px;
   }
   .our-doings > p{
-    line-height: 20px;
+    line-height: 25px;
     word-spacing: 0px;
+  }
+  .dashboard-element{
+    width: 100%;
   }
 
   .doings-wrapper {
@@ -5870,6 +5873,9 @@ background-color: #F5F5F5;
       flex-wrap: wrap;
       position: relative;
   }
+  .the-main{
+    overflow-x: hidden;
+  }
   .home-social{
     display: flex;
     flex-wrap: wrap;
@@ -5877,9 +5883,9 @@ background-color: #F5F5F5;
     column-gap: 20px;
     align-content: flex-end;
     position: absolute;
-    margin-top: 30px;
+    margin-top: 40px;
     right: 0;
-    margin-right: 10px;
+    margin-right: 5px;
   }
   .home-social div{
     display: flex;
@@ -5889,11 +5895,49 @@ background-color: #F5F5F5;
   .test-layer{
     background: #272733;
   }
-
   .second-container {
     padding: 0;
     border: none;
     margin-left: 0;
+  }
+  .view-customers-top{
+    display: block;  
+  }
+  .id-side{
+    border: 0px;
+  }
+  .dashboard-input-wrapper > p{
+    font-size: 16px;
+  }
+  #view-profile-right{
+    border: 0px;
+    margin-top: 20px;
+  }
+  .update-profile-main{
+    padding: 45px 10px 45px 10px;
+  }
+  .profile-update-buyer{
+    border: 0px;
+    padding: 0px 10px 0px 10px; 
+    font-weight: 600; 
+  }
+  .profile-update-row{
+    display: block;
+  }
+  .profile-update-row > div{
+    margin-bottom: 10px;
+  }
+  .save-profile-button-container{
+    margin-top: 0px;
+  }
+  .save-profile-button-container button{
+    display: block;
+    width: 100%;
+    padding: 13px;
+  }
+  
+  .admin-dashboard-right{
+    overflow-x: hidden;
   }
 
   .home-image-wrapper h2 {
@@ -6073,7 +6117,7 @@ background-color: #F5F5F5;
   }
 
   .residual > h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
   .property-bottom-right > div input {
     margin-right: 0;

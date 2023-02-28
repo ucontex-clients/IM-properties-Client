@@ -49,11 +49,11 @@ export function ViewCustomer() {
       }}
     >
       <div className="dashboard-input-wrapper" style={{ padding: "21px 20px" }}>
-        <p className="cursor-pointer">Profile</p>
+        <p className="cursor-pointer text-[13px]">View Profile</p>
 
         <Link
           to="/dashboard/profile/edit"
-          className="text-backblue cursor-pointer text-[15px] font-medium"
+          className="text-backblue cursor-pointer text-[18px] font-medium"
         >
           Edit
         </Link>
@@ -64,8 +64,8 @@ export function ViewCustomer() {
           <Flex columnGap="36px">
             <Avatar src={user.pictureupload}/>
             <Box>
-              <Text className="font-fam font-bold text-[20px]" style={{ textTransform: "capitalize" }}>{user.firstname} {" "} {user.lastname}</Text>
-              <Text className="font-fam font-medium text-[15px] text-light mt-[3px]" style={{ textTransform: "uppercase" }}>
+              <Text className="font-fam font-bold text-[20px] text-black" style={{ textTransform: "capitalize" }}>{user.firstname} {" "} {user.lastname}</Text>
+              <Text className="font-fam font-medium text-[15px] text-black mt-[3px]" style={{ textTransform: "uppercase" }}>
                 IM{shortId}
               </Text>
             </Box>
@@ -83,10 +83,6 @@ export function ViewCustomer() {
               <td>Phone Number:</td>
               <td>{user.phone1 ? user.phone1 : "- - - -"}</td>
             </tr>
-            {/* <tr>
-              <td></td>
-              <td>+2347034192605</td>
-            </tr> */}
             <tr>
               <td>Gender:</td>
               <td>{user.gender ? user.gender : "- - - -"}</td>
@@ -119,7 +115,7 @@ export function ViewCustomer() {
         </div>
         <div className="id-side">
           <p className="mb-[24px] font-medium text-[15px]">Valid ID</p>
-          <img src={user.idupload} alt="user id"></img>
+          <img src={user.idupload} alt="user id" className="w-[auto] md:h-[250px] h-[150px]"></img>
           <p className="mt-[24px] font-fam text-[15px] font-semibold">
             Next of Kin
           </p>

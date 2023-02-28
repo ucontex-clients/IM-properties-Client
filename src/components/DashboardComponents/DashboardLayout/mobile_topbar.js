@@ -37,6 +37,7 @@ export default function MobileTop(props, {
         { page: "Wallet", link: "/dashboard/wallet", img: "/images/wallet.svg" },
         { page: "Network", link: "/dashboard/network", img: "/images/network.svg" },
         { page: "Profile", link: "/dashboard/profile", img: "/images/profile.svg" },
+        { page: "Profile", link: "/dashboard/profile/edit", img: "/images/profile.svg" },
         { page: "Support", link: "/dashboard/support", img: "/images/support.svg" },
         {
             page: "Settings",
@@ -70,19 +71,19 @@ export default function MobileTop(props, {
         <div style={{ backgroundColor: "#fff" }}>
 
             <div className="">
-                <div className="" style={{ overflowY: "auto" }} >
+                <div className="" style={{ overflowY: "auto", borderBottom: "1px solid #b2beb5" }} >
                     <DashboardSideNav
                         display={show}
                         click={() => hide()}
                     />
                 </div>
 
-                <div className="flex items-center gap-x-[10px] ml-[18px]">
+                <div className="flex items-center mt-[15px] gap-x-[10px] ml-[23px]">
                     <img src={img} alt="profile"></img>
                     <p className="font-bold text-[18px]">{position}</p>
                 </div>
 
-                <div className="mt-[5px]">{props.table}</div>
+                <div className="mt-[25px]">{props.table}</div>
             </div>
 
         </div>

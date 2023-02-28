@@ -38,6 +38,7 @@ export function DashboardLayout({
     { page: "Wallet", link: "/dashboard/wallet", img: "/images/wallet.svg" },
     { page: "Network", link: "/dashboard/network", img: "/images/network.svg" },
     { page: "Profile", link: "/dashboard/profile", img: "/images/profile.svg" },
+    { page: "Profile", link: "/dashboard/profile/edit", img: "/images/profile.svg" },
     { page: "Support", link: "/dashboard/support", img: "/images/support.svg" },
     {
       page: "Settings",

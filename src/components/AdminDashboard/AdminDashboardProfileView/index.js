@@ -95,11 +95,10 @@ export function AdminDashboardProfileView({ setPage }) {
   return (
     <div className="admin-dashboard-right" style={{ backgroundColor: "#fff" }}>
       <div
-        className="dashboard-layout-wrapper"
+        className="dashboard-layout-wrapper mt-[0px] md:mt-[100px]"
         id="view-profile-right"
-        style={{ marginTop: "100px" }}
       >
-        <p className="profile-update-buyer">Update Profile</p>
+        <p className="profile-update-buyer font-bold">Update Profile</p>
       
         <div className="update-profile-main">
           <div className="profile-update-row">

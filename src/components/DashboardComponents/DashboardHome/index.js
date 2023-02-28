@@ -64,11 +64,11 @@ export function DashboardHome() {
             logoURL="/images/houseLogo.png"
             number="5"
             text="Properties"
-          />
+          /> 
           <DashboardElement
             logoBackground="rgba(255, 152, 0, 0.2)"
             logoURL="/images/accountBalance.png"
-            number="#15,000"
+            number="N15,000"
             text="Earnings"
           />
           <DashboardElement
@@ -79,7 +79,7 @@ export function DashboardHome() {
           />
         </div>
         <br />
-        <div className="dashboard-central">
+        <div className="dashboard-central mt-[25px]">
           <p>Dear {user.firstname} {user.lastname}, we have properties available for you</p>
           <div>
             <button>View Properties</button>

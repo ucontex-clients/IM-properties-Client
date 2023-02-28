@@ -66,24 +66,24 @@ export default function HomePage() {
       <TopSide />
       <Layout>
         <div
-          className="home-image-wrapper h-[100%] md:h-[600px]"
+          className="home-image-wrapper w-[100vw] md:w-[100vw] h-[100%] md:h-[600px]"
         >
           <div className="layer full_ah"></div>
           <div className="home-social mobile_ah flex">
             <div className="bg-white" style={{ width: "22px", height: "22px", borderRadius: "50%", border: "2px solid #fff"}}>
               <FaFacebookF style={{ fontSize: "18px", color: "#000" }} />
             </div>
-            <div className="mt-[38px]" style={{ width: "25px", height: "25px", borderRadius: "50%", border: "2px solid #fff" }}>
+            <div className="mt-[40px]" style={{ width: "25px", height: "25px", borderRadius: "50%", border: "2px solid #fff" }}>
               <AiOutlineTwitter style={{ fontSize: "18px", color: "#fff" }} />
             </div>
-            <div className="mt-[38px]" style={{ width: "25px", height: "25px", borderRadius: "50%", border: "2px solid #000" }}>
+            <div className="mt-[40px]" style={{ width: "25px", height: "25px", borderRadius: "50%", border: "2px solid #000" }}>
               <BsInstagram style={{ fontSize: "20px", color: "#fff", margin: "0px" }} />
             </div>
             <div className="mt-[280px]" style={{ width: "25px", height: "25px", borderRadius: "50%", border: "2px solid #000" }}>
               <BsWhatsapp style={{ fontSize: "20px", color: "#fff", margin: "0px" }} />
             </div>
           </div>
-          <div className="mobile_ah slider-block flex w-[312px] h-[190px] justify-center ml-[56.59px] mr-[60px] mt-[30px] mb-[20px]">
+          <div className="mobile_ah slider-block flex w-[312px] h-[190px] justify-center ml-[56.59px] mr-[60px] mt-[40px] mb-[20px]">
             
             <div id="carouselExampleIndicators" className="carousel slide carouselContainer" data-ride="carousel">
 
@@ -140,7 +140,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="background text-center mobile_ah px-[28px]">
+          <div className="background text-center mobile_ah px-[35px]">
             <h1 style={{ lineHeight: "30px", fontSize: "25px", fontFamily: "Montserrat", fontStyle: "normal", color: "#fff", fontWeight: 600 }}>
               Invest in IM Properties {/*<span style={{ color: "#FF1212" }}>IM</span> Properties*/}
             </h1>
@@ -190,7 +190,6 @@ export default function HomePage() {
                       <div
                         style={{
                           padding: "5px",
-                          border: "1px dashed black",
                           borderRadius: "2px",
                         }}
                         className="hidden md:block"
@@ -213,7 +212,6 @@ export default function HomePage() {
                       <div
                         style={{
                           padding: "5px",
-                          border: "1px dashed black",
                           borderRadius: "2px",
                         }}
                         className="hidden md:block"
@@ -428,7 +426,7 @@ export default function HomePage() {
             <div>
               <p className="font-fam text-[15px] font-bold">IM Properties</p>
               <div className="mt-[18px]">
-                <p className="font-fam text-[15px] font-medium flex gap-x-[5px]">
+                <p className="font-fam text-[13px] md:text-[15px] font-medium flex gap-x-[5px]">
                   <GrLocation className="hidden md:block" style={{ fontSize: "22px" }} />
                   KM 37 East West Road Port Harcourt.
                 </p>
@@ -438,7 +436,7 @@ export default function HomePage() {
             <div>
               <p className="font-fam text-[15px] font-bold">Give us a call</p>
               <div className="mt-[18px]">
-                <p className="font-fam text-[15px] font-medium flex items-center gap-x-[5px]">
+                <p className="font-fam text-[13px] md:text-[15px] font-medium flex items-center gap-x-[5px]">
                   <MdOutlineCall className="hidden md:block" style={{ fontSize: "22px" }} />
                   +234-806-7864-098
                 </p>

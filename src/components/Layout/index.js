@@ -7,7 +7,7 @@ import { IoMdRocket} from "react-icons/io";
 
 export function Layout({ children }) {
   return (
-    <div>
+    <div className="the-main">
       <NavigationBar />
       {children}
       <footer className="footer-wrapper grid grid-cols-4 gap-x-[100px]">
