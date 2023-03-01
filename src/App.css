@@ -3068,32 +3068,42 @@ text-align: center;
 
 .referral-main-container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  /*grid-template-rows: 1fr 1fr;*/
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 34px;
   column-gap: 23px;
   padding-inline: 18px;
   padding-block: 24px 32px;
   background-color: #fff;
-  border: 1px solid #d9d9d9;
+  /*border: 1px solid #d9d9d9;*/
   margin-top: 8px;
 }
 
 .referral-commission-wrapper {
-  grid-column: 1/-1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 10px;
+  column-gap: 40px;
+  width: 100%;
+  padding: 0px 18px;
+  margin-bottom: 40px;
+  /*grid-column: 1/-1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 23px;
+  column-gap: 23px;*/
 }
 
 .referral-commission-wrapper > div {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  width: auto;
 }
 
 .referral-link-container {
   padding: 17px 24px;
   border-radius: 5px;
   position: relative;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
 
 .referral-link-container p:first-child {
@@ -4856,7 +4866,6 @@ background-color: #F5F5F5;
 
 .one-sale-wrapper {
   max-width: 343px;
-  position: relative;
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   padding-bottom: 46px;
@@ -5836,8 +5845,6 @@ background-color: #F5F5F5;
   }
 
   .our-doings {
-    border: 1px solid #f5f5f5;
-    border-radius: 5px;
     padding: 0px;
     margin-top: 0px;
   }
@@ -5909,6 +5916,35 @@ background-color: #F5F5F5;
   .dashboard-input-wrapper > p{
     font-size: 16px;
   }
+  .dashboard-central P:first-child{
+    font-size: 15px;
+  }
+  .dashboard-central > div button{
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+  .sale-image-wrapper{
+    position: relative;
+  }
+  .each-property-holder{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .dashboard-main-right{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .fund-wallet-wrapper{
+    padding: 20px 26px 0px 26px;
+  }
+  .fund-wallet-wrapper p{
+    margin-bottom: 30px;
+  }
+  .wallet-input-holder input, .wallet-input-holder select{
+    width: 100%;
+  }
   #view-profile-right{
     border: 0px;
     margin-top: 20px;
@@ -5965,6 +6001,7 @@ background-color: #F5F5F5;
     flex-direction: column;
     row-gap: 43px;
   }
+  
 
   .property-view-main-wrapper {
     display: flex;

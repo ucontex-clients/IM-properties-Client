@@ -10,7 +10,7 @@ export function FundWalletCreateAccount({ setActivePage }) {
                     <p style={{ color: "green", fontWeight: "600" }}>#50,000</p>
                 </span>
                 <div style={{ color: "green", fontWeight: "600" }}>Fund</div>
-                <div>Withdraw</div>
+                <div>Withdraw</div> 
             </div>
             <div className="fund-wallet-wrapper">
                 <p className="">Fund Wallet</p>
@@ -56,7 +56,7 @@ export function FundWalletCreateAccount({ setActivePage }) {
 
                     <div className="wallet-input-holder">
                         <label>Choose payment method</label>
-                        <select style={{ width: "14rem" }}>
+                        <select>
                             <option>Paystack (card, USSD, Bank Transfer)</option>
                             <option>Bank Deposit/Transfer</option>
                         </select>

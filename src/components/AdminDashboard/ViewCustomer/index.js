@@ -62,7 +62,7 @@ export function ViewCustomer() {
       <div className="view-customers-top mt-[71px]">
         <div>
           <Flex columnGap="36px">
-            <Avatar src={user.pictureupload}/>
+            <Avatar src={user.pictureupload} style={{position: "absolute"}}/>
             <Box>
               <Text className="font-fam font-bold text-[20px] text-black" style={{ textTransform: "capitalize" }}>{user.firstname} {" "} {user.lastname}</Text>
               <Text className="font-fam font-medium text-[15px] text-black mt-[3px]" style={{ textTransform: "uppercase" }}>

@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { DashboardElement } from "../../";
+import { Link } from "react-router-dom";
 
 export function DashboardHome() {
 
@@ -57,7 +58,7 @@ export function DashboardHome() {
     </div>
 
     <div className="mobile_ah container  bg-white">
-      <div className="p-[10px]">
+      <div className="">
         <div className="mobile_dashboard_ah">
           <DashboardElement
             logoBackground="rgba(61, 178, 255, 0.2)"
@@ -82,7 +83,10 @@ export function DashboardHome() {
         <div className="dashboard-central mt-[25px]">
           <p>Dear {user.firstname} {user.lastname}, we have properties available for you</p>
           <div>
-            <button>View Properties</button>
+            <Link to="/dashboard/buy-property">
+              <button>View Properties</button>
+            </Link>
+            
           </div>
           <p>No property has been purchased yet</p>
         </div>

@@ -31,6 +31,7 @@ import DashboardTransactionPage from "./pages/DashboardTransactionPage";
 import DashboardSupportPage from "./pages/DashboardSupportPage";
 import DashboardSettingsPage from "./pages/DashboardSettings";
 import DashboardProfilePage from "./pages/DashboardProfilePage";
+import DashboardReferralPage from "./pages/DashboardReferralPage";
 import Login from "./pages/login";
 import EditProfile from "./pages/EditProfile";
 import "./assets/css/mobile.css";
@@ -69,6 +70,10 @@ function App() {
         <Route
           path={"/dashboard/bookings"}
           element={<DashboardBookingPage />}
+        />
+        <Route
+          path={"/dashboard/network"}
+          element={<DashboardReferralPage />}
         />
         <Route
           path={"/dashboard/my-property"}

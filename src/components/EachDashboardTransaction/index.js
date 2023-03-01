@@ -11,7 +11,7 @@ export function EachDashboardTransaction() {
         Aug 8 2022. 9AM
       </li>
       <li></li>
-      <li className="flex gap-x-[49px] font-fam text-[15px] font-medium">
+      <li className="flex gap-x-[20px] md:gap-x-[49px] font-fam text-[15px] font-medium">
         <p className="font-fam text-[15px] font-semibold">N200,000</p>
         <img
           src="/images/download.svg"

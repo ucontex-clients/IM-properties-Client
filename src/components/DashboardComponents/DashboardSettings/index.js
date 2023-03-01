@@ -18,6 +18,40 @@ export function DashboardSettings() {
 
   const style1 = { fontWeight: "700", color: "#05540D" };
 
+  let [currentEmail, setCurrentEmail] = useState("");
+  let [newEmail, setNewEmail] = useState("");
+  let [pass, setPass] =  useState("");
+  let [oldPass, setOldPass] = useState("");
+  let [newPass, setNewPass] = useState("");
+  let [rePass, setRePass] = useState("");
+
+  let data = {
+    oldEmail: "",
+    newEmail: "",
+    pass: ""
+  };
+  let data2 = {
+    oldPass: "",
+    newPass: ""
+  }
+
+  const changeEmail = async () => {
+    data.oldEmail = currentEmail;
+    data.newEmail = newEmail;
+    data.pass = pass;
+    console.log(data);
+  }
+  const changePassword = async () => {
+    if(newPass !== rePass){
+      alert("Password didnt match");
+      return;
+    }else{
+      data2.oldPass = oldPass;
+      data2.newPass = newPass;
+      console.log(data2);
+    }
+  }
+
   return (
     <Box className="pt-[80px] bg-white">
       <Flex
@@ -43,11 +77,11 @@ export function DashboardSettings() {
       {activeTab === "password" && (
         <Flex flexDir="column" className="md:w-[60%] px-[50px]">
           <FormControl>
-            <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+            <FormLabel className="mb-[12px] font-fam text-black text-[15px]">
               Current Password
             </FormLabel>
             <InputGroup>
-              <Input type="password" placeholder="Enter your old password" />
+              <Input type="password" placeholder="Enter your old password" onChange={(e) => setOldPass(e.target.value)}/>
               <InputRightElement
                 pointerEvents="cursor"
                 children={
@@ -62,11 +96,11 @@ export function DashboardSettings() {
           </FormControl>
 
           <FormControl mt="20px">
-            <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+            <FormLabel className="mb-[12px] font-fam text-black text-[15px]">
               New Password
             </FormLabel>
             <InputGroup>
-              <Input type="password" placeholder="New Password" />
+              <Input type="password" placeholder="New Password" onChange={(e) => setNewPass(e.target.value)}/>
               <InputRightElement
                 pointerEvents="cursor"
                 children={
@@ -81,11 +115,11 @@ export function DashboardSettings() {
           </FormControl>
 
           <FormControl mt="20px">
-            <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+            <FormLabel className="mb-[12px] font-fam text-black text-[15px]">
               Re-type Password
             </FormLabel>
             <InputGroup>
-              <Input type="tel" placeholder="Re-type New Password" />
+              <Input type="password" placeholder="Re-type New Password" onChange={(e) => setRePass(e.target.value)}/>
               <InputRightElement
                 pointerEvents="cursor"
                 children={
@@ -103,6 +137,7 @@ export function DashboardSettings() {
             backgroundColor="#FF1212"
             _hover="none"
             px="86px"
+            onClick={changePassword}
           >
             Save
           </Button>
@@ -112,29 +147,29 @@ export function DashboardSettings() {
       {activeTab === "email" && (
         <Flex flexDir="column" className="md:w-[60%] px-[50px]">
           <FormControl>
-            <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+            <FormLabel className="mb-[12px] font-fam text-black text-[15px]">
               Current Email
             </FormLabel>
             <InputGroup>
-              <Input type="email" placeholder="Johndoe@example.com" />
+              <Input type="email" placeholder="Johndoe@example.com" onChange={(e) => setCurrentEmail(e.target.value)} />
             </InputGroup>
           </FormControl>
 
           <FormControl mt="20px">
-            <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+            <FormLabel className="mb-[12px] font-fam text-black text-[15px]">
               New Email
             </FormLabel>
             <InputGroup>
-              <Input type="email" placeholder="Johndoe@example.com" />
+              <Input type="email" placeholder="Johndoe@example.com" onChange={(e) => setNewEmail(e.target.value)} />
             </InputGroup>
           </FormControl>
 
           <FormControl mt="20px">
-            <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+            <FormLabel className="mb-[12px] font-fam text-black text-[15px]">
               Password
             </FormLabel>
             <InputGroup>
-              <Input type="password" placeholder="***********" />
+              <Input type="password" placeholder="***********" onChange={(e) => setPass(e.target.value)}/>
               <InputRightElement
                 pointerEvents="cursor"
                 children={
@@ -152,6 +187,7 @@ export function DashboardSettings() {
             backgroundColor="#FF1212"
             _hover="none"
             px="86px"
+            onClick={changeEmail}
           >
             Save
           </Button>

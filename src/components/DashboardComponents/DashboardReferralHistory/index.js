@@ -22,7 +22,7 @@ const allReferralHistory = [1,2,3,4].map((history, index) => {
                 <li><p>S/N</p></li>
                 <li><p>Referee</p></li>
                 <li><p>Level</p></li>
-                <li><p>Date</p></li>
+                <li><p>Date</p></li> 
                 <li><p>Commission</p></li>
                 <li><p></p></li>
             </ul>

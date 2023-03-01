@@ -12,7 +12,7 @@ export function DashboardElement({ logoURL, logoBackground, text, number }) {
             </div>
         </div>
 
-        <div className="mobile_ah dashboard-element" style={{width:"auto", padding: "10px 15px 5px 15px"}}>
+        <div className="mobile_ah dashboard-element" style={{width:"auto", padding: "10px 12px 5px 12px"}}>
             {/*<div className="property-home-logo" style={{ backgroundColor: logoBackground }}>
                 <img src={logoURL} alt='dashboard logo'></img>
             </div>*/}

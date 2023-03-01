@@ -7,7 +7,8 @@ import Back from '../../assets/images/left-arrow.svg';
 
 export function DashboardSideNav(props) {
   const location = useLocation().pathname;
-  const navStyle = { backgroundColor: "#FF1212" };
+  const navStyle = { color: "#FF1212" };
+  const navStyle1 = { backgroundColor: "#FF1212" };
   let [user, setUser] = useState({});
   let [shortId, setShortId] = useState("");
   useEffect(() => {
@@ -56,7 +57,7 @@ export function DashboardSideNav(props) {
                     style={
                       location === page.link ||
                         (location === "/dashboard" && page.page === "Profile")
-                        ? navStyle
+                        ? navStyle1
                         : {}
                     }
                   >
@@ -70,7 +71,7 @@ export function DashboardSideNav(props) {
                       style={
                         location === page.link ||
                           (location === "/dashboard" && page.page === "Profile")
-                          ? { color: "white" }
+                          ? { color: "#fff" }
                           : {}
                       }
                     >
@@ -92,21 +93,21 @@ export function DashboardSideNav(props) {
           <img onClick={props.click} src={Menu} alt="menu" style={{ height: "40px" }} />
         </div>
 
-        <div className="mt-[66px]" style={{ display: props.display, position: "absolute", background: "#b2beb5", top: "0", border: "1px solid #b2beb5" }}>
+        <div className="mt-[66px]" style={{ display: props.display, position: "absolute", zIndex: "2", background: "#b2beb5", top: "0", border: "1px solid #b2beb5" }}>
           <Flex flexDir="column" align="center" mt="0px">
-            <a href="/">
+            {/*<a href="/">
               <img
                 src="/images/logo.png"
                 alt="logo"
                 className="w-[94px] h-[64px]"
               ></img>
-            </a>
+            </a>*/}
           </Flex>
           <ul className="">
             {sideNavList.map((page, idx) => {
               return (
                 <li key={idx}>
-                  <Link to={page.link}>
+                  <Link to={page.link} style={{color: "#ff1212"}}>
                     <div style={{ paddingInline: "16px" }}>
                       <div
                         className="sidenav-item-wrapper"
@@ -121,13 +122,14 @@ export function DashboardSideNav(props) {
                           <img
                             src={location === page.link ? page.img2 : page.img}
                             alt="dashboard icon"
+                            style={{color: "#ff1212"}}
                           ></img>
                         </div>
                         <p
                           style={
                             location === page.link ||
                               (location === "/dashboard" && page.page === "Profile")
-                              ? { color: "white" }
+                              ? { color: "#ff1212" }
                               : {}
                           }
                         >
@@ -142,14 +144,14 @@ export function DashboardSideNav(props) {
           </ul>
         </div>
 
-        <div className="flex" style={{flexWrap: "wrap", flexDirection: "row"}}>
+        <div className="flex justify-center items-center" style={{flexWrap: "wrap", flexDirection: "row"}}>
           <div className="text-center mr-[20px]">
             <Text className="font-fam mt-[5px] font-bold text-[15px]" style={{ textTransform: "capitalize" }}>{user.username}</Text>
             <Text className="font-fam mt-[0px] font-bold text-[15px]" style={{ textTransform: "uppercase" }}>
               IM{shortId}
             </Text>
           </div>
-          <div><Avatar src={user.pictureupload} /></div>
+          <div><Avatar src={user.pictureupload} size='sm' style={{fontSize: "20px"}}/></div>
         </div>
       </div>
     </div>

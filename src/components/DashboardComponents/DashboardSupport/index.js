@@ -14,14 +14,14 @@ export function DashboardSupport() {
     <Box className="pt-[80px] bg-white px-[40px]">
       <Flex flexDir="column" className="md:w-[60%]">
         <FormControl>
-          <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+          <FormLabel className="mb-[12px] font-fam text-black text-[15px]">
             Message Title
           </FormLabel>
           <Input type="text" backgroundColor="#F5F5F5" />
         </FormControl>
 
         <FormControl className="mt-[52px]">
-          <FormLabel className="mb-[12px] font-fam text-light text-[15px]">
+          <FormLabel className="mb-[12px] font-fam text-black text-[15px]">
             Description
           </FormLabel>
           <Textarea
