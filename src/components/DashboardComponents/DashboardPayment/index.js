@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Modal,
   Button,
@@ -19,6 +19,24 @@ import {
 export function DashboardPayment() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [details, setDetails] = useState(false);
+  let [payment, setPayment] = useState({});
+
+  useEffect(() => {
+    getUserPayments();
+  })
+
+  const getUserPayments = () => {
+    let url = '';
+    let token = localStorage.getItem("imToken");
+    fetch(url, {
+      method: 'get',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}` 
+      }
+    }).then(response => response.json())
+    .then(response => setPayment(response))
+  };
   let [data, setData] = useState([
     {
       tranId: "IM 0023",
@@ -65,15 +83,17 @@ export function DashboardPayment() {
           <th>Balance</th>
           <th>Duration</th>
           <th>Next Payment</th>
+          <th>Monthly Pay</th>
           <th>Action</th>
         </thead>
         <tbody>
           {
-            data.map((e, i) => {
+            payment.map((e, i) => {
+        
               let textColor;
               let hide;
               let show;
-              if (e.mode === "Outright") {
+              if (e.mode === "outright") {
                 textColor = "green_ah";
                 hide = "none";
                 show = "inline";
@@ -84,14 +104,15 @@ export function DashboardPayment() {
               }
               return <>
                 <tr>
-                  <td>{e.tranId}</td>
-                  <td>{e.property}</td>
-                  <td>{e.price}</td>
+                  <td>{e.id}</td>
+                  <td>{e.property_name}</td>
+                  <td>{e.amount}</td>
                   <td>{e.mode}</td>
                   <td>{e.paid}</td>
                   <td className={textColor}>{e.balance}</td>
                   <td>{e.duration}</td>
-                  <td>{e.next}</td>
+                  <td>{e.next_pay}</td>
+                  <td>{e.month_pay}</td>
                   <td className="flex items-center px-[13px]">
                     <p style={{ display: show, cursor: "pointer", marginTop: "10px" }}>History</p>
                     <Button style={{ display: hide }} className="px-[5px] py-[4px]" onClick={onOpen}>
@@ -243,18 +264,20 @@ export function DashboardPayment() {
                   <th>Balance</th>
                   <th>Duration</th>
                   <th>Next Payment</th>
+                  <th>Monthly Pay</th>
                   <th>Action</th>
                 </thead>
                 <tbody>
                   <tr style={{ display: "flex", flexDirection: "column" }}>
-                    <td>{e.tranId}</td>
-                    <td>{e.property}</td>
-                    <td>{e.price}</td>
+                    <td>{e.id}</td>
+                    <td>{e.property_name}</td>
+                    <td>{e.amount}</td>
                     <td>{e.mode}</td>
                     <td>{e.paid}</td>
                     <td className={textColor}>{e.balance}</td>
                     <td>{e.duration}</td>
-                    <td>{e.next}</td>
+                    <td>{e.next_pay}</td>
+                    <td>{e.month_pay}</td>
                     <td className="mt-2">
                       <p style={{ display: show, cursor: "pointer" }}>History</p>
                       <Button style={{ display: hide, marginTop: "-10px" }} className="m-auto" onClick={onOpen}>

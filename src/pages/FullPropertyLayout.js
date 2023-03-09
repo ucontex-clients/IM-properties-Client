@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { CartItems, NavigationBar, PlotDimension } from "../components";
+const axios = require("axios");
 
 export default function FullPropertyLayout() {
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem("imcart")));
@@ -11,33 +12,35 @@ export default function FullPropertyLayout() {
 
   useEffect(() => {
     loadProperty();
-    getTotal()
-  }, []);
+    getTotal();
+  }, []); 
 
   let id = useParams();
   const [url] = useState("https://nice-tan-harp-seal-wrap.cyclic.app/api/property/single/" + id.id);
   let [property, setProperty] = useState({});
 
   let loadProperty = () => {
-    fetch(url)
-      .then(e => e.json())
-      .then(res => {
-        setProperty(res.data)
-        localStorage.setItem("improperty", JSON.stringify(res.data))
-      })
+    axios({
+      url: url,
+      method: "GET"
+    })
+    .then((res) => {
+      setProperty(res.data.message.data)
+      localStorage.setItem("improperty", JSON.stringify(res.data.message.data))
+    })
   };
   let addCart = (e) => {
     if (cart !== null) {
       cart.push(e)
       localStorage.setItem("imcart", JSON.stringify(cart))
-      loadCart()
-      getTotal()
+      loadCart();
+      getTotal();
     } else {
       let cartt = [];
       cartt.push(e)
       localStorage.setItem("imcart", JSON.stringify(cartt))
-      loadCart()
-      getTotal()
+      loadCart();
+      getTotal();
     }
   };
   let loadCart = () => {
@@ -52,15 +55,26 @@ export default function FullPropertyLayout() {
   };
 
   let getTotal = () => {
-    let carttt = JSON.parse(localStorage.getItem("imcart"));
-    carttt?.map((e, i) => {
-      arr.push(e.price)
-    })
-    num = arr.reduce((a, b) => a + b, 0);
-    setTotal(num)
+    if(num){
+      setTotal(num)
+    }
+    else{
+      let carttt = JSON.parse(localStorage.getItem("imcart"));
+      carttt?.map((e, i) => {
+        arr.push(e.price)
+      })
+      num = arr.reduce((a, b) => a + b, 0);
+      setTotal(num)
+    }
+    
   };
 
   let makePayment = () => {
+    let data = {
+      property:property,
+      total:total
+    }
+    localStorage.setItem("imData", JSON.stringify(data));
     localStorage.setItem("impay", total)
     navigate("/payment")
   };

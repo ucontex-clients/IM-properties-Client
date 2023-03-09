@@ -1,10 +1,10 @@
 import React from "react"
 import EachReferralHistory from "../EachReferralHistory"
 
-export default function DashboardReferralHistory(){
+export default function DashboardReferralHistory(props){
 
-const allReferralHistory = [1,2,3,4].map((history, index) => {
-    return <EachReferralHistory key={index} index={index+1} />
+const allReferralHistory = props.map((history, index) => {
+    return <EachReferralHistory key={index} history={history} />
 })
 
 
@@ -14,7 +14,7 @@ const allReferralHistory = [1,2,3,4].map((history, index) => {
             <div className="referral-history-top">
                 <div>
                     <p>Referral History</p>
-                    <p>June 2022</p>
+                    <p>{Date.now()}</p>
                 </div>
             </div>
 

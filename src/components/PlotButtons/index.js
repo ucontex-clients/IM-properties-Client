@@ -23,7 +23,8 @@ export function PlotButtons(props) {
             </Link>
 
             <button className={active === 'buy' ? 'plot-button2' : 'plot-button1'}
-                onClick={() => setActive('buy')}>Buy Property</button>
+                onClick={() => setActive('buy')}>Buy Property
+            </button>
         </div>
     )
 }

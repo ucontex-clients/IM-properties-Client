@@ -7,7 +7,7 @@ import {
 } from "../components";
 
 export default function Payment() {
-  const [paymentMode, setPaymentMode] = useState("one-off");
+  const [paymentMode, setPaymentMode] = useState("outright");
   const [paymentMode1, setPaymentMode1] = useState("");
   const [amount, setAmount] = useState();
 
@@ -15,12 +15,13 @@ export default function Payment() {
     setPaymentMode(e.target.value);
     setPaymentMode1(e.target.value);
   };
+  let data = JSON.parse(localStorage.getItem("imData"));
   let amountDue;
   useEffect(() => {
     if (paymentMode === "installment") {
       amountDue = +localStorage.getItem("impay") * 0.4
       setAmount(amountDue)
-    } else if (paymentMode === "one-off") {
+    } else if (paymentMode === "outright") {
       amountDue = +localStorage.getItem("impay")
       setAmount(amountDue)
     };
@@ -30,14 +31,14 @@ export default function Payment() {
     <div className="bg-white">
       <NavigationBar page="AboutUs" />
       <div className="payment-main-section">
-        {paymentMode === "one-off" && (
+        {paymentMode === "outright" && (
           <OneOffPayment changePaymentMode={changePaymentMode} />
         )}
         {paymentMode === "installment" && (
           <Installment changePaymentMode={changePaymentMode} />
         )}
-        {paymentMode1 === "bank-deposit" && <PaymentAccountDetail payment={false} amnt={amount} />}
-        {paymentMode1 === "flutter" && <PaymentAccountDetail payment={true} amnt={amount} />}
+        {paymentMode1 === "bank-deposit" && <PaymentAccountDetail payment={false} amnt={amount} data1={data}/>}
+        {paymentMode1 === "flutter" && <PaymentAccountDetail payment={true} paymentMode={paymentMode} amnt={amount} data1={data} />}
         {/* {paymentMode1 === "" && window.reload()} */}
       </div>
     </div>

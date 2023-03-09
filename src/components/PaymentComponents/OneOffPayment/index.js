@@ -39,10 +39,10 @@ export function OneOffPayment({ changePaymentMode }) {
             <Select
               variant="filled"
               name="payment"
-              value="one-off"
+              value="outright"
               onChange={(e) => changePaymentMode(e)}
             >
-              <option className="option" value="one-off">
+              <option className="option" value="outright">
                 Out right payment
               </option>
               <option className="option" value="installment">
