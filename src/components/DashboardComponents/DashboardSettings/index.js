@@ -24,31 +24,65 @@ export function DashboardSettings() {
   let [oldPass, setOldPass] = useState("");
   let [newPass, setNewPass] = useState("");
   let [rePass, setRePass] = useState("");
+  let [successMessage, setSuccessMessage] = useState("");
+  let [success, setSuccess] = useState("");
 
-  let data = {
-    oldEmail: "",
-    newEmail: "",
-    pass: ""
-  };
-  let data2 = {
-    oldPass: "",
-    newPass: ""
-  }
+  
+  let token = localStorage.getItem("imToken");
+  let url = "";
 
   const changeEmail = async () => {
-    data.oldEmail = currentEmail;
-    data.newEmail = newEmail;
-    data.pass = pass;
+    let data = {
+      oldEmail: currentEmail,
+      newEmail: newEmail,
+      pass: pass
+    };
     console.log(data);
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      method: "PATCH",
+      body: JSON.stringify(data)
+    })
+      .then((e) => e.json())
+      .then(res => {
+        if(res.status === 200){
+          setSuccessMessage("Email Changed Successfully");
+        }
+        else{
+          setSuccessMessage(res.status);
+        }
+      })
   }
   const changePassword = async () => {
     if(newPass !== rePass){
       alert("Password didnt match");
       return;
     }else{
-      data2.oldPass = oldPass;
-      data2.newPass = newPass;
+      let data2 = {
+        oldPass: oldPass,
+        newPass: newPass
+      };
       console.log(data2);
+      fetch(url, {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
+        },
+        method: "PATCH",
+        body: JSON.stringify(data2)
+      })
+        .then((e) => e.json())
+        .then(res => {
+          if(res.status === 200){
+            setSuccess("Password Changed Successfully");
+          }
+          else{
+            setSuccess(res.status);
+          }
+        })
     }
   }
 

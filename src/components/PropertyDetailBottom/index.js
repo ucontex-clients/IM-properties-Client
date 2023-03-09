@@ -103,7 +103,7 @@ export function PropertyDetailBottom() {
       setProperty(response.data.message.data);
       setMax(response.data.message);
     })
-    console.log(property);
+    console.log(property); 
   };
 
   return (

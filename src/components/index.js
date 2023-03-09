@@ -62,6 +62,7 @@ export * from "./DashboardComponents/UserProfileModal";
 export * from "./PaymentComponents/OneOffPayment";
 export * from "./PaymentComponents/Installment";
 export * from "./PaymentComponents/EasyBuy";
+export * from "./WalletComponents/FundAccount";
 export * from "./WalletComponents/FundWalletCreateAccount";
 export * from "./WalletComponents/UploadPayment";
 export * from "./WalletComponents/WithdrawCash";

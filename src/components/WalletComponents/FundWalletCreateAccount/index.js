@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { AddAccountSuccess } from "../AddAccountSuccess"
+import { AddBankAccountModal } from "../AddBankAccountModal"
+import { FundAccount } from "../FundAccount";
+import { WithdrawCash } from "../WithdrawCash";
 
 
 export function FundWalletCreateAccount({ setActivePage }) {
+    let [activeTab, setActiveTab] = useState("fund");
+    let style1 = { color: "green", fontWeight: "600"};
+
     return (<>
         <div className="dashboard-main-right full_ah">
             <div className="flex_btw_ah mb-10 mx-10">
@@ -9,64 +16,36 @@ export function FundWalletCreateAccount({ setActivePage }) {
                     <p>Balance :</p>
                     <p style={{ color: "green", fontWeight: "600" }}>#50,000</p>
                 </span>
-                <div style={{ color: "green", fontWeight: "600" }}>Fund</div>
-                <div>Withdraw</div> 
+                <div style={activeTab === "fund" ? style1 : {}} onClick={() => setActiveTab("fund")}>Fund</div>
+                <div style={activeTab === "withdraw" ? style1 : {}} onClick={() => setActiveTab("withdraw")}>Withdraw</div> 
             </div>
-            <div className="fund-wallet-wrapper">
-                <p className="">Fund Wallet</p>
+            {activeTab === "fund" && (
+                <FundAccount />
+            )}
 
-                <div className="wallet-input-wrapper">
-                    <div className="wallet-input-holder">
-                        <label>Enter Top-Up Amount (N)</label>
-                        <input type='text' placeholder='Enter Amount'></input>
-                    </div>
+            {activeTab === "withdraw" && (
+                <WithdrawCash />
+            )}
 
-                    <div className="wallet-input-holder">
-                        <label>Choose payment method</label>
-                        <select>
-                            <option>Paystack (card, USSD, Bank Transfer)</option>
-                            <option>Bank Deposit/Transfer</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div className="create-wallet-button-holder">
-                    <button onClick={() => setActivePage('fund')}>Pay Now</button>
-                </div>
-            </div>
         </div>
 
         <div className="dashboard-main-right mobile_ah" style={{ marginTop: "-90px" }}>
             <div className="mb-2" style={{ display: "flex", justifyContent: "right", gap: "50px" }}>
-                <div style={{ color: "green", fontWeight: "600" }}>Fund</div>
-                <div>Withdraw</div>
+                <div style={activeTab === "fund" ? style1 : {}} onClick={() => setActiveTab("fund")}>Fund</div>
+                <div style={activeTab === "withdraw" ? style1 : {}} onClick={() => setActiveTab("withdraw")}>Withdraw</div>
             </div>
             <span className="mb-7" style={{ display: "flex", justifyContent: "right", gap: "50px" }}>
                 <p>Balance :</p>
                 <p style={{ color: "green", fontWeight: "600" }}>#50,000</p>
             </span>
-            <div className="fund-wallet-wrapper">
-                <p className="">Fund Wallet</p>
+            {activeTab === "fund" && (
+                <FundAccount />
+            )}
 
-                <div className="">
-                    <div className="wallet-input-holder mb-4">
-                        <label>Enter Top-Up Amount (N)</label>
-                        <input type='text' placeholder='Enter Amount'></input>
-                    </div>
-
-                    <div className="wallet-input-holder">
-                        <label>Choose payment method</label>
-                        <select>
-                            <option>Paystack (card, USSD, Bank Transfer)</option>
-                            <option>Bank Deposit/Transfer</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div className="mt-4" style={{ textAlign: "center" }}>
-                    <button style={{ background: "#3db2ff", color: "white", padding: "5px 20px", borderRadius: "4px" }} onClick={() => setActivePage('fund')}>Pay Now</button>
-                </div>
-            </div>
+            {activeTab === "withdraw" && (
+                <WithdrawCash />
+            )}
+            
         </div>
     </>
     )

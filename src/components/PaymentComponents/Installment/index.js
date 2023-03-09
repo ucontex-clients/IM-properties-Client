@@ -4,7 +4,8 @@ import { Select } from "@chakra-ui/react";
 export function Installment({ changePaymentMode }) {
   const [selectPeriod, setSelectPeriod] = useState("0");
   let num = JSON.parse(localStorage.getItem("imcart"));
-  let totalDue = localStorage.getItem("impay");
+  localStorage.setItem("imPeriod", selectPeriod);
+  const totalDue = localStorage.getItem("impay");
   let property = JSON.parse(localStorage.getItem("improperty"));
   let [paymentType, setPaymentType] = useState("");
   return (
@@ -65,11 +66,11 @@ export function Installment({ changePaymentMode }) {
             <div
               className="period-price-radio-container"
               value="1"
-              onClick={(e) => setSelectPeriod("1")}
+              onClick={(e) => setSelectPeriod("3-months")}
             >
               <img
                 src={
-                  selectPeriod === "1"
+                  selectPeriod === "3-months"
                     ? "./images/radio2.png"
                     : "./images/radio1.png"
                 }
@@ -77,7 +78,7 @@ export function Installment({ changePaymentMode }) {
               ></img>
             </div>
             <div className="installment-period">
-              <p>3 - 6 Months</p>
+              <p>3 Months</p>
               <p>N{Math.floor(totalDue * 0.6 * 1.1)}</p>
               <p>10% Interest</p>
             </div>
@@ -86,25 +87,17 @@ export function Installment({ changePaymentMode }) {
               <p>N{Math.floor(totalDue * 0.6 * 1.1 / 3)} Monthly</p>
             </div>
 
-            {/* <div className="installment-period">
-              <p>12 Oct 2022</p>
-              <p>N404,666.66</p>
-            </div>
-            <div className="installment-period">
-              <p>12 Oct 2022</p>
-              <p>N404,666.66</p>
-            </div> */}
           </div>
 
           <div className="period-price-wrapper" style={{ marginTop: "21px" }}>
             <div
               className="period-price-radio-container"
               value="2"
-              onClick={(e) => setSelectPeriod("2")}
+              onClick={(e) => setSelectPeriod("6-months")}
             >
               <img
                 src={
-                  selectPeriod === "2"
+                  selectPeriod === "6-months"
                     ? "./images/radio2.png"
                     : "./images/radio1.png"
                 }
@@ -112,13 +105,13 @@ export function Installment({ changePaymentMode }) {
               ></img>
             </div>
             <div className="installment-period">
-              <p>7 - 12 Months</p>
+              <p>6 Months</p>
               <p>N{Math.floor(totalDue * 0.6 * 1.3)}</p>
               <p>30% Interest</p>
             </div>
             <div className="installment-period">
               <p>Payment of </p>
-              <p> N{Math.floor(totalDue * 0.6 * 1.3 / 7)} Monthly</p>
+              <p> N{Math.floor(totalDue * 0.6 * 1.3 / 6)} Monthly</p>
             </div>
             {/* <div className="installment-period">
               <p>12 Oct 2022</p>

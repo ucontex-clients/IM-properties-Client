@@ -1,11 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 import { useNavigate } from "react-router-dom";
+import { getSuggestedQuery } from "@testing-library/react";
+const axios = require("axios")
 
 export function PaymentAccountDetail(props) {
   let [flutter, setFlutter] = useState(props.payment);
   let [amnt, setAmnt] = useState(props.amnt);
+  let mode = props.paymentMode;
+  let [user, setUser] = useState({});
   let navigate = useNavigate();
+  let data = props.data1;
+  let period = localStorage.getItem("imPeriod");
+  let num = JSON.parse(localStorage.getItem("imcart"));
+  let [transaction, setTransaction] = useState("");
+  let totalPrice = localStorage.getItem("imPay");
+
+  useEffect(() => {
+    getUser();
+  }, [])
+
+  let getUser = () => {
+    let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/user/single";
+    let token = localStorage.getItem("imToken");
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      method: "GET"
+    })
+      .then((e) => e.json())
+      .then(res => {
+        setUser(res)
+        console.log(res);
+      })
+  }
+
   let routing = () => {
     navigate("/payment")
     console.log("routing")
@@ -14,51 +45,80 @@ export function PaymentAccountDetail(props) {
   const config = {
     public_key: 'FLWPUBK_TEST-21cc0116b2bd6553bc6a06119aa2c3c2-X',
     tx_ref: Date.now(),
-    amount: 450000,
+    amount: 200,
     currency: 'NGN',
-    payment_options: 'card,mobilemoney,ussd',
+    payment_options: 'card, mobilemoney, ussd, bank-transfer, account',
     customer: {
-      email: 'meedoo4life@gmail.com',
-      phone_number: '08066981697',
-      name: 'nuhu ahmed',
+      email: user.email,
+      phone_number: user?.phone1,
+      name: user.username
     },
     customizations: {
-      title: 'Payment for plots on IM-Properties',
+      title: `Payment for ${num.length} plots on ${data.property?.name.toUpperCase()} under IM-Properties`,
       description: 'Payment for items in cart for IM-Properties',
       logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
     },
-    redirect_url: "http://localhost:3000/dashboard/home"
+    redirect_url: "https://nice-tan-harp-seal-wrap.cyclic.app/api/payment/confirm"
   };
 
   const handleFlutterPayment = useFlutterwave(config);
+  const makePay = async () => {
+    const response = handleFlutterPayment({
+      callback: (response) => {
+        console.log(response);
+        closePaymentModal() // this will close the modal programmatically
+      },
+      onClose: () => { routing() },
+    });
+    setTransaction(response.message);
+    if(response.status === 200){
+      let url = "https://nice-tan-harp-seal-wrap.cyclic.app/api/payment/addPayTransaction"
+      let token = localStorage.getItem("imToken");
+      let dataa = {
+        user_id: user._id,
+        mode,
+        totalPrice,
+        plots: num,
+        duration: period,
+        property_id: data.property?._id,
+        transaction_id: transaction
+      };
+      console.log(dataa);
+      const response = await axios.post(url, dataa, {
+        headers: {
+          'Authorization': `Basic ${token}`
+        }
+      });
+      if (response.status === 200) {
+        navigate("/dashboard/home");
+        localStorage.removeItem("imcart");
+        localStorage.removeItem("impay");
+        localStorage.removeItem("imData");
+        localStorage.removeItem("imPeriod");
+      } else console.log(response.error.message);
+    }else console.log(response.message);
+    
+  }
 
   return (<>
     {flutter ? <div>
       <button
-        onClick={() => {
-          handleFlutterPayment({
-            callback: (response) => {
-              console.log(response);
-              closePaymentModal() // this will close the modal programmatically
-            },
-            onClose: () => { routing() },
-          });
-        }}
+        onClick={makePay}
       >
         Click to Pay with FlutterWave
       </button>
     </div> :
       <div className="one-off-payment-container">
         <p className="payment-top-para hidden md:block">
-          Make Payment for 4 plots at
-          <span>CAMPUS GARDEN ESTATE PORT HARCOURT</span>
+          Make Payment for {num?.length} plots at
+          <span>{data.property.name.toUpperCase()}</span>
         </p>
         <div className="block px-[10px] md:hidden">
           <p className="font-fam font-bold text-[15px]">
-            Campus Garden Estate Port Harcourt
+            {data.property?.name.toUpperCase()}
           </p>
           <p className="text-[15px] font-fam text-light mt-[11px]">
-            Make Payment for 4 plots at
+            Make Payment for {num?.length} plots at
           </p>
         </div>
         <div className="one-off-payment-box">
@@ -90,7 +150,7 @@ export function PaymentAccountDetail(props) {
             <p className="font-fam text-[15px] mt-[22px] text-light">
               Please pay
               <span className="font-bold" style={{ color: "black" }}>
-                N674,666.66
+                {data.total}
               </span>
               to above bank details
             </p>

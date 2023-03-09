@@ -1,8 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
+import { useEffect } from "react"
 import { DashboardElement } from "../../"
 import DashboardReferralHistory from "../DashboardReferralHistory"
 
 export function DashboardReferral(){
+    let [referral, setReferral] = useState({})
+
+    useEffect(() => {
+        getUserReferral();
+    })
+    const getUserReferral = () => {
+        let id = localStorage.getItem("imUserId");
+        let url = `https://nice-tan-harp-seal-wrap.cyclic.app/api/esp/getesp/${id}`;
+        let token = localStorage.getItem("imToken");
+        fetch(url, {
+            method: "get",
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then(response => response.json())
+        .then(res => {
+            setReferral(res);
+        })
+    }
     return(
         <div className="dashboard-home-main-wrapper">
             <div className="dashboard-referral-logo-wrapper">
@@ -17,7 +39,7 @@ export function DashboardReferral(){
                 logoURL='/images/accountBalance.png' number='0' text='Total Earning'/>
                 <div className="referral-link-container">
                     <p>Referral Link</p>
-                    <p className="referral-link">https://improperties.com/register?u=IM1234509</p>
+                    <p className="referral-link">https://improperties.com/register?u=${referral.referralId}</p>
                     <div className="copy-image-wrapper">
                         <div><img src="/images/Copy.png" alt="copy"></img></div>
                         <p>Copy</p>
@@ -43,7 +65,7 @@ export function DashboardReferral(){
                 </div>
             </div>
 
-            <DashboardReferralHistory />
+            <DashboardReferralHistory referral={referral}/>
         </div>
     )
 }
